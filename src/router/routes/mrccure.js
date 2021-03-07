@@ -2,12 +2,12 @@ export default [
     {
         path: '/dashboard',
         name: 'dashboard',
-        component: () => import('@/views/dashboard/analytics/Analytics.vue'),
+        component: () => import('@/views/mrccure/Dashboard.vue'),
     },
     {
         path: '/appointments',
         name: 'appointments',
-        component: () => import('@/views/dashboard/ecommerce/Ecommerce.vue'),
+        component: () => import('@/views/mrccure/Appontments.vue'),
     },
     {
         path: '/clinics',

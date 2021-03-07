@@ -1,6 +1,6 @@
 export default [
     {
-        header: 'Apps & Pages',
+        header: 'Patient Screens',
     },
     {
         title: 'Dashboard',
