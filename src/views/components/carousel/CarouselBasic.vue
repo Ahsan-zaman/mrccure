@@ -27,16 +27,16 @@ import BCardCode from '@core/components/b-card-code'
 import { codeCarouselBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCarousel,
-    BCarouselSlide,
-    BCardText,
-  },
-  data() {
-    return {
-      codeCarouselBasic,
-    }
-  },
+    components: {
+        BCardCode,
+        BCarousel,
+        BCarouselSlide,
+        BCardText,
+    },
+    data() {
+        return {
+            codeCarouselBasic,
+        }
+    },
 }
 </script>

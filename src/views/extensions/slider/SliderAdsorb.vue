@@ -49,33 +49,33 @@ import store from '@/store/index'
 import { codeAdsorb } from './code'
 
 export default {
-  components: {
-    BCardText,
-    VueSlider,
-    BCardCode,
-  },
-  data() {
-    return {
-      codeAdsorb,
-      value1: 20,
-      value2: 'c',
-      value3: 60,
-      data: ['a', 'b', 'c', 'd', 'e', 'f', 'g'],
-      marks: [0, 10, 30, 60, 100],
-      dir: 'ltr',
-    }
-  },
-  computed: {
-    direction() {
-      if (store.state.appConfig.isRTL) {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.dir = 'rtl'
-        return this.dir
-      }
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.dir = 'ltr'
-      return this.dir
+    components: {
+        BCardText,
+        VueSlider,
+        BCardCode,
     },
-  },
+    data() {
+        return {
+            codeAdsorb,
+            value1: 20,
+            value2: 'c',
+            value3: 60,
+            data: ['a', 'b', 'c', 'd', 'e', 'f', 'g'],
+            marks: [0, 10, 30, 60, 100],
+            dir: 'ltr',
+        }
+    },
+    computed: {
+        direction() {
+            if (store.state.appConfig.isRTL) {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.dir = 'rtl'
+                return this.dir
+            }
+            // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+            this.dir = 'ltr'
+            return this.dir
+        },
+    },
 }
 </script>

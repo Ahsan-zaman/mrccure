@@ -79,27 +79,27 @@
 
 <script>
 import {
-  BModal, BButton, VBModal, BCardText,
+    BModal, BButton, VBModal, BCardText,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code'
 import Ripple from 'vue-ripple-directive'
 import { codeMultiple } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BModal,
-    BCardText,
-  },
-  directives: {
-    'b-modal': VBModal,
-    Ripple,
-  },
-  data() {
-    return {
-      codeMultiple,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BModal,
+        BCardText,
+    },
+    directives: {
+        'b-modal': VBModal,
+        Ripple,
+    },
+    data() {
+        return {
+            codeMultiple,
+        }
+    },
 }
 </script>

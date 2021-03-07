@@ -44,20 +44,20 @@ import CarouselPause from './CarouselPause.vue'
 import CarouselWrap from './CarouselWrap.vue'
 
 export default {
-  components: {
-    BCol,
-    BRow,
+    components: {
+        BCol,
+        BRow,
 
-    CarouselCaption,
-    CarouselBasic,
-    CarouselCrossFade,
-    CarouselInterval,
-    CarouselKeyboard,
-    CarouselProgrammaticaSlide,
-    CarouselVsupport,
-    CarouselPause,
-    CarouselWrap,
-  },
+        CarouselCaption,
+        CarouselBasic,
+        CarouselCrossFade,
+        CarouselInterval,
+        CarouselKeyboard,
+        CarouselProgrammaticaSlide,
+        CarouselVsupport,
+        CarouselPause,
+        CarouselWrap,
+    },
 }
 </script>
 

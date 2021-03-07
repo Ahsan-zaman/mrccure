@@ -78,34 +78,34 @@
 
 <script>
 import {
-  BCard, BTable, BAvatar, BImg,
+    BCard, BTable, BAvatar, BImg,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard,
-    BTable,
-    BAvatar,
-    BImg,
-  },
-  props: {
-    tableData: {
-      type: Array,
-      default: () => [],
+    components: {
+        BCard,
+        BTable,
+        BAvatar,
+        BImg,
     },
-  },
+    props: {
+        tableData: {
+            type: Array,
+            default: () => [],
+        },
+    },
 
-  data() {
-    return {
-      fields: [
-        { key: 'company', label: 'COMPANY' },
-        { key: 'category', label: 'CATEGORY' },
-        { key: 'views', label: 'VIEWS' },
-        { key: 'revenue', label: 'REVENUE' },
-        { key: 'sales', label: 'SALES' },
-      ],
-    }
-  },
+    data() {
+        return {
+            fields: [
+                { key: 'company', label: 'COMPANY' },
+                { key: 'category', label: 'CATEGORY' },
+                { key: 'views', label: 'VIEWS' },
+                { key: 'revenue', label: 'REVENUE' },
+                { key: 'sales', label: 'SALES' },
+            ],
+        }
+    },
 }
 </script>
 

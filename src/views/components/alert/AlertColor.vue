@@ -123,15 +123,15 @@ import { BAlert, BCardText } from 'bootstrap-vue'
 import { codeAlertColor } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAlert,
-    BCardText,
-  },
-  data() {
-    return {
-      codeAlertColor,
-    }
-  },
+    components: {
+        BCardCode,
+        BAlert,
+        BCardText,
+    },
+    data() {
+        return {
+            codeAlertColor,
+        }
+    },
 }
 </script>

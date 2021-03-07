@@ -36,11 +36,11 @@ import { BAvatar, BCardText } from 'bootstrap-vue'
 import { codeBadgeContent } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAvatar,
-    BCardText,
-  },
-  data() { return { codeBadgeContent } },
+    components: {
+        BCardCode,
+        BAvatar,
+        BCardText,
+    },
+    data() { return { codeBadgeContent } },
 }
 </script>

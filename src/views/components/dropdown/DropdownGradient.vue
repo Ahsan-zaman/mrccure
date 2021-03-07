@@ -142,19 +142,19 @@
 
 <script>
 import {
-  BDropdown, BDropdownItem, BDropdownDivider, BCardText,
+    BDropdown, BDropdownItem, BDropdownDivider, BCardText,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code'
 import { codeGradient } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BDropdown,
-    BDropdownDivider,
-    BDropdownItem,
-    BCardText,
-  },
-  data() { return { codeGradient } },
+    components: {
+        BCardCode,
+        BDropdown,
+        BDropdownDivider,
+        BDropdownItem,
+        BCardText,
+    },
+    data() { return { codeGradient } },
 }
 </script>

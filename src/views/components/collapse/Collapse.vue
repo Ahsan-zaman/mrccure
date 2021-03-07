@@ -19,15 +19,15 @@ import CollapseHover from './CollapseHover.vue'
 import CollapseTypes from './CollapseTypes.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    AccordionDefault,
-    CollapseDefault,
-    CollapseBoostrapVue,
-    CollapseHover,
-    CollapseTypes,
-  },
+        AccordionDefault,
+        CollapseDefault,
+        CollapseBoostrapVue,
+        CollapseHover,
+        CollapseTypes,
+    },
 }
 </script>

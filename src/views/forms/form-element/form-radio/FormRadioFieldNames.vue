@@ -37,22 +37,22 @@ import { BFormRadioGroup, BCardText } from 'bootstrap-vue'
 import { codeFieldNames } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormRadioGroup,
-    BCardText,
-  },
-  data() {
-    return {
-      selected: 'A',
-      options: [
-        { item: 'A', name: 'Option A' },
-        { item: 'B', name: 'Option B' },
-        { item: 'D', name: 'Option C', notEnabled: true },
-        { item: { d: 1 }, name: 'Option D' },
-      ],
-      codeFieldNames,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormRadioGroup,
+        BCardText,
+    },
+    data() {
+        return {
+            selected: 'A',
+            options: [
+                { item: 'A', name: 'Option A' },
+                { item: 'B', name: 'Option B' },
+                { item: 'D', name: 'Option C', notEnabled: true },
+                { item: { d: 1 }, name: 'Option D' },
+            ],
+            codeFieldNames,
+        }
+    },
 }
 </script>

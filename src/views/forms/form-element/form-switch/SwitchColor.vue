@@ -116,15 +116,15 @@ import { BFormCheckbox, BCardText } from 'bootstrap-vue'
 import { codeColor } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormCheckbox,
-    BCardText,
-  },
-  data() {
-    return {
-      codeColor,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormCheckbox,
+        BCardText,
+    },
+    data() {
+        return {
+            codeColor,
+        }
+    },
 }
 </script>

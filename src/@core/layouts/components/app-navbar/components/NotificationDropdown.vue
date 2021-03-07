@@ -106,81 +106,81 @@
 
 <script>
 import {
-  BNavItemDropdown, BBadge, BMedia, BLink, BAvatar, BButton, BFormCheckbox,
+    BNavItemDropdown, BBadge, BMedia, BLink, BAvatar, BButton, BFormCheckbox,
 } from 'bootstrap-vue'
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BNavItemDropdown,
-    BBadge,
-    BMedia,
-    BLink,
-    BAvatar,
-    VuePerfectScrollbar,
-    BButton,
-    BFormCheckbox,
-  },
-  directives: {
-    Ripple,
-  },
-  setup() {
+    components: {
+        BNavItemDropdown,
+        BBadge,
+        BMedia,
+        BLink,
+        BAvatar,
+        VuePerfectScrollbar,
+        BButton,
+        BFormCheckbox,
+    },
+    directives: {
+        Ripple,
+    },
+    setup() {
     /* eslint-disable global-require */
-    const notifications = [
-      {
-        title: 'Congratulation Sam 🎉',
-        avatar: require('@/assets/images/avatars/6-small.png'),
-        subtitle: 'Won the monthly best seller badge',
-        type: 'light-success',
-      },
-      {
-        title: 'New message received',
-        avatar: require('@/assets/images/avatars/9-small.png'),
-        subtitle: 'You have 10 unread messages',
-        type: 'light-info',
-      },
-      {
-        title: 'Revised Order 👋',
-        avatar: 'MD',
-        subtitle: 'MD Inc. order updated',
-        type: 'light-danger',
-      },
-    ]
-    /* eslint-disable global-require */
+        const notifications = [
+            {
+                title: 'Congratulation Sam 🎉',
+                avatar: require('@/assets/images/avatars/6-small.png'),
+                subtitle: 'Won the monthly best seller badge',
+                type: 'light-success',
+            },
+            {
+                title: 'New message received',
+                avatar: require('@/assets/images/avatars/9-small.png'),
+                subtitle: 'You have 10 unread messages',
+                type: 'light-info',
+            },
+            {
+                title: 'Revised Order 👋',
+                avatar: 'MD',
+                subtitle: 'MD Inc. order updated',
+                type: 'light-danger',
+            },
+        ]
+        /* eslint-disable global-require */
 
-    const systemNotifications = [
-      {
-        title: 'Server down',
-        subtitle: 'USA Server is down due to hight CPU usage',
-        type: 'light-danger',
-        icon: 'XIcon',
-      },
-      {
-        title: 'Sales report generated',
-        subtitle: 'Last month sales report generated',
-        type: 'light-success',
-        icon: 'CheckIcon',
-      },
-      {
-        title: 'High memory usage',
-        subtitle: 'BLR Server using high memory',
-        type: 'light-warning',
-        icon: 'AlertTriangleIcon',
-      },
-    ]
+        const systemNotifications = [
+            {
+                title: 'Server down',
+                subtitle: 'USA Server is down due to hight CPU usage',
+                type: 'light-danger',
+                icon: 'XIcon',
+            },
+            {
+                title: 'Sales report generated',
+                subtitle: 'Last month sales report generated',
+                type: 'light-success',
+                icon: 'CheckIcon',
+            },
+            {
+                title: 'High memory usage',
+                subtitle: 'BLR Server using high memory',
+                type: 'light-warning',
+                icon: 'AlertTriangleIcon',
+            },
+        ]
 
-    const perfectScrollbarSettings = {
-      maxScrollbarLength: 60,
-      wheelPropagation: false,
-    }
+        const perfectScrollbarSettings = {
+            maxScrollbarLength: 60,
+            wheelPropagation: false,
+        }
 
-    return {
-      notifications,
-      systemNotifications,
-      perfectScrollbarSettings,
-    }
-  },
+        return {
+            notifications,
+            systemNotifications,
+            perfectScrollbarSettings,
+        }
+    },
 }
 </script>
 

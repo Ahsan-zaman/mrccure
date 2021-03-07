@@ -101,23 +101,23 @@ import CardAdvanceTimeline from './CardAdvanceTimeline.vue'
 import CardAdvanceChat from './CardAdvanceChat.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    CardAdvanceCongratulation,
-    CardAdvanceMedal,
-    CardAdvanceEmployeeTask,
-    CardAdvanceMeetup,
-    CardAdvanceProfile,
-    CardAdvanceJob,
-    CardAdvanceTransactions,
-    CardAdvancePayAmount,
-    CardAdvanceBussinessSharks,
-    CardAdvanceBrowserStates,
-    CardAdvanceAppDesign,
-    CardAdvanceTimeline,
-    CardAdvanceChat,
-  },
+        CardAdvanceCongratulation,
+        CardAdvanceMedal,
+        CardAdvanceEmployeeTask,
+        CardAdvanceMeetup,
+        CardAdvanceProfile,
+        CardAdvanceJob,
+        CardAdvanceTransactions,
+        CardAdvancePayAmount,
+        CardAdvanceBussinessSharks,
+        CardAdvanceBrowserStates,
+        CardAdvanceAppDesign,
+        CardAdvanceTimeline,
+        CardAdvanceChat,
+    },
 }
 </script>

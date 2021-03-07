@@ -15,14 +15,14 @@ import VueApexCharts from 'vue-apexcharts'
 import apexChatData from './apexChartData'
 
 export default {
-  components: {
-    BCard,
-    VueApexCharts,
-  },
-  data() {
-    return {
-      apexChatData,
-    }
-  },
+    components: {
+        BCard,
+        VueApexCharts,
+    },
+    data() {
+        return {
+            apexChatData,
+        }
+    },
 }
 </script>

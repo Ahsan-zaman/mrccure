@@ -131,57 +131,57 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BTable, BFormGroup, BFormRadio, BFormCheckbox, BFormRadioGroup, BCardBody,
+    BTable, BFormGroup, BFormRadio, BFormCheckbox, BFormRadioGroup, BCardBody,
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import { codeStyleOption } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BTable,
-    BFormGroup,
-    BCardBody,
-    vSelect,
-    BFormRadio,
-    BFormCheckbox,
-    BFormRadioGroup,
-  },
-  data() {
-    return {
-      fields: ['first_name', 'last_name', 'age'],
-      items: [
-        { age: 40, first_name: 'Dickerson', last_name: 'Macdonald' },
-        { age: 21, first_name: 'Larsen', last_name: 'Shaw' },
-        { age: 89, first_name: 'Geneva', last_name: 'Wilson' },
-        { age: 89, first_name: 'Olenka', last_name: 'Brawley' },
-        { age: 89, first_name: 'Vernon', last_name: 'Perford' },
-      ],
-      tableVariants: [
-        'none',
-        'primary',
-        'secondary',
-        'info',
-        'danger',
-        'warning',
-        'success',
-        'light',
-        'dark',
-      ],
-      striped: false,
-      bordered: false,
-      borderless: false,
-      outlined: false,
-      small: false,
-      hover: false,
-      dark: false,
-      fixed: false,
-      footClone: false,
-      headVariant: null,
-      tableVariant: 'none',
-      noCollapse: false,
-      codeStyleOption,
-    }
-  },
+    components: {
+        BCardCode,
+        BTable,
+        BFormGroup,
+        BCardBody,
+        vSelect,
+        BFormRadio,
+        BFormCheckbox,
+        BFormRadioGroup,
+    },
+    data() {
+        return {
+            fields: ['first_name', 'last_name', 'age'],
+            items: [
+                { age: 40, first_name: 'Dickerson', last_name: 'Macdonald' },
+                { age: 21, first_name: 'Larsen', last_name: 'Shaw' },
+                { age: 89, first_name: 'Geneva', last_name: 'Wilson' },
+                { age: 89, first_name: 'Olenka', last_name: 'Brawley' },
+                { age: 89, first_name: 'Vernon', last_name: 'Perford' },
+            ],
+            tableVariants: [
+                'none',
+                'primary',
+                'secondary',
+                'info',
+                'danger',
+                'warning',
+                'success',
+                'light',
+                'dark',
+            ],
+            striped: false,
+            bordered: false,
+            borderless: false,
+            outlined: false,
+            small: false,
+            hover: false,
+            dark: false,
+            fixed: false,
+            footClone: false,
+            headVariant: null,
+            tableVariant: 'none',
+            noCollapse: false,
+            codeStyleOption,
+        }
+    },
 }
 </script>

@@ -49,78 +49,78 @@ import Ripple from 'vue-ripple-directive'
 import { codePosition } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codePosition,
-    }
-  },
-  methods: {
+    components: {
+        BCardCode,
+        BCardText,
+        BButton,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codePosition,
+        }
+    },
+    methods: {
 
-    // top start
-    topStart() {
-      this.$swal({
-        position: 'top-start',
-        icon: 'success',
-        title: 'Your work has been saved',
-        showConfirmButton: false,
-        timer: 1500,
-        customClass: {
-          confirmButton: 'btn btn-primary',
+        // top start
+        topStart() {
+            this.$swal({
+                position: 'top-start',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500,
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                buttonsStyling: false,
+            })
         },
-        buttonsStyling: false,
-      })
-    },
-    // top end
-    topEnd() {
-      this.$swal({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Your work has been saved',
-        showConfirmButton: false,
-        timer: 1500,
-        customClass: {
-          confirmButton: 'btn btn-primary',
+        // top end
+        topEnd() {
+            this.$swal({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500,
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                buttonsStyling: false,
+            })
         },
-        buttonsStyling: false,
-      })
-    },
-    // bottom start
-    bottomStart() {
-      this.$swal({
-        position: 'bottom-start',
-        icon: 'success',
-        title: 'Your work has been saved',
-        showConfirmButton: false,
-        timer: 1500,
-        customClass: {
-          confirmButton: 'btn btn-primary',
+        // bottom start
+        bottomStart() {
+            this.$swal({
+                position: 'bottom-start',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500,
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                buttonsStyling: false,
+            })
         },
-        buttonsStyling: false,
-      })
-    },
 
-    // bottom end
-    bottomEnd() {
-      this.$swal({
-        position: 'bottom-end',
-        icon: 'success',
-        title: 'Your work has been saved',
-        showConfirmButton: false,
-        timer: 1500,
-        customClass: {
-          confirmButton: 'btn btn-primary',
+        // bottom end
+        bottomEnd() {
+            this.$swal({
+                position: 'bottom-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500,
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                buttonsStyling: false,
+            })
         },
-        buttonsStyling: false,
-      })
     },
-  },
 }
 </script>

@@ -104,19 +104,19 @@ import Ripple from 'vue-ripple-directive'
 import { codeDropdownBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BDropdown,
-    BDropdownItem,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeDropdownBasic,
-    }
-  },
+    components: {
+        BCardCode,
+        BDropdown,
+        BDropdownItem,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeDropdownBasic,
+        }
+    },
 }
 </script>

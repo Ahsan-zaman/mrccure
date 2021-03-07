@@ -34,16 +34,16 @@ import { BFormFile, BCardText } from 'bootstrap-vue'
 import { codeContextualState } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormFile,
-    BCardText,
-  },
-  data() {
-    return {
-      file: null,
-      codeContextualState,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormFile,
+        BCardText,
+    },
+    data() {
+        return {
+            file: null,
+            codeContextualState,
+        }
+    },
 }
 </script>

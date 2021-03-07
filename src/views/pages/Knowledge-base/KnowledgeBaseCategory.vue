@@ -83,40 +83,40 @@
 
 <script>
 import {
-  BRow, BCol, BCard, BListGroup, BListGroupItem, BCardBody, BCardText, BForm, BInputGroup, BInputGroupPrepend, BFormInput,
+    BRow, BCol, BCard, BListGroup, BListGroupItem, BCardBody, BCardText, BForm, BInputGroup, BInputGroupPrepend, BFormInput,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BListGroup,
-    BListGroupItem,
-    BCardBody,
-    BCardText,
-    BForm,
-    BInputGroup,
-    BInputGroupPrepend,
-    BFormInput,
-  },
-  data() {
-    return {
-      knowledgeBaseSearchQuery: '',
-      kb: [],
-    }
-  },
-  computed: {
-    filteredKB() {
-      const knowledgeBaseSearchQueryLower = this.knowledgeBaseSearchQuery.toLowerCase()
-      return this.kb.filter(item => item.title.toLowerCase().includes(knowledgeBaseSearchQueryLower) || item.questions.filter(queObj => queObj.question.toLowerCase().includes(knowledgeBaseSearchQueryLower)).length)
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BListGroup,
+        BListGroupItem,
+        BCardBody,
+        BCardText,
+        BForm,
+        BInputGroup,
+        BInputGroupPrepend,
+        BFormInput,
     },
-  },
-  created() {
+    data() {
+        return {
+            knowledgeBaseSearchQuery: '',
+            kb: [],
+        }
+    },
+    computed: {
+        filteredKB() {
+            const knowledgeBaseSearchQueryLower = this.knowledgeBaseSearchQuery.toLowerCase()
+            return this.kb.filter(item => item.title.toLowerCase().includes(knowledgeBaseSearchQueryLower) || item.questions.filter(queObj => queObj.question.toLowerCase().includes(knowledgeBaseSearchQueryLower)).length)
+        },
+    },
+    created() {
     // ! You have to update the below API call according to route parameter
     // * We are using fixed API call for all categories for demo purposes
-    this.$http.get('/kb/data/category').then(res => { this.kb = res.data })
-  },
+        this.$http.get('/kb/data/category').then(res => { this.kb = res.data })
+    },
 }
 </script>
 

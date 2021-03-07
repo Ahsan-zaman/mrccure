@@ -24,28 +24,28 @@
 import { BCard, BCardBody, BAvatar } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard,
-    BCardBody,
-    BAvatar,
-  },
-  props: {
-    icon: {
-      type: String,
-      required: true,
+    components: {
+        BCard,
+        BCardBody,
+        BAvatar,
     },
-    statistic: {
-      type: [Number, String],
-      required: true,
+    props: {
+        icon: {
+            type: String,
+            required: true,
+        },
+        statistic: {
+            type: [Number, String],
+            required: true,
+        },
+        statisticTitle: {
+            type: String,
+            default: '',
+        },
+        color: {
+            type: String,
+            default: 'primary',
+        },
     },
-    statisticTitle: {
-      type: String,
-      default: '',
-    },
-    color: {
-      type: String,
-      default: 'primary',
-    },
-  },
 }
 </script>

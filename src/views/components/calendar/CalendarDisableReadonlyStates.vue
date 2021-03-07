@@ -52,32 +52,32 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormGroup, BFormRadioGroup, BFormRadio, BCalendar, BCardText,
+    BFormGroup, BFormRadioGroup, BFormRadio, BCalendar, BCardText,
 } from 'bootstrap-vue'
 import { codeStates } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormGroup,
-    BFormRadioGroup,
-    BFormRadio,
-    BCalendar,
-    BCardText,
-  },
-  data() {
-    return {
-      state: 'disabled',
-      codeStates,
-    }
-  },
-  computed: {
-    disabled() {
-      return this.state === 'disabled'
+    components: {
+        BCardCode,
+        BFormGroup,
+        BFormRadioGroup,
+        BFormRadio,
+        BCalendar,
+        BCardText,
     },
-    readonly() {
-      return this.state === 'readonly'
+    data() {
+        return {
+            state: 'disabled',
+            codeStates,
+        }
     },
-  },
+    computed: {
+        disabled() {
+            return this.state === 'disabled'
+        },
+        readonly() {
+            return this.state === 'readonly'
+        },
+    },
 }
 </script>

@@ -11,10 +11,10 @@ import { BRow, BCol } from 'bootstrap-vue'
 import EmbedTypes from './EmbedTypes.vue'
 
 export default {
-  components: {
-    EmbedTypes,
-    BRow,
-    BCol,
-  },
+    components: {
+        EmbedTypes,
+        BRow,
+        BCol,
+    },
 }
 </script>

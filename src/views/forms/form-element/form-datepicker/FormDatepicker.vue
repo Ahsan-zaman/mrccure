@@ -60,23 +60,23 @@ import FormDatepickerFullWidth from './FormDatepickerFullWidth.vue'
 import FormDatepickerInternationalization from './FormDatepickerInternationalization.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    FormDatepickerBasic,
-    FormDatepickerState,
-    FormDatepickerMinMax,
-    FormDatepickerDisableDate,
-    FormDatepickerValidation,
-    FormDatepickerVariant,
-    FormDatepickerSize,
-    FormDatepickerPlaceholder,
-    FormDatepickerOptional,
-    FormDatepickerButtonOnly,
-    FormDatepickerString,
-    FormDatepickerFullWidth,
-    FormDatepickerInternationalization,
-  },
+        FormDatepickerBasic,
+        FormDatepickerState,
+        FormDatepickerMinMax,
+        FormDatepickerDisableDate,
+        FormDatepickerValidation,
+        FormDatepickerVariant,
+        FormDatepickerSize,
+        FormDatepickerPlaceholder,
+        FormDatepickerOptional,
+        FormDatepickerButtonOnly,
+        FormDatepickerString,
+        FormDatepickerFullWidth,
+        FormDatepickerInternationalization,
+    },
 }
 </script>

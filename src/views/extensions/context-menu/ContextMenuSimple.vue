@@ -43,39 +43,39 @@ import Ripple from 'vue-ripple-directive'
 import { codeSimple } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    VueContext,
-    BLink,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      menuData: [
-        { icon: 'PlusIcon', text: 'New' },
-        { icon: 'FileIcon', text: 'Open' },
-        { icon: 'SaveIcon', text: 'Save' },
-        { icon: 'SaveIcon', text: 'Save As' },
-        { icon: 'XIcon', text: 'Close' },
-      ],
-      codeSimple,
-    }
-  },
-  methods: {
-    optionClicked(text, icon) {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: `You have click on ${text}!`,
-          icon,
-        },
-      })
+    components: {
+        BCardCode,
+        BButton,
+        VueContext,
+        BLink,
+        // eslint-disable-next-line vue/no-unused-components
+        ToastificationContent,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            menuData: [
+                { icon: 'PlusIcon', text: 'New' },
+                { icon: 'FileIcon', text: 'Open' },
+                { icon: 'SaveIcon', text: 'Save' },
+                { icon: 'SaveIcon', text: 'Save As' },
+                { icon: 'XIcon', text: 'Close' },
+            ],
+            codeSimple,
+        }
+    },
+    methods: {
+        optionClicked(text, icon) {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: `You have click on ${text}!`,
+                    icon,
+                },
+            })
+        },
+    },
 }
 </script>

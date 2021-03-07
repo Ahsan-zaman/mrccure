@@ -41,22 +41,22 @@ import { BFormCheckboxGroup, BCardText } from 'bootstrap-vue'
 import { codeChangeNames } from './code'
 
 export default {
-  components: {
-    BFormCheckboxGroup,
-    BCardText,
-    BCardCode,
-  },
-  data() {
-    return {
-      codeChangeNames,
-      selected: [],
-      options: [
-        { item: 'A', name: 'Option A' },
-        { item: 'B', name: 'Option B' },
-        { item: 'D', name: 'Option C', notEnabled: true },
-        { item: { d: 1 }, name: 'Option D' },
-      ],
-    }
-  },
+    components: {
+        BFormCheckboxGroup,
+        BCardText,
+        BCardCode,
+    },
+    data() {
+        return {
+            codeChangeNames,
+            selected: [],
+            options: [
+                { item: 'A', name: 'Option A' },
+                { item: 'B', name: 'Option B' },
+                { item: 'D', name: 'Option C', notEnabled: true },
+                { item: { d: 1 }, name: 'Option D' },
+            ],
+        }
+    },
 }
 </script>

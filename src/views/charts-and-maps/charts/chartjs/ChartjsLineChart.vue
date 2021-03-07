@@ -23,36 +23,36 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardBody, BCardSubTitle, BCardTitle,
+    BCard, BCardHeader, BCardBody, BCardSubTitle, BCardTitle,
 } from 'bootstrap-vue'
 import ChartjsComponentLineChart from './charts-components/ChartjsComponentLineChart.vue'
 import chartjsData from './chartjsData'
 
 export default {
-  components: {
-    BCard,
-    BCardHeader,
-    BCardBody,
-    BCardSubTitle,
-    BCardTitle,
-    ChartjsComponentLineChart,
-  },
-  data() {
-    return {
-      chartjsData,
-      plugins: [
-        // to add spacing between legends and chart
-        {
-          beforeInit(chart) {
-            /* eslint-disable func-names, no-param-reassign */
-            chart.legend.afterFit = function () {
-              this.height += 20
-            }
-            /* eslint-enable */
-          },
-        },
-      ],
-    }
-  },
+    components: {
+        BCard,
+        BCardHeader,
+        BCardBody,
+        BCardSubTitle,
+        BCardTitle,
+        ChartjsComponentLineChart,
+    },
+    data() {
+        return {
+            chartjsData,
+            plugins: [
+                // to add spacing between legends and chart
+                {
+                    beforeInit(chart) {
+                        /* eslint-disable func-names, no-param-reassign */
+                        chart.legend.afterFit = function () {
+                            this.height += 20
+                        }
+                        /* eslint-enable */
+                    },
+                },
+            ],
+        }
+    },
 }
 </script>

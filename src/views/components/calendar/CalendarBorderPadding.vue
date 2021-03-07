@@ -24,15 +24,15 @@ import { BCalendar, BCardText } from 'bootstrap-vue'
 import { codeBorderPadding } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCalendar,
-    BCardText,
-  },
-  data() {
-    return {
-      codeBorderPadding,
-    }
-  },
+    components: {
+        BCardCode,
+        BCalendar,
+        BCardText,
+    },
+    data() {
+        return {
+            codeBorderPadding,
+        }
+    },
 }
 </script>

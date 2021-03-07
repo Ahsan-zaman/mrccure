@@ -39,27 +39,27 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle,
+    BCard, BCardHeader, BCardBody, BCardTitle, BCardSubTitle,
 } from 'bootstrap-vue'
 import VueApexCharts from 'vue-apexcharts'
 import flatPickr from 'vue-flatpickr-component'
 import apexChatData from './apexChartData'
 
 export default {
-  components: {
-    BCard,
-    VueApexCharts,
-    BCardHeader,
-    BCardBody,
-    BCardTitle,
-    BCardSubTitle,
-    flatPickr,
-  },
-  data() {
-    return {
-      apexChatData,
-      rangePicker: ['2019-05-01', '2019-05-10'],
-    }
-  },
+    components: {
+        BCard,
+        VueApexCharts,
+        BCardHeader,
+        BCardBody,
+        BCardTitle,
+        BCardSubTitle,
+        flatPickr,
+    },
+    data() {
+        return {
+            apexChatData,
+            rangePicker: ['2019-05-01', '2019-05-10'],
+        }
+    },
 }
 </script>

@@ -111,24 +111,6 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BRow,
-  BCol,
-  BFormGroup,
-  BFormSelect,
-  BFormInput,
-  BInputGroupAppend,
-  BCard,
-  BOverlay,
-  BButton,
-  BCardText,
-  BInputGroup,
-} from 'bootstrap-vue'
-import Ripple from 'vue-ripple-directive'
-import { codeBackdrop } from './code'
-
-export default {
-  components: {
-    BCardCode,
     BRow,
     BCol,
     BFormGroup,
@@ -140,19 +122,37 @@ export default {
     BButton,
     BCardText,
     BInputGroup,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      variant: 'light',
-      opacity: 0.85,
-      blur: '2px',
-      variants: ['transparent', 'white', 'light', 'dark', 'primary', 'secondary', 'success', 'danger', 'warning', 'info'],
-      blurs: [{ text: 'None', value: '' }, '1px', '2px', '5px', '0.5em', '1rem'],
-      codeBackdrop,
-    }
-  },
+} from 'bootstrap-vue'
+import Ripple from 'vue-ripple-directive'
+import { codeBackdrop } from './code'
+
+export default {
+    components: {
+        BCardCode,
+        BRow,
+        BCol,
+        BFormGroup,
+        BFormSelect,
+        BFormInput,
+        BInputGroupAppend,
+        BCard,
+        BOverlay,
+        BButton,
+        BCardText,
+        BInputGroup,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            variant: 'light',
+            opacity: 0.85,
+            blur: '2px',
+            variants: ['transparent', 'white', 'light', 'dark', 'primary', 'secondary', 'success', 'danger', 'warning', 'info'],
+            blurs: [{ text: 'None', value: '' }, '1px', '2px', '5px', '0.5em', '1rem'],
+            codeBackdrop,
+        }
+    },
 }
 </script>

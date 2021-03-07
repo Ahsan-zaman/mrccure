@@ -49,15 +49,15 @@ import { BAvatar, BCardText } from 'bootstrap-vue'
 import { codeRounded } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAvatar,
-    BCardText,
-  },
-  data() {
-    return {
-      codeRounded,
-    }
-  },
+    components: {
+        BCardCode,
+        BAvatar,
+        BCardText,
+    },
+    data() {
+        return {
+            codeRounded,
+        }
+    },
 }
 </script>

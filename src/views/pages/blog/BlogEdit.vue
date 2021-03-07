@@ -160,7 +160,7 @@
 
 <script>
 import {
-  BCard, BMedia, BAvatar, BCardText, BMediaAside, BMediaBody, BForm, BRow, BCol, BFormGroup, BFormInput, BImg, BFormFile, BLink, BButton,
+    BCard, BMedia, BAvatar, BCardText, BMediaAside, BMediaBody, BForm, BRow, BCol, BFormGroup, BFormInput, BImg, BFormFile, BLink, BButton,
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import { quillEditor } from 'vue-quill-editor'
@@ -169,54 +169,54 @@ import { useInputImageRenderer } from '@core/comp-functions/forms/form-utils'
 import { ref } from '@vue/composition-api'
 
 export default {
-  components: {
-    BCard,
-    BMedia,
-    BAvatar,
-    BCardText,
-    BMediaAside,
-    BMediaBody,
-    BForm,
-    BLink,
-    BImg,
-    BRow,
-    BCol,
-    BButton,
-    BFormGroup,
-    BFormInput,
-    BFormFile,
-    vSelect,
-    quillEditor,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      blogEdit: {},
-      blogFile: null,
-      categoryOption: ['Fashion', 'Food', 'Gaming', 'Quote', 'Video'],
-      statusOption: ['Published', 'Pending', 'Draft'],
-      snowOption: {
-        theme: 'snow',
-      },
-    }
-  },
-  created() {
-    this.$http.get('/blog/list/data/edit').then(res => { this.blogEdit = res.data })
-  },
-  setup() {
-    const refInputEl = ref(null)
-    const refPreviewEl = ref(null)
+    components: {
+        BCard,
+        BMedia,
+        BAvatar,
+        BCardText,
+        BMediaAside,
+        BMediaBody,
+        BForm,
+        BLink,
+        BImg,
+        BRow,
+        BCol,
+        BButton,
+        BFormGroup,
+        BFormInput,
+        BFormFile,
+        vSelect,
+        quillEditor,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            blogEdit: {},
+            blogFile: null,
+            categoryOption: ['Fashion', 'Food', 'Gaming', 'Quote', 'Video'],
+            statusOption: ['Published', 'Pending', 'Draft'],
+            snowOption: {
+                theme: 'snow',
+            },
+        }
+    },
+    created() {
+        this.$http.get('/blog/list/data/edit').then(res => { this.blogEdit = res.data })
+    },
+    setup() {
+        const refInputEl = ref(null)
+        const refPreviewEl = ref(null)
 
-    const { inputImageRenderer } = useInputImageRenderer(refInputEl, base64 => { refPreviewEl.value.src = base64 })
+        const { inputImageRenderer } = useInputImageRenderer(refInputEl, base64 => { refPreviewEl.value.src = base64 })
 
-    return {
-      refInputEl,
-      refPreviewEl,
-      inputImageRenderer,
-    }
-  },
+        return {
+            refInputEl,
+            refPreviewEl,
+            inputImageRenderer,
+        }
+    },
 }
 </script>
 

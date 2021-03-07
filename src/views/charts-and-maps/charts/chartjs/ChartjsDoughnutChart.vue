@@ -43,25 +43,25 @@ import ChartjsComponentDoughnutChart from './charts-components/ChartjsComponentD
 import chartjsData from './chartjsData'
 
 export default {
-  components: {
-    ChartjsComponentDoughnutChart,
-    BCard,
-  },
-  data() {
-    return {
-      chartjsData,
-      stockData: [
-        {
-          device: 'Desktop', symbol: 'MonitorIcon', color: 'text-primary', percentage: 80, upDown: 2,
-        },
-        {
-          device: 'Mobile', symbol: 'TabletIcon', color: 'text-warning', percentage: 10, upDown: 8,
-        },
-        {
-          device: 'Tablet', symbol: 'TabletIcon', color: 'text-success', percentage: 10, upDown: -5,
-        },
-      ],
-    }
-  },
+    components: {
+        ChartjsComponentDoughnutChart,
+        BCard,
+    },
+    data() {
+        return {
+            chartjsData,
+            stockData: [
+                {
+                    device: 'Desktop', symbol: 'MonitorIcon', color: 'text-primary', percentage: 80, upDown: 2,
+                },
+                {
+                    device: 'Mobile', symbol: 'TabletIcon', color: 'text-warning', percentage: 10, upDown: 8,
+                },
+                {
+                    device: 'Tablet', symbol: 'TabletIcon', color: 'text-success', percentage: 10, upDown: -5,
+                },
+            ],
+        }
+    },
 }
 </script>

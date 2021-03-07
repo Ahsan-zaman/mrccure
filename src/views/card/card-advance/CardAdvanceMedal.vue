@@ -23,20 +23,20 @@
 
 <script>
 import {
-  BCard, BCardText, BLink, BButton, BImg,
+    BCard, BCardText, BLink, BButton, BImg,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BCard,
-    BCardText,
-    BLink,
-    BImg,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
+    components: {
+        BCard,
+        BCardText,
+        BLink,
+        BImg,
+        BButton,
+    },
+    directives: {
+        Ripple,
+    },
 }
 </script>

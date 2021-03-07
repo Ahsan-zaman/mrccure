@@ -40,24 +40,24 @@ import { BFormRating, BFormSelect, BCardText } from 'bootstrap-vue'
 import { codeInternationalization } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormRating,
-    BFormSelect,
-    BCardText,
-  },
-  data() {
-    return {
-      value: 3.5,
-      locale: 'en-US',
-      locales: [
-        { text: 'English US (en-US)', value: 'en-US' },
-        { text: 'French (fr)', value: 'fr' },
-        { text: 'Persian (fa)', value: 'fa' },
-        { text: 'Arabic Egyptian (ar-EG)', value: 'ar-EG' },
-      ],
-      codeInternationalization,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormRating,
+        BFormSelect,
+        BCardText,
+    },
+    data() {
+        return {
+            value: 3.5,
+            locale: 'en-US',
+            locales: [
+                { text: 'English US (en-US)', value: 'en-US' },
+                { text: 'French (fr)', value: 'fr' },
+                { text: 'Persian (fa)', value: 'fa' },
+                { text: 'Arabic Egyptian (ar-EG)', value: 'ar-EG' },
+            ],
+            codeInternationalization,
+        }
+    },
 }
 </script>

@@ -40,23 +40,23 @@ import { BFormRadioGroup, BCardText } from 'bootstrap-vue'
 import { codeArray } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormRadioGroup,
-  },
-  data() {
-    return {
-      selected: 'first',
-      options: [
-        { text: 'Item 1', value: 'first', disabled: false },
-        { text: 'Item 2', value: 'second', disabled: false },
-        { html: '<b>Item</b> 3', value: 'third', disabled: true },
-        { text: 'Item 4', value: 'Item 4', disabled: false },
-        { text: 'Item 5', value: 'E', disabled: false },
-      ],
-      codeArray,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormRadioGroup,
+    },
+    data() {
+        return {
+            selected: 'first',
+            options: [
+                { text: 'Item 1', value: 'first', disabled: false },
+                { text: 'Item 2', value: 'second', disabled: false },
+                { html: '<b>Item</b> 3', value: 'third', disabled: true },
+                { text: 'Item 4', value: 'Item 4', disabled: false },
+                { text: 'Item 5', value: 'E', disabled: false },
+            ],
+            codeArray,
+        }
+    },
 }
 </script>

@@ -54,80 +54,80 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardTitle, BDropdown, BDropdownItem, BCardBody,
+    BCard, BCardHeader, BCardTitle, BDropdown, BDropdownItem, BCardBody,
 } from 'bootstrap-vue'
 import VueApexCharts from 'vue-apexcharts'
 import { $themeColors } from '@themeConfig'
 
 export default {
-  components: {
-    VueApexCharts,
-    BCard,
-    BCardHeader,
-    BCardTitle,
-    BDropdown,
-    BDropdownItem,
-    BCardBody,
-  },
-  data() {
-    return {
-      chartInfo: {},
-      productOrdersRadialBar: {
-        series: [70, 52, 26],
-        chartOptions: {
-          labels: ['Finished', 'Pending', 'Rejected'],
-          plotOptions: {
-            radialBar: {
-              size: 150,
-              hollow: {
-                size: '20%',
-              },
-              track: {
-                strokeWidth: '100%',
-                margin: 15,
-              },
-              dataLabels: {
-                value: {
-                  fontSize: '1rem',
-                  colors: '#5e5873',
-                  fontWeight: '500',
-                  offsetY: 5,
-                },
-                total: {
-                  show: true,
-                  label: 'Total',
-                  fontSize: '1.286rem',
-                  colors: '#5e5873',
-                  fontWeight: '500',
+    components: {
+        VueApexCharts,
+        BCard,
+        BCardHeader,
+        BCardTitle,
+        BDropdown,
+        BDropdownItem,
+        BCardBody,
+    },
+    data() {
+        return {
+            chartInfo: {},
+            productOrdersRadialBar: {
+                series: [70, 52, 26],
+                chartOptions: {
+                    labels: ['Finished', 'Pending', 'Rejected'],
+                    plotOptions: {
+                        radialBar: {
+                            size: 150,
+                            hollow: {
+                                size: '20%',
+                            },
+                            track: {
+                                strokeWidth: '100%',
+                                margin: 15,
+                            },
+                            dataLabels: {
+                                value: {
+                                    fontSize: '1rem',
+                                    colors: '#5e5873',
+                                    fontWeight: '500',
+                                    offsetY: 5,
+                                },
+                                total: {
+                                    show: true,
+                                    label: 'Total',
+                                    fontSize: '1.286rem',
+                                    colors: '#5e5873',
+                                    fontWeight: '500',
 
-                  formatter() {
-                    // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-                    return 42459
-                  },
+                                    formatter() {
+                                        // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
+                                        return 42459
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    colors: [$themeColors.primary, $themeColors.warning, $themeColors.danger],
+                    stroke: {
+                        lineCap: 'round',
+                    },
+                    chart: {
+                        height: 355,
+                        dropShadow: {
+                            enabled: true,
+                            blur: 3,
+                            left: 1,
+                            top: 1,
+                            opacity: 0.1,
+                        },
+                    },
                 },
-              },
             },
-          },
-          colors: [$themeColors.primary, $themeColors.warning, $themeColors.danger],
-          stroke: {
-            lineCap: 'round',
-          },
-          chart: {
-            height: 355,
-            dropShadow: {
-              enabled: true,
-              blur: 3,
-              left: 1,
-              top: 1,
-              opacity: 0.1,
-            },
-          },
-        },
-      },
-    }
-  },
-  created() {
-    this.$http.get('/card/card-analytics/product-orders').then(res => { this.chartInfo = res.data })
-  },
+        }
+    },
+    created() {
+        this.$http.get('/card/card-analytics/product-orders').then(res => { this.chartInfo = res.data })
+    },
 }
 </script>

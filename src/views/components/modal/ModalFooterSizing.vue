@@ -67,27 +67,27 @@
 
 <script>
 import {
-  BButton, BModal, VBModal, BCardText,
+    BButton, BModal, VBModal, BCardText,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code'
 import Ripple from 'vue-ripple-directive'
 import { codeFooterSize } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BButton,
-    BModal,
-  },
-  directives: {
-    'b-modal': VBModal,
-    Ripple,
-  },
-  data() {
-    return {
-      codeFooterSize,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BButton,
+        BModal,
+    },
+    directives: {
+        'b-modal': VBModal,
+        Ripple,
+    },
+    data() {
+        return {
+            codeFooterSize,
+        }
+    },
 }
 </script>

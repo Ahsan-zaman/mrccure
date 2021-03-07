@@ -50,23 +50,23 @@
 
 <script>
 import {
-  BListGroup, BListGroupItem, BBadge, BCardText,
+    BListGroup, BListGroupItem, BBadge, BCardText,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code'
 import { codeListGroupBadge } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BBadge,
-    BListGroup,
-    BCardText,
-    BListGroupItem,
-  },
-  data() {
-    return {
-      codeListGroupBadge,
-    }
-  },
+    components: {
+        BCardCode,
+        BBadge,
+        BListGroup,
+        BCardText,
+        BListGroupItem,
+    },
+    data() {
+        return {
+            codeListGroupBadge,
+        }
+    },
 }
 </script>

@@ -217,90 +217,90 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BAvatar, BBadge, BPagination, BFormGroup, BFormInput, BFormSelect, BAlert, BDropdown, BDropdownItem,
+    BAvatar, BBadge, BPagination, BFormGroup, BFormInput, BFormSelect, BAlert, BDropdown, BDropdownItem,
 } from 'bootstrap-vue'
 import { VueGoodTable } from 'vue-good-table'
 import store from '@/store/index'
 import { codeI18n } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    VueGoodTable,
-    BAvatar,
-    BBadge,
-    BPagination,
-    BFormGroup,
-    BFormInput,
-    BFormSelect,
-    BAlert,
-    BDropdown,
-    BDropdownItem,
-  },
-  data() {
-    return {
-      pageLength: 5,
-      codeI18n,
-      dir: false,
-      columns: [
-        {
-          label: 'Name',
-          field: 'fullName',
-        },
-        {
-          label: 'Email',
-          field: 'email',
-        },
-        {
-          label: 'Date',
-          field: 'startDate',
-        },
-        {
-          label: 'Salary',
-          field: 'salary',
-        },
-        {
-          label: 'Status',
-          field: 'status',
-        },
-        {
-          label: 'Action',
-          field: 'action',
-        },
-      ],
-      rows: [],
-      searchTerm: '',
-
-    }
-  },
-  computed: {
-    statusVariant() {
-      const statusColor = {
-        /* eslint-disable key-spacing */
-        Current      : 'light-primary',
-        Professional : 'light-success',
-        Rejected     : 'light-danger',
-        Resigned     : 'light-warning',
-        Applied      : 'light-info',
-        /* eslint-enable key-spacing */
-      }
-
-      return status => statusColor[status]
+    components: {
+        BCardCode,
+        VueGoodTable,
+        BAvatar,
+        BBadge,
+        BPagination,
+        BFormGroup,
+        BFormInput,
+        BFormSelect,
+        BAlert,
+        BDropdown,
+        BDropdownItem,
     },
-    direction() {
-      if (store.state.appConfig.isRTL) {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.dir = true
-        return this.dir
-      }
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.dir = false
-      return this.dir
+    data() {
+        return {
+            pageLength: 5,
+            codeI18n,
+            dir: false,
+            columns: [
+                {
+                    label: 'Name',
+                    field: 'fullName',
+                },
+                {
+                    label: 'Email',
+                    field: 'email',
+                },
+                {
+                    label: 'Date',
+                    field: 'startDate',
+                },
+                {
+                    label: 'Salary',
+                    field: 'salary',
+                },
+                {
+                    label: 'Status',
+                    field: 'status',
+                },
+                {
+                    label: 'Action',
+                    field: 'action',
+                },
+            ],
+            rows: [],
+            searchTerm: '',
+
+        }
     },
-  },
-  created() {
-    this.$http.get('/good-table/basic')
-      .then(res => { this.rows = res.data })
-  },
+    computed: {
+        statusVariant() {
+            const statusColor = {
+                /* eslint-disable key-spacing */
+                Current      : 'light-primary',
+                Professional : 'light-success',
+                Rejected     : 'light-danger',
+                Resigned     : 'light-warning',
+                Applied      : 'light-info',
+                /* eslint-enable key-spacing */
+            }
+
+            return status => statusColor[status]
+        },
+        direction() {
+            if (store.state.appConfig.isRTL) {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.dir = true
+                return this.dir
+            }
+            // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+            this.dir = false
+            return this.dir
+        },
+    },
+    created() {
+        this.$http.get('/good-table/basic')
+            .then(res => { this.rows = res.data })
+    },
 }
 </script>

@@ -64,26 +64,26 @@ import { BCarousel, BCarouselSlide, BCardText } from 'bootstrap-vue'
 import { codeVsupport } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCarousel,
-    BCarouselSlide,
-    BCardText,
-  },
-  data() {
-    return {
-      slide: 0,
-      sliding: null,
-      codeVsupport,
-    }
-  },
-  methods: {
-    onSlideStart() {
-      this.sliding = true
+    components: {
+        BCardCode,
+        BCarousel,
+        BCarouselSlide,
+        BCardText,
     },
-    onSlideEnd() {
-      this.sliding = false
+    data() {
+        return {
+            slide: 0,
+            sliding: null,
+            codeVsupport,
+        }
     },
-  },
+    methods: {
+        onSlideStart() {
+            this.sliding = true
+        },
+        onSlideEnd() {
+            this.sliding = false
+        },
+    },
 }
 </script>

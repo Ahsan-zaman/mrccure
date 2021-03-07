@@ -48,41 +48,41 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardTitle, BCardBody, BCardText, BFormCheckbox, BBadge, BButton,
+    BCard, BCardHeader, BCardTitle, BCardBody, BCardText, BFormCheckbox, BBadge, BButton,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BCard,
-    BBadge,
-    BButton,
-    BCardHeader,
-    BCardTitle,
-    BCardBody,
-    BCardText,
-    BFormCheckbox,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      businessItems: [
-        {
-          option: 'Option #1', money: '+$39', badgeColor: 'light-success', checked: false,
-        },
-        {
-          option: 'Option #2', money: '+85', badgeColor: 'light-primary', checked: true,
-        },
-        {
-          option: 'Option #3', money: '+$199', badgeColor: 'light-success', checked: false,
-        },
-        {
-          option: 'Option #4', money: '+$459', badgeColor: 'light-success', checked: false,
-        },
-      ],
-    }
-  },
+    components: {
+        BCard,
+        BBadge,
+        BButton,
+        BCardHeader,
+        BCardTitle,
+        BCardBody,
+        BCardText,
+        BFormCheckbox,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            businessItems: [
+                {
+                    option: 'Option #1', money: '+$39', badgeColor: 'light-success', checked: false,
+                },
+                {
+                    option: 'Option #2', money: '+85', badgeColor: 'light-primary', checked: true,
+                },
+                {
+                    option: 'Option #3', money: '+$199', badgeColor: 'light-success', checked: false,
+                },
+                {
+                    option: 'Option #4', money: '+$459', badgeColor: 'light-success', checked: false,
+                },
+            ],
+        }
+    },
 }
 </script>

@@ -89,34 +89,34 @@
 
 <script>
 import {
-  BCard, BCardBody, BCardHeader, BCardTitle, BImg, BMedia, BMediaBody, BMediaAside, BAvatar, BAvatarGroup, VBTooltip,
+    BCard, BCardBody, BCardHeader, BCardTitle, BImg, BMedia, BMediaBody, BMediaAside, BAvatar, BAvatarGroup, VBTooltip,
 } from 'bootstrap-vue'
 import AppTimeline from '@core/components/app-timeline/AppTimeline.vue'
 import AppTimelineItem from '@core/components/app-timeline/AppTimelineItem.vue'
 /* eslint-disable global-require */
 export default {
-  components: {
-    BCard,
-    BImg,
-    BCardBody,
-    BCardHeader,
-    BCardTitle,
-    AppTimeline,
-    AppTimelineItem,
-    BMedia,
-    BAvatar,
-    BMediaBody,
-    BMediaAside,
-    BAvatarGroup,
-  },
-  directives: {
-    'b-tooltip': VBTooltip,
-  },
-  props: {
-    data: {
-      type: Object,
-      default: () => {},
+    components: {
+        BCard,
+        BImg,
+        BCardBody,
+        BCardHeader,
+        BCardTitle,
+        AppTimeline,
+        AppTimelineItem,
+        BMedia,
+        BAvatar,
+        BMediaBody,
+        BMediaAside,
+        BAvatarGroup,
     },
-  },
+    directives: {
+        'b-tooltip': VBTooltip,
+    },
+    props: {
+        data: {
+            type: Object,
+            default: () => {},
+        },
+    },
 }
 </script>

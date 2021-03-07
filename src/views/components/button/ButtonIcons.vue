@@ -70,14 +70,14 @@ import Ripple from 'vue-ripple-directive'
 import { codeIcon } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  data() { return { codeIcon } },
+    components: {
+        BCardCode,
+        BCardText,
+        BButton,
+    },
+    directives: {
+        Ripple,
+    },
+    data() { return { codeIcon } },
 }
 </script>

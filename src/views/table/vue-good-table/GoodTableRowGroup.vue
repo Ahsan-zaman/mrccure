@@ -161,88 +161,88 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BAvatar, BBadge, BPagination, BFormGroup, BFormInput, BFormSelect, BDropdownItem, BDropdown,
+    BAvatar, BBadge, BPagination, BFormGroup, BFormInput, BFormSelect, BDropdownItem, BDropdown,
 } from 'bootstrap-vue'
 import { VueGoodTable } from 'vue-good-table'
 import store from '@/store/index'
 import { codeRowGroup } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    VueGoodTable,
-    BAvatar,
-    BBadge,
-    BPagination,
-    BFormGroup,
-    BFormInput,
-    BFormSelect,
-    BDropdownItem,
-    BDropdown,
-  },
-  data() {
-    return {
-      pageLength: 5,
-      dir: false,
-      codeRowGroup,
-      columns: [
-        {
-          label: 'Name',
-          field: 'fullName',
-        },
-        {
-          label: 'Email',
-          field: 'email',
-        },
-        {
-          label: 'Date',
-          field: 'startDate',
-        },
-        {
-          label: 'Salary',
-          field: 'salary',
-        },
-        {
-          label: 'Status',
-          field: 'status',
-        },
-        {
-          label: 'Action',
-          field: 'action',
-        },
-      ],
-      rows: [],
-      searchTerm: '',
-    }
-  },
-  computed: {
-    statusVariant() {
-      const statusColor = {
-        /* eslint-disable key-spacing */
-        Current      : 'light-primary',
-        Professional : 'light-success',
-        Rejected     : 'light-danger',
-        Resigned     : 'light-warning',
-        Applied      : 'light-info',
-        /* eslint-enable key-spacing */
-      }
+    components: {
+        BCardCode,
+        VueGoodTable,
+        BAvatar,
+        BBadge,
+        BPagination,
+        BFormGroup,
+        BFormInput,
+        BFormSelect,
+        BDropdownItem,
+        BDropdown,
+    },
+    data() {
+        return {
+            pageLength: 5,
+            dir: false,
+            codeRowGroup,
+            columns: [
+                {
+                    label: 'Name',
+                    field: 'fullName',
+                },
+                {
+                    label: 'Email',
+                    field: 'email',
+                },
+                {
+                    label: 'Date',
+                    field: 'startDate',
+                },
+                {
+                    label: 'Salary',
+                    field: 'salary',
+                },
+                {
+                    label: 'Status',
+                    field: 'status',
+                },
+                {
+                    label: 'Action',
+                    field: 'action',
+                },
+            ],
+            rows: [],
+            searchTerm: '',
+        }
+    },
+    computed: {
+        statusVariant() {
+            const statusColor = {
+                /* eslint-disable key-spacing */
+                Current      : 'light-primary',
+                Professional : 'light-success',
+                Rejected     : 'light-danger',
+                Resigned     : 'light-warning',
+                Applied      : 'light-info',
+                /* eslint-enable key-spacing */
+            }
 
-      return status => statusColor[status]
+            return status => statusColor[status]
+        },
+        direction() {
+            if (store.state.appConfig.isRTL) {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.dir = true
+                return this.dir
+            }
+            // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+            this.dir = false
+            return this.dir
+        },
     },
-    direction() {
-      if (store.state.appConfig.isRTL) {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.dir = true
-        return this.dir
-      }
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.dir = false
-      return this.dir
+    created() {
+        this.$http.get('/good-table/row-group')
+            .then(res => { this.rows = res.data })
     },
-  },
-  created() {
-    this.$http.get('/good-table/row-group')
-      .then(res => { this.rows = res.data })
-  },
 }
 </script>

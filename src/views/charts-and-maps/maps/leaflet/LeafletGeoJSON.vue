@@ -20,25 +20,25 @@ import BCardCode from '@/@core/components/b-card-code/BCardCode.vue'
 import { codeGeoJSON } from './code'
 
 export default {
-  components: {
-    LMap,
-    LTileLayer,
-    LGeoJson,
-    BCardCode,
-  },
-  data() {
-    return {
-      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      zoom: 8,
-      center: [47.313220, -1.319482],
-      geojson: null,
-      codeGeoJSON,
-    }
-  },
-  async created() {
-    const response = await fetch('https://rawgit.com/gregoiredavid/france-geojson/master/regions/pays-de-la-loire/communes-pays-de-la-loire.geojson')
-    this.geojson = await response.json()
-  },
+    components: {
+        LMap,
+        LTileLayer,
+        LGeoJson,
+        BCardCode,
+    },
+    data() {
+        return {
+            url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            zoom: 8,
+            center: [47.313220, -1.319482],
+            geojson: null,
+            codeGeoJSON,
+        }
+    },
+    async created() {
+        const response = await fetch('https://rawgit.com/gregoiredavid/france-geojson/master/regions/pays-de-la-loire/communes-pays-de-la-loire.geojson')
+        this.geojson = await response.json()
+    },
 }
 </script>
 

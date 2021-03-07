@@ -140,64 +140,64 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BRow,
-  BCol,
-  BFormGroup,
-  BFormInput,
-  BFormCheckbox,
-  BForm,
-  BButton,
-  BFormText,
-  BFormDatalist,
-  BFormInvalidFeedback,
-  BInputGroup,
-  BInputGroupPrepend,
-  BFormValidFeedback,
+    BRow,
+    BCol,
+    BFormGroup,
+    BFormInput,
+    BFormCheckbox,
+    BForm,
+    BButton,
+    BFormText,
+    BFormDatalist,
+    BFormInvalidFeedback,
+    BInputGroup,
+    BInputGroupPrepend,
+    BFormValidFeedback,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeFeedbackHelper } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BRow,
-    BCol,
-    BFormGroup,
-    BInputGroup,
-    BInputGroupPrepend,
-    BFormInput,
-    BFormCheckbox,
-    BForm,
-    BFormText,
-    BButton,
-    BFormDatalist,
-    BFormInvalidFeedback,
-    BFormValidFeedback,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      options: ['Devloper', 'Manager', 'CEO', 'CTO', 'Full Stack Devloper'],
-      userId: '',
-      occupationID: '',
-      codeFeedbackHelper,
-    }
-  },
-  computed: {
-    validation() {
-      return this.userId.length > 4 && this.userId.length < 13
+    components: {
+        BCardCode,
+        BRow,
+        BCol,
+        BFormGroup,
+        BInputGroup,
+        BInputGroupPrepend,
+        BFormInput,
+        BFormCheckbox,
+        BForm,
+        BFormText,
+        BButton,
+        BFormDatalist,
+        BFormInvalidFeedback,
+        BFormValidFeedback,
     },
-    validationOccupation() {
-      return this.occupationID.length > 1
+    directives: {
+        Ripple,
     },
-  },
-  methods: {
-    reset() {
-      this.userId = ''
-      this.occupationID = ''
+    data() {
+        return {
+            options: ['Devloper', 'Manager', 'CEO', 'CTO', 'Full Stack Devloper'],
+            userId: '',
+            occupationID: '',
+            codeFeedbackHelper,
+        }
     },
-  },
+    computed: {
+        validation() {
+            return this.userId.length > 4 && this.userId.length < 13
+        },
+        validationOccupation() {
+            return this.occupationID.length > 1
+        },
+    },
+    methods: {
+        reset() {
+            this.userId = ''
+            this.occupationID = ''
+        },
+    },
 }
 </script>

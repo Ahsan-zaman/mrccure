@@ -14,14 +14,14 @@ import ChartjsComponentRadarChart from './charts-components/ChartjsComponentRada
 import chartjsData from './chartjsData'
 
 export default {
-  components: {
-    ChartjsComponentRadarChart,
-    BCard,
-  },
-  data() {
-    return {
-      chartjsData,
-    }
-  },
+    components: {
+        ChartjsComponentRadarChart,
+        BCard,
+    },
+    data() {
+        return {
+            chartjsData,
+        }
+    },
 }
 </script>

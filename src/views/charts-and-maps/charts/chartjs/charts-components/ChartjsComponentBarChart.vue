@@ -123,19 +123,19 @@ Chart.elements.Rectangle.prototype.draw = function () {
 /* eslint-enable */
 
 export default {
-  extends: Bar,
-  props: {
-    data: {
-      type: Object,
-      default: null,
+    extends: Bar,
+    props: {
+        data: {
+            type: Object,
+            default: null,
+        },
+        options: {
+            type: Object,
+            default: null,
+        },
     },
-    options: {
-      type: Object,
-      default: null,
+    mounted() {
+        this.renderChart(this.data, this.options)
     },
-  },
-  mounted() {
-    this.renderChart(this.data, this.options)
-  },
 }
 </script>

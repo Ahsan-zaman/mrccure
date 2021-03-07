@@ -35,24 +35,24 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BNav, BNavItem, BNavItemDropdown, BDropdownDivider, BDropdownItem, BCardText,
+    BNav, BNavItem, BNavItemDropdown, BDropdownDivider, BDropdownItem, BCardText,
 } from 'bootstrap-vue'
 import { codeDropdown } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BNav,
-    BNavItem,
-    BNavItemDropdown,
-    BDropdownDivider,
-    BDropdownItem,
-    BCardText,
-  },
-  data() {
-    return {
-      codeDropdown,
-    }
-  },
+    components: {
+        BCardCode,
+        BNav,
+        BNavItem,
+        BNavItemDropdown,
+        BDropdownDivider,
+        BDropdownItem,
+        BCardText,
+    },
+    data() {
+        return {
+            codeDropdown,
+        }
+    },
 }
 </script>

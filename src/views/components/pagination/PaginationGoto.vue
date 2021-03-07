@@ -50,18 +50,18 @@ import BCardCode from '@core/components/b-card-code'
 import { codeGoto } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPagination,
-    BCardText,
-  },
-  data() {
-    return {
-      codeGoto,
-      currentPage: 5,
-      perPage: 1,
-      rows: 100,
-    }
-  },
+    components: {
+        BCardCode,
+        BPagination,
+        BCardText,
+    },
+    data() {
+        return {
+            codeGoto,
+            currentPage: 5,
+            perPage: 1,
+            rows: 100,
+        }
+    },
 }
 </script>

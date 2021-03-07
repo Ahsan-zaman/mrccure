@@ -85,33 +85,33 @@ import ToastificationContent from '@core/components/toastification/Toastificatio
 import { codeVariant } from './code'
 
 export default {
-  components: {
-    BButton,
-    BCardCode,
-    BCardText,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeVariant,
-    }
-  },
-  methods: {
-    showToast(variant) {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Notification',
-          icon: 'BellIcon',
-          text: '👋 Chocolate oat cake jelly oat cake candy jelly beans pastry.',
-          variant,
-        },
-      })
+    components: {
+        BButton,
+        BCardCode,
+        BCardText,
+        // eslint-disable-next-line vue/no-unused-components
+        ToastificationContent,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeVariant,
+        }
+    },
+    methods: {
+        showToast(variant) {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Notification',
+                    icon: 'BellIcon',
+                    text: '👋 Chocolate oat cake jelly oat cake candy jelly beans pastry.',
+                    variant,
+                },
+            })
+        },
+    },
 }
 </script>

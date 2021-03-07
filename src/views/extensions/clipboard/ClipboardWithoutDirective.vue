@@ -36,51 +36,51 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BFormInput, BFormGroup, BButton, BCardText,
+    BFormInput, BFormGroup, BButton, BCardText,
 } from 'bootstrap-vue'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
 import Ripple from 'vue-ripple-directive'
 import { codeWithoutDirective } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormInput,
-    BFormGroup,
-    BButton,
-    BCardText,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      message1: 'Copy Me Without Directive',
-      codeWithoutDirective,
-    }
-  },
-  methods: {
-    doCopy() {
-      this.$copyText(this.message1).then(() => {
-        this.$toast({
-          component: ToastificationContent,
-          props: {
-            title: 'Text copied',
-            icon: 'BellIcon',
-          },
-        })
-      }, () => {
-        this.$toast({
-          component: ToastificationContent,
-          props: {
-            title: 'Can not copy!',
-            icon: 'BellIcon',
-          },
-        })
-      })
+    components: {
+        BCardCode,
+        BFormInput,
+        BFormGroup,
+        BButton,
+        BCardText,
+        // eslint-disable-next-line vue/no-unused-components
+        ToastificationContent,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            message1: 'Copy Me Without Directive',
+            codeWithoutDirective,
+        }
+    },
+    methods: {
+        doCopy() {
+            this.$copyText(this.message1).then(() => {
+                this.$toast({
+                    component: ToastificationContent,
+                    props: {
+                        title: 'Text copied',
+                        icon: 'BellIcon',
+                    },
+                })
+            }, () => {
+                this.$toast({
+                    component: ToastificationContent,
+                    props: {
+                        title: 'Can not copy!',
+                        icon: 'BellIcon',
+                    },
+                })
+            })
+        },
+    },
 }
 </script>

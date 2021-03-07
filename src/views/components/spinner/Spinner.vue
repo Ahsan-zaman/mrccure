@@ -44,19 +44,19 @@ import SpinnerTextAlign from './SpinnerTextAlign.vue'
 import SpinnerButton from './SpinnerButton.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    SpinnerBorder,
-    SpinnerColor,
-    SpinnerGrow,
-    SpinnerGrowColor,
-    SpinnerSize,
-    SpinnerFlex,
-    SpinnerFloat,
-    SpinnerTextAlign,
-    SpinnerButton,
-  },
+        SpinnerBorder,
+        SpinnerColor,
+        SpinnerGrow,
+        SpinnerGrowColor,
+        SpinnerSize,
+        SpinnerFlex,
+        SpinnerFloat,
+        SpinnerTextAlign,
+        SpinnerButton,
+    },
 }
 </script>

@@ -46,26 +46,26 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BButton, BModal, VBModal, BCardText,
+    BButton, BModal, VBModal, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeDisableFooter } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-    BModal,
-  },
-  directives: {
-    'b-modal': VBModal,
-    Ripple,
-  },
-  data() {
-    return {
-      codeDisableFooter,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
+        BModal,
+    },
+    directives: {
+        'b-modal': VBModal,
+        Ripple,
+    },
+    data() {
+        return {
+            codeDisableFooter,
+        }
+    },
 }
 </script>

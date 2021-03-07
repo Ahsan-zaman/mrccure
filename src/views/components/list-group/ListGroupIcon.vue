@@ -50,16 +50,16 @@ import BCardCode from '@core/components/b-card-code'
 import { codeIcon } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BListGroup,
-    BCardText,
-    BListGroupItem,
-  },
-  data() {
-    return {
-      codeIcon,
-    }
-  },
+    components: {
+        BCardCode,
+        BListGroup,
+        BCardText,
+        BListGroupItem,
+    },
+    data() {
+        return {
+            codeIcon,
+        }
+    },
 }
 </script>

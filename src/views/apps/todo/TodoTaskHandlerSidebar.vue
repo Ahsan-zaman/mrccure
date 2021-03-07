@@ -213,7 +213,7 @@
 
 <script>
 import {
-  BSidebar, BForm, BFormGroup, BFormInput, BAvatar, BButton, BFormInvalidFeedback,
+    BSidebar, BForm, BFormGroup, BFormInput, BAvatar, BButton, BFormInvalidFeedback,
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import flatPickr from 'vue-flatpickr-component'
@@ -227,100 +227,100 @@ import { quillEditor } from 'vue-quill-editor'
 import useTaskHandler from './useTaskHandler'
 
 export default {
-  components: {
+    components: {
     // BSV
-    BButton,
-    BSidebar,
-    BForm,
-    BFormGroup,
-    BFormInput,
-    BAvatar,
-    BFormInvalidFeedback,
+        BButton,
+        BSidebar,
+        BForm,
+        BFormGroup,
+        BFormInput,
+        BAvatar,
+        BFormInvalidFeedback,
 
-    // 3rd party packages
-    vSelect,
-    flatPickr,
-    quillEditor,
+        // 3rd party packages
+        vSelect,
+        flatPickr,
+        quillEditor,
 
-    // Form Validation
-    ValidationProvider,
-    ValidationObserver,
-  },
-  directives: {
-    Ripple,
-  },
-  model: {
-    prop: 'isTaskHandlerSidebarActive',
-    event: 'update:is-task-handler-sidebar-active',
-  },
-  props: {
-    isTaskHandlerSidebarActive: {
-      type: Boolean,
-      required: true,
+        // Form Validation
+        ValidationProvider,
+        ValidationObserver,
     },
-    task: {
-      type: Object,
-      required: true,
+    directives: {
+        Ripple,
     },
-    clearTaskData: {
-      type: Function,
-      required: true,
+    model: {
+        prop: 'isTaskHandlerSidebarActive',
+        event: 'update:is-task-handler-sidebar-active',
     },
-  },
-  data() {
-    return {
-      required,
-      email,
-      url,
-    }
-  },
-  setup(props, { emit }) {
-    const {
-      taskLocal,
-      resetTaskLocal,
+    props: {
+        isTaskHandlerSidebarActive: {
+            type: Boolean,
+            required: true,
+        },
+        task: {
+            type: Object,
+            required: true,
+        },
+        clearTaskData: {
+            type: Function,
+            required: true,
+        },
+    },
+    data() {
+        return {
+            required,
+            email,
+            url,
+        }
+    },
+    setup(props, { emit }) {
+        const {
+            taskLocal,
+            resetTaskLocal,
 
-      // UI
-      assigneeOptions,
-      onSubmit,
-      tagOptions,
-      resolveAvatarVariant,
-    } = useTaskHandler(toRefs(props), emit)
+            // UI
+            assigneeOptions,
+            onSubmit,
+            tagOptions,
+            resolveAvatarVariant,
+        } = useTaskHandler(toRefs(props), emit)
 
-    const {
-      refFormObserver,
-      getValidationState,
-      resetForm,
-      clearForm,
-    } = formValidation(resetTaskLocal, props.clearTaskData)
+        const {
+            refFormObserver,
+            getValidationState,
+            resetForm,
+            clearForm,
+        } = formValidation(resetTaskLocal, props.clearTaskData)
 
-    const editorOption = {
-      modules: {
-        toolbar: '#quill-toolbar',
-      },
-      placeholder: 'Write your description',
-    }
+        const editorOption = {
+            modules: {
+                toolbar: '#quill-toolbar',
+            },
+            placeholder: 'Write your description',
+        }
 
-    return {
-      // Add New
-      taskLocal,
-      onSubmit,
-      assigneeOptions,
-      tagOptions,
+        return {
+            // Add New
+            taskLocal,
+            onSubmit,
+            assigneeOptions,
+            tagOptions,
 
-      // Form Validation
-      resetForm,
-      clearForm,
-      refFormObserver,
-      getValidationState,
+            // Form Validation
+            resetForm,
+            clearForm,
+            refFormObserver,
+            getValidationState,
 
-      // UI
-      editorOption,
-      resolveAvatarVariant,
+            // UI
+            editorOption,
+            resolveAvatarVariant,
 
-      // Filter/Formatter
-      avatarText,
-    }
-  },
+            // Filter/Formatter
+            avatarText,
+        }
+    },
 }
 </script>
 

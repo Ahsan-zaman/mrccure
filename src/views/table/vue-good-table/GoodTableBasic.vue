@@ -159,102 +159,102 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BAvatar, BBadge, BPagination, BFormGroup, BFormInput, BFormSelect, BDropdown, BDropdownItem,
+    BAvatar, BBadge, BPagination, BFormGroup, BFormInput, BFormSelect, BDropdown, BDropdownItem,
 } from 'bootstrap-vue'
 import { VueGoodTable } from 'vue-good-table'
 import store from '@/store/index'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    VueGoodTable,
-    BAvatar,
-    BBadge,
-    BPagination,
-    BFormGroup,
-    BFormInput,
-    BFormSelect,
-    BDropdown,
-    BDropdownItem,
-  },
-  data() {
-    return {
-      pageLength: 3,
-      dir: false,
-      codeBasic,
-      columns: [
-        {
-          label: 'Name',
-          field: 'fullName',
-        },
-        {
-          label: 'Email',
-          field: 'email',
-        },
-        {
-          label: 'Date',
-          field: 'startDate',
-        },
-        {
-          label: 'Salary',
-          field: 'salary',
-        },
-        {
-          label: 'Status',
-          field: 'status',
-        },
-        {
-          label: 'Action',
-          field: 'action',
-        },
-      ],
-      rows: [],
-      searchTerm: '',
-      status: [{
-        1: 'Current',
-        2: 'Professional',
-        3: 'Rejected',
-        4: 'Resigned',
-        5: 'Applied',
-      },
-      {
-        1: 'light-primary',
-        2: 'light-success',
-        3: 'light-danger',
-        4: 'light-warning',
-        5: 'light-info',
-      }],
-    }
-  },
-  computed: {
-    statusVariant() {
-      const statusColor = {
-        /* eslint-disable key-spacing */
-        Current      : 'light-primary',
-        Professional : 'light-success',
-        Rejected     : 'light-danger',
-        Resigned     : 'light-warning',
-        Applied      : 'light-info',
-        /* eslint-enable key-spacing */
-      }
+    components: {
+        BCardCode,
+        VueGoodTable,
+        BAvatar,
+        BBadge,
+        BPagination,
+        BFormGroup,
+        BFormInput,
+        BFormSelect,
+        BDropdown,
+        BDropdownItem,
+    },
+    data() {
+        return {
+            pageLength: 3,
+            dir: false,
+            codeBasic,
+            columns: [
+                {
+                    label: 'Name',
+                    field: 'fullName',
+                },
+                {
+                    label: 'Email',
+                    field: 'email',
+                },
+                {
+                    label: 'Date',
+                    field: 'startDate',
+                },
+                {
+                    label: 'Salary',
+                    field: 'salary',
+                },
+                {
+                    label: 'Status',
+                    field: 'status',
+                },
+                {
+                    label: 'Action',
+                    field: 'action',
+                },
+            ],
+            rows: [],
+            searchTerm: '',
+            status: [{
+                1: 'Current',
+                2: 'Professional',
+                3: 'Rejected',
+                4: 'Resigned',
+                5: 'Applied',
+            },
+            {
+                1: 'light-primary',
+                2: 'light-success',
+                3: 'light-danger',
+                4: 'light-warning',
+                5: 'light-info',
+            }],
+        }
+    },
+    computed: {
+        statusVariant() {
+            const statusColor = {
+                /* eslint-disable key-spacing */
+                Current      : 'light-primary',
+                Professional : 'light-success',
+                Rejected     : 'light-danger',
+                Resigned     : 'light-warning',
+                Applied      : 'light-info',
+                /* eslint-enable key-spacing */
+            }
 
-      return status => statusColor[status]
+            return status => statusColor[status]
+        },
+        direction() {
+            if (store.state.appConfig.isRTL) {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.dir = true
+                return this.dir
+            }
+            // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+            this.dir = false
+            return this.dir
+        },
     },
-    direction() {
-      if (store.state.appConfig.isRTL) {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.dir = true
-        return this.dir
-      }
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.dir = false
-      return this.dir
+    created() {
+        this.$http.get('/good-table/basic')
+            .then(res => { this.rows = res.data })
     },
-  },
-  created() {
-    this.$http.get('/good-table/basic')
-      .then(res => { this.rows = res.data })
-  },
 }
 </script>

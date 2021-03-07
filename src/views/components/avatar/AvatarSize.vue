@@ -43,15 +43,15 @@ import { BAvatar, BCardText } from 'bootstrap-vue'
 import { codeSizes } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAvatar,
-    BCardText,
-  },
-  data() {
-    return {
-      codeSizes,
-    }
-  },
+    components: {
+        BCardCode,
+        BAvatar,
+        BCardText,
+    },
+    data() {
+        return {
+            codeSizes,
+        }
+    },
 }
 </script>

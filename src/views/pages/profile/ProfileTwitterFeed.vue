@@ -47,18 +47,18 @@
 
 <script>
 import {
-  BCard, BAvatar, BLink, BCardText,
+    BCard, BAvatar, BLink, BCardText,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard, BAvatar, BLink, BCardText,
-  },
-  props: {
-    twitterFeed: {
-      type: Array,
-      default: () => {},
+    components: {
+        BCard, BAvatar, BLink, BCardText,
     },
-  },
+    props: {
+        twitterFeed: {
+            type: Array,
+            default: () => {},
+        },
+    },
 }
 </script>

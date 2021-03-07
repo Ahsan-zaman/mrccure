@@ -50,55 +50,55 @@ import CalendarEventHandler from './calendar-event-handler/CalendarEventHandler.
 import useCalendar from './useCalendar'
 
 export default {
-  components: {
-    FullCalendar, // make the <FullCalendar> tag available
-    CalendarSidebar,
-    CalendarEventHandler,
-  },
-  setup() {
-    const CALENDAR_APP_STORE_MODULE_NAME = 'calendar'
+    components: {
+        FullCalendar, // make the <FullCalendar> tag available
+        CalendarSidebar,
+        CalendarEventHandler,
+    },
+    setup() {
+        const CALENDAR_APP_STORE_MODULE_NAME = 'calendar'
 
-    // Register module
-    if (!store.hasModule(CALENDAR_APP_STORE_MODULE_NAME)) store.registerModule(CALENDAR_APP_STORE_MODULE_NAME, calendarStoreModule)
+        // Register module
+        if (!store.hasModule(CALENDAR_APP_STORE_MODULE_NAME)) store.registerModule(CALENDAR_APP_STORE_MODULE_NAME, calendarStoreModule)
 
-    // UnRegister on leave
-    onUnmounted(() => {
-      if (store.hasModule(CALENDAR_APP_STORE_MODULE_NAME)) store.unregisterModule(CALENDAR_APP_STORE_MODULE_NAME)
-    })
+        // UnRegister on leave
+        onUnmounted(() => {
+            if (store.hasModule(CALENDAR_APP_STORE_MODULE_NAME)) store.unregisterModule(CALENDAR_APP_STORE_MODULE_NAME)
+        })
 
-    const {
-      refCalendar,
-      isCalendarOverlaySidebarActive,
-      event,
-      clearEventData,
-      addEvent,
-      updateEvent,
-      removeEvent,
-      fetchEvents,
-      refetchEvents,
-      calendarOptions,
+        const {
+            refCalendar,
+            isCalendarOverlaySidebarActive,
+            event,
+            clearEventData,
+            addEvent,
+            updateEvent,
+            removeEvent,
+            fetchEvents,
+            refetchEvents,
+            calendarOptions,
 
-      // ----- UI ----- //
-      isEventHandlerSidebarActive,
-    } = useCalendar()
+            // ----- UI ----- //
+            isEventHandlerSidebarActive,
+        } = useCalendar()
 
-    fetchEvents()
+        fetchEvents()
 
-    return {
-      refCalendar,
-      isCalendarOverlaySidebarActive,
-      event,
-      clearEventData,
-      addEvent,
-      updateEvent,
-      removeEvent,
-      refetchEvents,
-      calendarOptions,
+        return {
+            refCalendar,
+            isCalendarOverlaySidebarActive,
+            event,
+            clearEventData,
+            addEvent,
+            updateEvent,
+            removeEvent,
+            refetchEvents,
+            calendarOptions,
 
-      // ----- UI ----- //
-      isEventHandlerSidebarActive,
-    }
-  },
+            // ----- UI ----- //
+            isEventHandlerSidebarActive,
+        }
+    },
 }
 </script>
 

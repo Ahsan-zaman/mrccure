@@ -42,16 +42,16 @@ import BCardCode from '@core/components/b-card-code'
 import { codeListGroupContextual } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BListGroup,
-    BListGroupItem,
-    BCardText,
-  },
-  data() {
-    return {
-      codeListGroupContextual,
-    }
-  },
+    components: {
+        BCardCode,
+        BListGroup,
+        BListGroupItem,
+        BCardText,
+    },
+    data() {
+        return {
+            codeListGroupContextual,
+        }
+    },
 }
 </script>

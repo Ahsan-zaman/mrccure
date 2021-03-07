@@ -47,17 +47,17 @@ import BCardCode from '@core/components/b-card-code'
 import { codePill } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPagination,
-    BCardText,
-  },
-  data() {
-    return {
-      codePill,
-      currentPage: 1,
-      rows: 100,
-    }
-  },
+    components: {
+        BCardCode,
+        BPagination,
+        BCardText,
+    },
+    data() {
+        return {
+            codePill,
+            currentPage: 1,
+            rows: 100,
+        }
+    },
 }
 </script>

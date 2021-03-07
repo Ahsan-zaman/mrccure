@@ -36,16 +36,16 @@ import { BAlert, BCardText, BLink } from 'bootstrap-vue'
 import { codeAlertTitle } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAlert,
-    BCardText,
-    BLink,
-  },
-  data() {
-    return {
-      codeAlertTitle,
-    }
-  },
+    components: {
+        BCardCode,
+        BAlert,
+        BCardText,
+        BLink,
+    },
+    data() {
+        return {
+            codeAlertTitle,
+        }
+    },
 }
 </script>

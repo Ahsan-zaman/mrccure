@@ -55,26 +55,26 @@
 
 <script>
 import {
-  BCard, BFormRadio, BProgress, BAvatarGroup, BCardText, BAvatar, VBTooltip,
+    BCard, BFormRadio, BProgress, BAvatarGroup, BCardText, BAvatar, VBTooltip,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard, BFormRadio, BProgress, BAvatarGroup, BCardText, BAvatar,
-  },
-  directives: {
-    'b-tooltip': VBTooltip,
-  },
-  props: {
-    pollsData: {
-      type: Array,
-      default: () => [],
+    components: {
+        BCard, BFormRadio, BProgress, BAvatarGroup, BCardText, BAvatar,
     },
-  },
-  data() {
-    return {
-      Selected: '',
-    }
-  },
+    directives: {
+        'b-tooltip': VBTooltip,
+    },
+    props: {
+        pollsData: {
+            type: Array,
+            default: () => [],
+        },
+    },
+    data() {
+        return {
+            Selected: '',
+        }
+    },
 }
 </script>

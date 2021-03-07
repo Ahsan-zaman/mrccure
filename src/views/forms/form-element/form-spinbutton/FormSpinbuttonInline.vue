@@ -31,16 +31,16 @@ import { BFormSpinbutton, BCardText } from 'bootstrap-vue'
 import { codeInline } from './code'
 
 export default {
-  components: {
-    BFormSpinbutton,
-    BCardText,
-    BCardCode,
-  },
-  data() {
-    return {
-      value: 50,
-      codeInline,
-    }
-  },
+    components: {
+        BFormSpinbutton,
+        BCardText,
+        BCardCode,
+    },
+    data() {
+        return {
+            value: 50,
+            codeInline,
+        }
+    },
 }
 </script>

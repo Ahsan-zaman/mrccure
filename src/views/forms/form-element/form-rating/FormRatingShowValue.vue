@@ -57,17 +57,17 @@ import { BFormRating, BCardText } from 'bootstrap-vue'
 import { codeShowValue } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormRating,
-    BCardText,
-  },
-  data() {
-    return {
-      value: 4,
-      value2: 3.5505,
-      codeShowValue,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormRating,
+        BCardText,
+    },
+    data() {
+        return {
+            value: 4,
+            value2: 3.5505,
+            codeShowValue,
+        }
+    },
 }
 </script>

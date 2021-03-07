@@ -21,17 +21,17 @@ import SweetAlertOption from './SweetAlertOption.vue'
 import SweetAlertConfirmOption from './SweetAlertConfirmOption.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    SweetAlertBasic,
-    SweetAlertPosition,
-    SweetAlertAnimation,
-    SweetAlertTypes,
-    SweetAlertOption,
-    SweetAlertConfirmOption,
-  },
+        SweetAlertBasic,
+        SweetAlertPosition,
+        SweetAlertAnimation,
+        SweetAlertTypes,
+        SweetAlertOption,
+        SweetAlertConfirmOption,
+    },
 }
 </script>
 

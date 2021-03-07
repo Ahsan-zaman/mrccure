@@ -33,16 +33,16 @@ import { BFormTextarea, BCardText } from 'bootstrap-vue'
 import { codeReadonly } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormTextarea,
-    BCardText,
-  },
-  data() {
-    return {
-      text: "This is some text.\nIt is read only and doesn't look like an input.",
-      codeReadonly,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormTextarea,
+        BCardText,
+    },
+    data() {
+        return {
+            text: "This is some text.\nIt is read only and doesn't look like an input.",
+            codeReadonly,
+        }
+    },
 }
 </script>

@@ -242,18 +242,18 @@
 
 <script>
 import {
-  BCard, BAlert, BLink, BCardText, BRow, BCol,
+    BCard, BAlert, BLink, BCardText, BRow, BCol,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard,
-    BAlert,
-    BLink,
-    BRow,
-    BCol,
-    BCardText,
-  },
+    components: {
+        BCard,
+        BAlert,
+        BLink,
+        BRow,
+        BCol,
+        BCardText,
+    },
 }
 </script>
 

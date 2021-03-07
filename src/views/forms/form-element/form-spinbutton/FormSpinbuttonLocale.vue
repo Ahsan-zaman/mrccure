@@ -51,25 +51,25 @@ import { BFormSpinbutton, BFormSelect, BCardText } from 'bootstrap-vue'
 import { codeLocale } from './code'
 
 export default {
-  components: {
-    BFormSpinbutton,
-    BCardCode,
-    BFormSelect,
-    BCardText,
-  },
-  data() {
-    return {
-      value: 0,
-      locale: 'fr-CA',
-      locales: [
-        { value: 'en', text: 'English' },
-        { value: 'de', text: 'German' },
-        { value: 'fr-CA', text: 'French (Canadian)' },
-        { value: 'fa', text: 'Persian' },
-        { value: 'ar-EG', text: 'Arabic (Egyptian)' },
-      ],
-      codeLocale,
-    }
-  },
+    components: {
+        BFormSpinbutton,
+        BCardCode,
+        BFormSelect,
+        BCardText,
+    },
+    data() {
+        return {
+            value: 0,
+            locale: 'fr-CA',
+            locales: [
+                { value: 'en', text: 'English' },
+                { value: 'de', text: 'German' },
+                { value: 'fr-CA', text: 'French (Canadian)' },
+                { value: 'fa', text: 'Persian' },
+                { value: 'ar-EG', text: 'Arabic (Egyptian)' },
+            ],
+            codeLocale,
+        }
+    },
 }
 </script>

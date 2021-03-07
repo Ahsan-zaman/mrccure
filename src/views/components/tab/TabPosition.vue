@@ -153,16 +153,16 @@ import { BTabs, BTab, BCardText } from 'bootstrap-vue'
 import { codePosition } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BTabs,
-    BTab,
-  },
-  data() {
-    return {
-      codePosition,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BTabs,
+        BTab,
+    },
+    data() {
+        return {
+            codePosition,
+        }
+    },
 }
 </script>

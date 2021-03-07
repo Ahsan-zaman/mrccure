@@ -40,16 +40,16 @@ import { BImg, BCardText } from 'bootstrap-vue'
 import { codeResponsive } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    // eslint-disable-next-line vue/no-unused-components
-    BImg,
-  },
-  data() {
-    return {
-      codeResponsive,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        // eslint-disable-next-line vue/no-unused-components
+        BImg,
+    },
+    data() {
+        return {
+            codeResponsive,
+        }
+    },
 }
 </script>

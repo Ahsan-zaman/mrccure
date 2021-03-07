@@ -53,40 +53,40 @@ import Ripple from 'vue-ripple-directive'
 import { codeCloseOnClick } from './code'
 
 export default {
-  components: {
-    BButton,
-    BLink,
-    BCardText,
-    BCardCode,
-    VueContext,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      menuData: [
-        { icon: 'ChevronRightIcon', text: 'Next' },
-        { icon: 'ChevronLeftIcon', text: 'Previous' },
-        { icon: 'PlusIcon', text: 'Increase' },
-        { icon: 'MinusIcon', text: 'Decrease' },
-        { icon: 'ShuffleIcon', text: 'Random' },
-      ],
-      codeCloseOnClick,
-    }
-  },
-  methods: {
-    optionClicked(text, icon) {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: `You have click on ${text}!`,
-          icon,
-        },
-      })
+    components: {
+        BButton,
+        BLink,
+        BCardText,
+        BCardCode,
+        VueContext,
+        // eslint-disable-next-line vue/no-unused-components
+        ToastificationContent,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            menuData: [
+                { icon: 'ChevronRightIcon', text: 'Next' },
+                { icon: 'ChevronLeftIcon', text: 'Previous' },
+                { icon: 'PlusIcon', text: 'Increase' },
+                { icon: 'MinusIcon', text: 'Decrease' },
+                { icon: 'ShuffleIcon', text: 'Random' },
+            ],
+            codeCloseOnClick,
+        }
+    },
+    methods: {
+        optionClicked(text, icon) {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: `You have click on ${text}!`,
+                    icon,
+                },
+            })
+        },
+    },
 }
 </script>

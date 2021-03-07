@@ -72,27 +72,27 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardTitle, BCardBody, BMediaBody, BMedia, BMediaAside, BAvatar, BDropdown, BDropdownItem,
+    BCard, BCardHeader, BCardTitle, BCardBody, BMediaBody, BMedia, BMediaAside, BAvatar, BDropdown, BDropdownItem,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard,
-    BCardHeader,
-    BCardTitle,
-    BCardBody,
-    BMediaBody,
-    BMedia,
-    BMediaAside,
-    BAvatar,
-    BDropdown,
-    BDropdownItem,
-  },
-  props: {
-    data: {
-      type: Array,
-      default: () => [],
+    components: {
+        BCard,
+        BCardHeader,
+        BCardTitle,
+        BCardBody,
+        BMediaBody,
+        BMedia,
+        BMediaAside,
+        BAvatar,
+        BDropdown,
+        BDropdownItem,
     },
-  },
+    props: {
+        data: {
+            type: Array,
+            default: () => [],
+        },
+    },
 }
 </script>

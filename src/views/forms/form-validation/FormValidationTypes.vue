@@ -259,63 +259,63 @@
 import BCardCode from '@core/components/b-card-code'
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import {
-  BFormInput, BFormGroup, BForm, BRow, BCol, BButton,
+    BFormInput, BFormGroup, BForm, BRow, BCol, BButton,
 } from 'bootstrap-vue'
 import {
-  required, email, confirmed, url, between, alpha, integer, password, min, digits, alphaDash, length,
+    required, email, confirmed, url, between, alpha, integer, password, min, digits, alphaDash, length,
 } from '@validations'
 import { codeType } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    ValidationProvider,
-    ValidationObserver,
-    BFormInput,
-    BFormGroup,
-    BForm,
-    BRow,
-    BCol,
-    BButton,
-  },
-  data() {
-    return {
-      name: '',
-      passwordValue: '',
-      passwordCon: '',
-      emailValue: '',
-      number: '',
-      numberRange: '',
-      numberRegx: '',
-      URL: '',
-      Alphabetic: '',
-      digitValue: '',
-      digitValue2: '',
-      character: '',
-      required,
-      confirmed,
-      password,
-      email,
-      min,
-      integer,
-      url,
-      alpha,
-      between,
-      digits,
-      length,
-      alphaDash,
-      codeType,
-    }
-  },
-  methods: {
-    validationForm() {
-      this.$refs.simpleRules.validate().then(success => {
-        if (success) {
-          // eslint-disable-next-line
-          alert('form submitted!')
-        }
-      })
+    components: {
+        BCardCode,
+        ValidationProvider,
+        ValidationObserver,
+        BFormInput,
+        BFormGroup,
+        BForm,
+        BRow,
+        BCol,
+        BButton,
     },
-  },
+    data() {
+        return {
+            name: '',
+            passwordValue: '',
+            passwordCon: '',
+            emailValue: '',
+            number: '',
+            numberRange: '',
+            numberRegx: '',
+            URL: '',
+            Alphabetic: '',
+            digitValue: '',
+            digitValue2: '',
+            character: '',
+            required,
+            confirmed,
+            password,
+            email,
+            min,
+            integer,
+            url,
+            alpha,
+            between,
+            digits,
+            length,
+            alphaDash,
+            codeType,
+        }
+    },
+    methods: {
+        validationForm() {
+            this.$refs.simpleRules.validate().then(success => {
+                if (success) {
+                    // eslint-disable-next-line
+          alert('form submitted!')
+                }
+            })
+        },
+    },
 }
 </script>

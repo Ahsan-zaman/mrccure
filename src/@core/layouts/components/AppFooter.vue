@@ -24,8 +24,8 @@
 import { BLink } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BLink,
-  },
+    components: {
+        BLink,
+    },
 }
 </script>

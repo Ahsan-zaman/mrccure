@@ -77,30 +77,30 @@ import AnalyticsSalesRadarChart from './AnalyticsSalesRadarChart.vue'
 import AnalyticsAppDesign from './AnalyticsAppDesign.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    AnalyticsCongratulation,
-    AnalyticsAvgSessions,
-    StatisticCardWithAreaChart,
-    AnalyticsSupportTracker,
-    AnalyticsTimeline,
-    AnalyticsSalesRadarChart,
-    AnalyticsAppDesign,
-    InvoiceList,
-  },
-  data() {
-    return {
-      data: {},
-    }
-  },
-  created() {
+    components: {
+        BRow,
+        BCol,
+        AnalyticsCongratulation,
+        AnalyticsAvgSessions,
+        StatisticCardWithAreaChart,
+        AnalyticsSupportTracker,
+        AnalyticsTimeline,
+        AnalyticsSalesRadarChart,
+        AnalyticsAppDesign,
+        InvoiceList,
+    },
+    data() {
+        return {
+            data: {},
+        }
+    },
+    created() {
     // data
-    this.$http.get('/analytics/data')
-      .then(response => { this.data = response.data })
-  },
-  methods: {
-    kFormatter,
-  },
+        this.$http.get('/analytics/data')
+            .then(response => { this.data = response.data })
+    },
+    methods: {
+        kFormatter,
+    },
 }
 </script>

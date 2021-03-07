@@ -33,13 +33,13 @@ import { BEmbed, BCardText } from 'bootstrap-vue'
 import { codeTypes } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BEmbed,
-    BCardText,
-  },
-  data() {
-    return { codeTypes }
-  },
+    components: {
+        BCardCode,
+        BEmbed,
+        BCardText,
+    },
+    data() {
+        return { codeTypes }
+    },
 }
 </script>

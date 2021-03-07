@@ -68,7 +68,7 @@ import store from '@/store'
 import router from '@/router'
 import { ref, onUnmounted } from '@vue/composition-api'
 import {
-  BRow, BCol, BAlert, BLink,
+    BRow, BCol, BAlert, BLink,
 } from 'bootstrap-vue'
 import InvoiceList from '@/views/apps/invoice/invoice-list/InvoiceList.vue'
 import userStoreModule from '../userStoreModule'
@@ -78,45 +78,45 @@ import UserViewUserTimelineCard from './UserViewUserTimelineCard.vue'
 import UserViewUserPermissionsCard from './UserViewUserPermissionsCard.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BAlert,
-    BLink,
+    components: {
+        BRow,
+        BCol,
+        BAlert,
+        BLink,
 
-    // Local Components
-    UserViewUserInfoCard,
-    UserViewUserPlanCard,
-    UserViewUserTimelineCard,
-    UserViewUserPermissionsCard,
+        // Local Components
+        UserViewUserInfoCard,
+        UserViewUserPlanCard,
+        UserViewUserTimelineCard,
+        UserViewUserPermissionsCard,
 
-    InvoiceList,
-  },
-  setup() {
-    const userData = ref(null)
+        InvoiceList,
+    },
+    setup() {
+        const userData = ref(null)
 
-    const USER_APP_STORE_MODULE_NAME = 'app-user'
+        const USER_APP_STORE_MODULE_NAME = 'app-user'
 
-    // Register module
-    if (!store.hasModule(USER_APP_STORE_MODULE_NAME)) store.registerModule(USER_APP_STORE_MODULE_NAME, userStoreModule)
+        // Register module
+        if (!store.hasModule(USER_APP_STORE_MODULE_NAME)) store.registerModule(USER_APP_STORE_MODULE_NAME, userStoreModule)
 
-    // UnRegister on leave
-    onUnmounted(() => {
-      if (store.hasModule(USER_APP_STORE_MODULE_NAME)) store.unregisterModule(USER_APP_STORE_MODULE_NAME)
-    })
+        // UnRegister on leave
+        onUnmounted(() => {
+            if (store.hasModule(USER_APP_STORE_MODULE_NAME)) store.unregisterModule(USER_APP_STORE_MODULE_NAME)
+        })
 
-    store.dispatch('app-user/fetchUser', { id: router.currentRoute.params.id })
-      .then(response => { userData.value = response.data })
-      .catch(error => {
-        if (error.response.status === 404) {
-          userData.value = undefined
+        store.dispatch('app-user/fetchUser', { id: router.currentRoute.params.id })
+            .then(response => { userData.value = response.data })
+            .catch(error => {
+                if (error.response.status === 404) {
+                    userData.value = undefined
+                }
+            })
+
+        return {
+            userData,
         }
-      })
-
-    return {
-      userData,
-    }
-  },
+    },
 }
 </script>
 

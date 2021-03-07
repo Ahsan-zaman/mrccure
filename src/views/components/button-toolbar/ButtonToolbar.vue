@@ -19,15 +19,15 @@ import ButtonToolbarSize from './ButtonToolbarSize.vue'
 import ButtonToolbarJustify from './ButtonToolbarJustify.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    ButtonToolbarNavigation,
-    ButtonToolbarInput,
-    ButtonToolbarDropdown,
-    ButtonToolbarSize,
-    ButtonToolbarJustify,
-  },
+        ButtonToolbarNavigation,
+        ButtonToolbarInput,
+        ButtonToolbarDropdown,
+        ButtonToolbarSize,
+        ButtonToolbarJustify,
+    },
 }
 </script>

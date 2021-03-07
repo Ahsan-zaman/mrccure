@@ -31,26 +31,26 @@ import Ripple from 'vue-ripple-directive'
 import { codeLinks } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeLinks,
-    }
-  },
-  methods: {
-    toast() {
-      this.$bvToast.toast('Toast with action link', {
-        href: '#foo',
-        title: 'Toast Link',
-      })
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeLinks,
+        }
+    },
+    methods: {
+        toast() {
+            this.$bvToast.toast('Toast with action link', {
+                href: '#foo',
+                title: 'Toast Link',
+            })
+        },
+    },
 }
 </script>

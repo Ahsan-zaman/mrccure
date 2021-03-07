@@ -68,25 +68,25 @@ import AvatarGroup from './AvatarGroup.vue'
 import AvatarGroupTooltip from './AvatarGroupTooltip.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    AvatarInitials,
-    AvatarColor,
-    AvatarLightColor,
-    AvatarSize,
-    AvatarAction,
-    AvatarBadge,
-    AvatarBadgePosition,
-    AvatarOffset,
-    AvatarIcon,
-    AvatarCustomContent,
-    AvatarBadgeContent,
-    AvatarSquare,
-    AvatarRounded,
-    AvatarGroup,
-    AvatarGroupTooltip,
-  },
+        AvatarInitials,
+        AvatarColor,
+        AvatarLightColor,
+        AvatarSize,
+        AvatarAction,
+        AvatarBadge,
+        AvatarBadgePosition,
+        AvatarOffset,
+        AvatarIcon,
+        AvatarCustomContent,
+        AvatarBadgeContent,
+        AvatarSquare,
+        AvatarRounded,
+        AvatarGroup,
+        AvatarGroupTooltip,
+    },
 }
 </script>

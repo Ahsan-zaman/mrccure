@@ -68,19 +68,19 @@
 
 <script>
 import {
-  BRow, BCol, BCardGroup, BCard, BCardText, BCardFooter, BCardBody, BCardTitle,
+    BRow, BCol, BCardGroup, BCard, BCardText, BCardFooter, BCardBody, BCardTitle,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCardGroup,
-    BCard,
-    BCardText,
-    BCardFooter,
-    BCardBody,
-    BCardTitle,
-  },
+    components: {
+        BRow,
+        BCol,
+        BCardGroup,
+        BCard,
+        BCardText,
+        BCardFooter,
+        BCardBody,
+        BCardTitle,
+    },
 }
 </script>

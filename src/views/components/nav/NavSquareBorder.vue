@@ -34,16 +34,16 @@ import { BNav, BNavItem, BCardText } from 'bootstrap-vue'
 import { codeSquareBorder } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BNav,
-    BNavItem,
-    BCardText,
-  },
-  data() {
-    return {
-      codeSquareBorder,
-    }
-  },
+    components: {
+        BCardCode,
+        BNav,
+        BNavItem,
+        BCardText,
+    },
+    data() {
+        return {
+            codeSquareBorder,
+        }
+    },
 }
 </script>

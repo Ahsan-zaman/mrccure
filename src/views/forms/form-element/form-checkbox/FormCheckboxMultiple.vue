@@ -48,29 +48,29 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormGroup, BFormCheckboxGroup, BCardText, BFormCheckbox,
+    BFormGroup, BFormCheckboxGroup, BCardText, BFormCheckbox,
 } from 'bootstrap-vue'
 import { codemultipleChoice } from './code'
 
 export default {
-  components: {
-    BFormCheckboxGroup,
-    BCardCode,
-    BFormCheckbox,
-    BFormGroup,
-    BCardText,
-  },
-  data() {
-    return {
-      selected: [],
-      options: [
-        { text: 'Orange', value: 'orange' },
-        { text: 'Apple', value: 'apple' },
-        { text: 'Pineapple', value: 'pineapple' },
-        { text: 'Grape', value: 'grape' },
-      ],
-      codemultipleChoice,
-    }
-  },
+    components: {
+        BFormCheckboxGroup,
+        BCardCode,
+        BFormCheckbox,
+        BFormGroup,
+        BCardText,
+    },
+    data() {
+        return {
+            selected: [],
+            options: [
+                { text: 'Orange', value: 'orange' },
+                { text: 'Apple', value: 'apple' },
+                { text: 'Pineapple', value: 'pineapple' },
+                { text: 'Grape', value: 'grape' },
+            ],
+            codemultipleChoice,
+        }
+    },
 }
 </script>

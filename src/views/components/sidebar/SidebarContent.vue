@@ -35,26 +35,26 @@
 
 <script>
 import {
-  BAvatar, BListGroup, BListGroupItem, BCardText,
+    BAvatar, BListGroup, BListGroupItem, BCardText,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BAvatar,
-    BListGroup,
-    BListGroupItem,
-    BCardText,
-  },
-  data() {
-    return {
-      sidebarItems: [
-        { title: 'Dashboard', icon: 'GridIcon' },
-        { title: 'Analytics', icon: 'ActivityIcon' },
-        { title: 'History', icon: 'RefreshCwIcon' },
-        { title: 'Configuration', icon: 'SettingsIcon' },
-        { title: 'Profile', icon: 'UserIcon' },
-      ],
-    }
-  },
+    components: {
+        BAvatar,
+        BListGroup,
+        BListGroupItem,
+        BCardText,
+    },
+    data() {
+        return {
+            sidebarItems: [
+                { title: 'Dashboard', icon: 'GridIcon' },
+                { title: 'Analytics', icon: 'ActivityIcon' },
+                { title: 'History', icon: 'RefreshCwIcon' },
+                { title: 'Configuration', icon: 'SettingsIcon' },
+                { title: 'Profile', icon: 'UserIcon' },
+            ],
+        }
+    },
 }
 </script>

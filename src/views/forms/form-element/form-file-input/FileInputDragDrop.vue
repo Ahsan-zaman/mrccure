@@ -26,15 +26,15 @@ import { BFormFile, BCardText } from 'bootstrap-vue'
 import { codeDragDrop } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormFile,
-    BCardText,
-  },
-  data() {
-    return {
-      codeDragDrop,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormFile,
+        BCardText,
+    },
+    data() {
+        return {
+            codeDragDrop,
+        }
+    },
 }
 </script>

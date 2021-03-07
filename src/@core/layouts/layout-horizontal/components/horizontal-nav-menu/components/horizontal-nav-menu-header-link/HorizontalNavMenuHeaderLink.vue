@@ -23,23 +23,23 @@ import useHorizontalNavMenuHeaderLink from './useHorizontalNavMenuHeaderLink'
 import mixinHorizontalNavMenuHeaderLink from './mixinHorizontalNavMenuHeaderLink'
 
 export default {
-  components: {
-    BLink,
-  },
-  mixins: [mixinHorizontalNavMenuHeaderLink],
-  props: {
-    item: {
-      type: Object,
-      required: true,
+    components: {
+        BLink,
     },
-  },
-  setup(props) {
-    const { isActive, updateIsActive } = useHorizontalNavMenuHeaderLink(props.item)
+    mixins: [mixinHorizontalNavMenuHeaderLink],
+    props: {
+        item: {
+            type: Object,
+            required: true,
+        },
+    },
+    setup(props) {
+        const { isActive, updateIsActive } = useHorizontalNavMenuHeaderLink(props.item)
 
-    return {
-      isActive,
-      updateIsActive,
-    }
-  },
+        return {
+            isActive,
+            updateIsActive,
+        }
+    },
 }
 </script>

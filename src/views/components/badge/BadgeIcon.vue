@@ -79,15 +79,15 @@ import { BBadge, BCardText } from 'bootstrap-vue'
 import { codeIcon } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BBadge,
-    BCardText,
-  },
-  data() {
-    return {
-      codeIcon,
-    }
-  },
+    components: {
+        BCardCode,
+        BBadge,
+        BCardText,
+    },
+    data() {
+        return {
+            codeIcon,
+        }
+    },
 }
 </script>

@@ -48,15 +48,15 @@ import { BFormFile, BCardText } from 'bootstrap-vue'
 import { codeLimiting } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormFile,
-    BCardText,
-  },
-  data() {
-    return {
-      codeLimiting,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormFile,
+        BCardText,
+    },
+    data() {
+        return {
+            codeLimiting,
+        }
+    },
 }
 </script>

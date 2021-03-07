@@ -39,22 +39,22 @@ import { BCalendar, BCardText } from 'bootstrap-vue'
 import { codeCustomClass } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BCalendar,
-  },
-  data() {
-    return {
-      value: '',
-      codeCustomClass,
-    }
-  },
-  methods: {
-    dateClass(ymd, date) {
-      const day = date.getDate()
-      return day >= 10 && day <= 20 ? 'table-primary' : ''
+    components: {
+        BCardCode,
+        BCardText,
+        BCalendar,
     },
-  },
+    data() {
+        return {
+            value: '',
+            codeCustomClass,
+        }
+    },
+    methods: {
+        dateClass(ymd, date) {
+            const day = date.getDate()
+            return day >= 10 && day <= 20 ? 'table-primary' : ''
+        },
+    },
 }
 </script>

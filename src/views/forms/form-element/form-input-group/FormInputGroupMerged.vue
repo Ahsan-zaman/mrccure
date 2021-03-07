@@ -78,31 +78,31 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BInputGroup, BFormInput, BInputGroupPrepend, BInputGroupAppend, BFormGroup, BFormTextarea,
+    BInputGroup, BFormInput, BInputGroupPrepend, BInputGroupAppend, BFormGroup, BFormTextarea,
 } from 'bootstrap-vue'
 import { togglePasswordVisibility } from '@core/mixins/ui/forms'
 import { codeMerged } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormTextarea,
-    BInputGroup,
-    BFormGroup,
-    BFormInput,
-    BInputGroupPrepend,
-    BInputGroupAppend,
-  },
-  mixins: [togglePasswordVisibility],
-  data() {
-    return {
-      codeMerged,
-    }
-  },
-  computed: {
-    passwordToggleIcon() {
-      return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'
+    components: {
+        BCardCode,
+        BFormTextarea,
+        BInputGroup,
+        BFormGroup,
+        BFormInput,
+        BInputGroupPrepend,
+        BInputGroupAppend,
     },
-  },
+    mixins: [togglePasswordVisibility],
+    data() {
+        return {
+            codeMerged,
+        }
+    },
+    computed: {
+        passwordToggleIcon() {
+            return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'
+        },
+    },
 }
 </script>

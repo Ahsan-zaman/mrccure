@@ -31,15 +31,15 @@ import { BSpinner, BCardText } from 'bootstrap-vue'
 import { codeGrow } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BSpinner,
-    BCardText,
-  },
-  data() {
-    return {
-      codeGrow,
-    }
-  },
+    components: {
+        BCardCode,
+        BSpinner,
+        BCardText,
+    },
+    data() {
+        return {
+            codeGrow,
+        }
+    },
 }
 </script>

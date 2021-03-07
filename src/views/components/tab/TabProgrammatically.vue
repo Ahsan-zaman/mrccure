@@ -68,29 +68,29 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BButtonGroup, BButton, BCard, BTab, BTabs, BCardText,
+    BButtonGroup, BButton, BCard, BTab, BTabs, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeProgrammatically } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButtonGroup,
-    BButton,
-    BCard,
-    BTab,
-    BTabs,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      tabIndex: 1,
-      codeProgrammatically,
-    }
-  },
+    components: {
+        BCardCode,
+        BButtonGroup,
+        BButton,
+        BCard,
+        BTab,
+        BTabs,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            tabIndex: 1,
+            codeProgrammatically,
+        }
+    },
 }
 </script>

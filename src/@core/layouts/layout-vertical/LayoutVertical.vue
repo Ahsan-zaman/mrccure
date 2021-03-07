@@ -98,63 +98,63 @@ import useVerticalLayout from './useVerticalLayout'
 import mixinVerticalLayout from './mixinVerticalLayout'
 
 export default {
-  components: {
+    components: {
     // AppBreadcrumb,
-    AppNavbarVerticalLayout,
-    AppFooter,
-    VerticalNavMenu,
-    BNavbar,
-    LayoutContentRendererLeftDetached,
-    LayoutContentRendererLeft,
-    LayoutContentRendererDefault,
-  },
-  mixins: [mixinVerticalLayout],
-  computed: {
-    layoutContentRenderer() {
-      const rendererType = this.$route.meta.contentRenderer
-      if (rendererType === 'sidebar-left') return 'layout-content-renderer-left'
-      if (rendererType === 'sidebar-left-detached') return 'layout-content-renderer-left-detached'
-      return 'layout-content-renderer-default'
+        AppNavbarVerticalLayout,
+        AppFooter,
+        VerticalNavMenu,
+        BNavbar,
+        LayoutContentRendererLeftDetached,
+        LayoutContentRendererLeft,
+        LayoutContentRendererDefault,
     },
-  },
-  setup() {
-    const {
-      routerTransition, navbarBackgroundColor, navbarType, footerType, isNavMenuHidden,
-    } = useAppConfig()
+    mixins: [mixinVerticalLayout],
+    computed: {
+        layoutContentRenderer() {
+            const rendererType = this.$route.meta.contentRenderer
+            if (rendererType === 'sidebar-left') return 'layout-content-renderer-left'
+            if (rendererType === 'sidebar-left-detached') return 'layout-content-renderer-left-detached'
+            return 'layout-content-renderer-default'
+        },
+    },
+    setup() {
+        const {
+            routerTransition, navbarBackgroundColor, navbarType, footerType, isNavMenuHidden,
+        } = useAppConfig()
 
-    const {
-      isVerticalMenuActive,
-      toggleVerticalMenuActive,
-      isVerticalMenuCollapsed,
-      layoutClasses,
-      overlayClasses,
-      resizeHandler,
-      navbarTypeClass,
-      footerTypeClass,
-    } = useVerticalLayout(navbarType, footerType)
+        const {
+            isVerticalMenuActive,
+            toggleVerticalMenuActive,
+            isVerticalMenuCollapsed,
+            layoutClasses,
+            overlayClasses,
+            resizeHandler,
+            navbarTypeClass,
+            footerTypeClass,
+        } = useVerticalLayout(navbarType, footerType)
 
-    // Resize handler
-    resizeHandler()
-    window.addEventListener('resize', resizeHandler)
-    onUnmounted(() => {
-      window.removeEventListener('resize', resizeHandler)
-    })
+        // Resize handler
+        resizeHandler()
+        window.addEventListener('resize', resizeHandler)
+        onUnmounted(() => {
+            window.removeEventListener('resize', resizeHandler)
+        })
 
-    return {
-      isVerticalMenuActive,
-      toggleVerticalMenuActive,
-      isVerticalMenuCollapsed,
-      overlayClasses,
-      layoutClasses,
-      navbarTypeClass,
-      footerTypeClass,
+        return {
+            isVerticalMenuActive,
+            toggleVerticalMenuActive,
+            isVerticalMenuCollapsed,
+            overlayClasses,
+            layoutClasses,
+            navbarTypeClass,
+            footerTypeClass,
 
-      // App Config
-      routerTransition,
-      navbarBackgroundColor,
-      isNavMenuHidden,
-    }
-  },
+            // App Config
+            routerTransition,
+            navbarBackgroundColor,
+            isNavMenuHidden,
+        }
+    },
 }
 </script>
 

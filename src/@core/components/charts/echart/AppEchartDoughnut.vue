@@ -18,29 +18,29 @@ import theme from './theme.json'
 ECharts.registerTheme('theme-color', theme)
 
 export default {
-  components: {
-    ECharts,
-  },
-  props: {
-    series: {
-      type: Array,
-      default: null,
+    components: {
+        ECharts,
     },
-  },
-  data() {
-    return {
-      option: {
-        tooltip: {
-          trigger: 'item',
-          formatter: '{a} <br/>{b}: {c} ({d}%)',
+    props: {
+        series: {
+            type: Array,
+            default: null,
         },
-        legend: {
-          left: 10,
-          bottom: '0',
-        },
-        series: this.series,
-      },
-    }
-  },
+    },
+    data() {
+        return {
+            option: {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b}: {c} ({d}%)',
+                },
+                legend: {
+                    left: 10,
+                    bottom: '0',
+                },
+                series: this.series,
+            },
+        }
+    },
 }
 </script>

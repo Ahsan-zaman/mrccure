@@ -65,15 +65,15 @@ import { BBadge, BCardText } from 'bootstrap-vue'
 import { codePillContextual } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BBadge,
-    BCardText,
-  },
-  data() {
-    return {
-      codePillContextual,
-    }
-  },
+    components: {
+        BCardCode,
+        BBadge,
+        BCardText,
+    },
+    data() {
+        return {
+            codePillContextual,
+        }
+    },
 }
 </script>

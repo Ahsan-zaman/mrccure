@@ -280,63 +280,63 @@ import vSelect from 'vue-select'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
 import 'vue-form-wizard/dist/vue-form-wizard.min.css'
 import {
-  BRow,
-  BCol,
-  BFormGroup,
-  BFormInput,
-} from 'bootstrap-vue'
-import { codeIconInfo } from './code'
-
-export default {
-  components: {
-    FormWizard,
-    TabContent,
     BRow,
     BCol,
     BFormGroup,
     BFormInput,
-    vSelect,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
-  data() {
-    return {
-      selectedContry: 'select_value',
-      selectedLanguage: 'nothing_selected',
-      codeIconInfo,
-      countryName: [
-        { value: 'select_value', text: 'Select Value' },
-        { value: 'Russia', text: 'Russia' },
-        { value: 'Canada', text: 'Canada' },
-        { value: 'China', text: 'China' },
-        { value: 'United States', text: 'United States' },
-        { value: 'Brazil', text: 'Brazil' },
-        { value: 'Australia', text: 'Australia' },
-        { value: 'India', text: 'India' },
-      ],
-      languageName: [
-        { value: 'nothing_selected', text: 'Nothing Selected' },
-        { value: 'English', text: 'English' },
-        { value: 'Chinese', text: 'Mandarin Chinese' },
-        { value: 'Hindi', text: 'Hindi' },
-        { value: 'Spanish', text: 'Spanish' },
-        { value: 'Arabic', text: 'Arabic' },
-        { value: 'Malay', text: 'Malay' },
-        { value: 'Russian', text: 'Russian' },
-      ],
-    }
-  },
-  methods: {
-    formSubmitted() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Form Submitted',
-          icon: 'EditIcon',
-          variant: 'success',
-        },
-      })
+} from 'bootstrap-vue'
+import { codeIconInfo } from './code'
+
+export default {
+    components: {
+        FormWizard,
+        TabContent,
+        BRow,
+        BCol,
+        BFormGroup,
+        BFormInput,
+        vSelect,
+        // eslint-disable-next-line vue/no-unused-components
+        ToastificationContent,
     },
-  },
+    data() {
+        return {
+            selectedContry: 'select_value',
+            selectedLanguage: 'nothing_selected',
+            codeIconInfo,
+            countryName: [
+                { value: 'select_value', text: 'Select Value' },
+                { value: 'Russia', text: 'Russia' },
+                { value: 'Canada', text: 'Canada' },
+                { value: 'China', text: 'China' },
+                { value: 'United States', text: 'United States' },
+                { value: 'Brazil', text: 'Brazil' },
+                { value: 'Australia', text: 'Australia' },
+                { value: 'India', text: 'India' },
+            ],
+            languageName: [
+                { value: 'nothing_selected', text: 'Nothing Selected' },
+                { value: 'English', text: 'English' },
+                { value: 'Chinese', text: 'Mandarin Chinese' },
+                { value: 'Hindi', text: 'Hindi' },
+                { value: 'Spanish', text: 'Spanish' },
+                { value: 'Arabic', text: 'Arabic' },
+                { value: 'Malay', text: 'Malay' },
+                { value: 'Russian', text: 'Russian' },
+            ],
+        }
+    },
+    methods: {
+        formSubmitted() {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Form Submitted',
+                    icon: 'EditIcon',
+                    variant: 'success',
+                },
+            })
+        },
+    },
 }
 </script>

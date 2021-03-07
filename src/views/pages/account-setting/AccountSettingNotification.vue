@@ -120,31 +120,31 @@
 
 <script>
 import {
-  BButton, BRow, BCol, BCard, BFormCheckbox,
+    BButton, BRow, BCol, BCard, BFormCheckbox,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BButton,
-    BRow,
-    BCol,
-    BCard,
-    BFormCheckbox,
-  },
-  directives: {
-    Ripple,
-  },
-  props: {
-    notificationData: {
-      type: Object,
-      default: () => {},
+    components: {
+        BButton,
+        BRow,
+        BCol,
+        BCard,
+        BFormCheckbox,
     },
-  },
-  data() {
-    return {
-      localOptions: JSON.parse(JSON.stringify(this.notificationData)),
-    }
-  },
+    directives: {
+        Ripple,
+    },
+    props: {
+        notificationData: {
+            type: Object,
+            default: () => {},
+        },
+    },
+    data() {
+        return {
+            localOptions: JSON.parse(JSON.stringify(this.notificationData)),
+        }
+    },
 }
 </script>

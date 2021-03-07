@@ -35,15 +35,15 @@ import { BAlert, BCardText } from 'bootstrap-vue'
 import { codeIcon } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAlert,
-    BCardText,
-  },
-  data() {
-    return {
-      codeIcon,
-    }
-  },
+    components: {
+        BCardCode,
+        BAlert,
+        BCardText,
+    },
+    data() {
+        return {
+            codeIcon,
+        }
+    },
 }
 </script>

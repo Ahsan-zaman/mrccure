@@ -340,7 +340,7 @@ import { ref, onUnmounted } from '@vue/composition-api'
 import store from '@/store'
 import router from '@/router'
 import {
-  BRow, BCol, BCard, BCardBody, BTableLite, BCardText, BButton, BAlert, BLink, VBToggle,
+    BRow, BCol, BCard, BCardBody, BTableLite, BCardText, BButton, BAlert, BLink, VBToggle,
 } from 'bootstrap-vue'
 import Logo from '@core/layouts/components/Logo.vue'
 import Ripple from 'vue-ripple-directive'
@@ -349,80 +349,80 @@ import InvoiceSidebarSendInvoice from '../InvoiceSidebarSendInvoice.vue'
 import InvoiceSidebarAddPayment from '../InvoiceSidebarAddPayment.vue'
 
 export default {
-  directives: {
-    Ripple,
-    'b-toggle': VBToggle,
-  },
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BCardBody,
-    BTableLite,
-    BCardText,
-    BButton,
-    BAlert,
-    BLink,
+    directives: {
+        Ripple,
+        'b-toggle': VBToggle,
+    },
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BCardBody,
+        BTableLite,
+        BCardText,
+        BButton,
+        BAlert,
+        BLink,
 
-    Logo,
-    InvoiceSidebarAddPayment,
-    InvoiceSidebarSendInvoice,
-  },
-  setup() {
-    const invoiceData = ref(null)
-    const paymentDetails = ref({})
+        Logo,
+        InvoiceSidebarAddPayment,
+        InvoiceSidebarSendInvoice,
+    },
+    setup() {
+        const invoiceData = ref(null)
+        const paymentDetails = ref({})
 
-    // Invoice Description
-    // ? Your real data will contain this information
-    const invoiceDescription = [
-      {
-        taskTitle: 'Native App Development',
-        taskDescription: 'Developed a full stack native app using React Native, Bootstrap & Python',
-        rate: '$60.00',
-        hours: '30',
-        total: '$1,800.00',
-      },
-      {
-        taskTitle: 'UI Kit Design',
-        taskDescription: 'Designed a UI kit for native app using Sketch, Figma & Adobe XD',
-        rate: '$60.00',
-        hours: '20',
-        total: '$1200.00',
-      },
-    ]
+        // Invoice Description
+        // ? Your real data will contain this information
+        const invoiceDescription = [
+            {
+                taskTitle: 'Native App Development',
+                taskDescription: 'Developed a full stack native app using React Native, Bootstrap & Python',
+                rate: '$60.00',
+                hours: '30',
+                total: '$1,800.00',
+            },
+            {
+                taskTitle: 'UI Kit Design',
+                taskDescription: 'Designed a UI kit for native app using Sketch, Figma & Adobe XD',
+                rate: '$60.00',
+                hours: '20',
+                total: '$1200.00',
+            },
+        ]
 
-    const INVOICE_APP_STORE_MODULE_NAME = 'app-invoice'
+        const INVOICE_APP_STORE_MODULE_NAME = 'app-invoice'
 
-    // Register module
-    if (!store.hasModule(INVOICE_APP_STORE_MODULE_NAME)) store.registerModule(INVOICE_APP_STORE_MODULE_NAME, invoiceStoreModule)
+        // Register module
+        if (!store.hasModule(INVOICE_APP_STORE_MODULE_NAME)) store.registerModule(INVOICE_APP_STORE_MODULE_NAME, invoiceStoreModule)
 
-    // UnRegister on leave
-    onUnmounted(() => {
-      if (store.hasModule(INVOICE_APP_STORE_MODULE_NAME)) store.unregisterModule(INVOICE_APP_STORE_MODULE_NAME)
-    })
+        // UnRegister on leave
+        onUnmounted(() => {
+            if (store.hasModule(INVOICE_APP_STORE_MODULE_NAME)) store.unregisterModule(INVOICE_APP_STORE_MODULE_NAME)
+        })
 
-    store.dispatch('app-invoice/fetchInvoice', { id: router.currentRoute.params.id })
-      .then(response => {
-        invoiceData.value = response.data.invoice
-        paymentDetails.value = response.data.paymentDetails
-      })
-      .catch(error => {
-        if (error.response.status === 404) {
-          invoiceData.value = undefined
+        store.dispatch('app-invoice/fetchInvoice', { id: router.currentRoute.params.id })
+            .then(response => {
+                invoiceData.value = response.data.invoice
+                paymentDetails.value = response.data.paymentDetails
+            })
+            .catch(error => {
+                if (error.response.status === 404) {
+                    invoiceData.value = undefined
+                }
+            })
+
+        const printInvoice = () => {
+            window.print()
         }
-      })
 
-    const printInvoice = () => {
-      window.print()
-    }
-
-    return {
-      invoiceData,
-      paymentDetails,
-      invoiceDescription,
-      printInvoice,
-    }
-  },
+        return {
+            invoiceData,
+            paymentDetails,
+            invoiceDescription,
+            printInvoice,
+        }
+    },
 }
 </script>
 

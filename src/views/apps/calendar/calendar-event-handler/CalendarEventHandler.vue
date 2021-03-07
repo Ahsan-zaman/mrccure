@@ -285,7 +285,7 @@
 
 <script>
 import {
-  BSidebar, BForm, BFormGroup, BFormInput, BFormCheckbox, BAvatar, BFormTextarea, BButton, BFormInvalidFeedback,
+    BSidebar, BForm, BFormGroup, BFormInput, BFormCheckbox, BAvatar, BFormTextarea, BButton, BFormInvalidFeedback,
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import flatPickr from 'vue-flatpickr-component'
@@ -297,50 +297,50 @@ import { ref, toRefs } from '@vue/composition-api'
 import useCalendarEventHandler from './useCalendarEventHandler'
 
 export default {
-  components: {
-    BButton,
-    BSidebar,
-    BForm,
-    BFormGroup,
-    BFormInput,
-    BFormCheckbox,
-    BFormTextarea,
-    BAvatar,
-    vSelect,
-    flatPickr,
-    ValidationProvider,
-    BFormInvalidFeedback,
-    ValidationObserver,
-  },
-  directives: {
-    Ripple,
-  },
-  model: {
-    prop: 'isEventHandlerSidebarActive',
-    event: 'update:is-event-handler-sidebar-active',
-  },
-  props: {
-    isEventHandlerSidebarActive: {
-      type: Boolean,
-      required: true,
+    components: {
+        BButton,
+        BSidebar,
+        BForm,
+        BFormGroup,
+        BFormInput,
+        BFormCheckbox,
+        BFormTextarea,
+        BAvatar,
+        vSelect,
+        flatPickr,
+        ValidationProvider,
+        BFormInvalidFeedback,
+        ValidationObserver,
     },
-    event: {
-      type: Object,
-      required: true,
+    directives: {
+        Ripple,
     },
-    clearEventData: {
-      type: Function,
-      required: true,
+    model: {
+        prop: 'isEventHandlerSidebarActive',
+        event: 'update:is-event-handler-sidebar-active',
     },
-  },
-  data() {
-    return {
-      required,
-      email,
-      url,
-    }
-  },
-  setup(props, { emit }) {
+    props: {
+        isEventHandlerSidebarActive: {
+            type: Boolean,
+            required: true,
+        },
+        event: {
+            type: Object,
+            required: true,
+        },
+        clearEventData: {
+            type: Function,
+            required: true,
+        },
+    },
+    data() {
+        return {
+            required,
+            email,
+            url,
+        }
+    },
+    setup(props, { emit }) {
     /*
      ? This is handled quite differently in SFC due to deadlock of `useFormValidation` and this composition function.
      ? If we don't handle it the way it is being handled then either of two composition function used by this SFC get undefined as one of it's argument.
@@ -354,40 +354,40 @@ export default {
      ? When we passed it to `useCalendarEventHandler` for first time it will be null but right after it we are getting correct value (which is `clearForm`) and assigning that correct value.
      ? As `clearFormData` is reactive it is being changed from `null` to corrent value and thanks to reactivity it is also update in `useCalendarEventHandler` composition function and it is getting correct value in second time and can work w/o any issues.
     */
-    const clearFormData = ref(null)
+        const clearFormData = ref(null)
 
-    const {
-      eventLocal,
-      resetEventLocal,
-      calendarOptions,
+        const {
+            eventLocal,
+            resetEventLocal,
+            calendarOptions,
 
-      // UI
-      onSubmit,
-      guestsOptions,
-    } = useCalendarEventHandler(toRefs(props), clearFormData, emit)
+            // UI
+            onSubmit,
+            guestsOptions,
+        } = useCalendarEventHandler(toRefs(props), clearFormData, emit)
 
-    const {
-      refFormObserver,
-      getValidationState,
-      resetForm,
-      clearForm,
-    } = formValidation(resetEventLocal, props.clearEventData)
+        const {
+            refFormObserver,
+            getValidationState,
+            resetForm,
+            clearForm,
+        } = formValidation(resetEventLocal, props.clearEventData)
 
-    clearFormData.value = clearForm
+        clearFormData.value = clearForm
 
-    return {
-      // Add New Event
-      eventLocal,
-      calendarOptions,
-      onSubmit,
-      guestsOptions,
+        return {
+            // Add New Event
+            eventLocal,
+            calendarOptions,
+            onSubmit,
+            guestsOptions,
 
-      // Form Validation
-      resetForm,
-      refFormObserver,
-      getValidationState,
-    }
-  },
+            // Form Validation
+            resetForm,
+            refFormObserver,
+            getValidationState,
+        }
+    },
 }
 </script>
 

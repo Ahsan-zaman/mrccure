@@ -57,16 +57,16 @@ import { BSpinner, BButton, BCardText } from 'bootstrap-vue'
 import { codeButton } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BSpinner,
-    BCardText,
-  },
-  data() {
-    return {
-      codeButton,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BSpinner,
+        BCardText,
+    },
+    data() {
+        return {
+            codeButton,
+        }
+    },
 }
 </script>

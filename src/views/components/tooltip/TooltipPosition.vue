@@ -48,25 +48,25 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BButton, VBTooltip, BCardText,
+    BButton, VBTooltip, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codePosition } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    'b-tooltip': VBTooltip,
-    Ripple,
-  },
-  data() {
-    return {
-      codePosition,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
+    },
+    directives: {
+        'b-tooltip': VBTooltip,
+        Ripple,
+    },
+    data() {
+        return {
+            codePosition,
+        }
+    },
 }
 </script>

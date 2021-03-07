@@ -26,20 +26,20 @@ import BCardCode from '@core/components/b-card-code'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BPaginationNav,
-  },
-  data() {
-    return {
-      codeBasic,
-    }
-  },
-  methods: {
-    linkGen(pageNum) {
-      return pageNum === 1 ? '?' : `?page=${pageNum}`
+    components: {
+        BCardCode,
+        BCardText,
+        BPaginationNav,
     },
-  },
+    data() {
+        return {
+            codeBasic,
+        }
+    },
+    methods: {
+        linkGen(pageNum) {
+            return pageNum === 1 ? '?' : `?page=${pageNum}`
+        },
+    },
 }
 </script>

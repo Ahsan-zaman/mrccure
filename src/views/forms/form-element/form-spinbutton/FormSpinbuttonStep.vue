@@ -32,16 +32,16 @@ import { BFormSpinbutton, BCardText } from 'bootstrap-vue'
 import { codeStep } from './code'
 
 export default {
-  components: {
-    BFormSpinbutton,
-    BCardCode,
-    BCardText,
-  },
-  data() {
-    return {
-      value1: 50,
-      codeStep,
-    }
-  },
+    components: {
+        BFormSpinbutton,
+        BCardCode,
+        BCardText,
+    },
+    data() {
+        return {
+            value1: 50,
+            codeStep,
+        }
+    },
 }
 </script>

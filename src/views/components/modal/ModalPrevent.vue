@@ -83,63 +83,63 @@
 
 <script>
 import {
-  BButton, BFormGroup, BFormInput, BModal, VBModal, BCardText, BListGroup, BListGroupItem,
+    BButton, BFormGroup, BFormInput, BModal, VBModal, BCardText, BListGroup, BListGroupItem,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code'
 import Ripple from 'vue-ripple-directive'
 import { codePrevent } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BFormGroup,
-    BCardText,
-    BFormInput,
-    BListGroup,
-    BListGroupItem,
-    BModal,
-  },
-  directives: {
-    'b-modal': VBModal,
-    Ripple,
-  },
-  data() {
-    return {
-      codePrevent,
-      name: '',
-      nameState: null,
-      submittedNames: [],
-    }
-  },
-  methods: {
-    checkFormValidity() {
-      const valid = this.$refs.form.checkValidity()
-      this.nameState = valid
-      return valid
+    components: {
+        BCardCode,
+        BButton,
+        BFormGroup,
+        BCardText,
+        BFormInput,
+        BListGroup,
+        BListGroupItem,
+        BModal,
     },
-    resetModal() {
-      this.name = ''
-      this.nameState = null
+    directives: {
+        'b-modal': VBModal,
+        Ripple,
     },
-    handleOk(bvModalEvt) {
-      // Prevent modal from closing
-      bvModalEvt.preventDefault()
-      // Trigger submit handler
-      this.handleSubmit()
+    data() {
+        return {
+            codePrevent,
+            name: '',
+            nameState: null,
+            submittedNames: [],
+        }
     },
-    handleSubmit() {
-      // Exit when the form isn't valid
-      if (!this.checkFormValidity()) {
-        return
-      }
-      // Push the name to submitted names
-      this.submittedNames.push(this.name)
-      // Hide the modal manually
-      this.$nextTick(() => {
-        this.$refs['my-modal'].toggle('#toggle-btn')
-      })
+    methods: {
+        checkFormValidity() {
+            const valid = this.$refs.form.checkValidity()
+            this.nameState = valid
+            return valid
+        },
+        resetModal() {
+            this.name = ''
+            this.nameState = null
+        },
+        handleOk(bvModalEvt) {
+            // Prevent modal from closing
+            bvModalEvt.preventDefault()
+            // Trigger submit handler
+            this.handleSubmit()
+        },
+        handleSubmit() {
+            // Exit when the form isn't valid
+            if (!this.checkFormValidity()) {
+                return
+            }
+            // Push the name to submitted names
+            this.submittedNames.push(this.name)
+            // Hide the modal manually
+            this.$nextTick(() => {
+                this.$refs['my-modal'].toggle('#toggle-btn')
+            })
+        },
     },
-  },
 }
 </script>

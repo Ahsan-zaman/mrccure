@@ -74,41 +74,41 @@
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import VuexyLogo from '@core/layouts/components/Logo.vue'
 import {
-  BCard, BLink, BCardText, BCardTitle, BFormGroup, BFormInput, BForm, BButton,
+    BCard, BLink, BCardText, BCardTitle, BFormGroup, BFormInput, BForm, BButton,
 } from 'bootstrap-vue'
 import { required, email } from '@validations'
 
 export default {
-  components: {
-    VuexyLogo,
-    BCard,
-    BLink,
-    BCardText,
-    BCardTitle,
-    BFormGroup,
-    BFormInput,
-    BButton,
-    BForm,
-    ValidationProvider,
-    ValidationObserver,
-  },
-  data() {
-    return {
-      userEmail: '',
-      // validation
-      required,
-      email,
-    }
-  },
-  methods: {
-    validationForm() {
-      this.$refs.simpleRules.validate().then(success => {
-        if (success) {
-          this.$router.push({ name: 'auth-reset-password-v1' })
-        }
-      })
+    components: {
+        VuexyLogo,
+        BCard,
+        BLink,
+        BCardText,
+        BCardTitle,
+        BFormGroup,
+        BFormInput,
+        BButton,
+        BForm,
+        ValidationProvider,
+        ValidationObserver,
     },
-  },
+    data() {
+        return {
+            userEmail: '',
+            // validation
+            required,
+            email,
+        }
+    },
+    methods: {
+        validationForm() {
+            this.$refs.simpleRules.validate().then(success => {
+                if (success) {
+                    this.$router.push({ name: 'auth-reset-password-v1' })
+                }
+            })
+        },
+    },
 }
 </script>
 

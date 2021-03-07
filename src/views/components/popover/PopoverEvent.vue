@@ -104,67 +104,67 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  VBPopover, BButton, BPopover, BCardText,
+    VBPopover, BButton, BPopover, BCardText,
 } from 'bootstrap-vue'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
 import Ripple from 'vue-ripple-directive'
 import { codeEvent } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BButton,
-    BPopover,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
-  directives: {
-    'b-popover': VBPopover,
-    Ripple,
-  },
-  data() {
-    return {
-      codeEvent,
-    }
-  },
-  methods: {
-    onShow() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Show Event popover',
-          icon: 'BellIcon',
-        },
-      })
+    components: {
+        BCardCode,
+        BCardText,
+        BButton,
+        BPopover,
+        // eslint-disable-next-line vue/no-unused-components
+        ToastificationContent,
     },
-    onShown() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Shown Event popover',
-          icon: 'BellIcon',
-        },
-      })
+    directives: {
+        'b-popover': VBPopover,
+        Ripple,
     },
-    onHide() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Hide Event popover',
-          icon: 'BellIcon',
-        },
-      })
+    data() {
+        return {
+            codeEvent,
+        }
     },
-    onHidden() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Hidden Event popover',
-          icon: 'BellIcon',
+    methods: {
+        onShow() {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Show Event popover',
+                    icon: 'BellIcon',
+                },
+            })
         },
-      })
+        onShown() {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Shown Event popover',
+                    icon: 'BellIcon',
+                },
+            })
+        },
+        onHide() {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Hide Event popover',
+                    icon: 'BellIcon',
+                },
+            })
+        },
+        onHidden() {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Hidden Event popover',
+                    icon: 'BellIcon',
+                },
+            })
+        },
     },
-  },
 }
 </script>

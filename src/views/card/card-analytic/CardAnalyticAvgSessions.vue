@@ -128,7 +128,7 @@
 
 <script>
 import {
-  BCard, BRow, BCol, BButton, BDropdown, BDropdownItem, BProgress, BCardText,
+    BCard, BRow, BCol, BButton, BDropdown, BDropdownItem, BProgress, BCardText,
 } from 'bootstrap-vue'
 import VueApexCharts from 'vue-apexcharts'
 import Ripple from 'vue-ripple-directive'
@@ -136,77 +136,77 @@ import { $themeColors } from '@themeConfig'
 import { kFormatter } from '@core/utils/filter'
 
 export default {
-  components: {
-    VueApexCharts,
-    BCard,
-    BRow,
-    BCol,
-    BButton,
-    BCardText,
-    BDropdown,
-    BDropdownItem,
-    BProgress,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      avgData: {},
-      salesBar: {
-        series: [
-          {
-            name: 'Sessions',
-            data: [75, 125, 225, 175, 125, 75, 25],
-          },
-        ],
-        chartOptions: {
-          chart: {
-            sparkline: { enabled: true },
-            toolbar: { show: false },
-          },
-          grid: {
-            show: false,
-            padding: {
-              left: 0,
-              right: 0,
+    components: {
+        VueApexCharts,
+        BCard,
+        BRow,
+        BCol,
+        BButton,
+        BCardText,
+        BDropdown,
+        BDropdownItem,
+        BProgress,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            avgData: {},
+            salesBar: {
+                series: [
+                    {
+                        name: 'Sessions',
+                        data: [75, 125, 225, 175, 125, 75, 25],
+                    },
+                ],
+                chartOptions: {
+                    chart: {
+                        sparkline: { enabled: true },
+                        toolbar: { show: false },
+                    },
+                    grid: {
+                        show: false,
+                        padding: {
+                            left: 0,
+                            right: 0,
+                        },
+                    },
+                    states: {
+                        hover: {
+                            filter: 'none',
+                        },
+                    },
+                    colors: [
+                        '#ebf0f7',
+                        '#ebf0f7',
+                        $themeColors.primary,
+                        '#ebf0f7',
+                        '#ebf0f7',
+                        '#ebf0f7',
+                    ],
+                    plotOptions: {
+                        bar: {
+                            columnWidth: '45%',
+                            distributed: true,
+                            endingShape: 'rounded',
+                        },
+                    },
+                    tooltip: {
+                        x: { show: false },
+                    },
+                    xaxis: {
+                        type: 'numeric',
+                    },
+                },
             },
-          },
-          states: {
-            hover: {
-              filter: 'none',
-            },
-          },
-          colors: [
-            '#ebf0f7',
-            '#ebf0f7',
-            $themeColors.primary,
-            '#ebf0f7',
-            '#ebf0f7',
-            '#ebf0f7',
-          ],
-          plotOptions: {
-            bar: {
-              columnWidth: '45%',
-              distributed: true,
-              endingShape: 'rounded',
-            },
-          },
-          tooltip: {
-            x: { show: false },
-          },
-          xaxis: {
-            type: 'numeric',
-          },
-        },
-      },
-    }
-  },
-  created() {
-    this.$http.get('/card/card-analytics/avg-sessions').then(res => { this.avgData = res.data })
-  },
-  methods: {
-    kFormatter,
-  },
+        }
+    },
+    created() {
+        this.$http.get('/card/card-analytics/avg-sessions').then(res => { this.avgData = res.data })
+    },
+    methods: {
+        kFormatter,
+    },
 }
 </script>

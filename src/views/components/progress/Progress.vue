@@ -23,17 +23,17 @@ import ProgressMultipleBar from './ProgressMultipleBar.vue'
 import ProgressLabelCustom from './ProgressLabelCustom.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    ProgressBasic,
-    ProgressColored,
-    ProgressLabel,
-    ProgressAnimated,
-    ProgressStripped,
-    ProgressMultipleBar,
-    ProgressLabelCustom,
-  },
+        ProgressBasic,
+        ProgressColored,
+        ProgressLabel,
+        ProgressAnimated,
+        ProgressStripped,
+        ProgressMultipleBar,
+        ProgressLabelCustom,
+    },
 }
 </script>

@@ -64,15 +64,15 @@ import { BProgress, BCardText } from 'bootstrap-vue'
 import { codeStripped } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BProgress,
-    BCardText,
-  },
-  data() {
-    return {
-      codeStripped,
-    }
-  },
+    components: {
+        BCardCode,
+        BProgress,
+        BCardText,
+    },
+    data() {
+        return {
+            codeStripped,
+        }
+    },
 }
 </script>

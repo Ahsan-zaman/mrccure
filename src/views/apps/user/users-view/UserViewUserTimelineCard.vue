@@ -48,20 +48,20 @@
 
 <script>
 import {
-  BCard, BImg, BMedia, BAvatar,
+    BCard, BImg, BMedia, BAvatar,
 } from 'bootstrap-vue'
 import AppTimeline from '@core/components/app-timeline/AppTimeline.vue'
 import AppTimelineItem from '@core/components/app-timeline/AppTimelineItem.vue'
 
 export default {
-  components: {
-    BCard,
-    BImg,
-    BMedia,
-    BAvatar,
-    AppTimeline,
-    AppTimelineItem,
-  },
+    components: {
+        BCard,
+        BImg,
+        BMedia,
+        BAvatar,
+        AppTimeline,
+        AppTimelineItem,
+    },
 }
 </script>
 

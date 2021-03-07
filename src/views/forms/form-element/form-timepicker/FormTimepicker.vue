@@ -44,19 +44,19 @@ import FormTimepickerButtonOnly from './FormTimepickerButtonOnly.vue'
 import FormTimepickerInternationalization from './FormTimepickerInternationalization.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    FormTimepickerBasic,
-    FormTimepickerState,
-    FormTimepickerValidation,
-    FormTimepickerSecond,
-    FormTimepickerSize,
-    FormTimepickerPlaceholder,
-    FormTimepickerOptional,
-    FormTimepickerButtonOnly,
-    FormTimepickerInternationalization,
-  },
+        FormTimepickerBasic,
+        FormTimepickerState,
+        FormTimepickerValidation,
+        FormTimepickerSecond,
+        FormTimepickerSize,
+        FormTimepickerPlaceholder,
+        FormTimepickerOptional,
+        FormTimepickerButtonOnly,
+        FormTimepickerInternationalization,
+    },
 }
 </script>

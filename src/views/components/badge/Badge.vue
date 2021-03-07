@@ -32,16 +32,16 @@ import BadgeLink from './BadgeLink.vue'
 import BadgeBlock from './BadgeBlock.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    BadgeContextual,
-    BadgeGlow,
-    BadgeLight,
-    BadgeIcon,
-    BadgeLink,
-    BadgeBlock,
-  },
+        BadgeContextual,
+        BadgeGlow,
+        BadgeLight,
+        BadgeIcon,
+        BadgeLink,
+        BadgeBlock,
+    },
 }
 </script>

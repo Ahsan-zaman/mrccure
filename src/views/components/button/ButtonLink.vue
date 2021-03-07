@@ -54,19 +54,19 @@ import Ripple from 'vue-ripple-directive'
 import { codeButtonHref } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BAlert,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeButtonHref,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BAlert,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeButtonHref,
+        }
+    },
 }
 </script>

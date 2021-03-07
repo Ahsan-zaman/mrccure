@@ -129,28 +129,28 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardTitle, BCardText, BCardBody, BFormGroup, BFormRadio, BFormInput, BButton,
+    BCard, BCardHeader, BCardTitle, BCardText, BCardBody, BFormGroup, BFormRadio, BFormInput, BButton,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
+    components: {
     // BSV
-    BCard,
-    BCardHeader,
-    BCardTitle,
-    BCardText,
-    BCardBody,
-    BFormGroup,
-    BFormRadio,
-    BFormInput,
-    BButton,
-  },
-  props: {
-    paymentDetails: {
-      type: Object,
-      required: true,
+        BCard,
+        BCardHeader,
+        BCardTitle,
+        BCardText,
+        BCardBody,
+        BFormGroup,
+        BFormRadio,
+        BFormInput,
+        BButton,
     },
-  },
+    props: {
+        paymentDetails: {
+            type: Object,
+            required: true,
+        },
+    },
 }
 </script>
 

@@ -80,127 +80,127 @@
 
 <script>
 import {
-  BCard, BRow, BCol, BDropdown, BDropdownItem, BButton,
+    BCard, BRow, BCol, BDropdown, BDropdownItem, BButton,
 } from 'bootstrap-vue'
 import VueApexCharts from 'vue-apexcharts'
 import { $themeColors } from '@themeConfig'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    VueApexCharts,
-    BDropdown,
-    BDropdownItem,
-    BCard,
-    BButton,
-    BRow,
-    BCol,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      revenue_report: {},
-      revenueReport: {
-        series: [
-          {
-            name: 'Earning',
-            data: [95, 177, 284, 256, 105, 63, 168, 218, 72],
-          },
-          {
-            name: 'Expense',
-            data: [-145, -80, -60, -180, -100, -60, -85, -75, -100],
-          },
-        ],
-        chartOptions: {
-          chart: {
-            stacked: true,
-            type: 'bar',
-            toolbar: { show: false },
-          },
-          grid: {
-            padding: {
-              top: -20,
-              bottom: -10,
+    components: {
+        VueApexCharts,
+        BDropdown,
+        BDropdownItem,
+        BCard,
+        BButton,
+        BRow,
+        BCol,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            revenue_report: {},
+            revenueReport: {
+                series: [
+                    {
+                        name: 'Earning',
+                        data: [95, 177, 284, 256, 105, 63, 168, 218, 72],
+                    },
+                    {
+                        name: 'Expense',
+                        data: [-145, -80, -60, -180, -100, -60, -85, -75, -100],
+                    },
+                ],
+                chartOptions: {
+                    chart: {
+                        stacked: true,
+                        type: 'bar',
+                        toolbar: { show: false },
+                    },
+                    grid: {
+                        padding: {
+                            top: -20,
+                            bottom: -10,
+                        },
+                        yaxis: {
+                            lines: { show: false },
+                        },
+                    },
+                    xaxis: {
+                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                        labels: {
+                            style: {
+                                colors: '#b9b9c3',
+                                fontSize: '0.86rem',
+                            },
+                        },
+                        axisTicks: {
+                            show: false,
+                        },
+                        axisBorder: {
+                            show: false,
+                        },
+                    },
+                    legend: {
+                        show: false,
+                    },
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    colors: [$themeColors.primary, $themeColors.warning],
+                    plotOptions: {
+                        bar: {
+                            columnWidth: '17%',
+                            endingShape: 'rounded',
+                        },
+                        distributed: true,
+                    },
+                    yaxis: {
+                        labels: {
+                            style: {
+                                colors: '#b9b9c3',
+                                fontSize: '0.86rem',
+                            },
+                        },
+                    },
+                },
             },
-            yaxis: {
-              lines: { show: false },
-            },
-          },
-          xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-            labels: {
-              style: {
-                colors: '#b9b9c3',
-                fontSize: '0.86rem',
-              },
-            },
-            axisTicks: {
-              show: false,
-            },
-            axisBorder: {
-              show: false,
-            },
-          },
-          legend: {
-            show: false,
-          },
-          dataLabels: {
-            enabled: false,
-          },
-          colors: [$themeColors.primary, $themeColors.warning],
-          plotOptions: {
-            bar: {
-              columnWidth: '17%',
-              endingShape: 'rounded',
-            },
-            distributed: true,
-          },
-          yaxis: {
-            labels: {
-              style: {
-                colors: '#b9b9c3',
-                fontSize: '0.86rem',
-              },
-            },
-          },
-        },
-      },
 
-      // budget chart
-      budgetChart: {
-        series: [
-          {
-            data: [61, 48, 69, 52, 60, 40, 79, 60, 59, 43, 62],
-          },
-          {
-            data: [20, 10, 30, 15, 23, 0, 25, 15, 20, 5, 27],
-          },
-        ],
-        options: {
-          chart: {
-            height: 80,
-            toolbar: { show: false },
-            zoom: { enabled: false },
-            type: 'line',
-            sparkline: { enabled: true },
-          },
-          stroke: {
-            curve: 'smooth',
-            dashArray: [0, 5],
-            width: [2],
-          },
-          colors: [$themeColors.primary, '#dcdae3'],
-          tooltip: {
-            enabled: false,
-          },
-        },
-      },
-    }
-  },
-  created() {
-    this.$http.get('/card/card-analytics/revenue-report').then(res => { this.revenue_report = res.data })
-  },
+            // budget chart
+            budgetChart: {
+                series: [
+                    {
+                        data: [61, 48, 69, 52, 60, 40, 79, 60, 59, 43, 62],
+                    },
+                    {
+                        data: [20, 10, 30, 15, 23, 0, 25, 15, 20, 5, 27],
+                    },
+                ],
+                options: {
+                    chart: {
+                        height: 80,
+                        toolbar: { show: false },
+                        zoom: { enabled: false },
+                        type: 'line',
+                        sparkline: { enabled: true },
+                    },
+                    stroke: {
+                        curve: 'smooth',
+                        dashArray: [0, 5],
+                        width: [2],
+                    },
+                    colors: [$themeColors.primary, '#dcdae3'],
+                    tooltip: {
+                        enabled: false,
+                    },
+                },
+            },
+        }
+    },
+    created() {
+        this.$http.get('/card/card-analytics/revenue-report').then(res => { this.revenue_report = res.data })
+    },
 }
 </script>

@@ -93,21 +93,21 @@
 
 <script>
 import {
-  BButton, BCard, BInputGroup, BFormInput, BInputGroupAppend,
+    BButton, BCard, BInputGroup, BFormInput, BInputGroupAppend,
 } from 'bootstrap-vue'
 import ECommerceCheckoutStepCartProducts from './ECommerceCheckoutStepCartProducts.vue'
 
 export default {
-  components: {
+    components: {
     // BSV
-    BButton,
-    BCard,
-    BInputGroup,
-    BFormInput,
-    BInputGroupAppend,
+        BButton,
+        BCard,
+        BInputGroup,
+        BFormInput,
+        BInputGroupAppend,
 
-    // SFC
-    ECommerceCheckoutStepCartProducts,
-  },
+        // SFC
+        ECommerceCheckoutStepCartProducts,
+    },
 }
 </script>

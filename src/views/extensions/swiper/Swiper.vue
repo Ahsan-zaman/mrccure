@@ -43,28 +43,28 @@ import SwiperResponsive from './SwiperResponsive.vue'
 import SwiperVirtual from './SwiperVirtual.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    SwiperDefault,
-    SwiperNavigation,
-    SwiperPagination,
-    SwiperProgress,
-    SwiperMultipleSlides,
-    SwiperMultiRowSlides,
-    SwiperCenteredSlides,
-    SwiperCenteredSlides2,
-    SwiperFadeEffect,
-    SwiperCube,
-    SwiperCoverflowEffect,
-    SwiperAutoplay,
-    SwiperGallery,
-    SwiperParallax,
-    SwiperLazy,
-    SwiperResponsive,
-    SwiperVirtual,
-  },
+        SwiperDefault,
+        SwiperNavigation,
+        SwiperPagination,
+        SwiperProgress,
+        SwiperMultipleSlides,
+        SwiperMultiRowSlides,
+        SwiperCenteredSlides,
+        SwiperCenteredSlides2,
+        SwiperFadeEffect,
+        SwiperCube,
+        SwiperCoverflowEffect,
+        SwiperAutoplay,
+        SwiperGallery,
+        SwiperParallax,
+        SwiperLazy,
+        SwiperResponsive,
+        SwiperVirtual,
+    },
 }
 </script>
 

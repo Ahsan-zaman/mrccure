@@ -99,27 +99,27 @@
 
 <script>
 import {
-  BButtonToolbar, BButtonGroup, BButton, BCardText,
+    BButtonToolbar, BButtonGroup, BButton, BCardText,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import Ripple from 'vue-ripple-directive'
 import { codeSize } from './code'
 
 export default {
-  components: {
-    BButtonToolbar,
-    BButtonGroup,
-    BButton,
-    BCardText,
-    BCardCode,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeSize,
-    }
-  },
+    components: {
+        BButtonToolbar,
+        BButtonGroup,
+        BButton,
+        BCardText,
+        BCardCode,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeSize,
+        }
+    },
 }
 </script>

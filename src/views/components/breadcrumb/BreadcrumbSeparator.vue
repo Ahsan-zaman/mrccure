@@ -41,27 +41,27 @@ import BCardCode from '@core/components/b-card-code'
 import { codeSeparator } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BBreadcrumb,
-    BCardText,
-  },
-  data() {
-    return {
-      codeSeparator,
-      items: [
-        {
-          text: 'Home',
-        },
-        {
-          text: 'Library',
-        },
-        {
-          text: 'Data',
-          active: true,
-        },
-      ],
-    }
-  },
+    components: {
+        BCardCode,
+        BBreadcrumb,
+        BCardText,
+    },
+    data() {
+        return {
+            codeSeparator,
+            items: [
+                {
+                    text: 'Home',
+                },
+                {
+                    text: 'Library',
+                },
+                {
+                    text: 'Data',
+                    active: true,
+                },
+            ],
+        }
+    },
 }
 </script>

@@ -34,17 +34,17 @@ import { BFormTextarea, BCardText } from 'bootstrap-vue'
 import { codeCounter } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormTextarea,
-  },
-  data() {
-    return {
-      value: '',
-      maxChar: 20,
-      codeCounter,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormTextarea,
+    },
+    data() {
+        return {
+            value: '',
+            maxChar: 20,
+            codeCounter,
+        }
+    },
 }
 </script>

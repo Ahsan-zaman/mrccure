@@ -30,16 +30,16 @@ import { BCarousel, BCarouselSlide, BCardText } from 'bootstrap-vue'
 import { codePause } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCarousel,
-    BCarouselSlide,
-    BCardText,
-  },
-  data() {
-    return {
-      codePause,
-    }
-  },
+    components: {
+        BCardCode,
+        BCarousel,
+        BCarouselSlide,
+        BCardText,
+    },
+    data() {
+        return {
+            codePause,
+        }
+    },
 }
 </script>

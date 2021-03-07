@@ -17,14 +17,14 @@ import BreadcrumbSlot from './BreadcrumbSlot.vue'
 import BreadcrumbAlignment from './BreadcrumbAlignment.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    BreadcrumbDefault,
-    BreadcrumbSeparator,
-    BreadcrumbSlot,
-    BreadcrumbAlignment,
-  },
+        BreadcrumbDefault,
+        BreadcrumbSeparator,
+        BreadcrumbSlot,
+        BreadcrumbAlignment,
+    },
 }
 </script>

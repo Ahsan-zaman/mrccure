@@ -61,22 +61,22 @@ import ApexRadialBarChart from './ApexRadialBarChart.vue'
 import ApexRadarChart from './ApexRadarChart.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BLink,
+    components: {
+        BRow,
+        BCol,
+        BLink,
 
-    ApexLineChart,
-    ApexLineAreaChart,
-    ApexDataBarChart,
-    ApexBarChart,
-    ApexCandlestickChart,
-    ApexScatterChart,
-    ApexHeatMapChart,
-    ApexDonutChart,
-    ApexRadarChart,
-    ApexRadialBarChart,
-  },
+        ApexLineChart,
+        ApexLineAreaChart,
+        ApexDataBarChart,
+        ApexBarChart,
+        ApexCandlestickChart,
+        ApexScatterChart,
+        ApexHeatMapChart,
+        ApexDonutChart,
+        ApexRadarChart,
+        ApexRadialBarChart,
+    },
 }
 </script>
 

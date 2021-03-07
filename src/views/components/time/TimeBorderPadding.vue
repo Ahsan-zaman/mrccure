@@ -22,15 +22,15 @@ import { BTime, BCardText } from 'bootstrap-vue'
 import { codeBorderPadding } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BTime,
-  },
-  data() {
-    return {
-      codeBorderPadding,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BTime,
+    },
+    data() {
+        return {
+            codeBorderPadding,
+        }
+    },
 }
 </script>

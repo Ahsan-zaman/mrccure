@@ -35,15 +35,15 @@ import { BCalendar, BCardText } from 'bootstrap-vue'
 import { codeWidth } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCalendar,
-    BCardText,
-  },
-  data() {
-    return {
-      codeWidth,
-    }
-  },
+    components: {
+        BCardCode,
+        BCalendar,
+        BCardText,
+    },
+    data() {
+        return {
+            codeWidth,
+        }
+    },
 }
 </script>

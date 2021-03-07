@@ -44,15 +44,15 @@ import { BAvatar, BCardText } from 'bootstrap-vue'
 import { codeCustomContent } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAvatar,
-    BCardText,
-  },
-  data() {
-    return {
-      codeCustomContent,
-    }
-  },
+    components: {
+        BCardCode,
+        BAvatar,
+        BCardText,
+    },
+    data() {
+        return {
+            codeCustomContent,
+        }
+    },
 }
 </script>

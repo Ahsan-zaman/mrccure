@@ -109,7 +109,7 @@
 
 <script>
 import {
-  BCard, BCardBody, BLink, BImg, BButton, BBadge, BFormSpinbutton,
+    BCard, BCardBody, BLink, BImg, BButton, BBadge, BFormSpinbutton,
 } from 'bootstrap-vue'
 import store from '@/store'
 import { ref } from '@vue/composition-api'
@@ -117,43 +117,43 @@ import { formatDate } from '@core/utils/filter'
 import { useEcommerce, useEcommerceUi } from '../useEcommerce'
 
 export default {
-  components: {
-    BCard, BCardBody, BLink, BImg, BButton, BBadge, BFormSpinbutton,
-  },
-  setup() {
-    const products = ref([])
+    components: {
+        BCard, BCardBody, BLink, BImg, BButton, BBadge, BFormSpinbutton,
+    },
+    setup() {
+        const products = ref([])
 
-    const { toggleProductInWishlist } = useEcommerceUi()
-    const { removeProductFromCart } = useEcommerce()
-    const removeProductFromCartClick = product => {
-      removeProductFromCart(product.id)
-        .then(() => {
-          const productIndex = products.value.findIndex(p => p.id === product.id)
-          products.value.splice(productIndex, 1)
+        const { toggleProductInWishlist } = useEcommerceUi()
+        const { removeProductFromCart } = useEcommerce()
+        const removeProductFromCartClick = product => {
+            removeProductFromCart(product.id)
+                .then(() => {
+                    const productIndex = products.value.findIndex(p => p.id === product.id)
+                    products.value.splice(productIndex, 1)
 
-          store.commit('app-ecommerce/UPDATE_CART_ITEMS_COUNT', products.value.length)
-        })
-    }
+                    store.commit('app-ecommerce/UPDATE_CART_ITEMS_COUNT', products.value.length)
+                })
+        }
 
-    const fetchCartProducts = () => {
-      store.dispatch('app-ecommerce/fetchCartProducts')
-        .then(response => {
-          products.value = response.data.products
-        })
-    }
-    fetchCartProducts()
+        const fetchCartProducts = () => {
+            store.dispatch('app-ecommerce/fetchCartProducts')
+                .then(response => {
+                    products.value = response.data.products
+                })
+        }
+        fetchCartProducts()
 
-    return {
-      products,
+        return {
+            products,
 
-      // UI
-      toggleProductInWishlist,
-      removeProductFromCartClick,
+            // UI
+            toggleProductInWishlist,
+            removeProductFromCartClick,
 
-      // Filter
-      formatDate,
-    }
-  },
+            // Filter
+            formatDate,
+        }
+    },
 }
 </script>
 

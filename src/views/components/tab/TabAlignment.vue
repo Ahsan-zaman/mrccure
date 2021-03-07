@@ -51,15 +51,15 @@ import { BTabs, BTab } from 'bootstrap-vue'
 import { codeAlignment } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BTabs,
-    BTab,
-  },
-  data() {
-    return {
-      codeAlignment,
-    }
-  },
+    components: {
+        BCardCode,
+        BTabs,
+        BTab,
+    },
+    data() {
+        return {
+            codeAlignment,
+        }
+    },
 }
 </script>

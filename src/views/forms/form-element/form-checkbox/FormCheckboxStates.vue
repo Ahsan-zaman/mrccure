@@ -36,33 +36,33 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormCheckboxGroup, BFormInvalidFeedback, BFormValidFeedback, BCardText,
+    BFormCheckboxGroup, BFormInvalidFeedback, BFormValidFeedback, BCardText,
 } from 'bootstrap-vue'
 import { codeStates } from './code'
 
 export default {
-  components: {
-    BFormCheckboxGroup,
-    BFormInvalidFeedback,
-    BFormValidFeedback,
-    BCardText,
-    BCardCode,
-  },
-  data() {
-    return {
-      value: [],
-      options: [
-        { text: 'First Check', value: 'first' },
-        { text: 'Second Check', value: 'second' },
-        { text: 'Third Check', value: 'third' },
-      ],
-      codeStates,
-    }
-  },
-  computed: {
-    state() {
-      return this.value.length === 2
+    components: {
+        BFormCheckboxGroup,
+        BFormInvalidFeedback,
+        BFormValidFeedback,
+        BCardText,
+        BCardCode,
     },
-  },
+    data() {
+        return {
+            value: [],
+            options: [
+                { text: 'First Check', value: 'first' },
+                { text: 'Second Check', value: 'second' },
+                { text: 'Third Check', value: 'third' },
+            ],
+            codeStates,
+        }
+    },
+    computed: {
+        state() {
+            return this.value.length === 2
+        },
+    },
 }
 </script>

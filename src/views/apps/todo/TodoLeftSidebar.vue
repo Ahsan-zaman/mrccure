@@ -73,39 +73,39 @@ import { isDynamicRouteActive } from '@core/utils/utils'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  directives: {
-    Ripple,
-  },
-  components: {
-    BButton,
-    BListGroup,
-    BListGroupItem,
-    VuePerfectScrollbar,
-  },
-  props: {
-    taskTags: {
-      type: Array,
-      required: true,
+    directives: {
+        Ripple,
     },
-  },
-  setup() {
-    const perfectScrollbarSettings = {
-      maxScrollbarLength: 60,
-    }
+    components: {
+        BButton,
+        BListGroup,
+        BListGroupItem,
+        VuePerfectScrollbar,
+    },
+    props: {
+        taskTags: {
+            type: Array,
+            required: true,
+        },
+    },
+    setup() {
+        const perfectScrollbarSettings = {
+            maxScrollbarLength: 60,
+        }
 
-    const taskFilters = [
-      { title: 'My Task', icon: 'MailIcon', route: { name: 'apps-todo' } },
-      { title: 'Important', icon: 'StarIcon', route: { name: 'apps-todo-filter', params: { filter: 'important' } } },
-      { title: 'Completed', icon: 'CheckIcon', route: { name: 'apps-todo-filter', params: { filter: 'completed' } } },
-      { title: 'Deleted', icon: 'TrashIcon', route: { name: 'apps-todo-filter', params: { filter: 'deleted' } } },
-    ]
+        const taskFilters = [
+            { title: 'My Task', icon: 'MailIcon', route: { name: 'apps-todo' } },
+            { title: 'Important', icon: 'StarIcon', route: { name: 'apps-todo-filter', params: { filter: 'important' } } },
+            { title: 'Completed', icon: 'CheckIcon', route: { name: 'apps-todo-filter', params: { filter: 'completed' } } },
+            { title: 'Deleted', icon: 'TrashIcon', route: { name: 'apps-todo-filter', params: { filter: 'deleted' } } },
+        ]
 
-    return {
-      perfectScrollbarSettings,
-      taskFilters,
-      isDynamicRouteActive,
-    }
-  },
+        return {
+            perfectScrollbarSettings,
+            taskFilters,
+            isDynamicRouteActive,
+        }
+    },
 }
 </script>
 

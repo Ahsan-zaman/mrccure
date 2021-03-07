@@ -36,22 +36,22 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BCalendar, BRow, BCol, BCardText,
+    BCalendar, BRow, BCol, BCardText,
 } from 'bootstrap-vue'
 import { codeFormat } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCalendar,
-    BCardText,
-    BRow,
-    BCol,
-  },
-  data() {
-    return {
-      codeFormat,
-    }
-  },
+    components: {
+        BCardCode,
+        BCalendar,
+        BCardText,
+        BRow,
+        BCol,
+    },
+    data() {
+        return {
+            codeFormat,
+        }
+    },
 }
 </script>

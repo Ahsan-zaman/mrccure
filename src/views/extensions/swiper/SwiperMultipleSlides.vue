@@ -35,35 +35,35 @@ import 'swiper/css/swiper.css'
 import { codeMultipleSlides } from './code'
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-    BCardCode,
-    BImg,
-  },
-  data() {
-    return {
-      codeMultipleSlides,
+    components: {
+        Swiper,
+        SwiperSlide,
+        BCardCode,
+        BImg,
+    },
+    data() {
+        return {
+            codeMultipleSlides,
 
-      /* eslint-disable global-require */
-      swiperData: [
-        { img: require('@/assets/images/banner/banner-31.jpg') },
-        { img: require('@/assets/images/banner/banner-32.jpg') },
-        { img: require('@/assets/images/banner/banner-33.jpg') },
-        { img: require('@/assets/images/banner/banner-34.jpg') },
-        { img: require('@/assets/images/banner/banner-35.jpg') },
-      ],
-      /* eslint-disable global-require */
+            /* eslint-disable global-require */
+            swiperData: [
+                { img: require('@/assets/images/banner/banner-31.jpg') },
+                { img: require('@/assets/images/banner/banner-32.jpg') },
+                { img: require('@/assets/images/banner/banner-33.jpg') },
+                { img: require('@/assets/images/banner/banner-34.jpg') },
+                { img: require('@/assets/images/banner/banner-35.jpg') },
+            ],
+            /* eslint-disable global-require */
 
-      swiperOptions: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      },
-    }
-  },
+            swiperOptions: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            },
+        }
+    },
 }
 </script>

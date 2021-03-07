@@ -21,17 +21,17 @@ import GoodTableI18n from './GoodTableI18n.vue'
 import GoodTableSsr from './GoodTableSsr.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    GoodTableBasic,
-    GoodTableRowGroup,
-    GoodTableColumnSearch,
-    GoodTableAdvanceSearch,
-    GoodTableI18n,
-    GoodTableSsr,
-  },
+        GoodTableBasic,
+        GoodTableRowGroup,
+        GoodTableColumnSearch,
+        GoodTableAdvanceSearch,
+        GoodTableI18n,
+        GoodTableSsr,
+    },
 }
 </script>
 

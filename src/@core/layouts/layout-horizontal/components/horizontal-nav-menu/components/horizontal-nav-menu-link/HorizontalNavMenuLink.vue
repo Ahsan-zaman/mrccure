@@ -25,25 +25,25 @@ import useHorizontalNavMenuLink from './useHorizontalNavMenuLink'
 import mixinHorizontalNavMenuLink from './mixinHorizontalNavMenuLink'
 
 export default {
-  components: {
-    BLink,
-  },
-  mixins: [mixinHorizontalNavMenuLink],
-  props: {
-    item: {
-      type: Object,
-      required: true,
+    components: {
+        BLink,
     },
-  },
-  setup(props) {
-    const { isActive, linkProps, updateIsActive } = useHorizontalNavMenuLink(props.item)
+    mixins: [mixinHorizontalNavMenuLink],
+    props: {
+        item: {
+            type: Object,
+            required: true,
+        },
+    },
+    setup(props) {
+        const { isActive, linkProps, updateIsActive } = useHorizontalNavMenuLink(props.item)
 
-    return {
-      isActive,
-      linkProps,
-      updateIsActive,
-    }
-  },
+        return {
+            isActive,
+            linkProps,
+            updateIsActive,
+        }
+    },
 
 }
 </script>

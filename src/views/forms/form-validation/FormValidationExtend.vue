@@ -86,7 +86,7 @@
 import BCardCode from '@core/components/b-card-code'
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import {
-  BFormInput, BFormGroup, BForm, BButton, BRow, BCol, BCardText,
+    BFormInput, BFormGroup, BForm, BButton, BRow, BCol, BCardText,
 } from 'bootstrap-vue'
 import 'prismjs'
 import 'prismjs/themes/prism-tomorrow.css'
@@ -94,25 +94,25 @@ import Prism from 'vue-prism-component'
 import { codeExtended } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    ValidationProvider,
-    ValidationObserver,
-    BFormInput,
-    BFormGroup,
-    BCardText,
-    BForm,
-    BRow,
-    BCol,
-    BButton,
-    Prism,
-  },
-  data() {
-    return {
-      cardNUm: '',
-      posNum: '',
-      codeExtended,
-      codeCredit: `export const credit = extend('credit', {
+    components: {
+        BCardCode,
+        ValidationProvider,
+        ValidationObserver,
+        BFormInput,
+        BFormGroup,
+        BCardText,
+        BForm,
+        BRow,
+        BCol,
+        BButton,
+        Prism,
+    },
+    data() {
+        return {
+            cardNUm: '',
+            posNum: '',
+            codeExtended,
+            codeCredit: `export const credit = extend('credit', {
     validate: validatorCreditCard,
     message: 'Please enter positive number!',
   })
@@ -124,7 +124,7 @@ export default {
   const validCreditCard = cRegExp.test(creditnum)
   return validCreditCard
   }`,
-      codePositive: `export const positive = extend('positive', {
+            codePositive: `export const positive = extend('positive', {
   validate: validatorPositive,
   message: 'Please enter positive number!',
   })
@@ -136,17 +136,17 @@ export default {
   return false
   }
   `,
-    }
-  },
-  methods: {
-    validationForm() {
-      this.$refs.simpleRules.validate().then(success => {
-        if (success) {
-        // eslint-disable-next-line
-          alert('form submitted!')
         }
-      })
     },
-  },
+    methods: {
+        validationForm() {
+            this.$refs.simpleRules.validate().then(success => {
+                if (success) {
+                    // eslint-disable-next-line
+          alert('form submitted!')
+                }
+            })
+        },
+    },
 }
 </script>

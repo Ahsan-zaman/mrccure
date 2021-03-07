@@ -75,25 +75,25 @@
 
 <script>
 import {
-  BCard, BCardText, BButton, BRow, BCol, BImg, BCardBody, BCardTitle, BCardSubTitle, BLink,
+    BCard, BCardText, BButton, BRow, BCol, BImg, BCardBody, BCardTitle, BCardSubTitle, BLink,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BCard,
-    BCardText,
-    BButton,
-    BCardBody,
-    BCardTitle,
-    BCardSubTitle,
-    BRow,
-    BCol,
-    BLink,
-    BImg,
-  },
-  directives: {
-    Ripple,
-  },
+    components: {
+        BCard,
+        BCardText,
+        BButton,
+        BCardBody,
+        BCardTitle,
+        BCardSubTitle,
+        BRow,
+        BCol,
+        BLink,
+        BImg,
+    },
+    directives: {
+        Ripple,
+    },
 }
 </script>

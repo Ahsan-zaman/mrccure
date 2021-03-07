@@ -19,23 +19,23 @@
 
 <script>
 import {
-  BCard, BCardTitle, BCardBody, BCardHeader,
+    BCard, BCardTitle, BCardBody, BCardHeader,
 } from 'bootstrap-vue'
 import VueApexCharts from 'vue-apexcharts'
 import apexChatData from './apexChartData'
 
 export default {
-  components: {
-    VueApexCharts,
-    BCard,
-    BCardTitle,
-    BCardBody,
-    BCardHeader,
-  },
-  data() {
-    return {
-      apexChatData,
-    }
-  },
+    components: {
+        VueApexCharts,
+        BCard,
+        BCardTitle,
+        BCardBody,
+        BCardHeader,
+    },
+    data() {
+        return {
+            apexChatData,
+        }
+    },
 }
 </script>

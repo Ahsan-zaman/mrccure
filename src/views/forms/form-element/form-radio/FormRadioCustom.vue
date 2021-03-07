@@ -49,17 +49,17 @@ import { BFormRadio, BCardText } from 'bootstrap-vue'
 import { codeCustom } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormRadio,
-  },
-  data() {
-    return {
-      Selected: 'A',
-      Selected1: 'c',
-      codeCustom,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormRadio,
+    },
+    data() {
+        return {
+            Selected: 'A',
+            Selected1: 'c',
+            codeCustom,
+        }
+    },
 }
 </script>

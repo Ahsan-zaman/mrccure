@@ -39,18 +39,18 @@ import PaginationSeparated from './PaginationSeparated.vue'
 import PaginationSize from './PaginationSize.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    PaginationAlignment,
-    PaginationBasic,
-    PaginationButtonContent,
-    PaginationColor,
-    PaginationGoto,
-    PaginationPill,
-    PaginationSeparated,
-    PaginationSize,
-  },
+    components: {
+        BRow,
+        BCol,
+        PaginationAlignment,
+        PaginationBasic,
+        PaginationButtonContent,
+        PaginationColor,
+        PaginationGoto,
+        PaginationPill,
+        PaginationSeparated,
+        PaginationSize,
+    },
 
 }
 </script>

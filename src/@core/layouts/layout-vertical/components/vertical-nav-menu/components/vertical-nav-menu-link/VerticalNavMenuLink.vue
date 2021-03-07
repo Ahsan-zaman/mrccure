@@ -1,25 +1,28 @@
 <template>
-    <li
-        v-if="$can(item.action, item.resource)"
-        class="nav-item"
-        :class="{
-            active: isActive,
-            disabled: item.disabled,
-        }"
+  <li
+    v-if="$can(item.action, item.resource)"
+    class="nav-item"
+    :class="{
+      active: isActive,
+      disabled: item.disabled,
+    }"
+  >
+    <b-link
+      v-bind="linkProps"
+      class="d-flex align-items-center"
     >
-        <b-link v-bind="linkProps" class="d-flex align-items-center">
-            <feather-icon :icon="item.icon || 'CircleIcon'" />
-            <span class="menu-title text-truncate">{{ item.title }}</span>
-            <b-badge
-                v-if="item.tag"
-                pill
-                :variant="item.tagVariant || 'primary'"
-                class="mr-1 ml-auto"
-            >
-                {{ item.tag }}
-            </b-badge>
-        </b-link>
-    </li>
+      <feather-icon :icon="item.icon || 'CircleIcon'" />
+      <span class="menu-title text-truncate">{{ item.title }}</span>
+      <b-badge
+        v-if="item.tag"
+        pill
+        :variant="item.tagVariant || 'primary'"
+        class="mr-1 ml-auto"
+      >
+        {{ item.tag }}
+      </b-badge>
+    </b-link>
+  </li>
 </template>
 
 <script>

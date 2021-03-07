@@ -93,36 +93,36 @@ import Ripple from 'vue-ripple-directive'
 import { codePosition } from './code'
 
 export default {
-  components: {
-    BButton,
-    BCardCode,
-    BCardText,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codePosition,
-    }
-  },
-  methods: {
-    showToast(variant, position) {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Notification',
-          icon: 'InfoIcon',
-          text: 'I do not think that word means what you think it means.',
-          variant,
-        },
-      },
-      {
-        position,
-      })
+    components: {
+        BButton,
+        BCardCode,
+        BCardText,
+        // eslint-disable-next-line vue/no-unused-components
+        ToastificationContent,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codePosition,
+        }
+    },
+    methods: {
+        showToast(variant, position) {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Notification',
+                    icon: 'InfoIcon',
+                    text: 'I do not think that word means what you think it means.',
+                    variant,
+                },
+            },
+            {
+                position,
+            })
+        },
+    },
 }
 </script>

@@ -10,9 +10,9 @@ import ClipboardWithDirective from './ClipboardWithDirective.vue'
 import ClipboardWithoutDirective from './ClipboardWithoutDirective.vue'
 
 export default {
-  components: {
-    ClipboardWithDirective,
-    ClipboardWithoutDirective,
-  },
+    components: {
+        ClipboardWithDirective,
+        ClipboardWithoutDirective,
+    },
 }
 </script>

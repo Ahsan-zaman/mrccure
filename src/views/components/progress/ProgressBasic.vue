@@ -63,20 +63,20 @@ import { BProgress, BCardText } from 'bootstrap-vue'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BProgress,
-  },
-  data() {
-    return {
-      value: 0,
-      value1: 25,
-      value2: 50,
-      value3: 75,
-      value4: 100,
-      codeBasic,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BProgress,
+    },
+    data() {
+        return {
+            value: 0,
+            value1: 25,
+            value2: 50,
+            value3: 75,
+            value4: 100,
+            codeBasic,
+        }
+    },
 }
 </script>

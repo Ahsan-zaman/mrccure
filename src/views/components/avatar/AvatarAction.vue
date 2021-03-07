@@ -41,28 +41,28 @@ import ToastificationContent from '@core/components/toastification/Toastificatio
 import { codeAction } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAvatar,
-    BCardText,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
-  data() {
-    return {
-      codeAction,
-    }
-  },
-  methods: {
-    showToast() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Notification',
-          icon: 'BellIcon',
-        },
-      })
+    components: {
+        BCardCode,
+        BAvatar,
+        BCardText,
+        // eslint-disable-next-line vue/no-unused-components
+        ToastificationContent,
     },
-  },
+    data() {
+        return {
+            codeAction,
+        }
+    },
+    methods: {
+        showToast() {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Notification',
+                    icon: 'BellIcon',
+                },
+            })
+        },
+    },
 }
 </script>

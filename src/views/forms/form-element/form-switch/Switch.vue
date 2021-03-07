@@ -17,14 +17,14 @@ import SwitchIcon from './SwitchIcon.vue'
 import SwitchGrouped from './SwitchGrouped.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    SwitchBasic,
-    SwitchColor,
-    SwitchIcon,
-    SwitchGrouped,
-  },
+        SwitchBasic,
+        SwitchColor,
+        SwitchIcon,
+        SwitchGrouped,
+    },
 }
 </script>

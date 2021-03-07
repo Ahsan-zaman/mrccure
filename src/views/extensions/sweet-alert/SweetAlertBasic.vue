@@ -49,80 +49,80 @@ import Ripple from 'vue-ripple-directive'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeBasic,
-    }
-  },
-  methods: {
-
-    // basic
-    showAlert() {
-      this.$swal({
-        title: 'Any fool can use a computer',
-        customClass: {
-          confirmButton: 'btn btn-primary',
-        },
-        buttonsStyling: false,
-      })
+    components: {
+        BCardCode,
+        BCardText,
+        BButton,
     },
-
-    // whith title
-    withTitle() {
-      this.$swal({
-        title: 'The Internet?,',
-        text: 'That thing is still around?',
-        customClass: {
-          confirmButton: 'btn btn-primary',
-        },
-        buttonsStyling: false,
-      })
+    directives: {
+        Ripple,
     },
-
-    // with footer
-    withFooter() {
-      this.$swal({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Something went wrong!',
-        footer: '<a href="javascript:void(0)">Why do I have this issue?</a>',
-        customClass: {
-          confirmButton: 'btn btn-primary',
-        },
-        buttonsStyling: false,
-      })
+    data() {
+        return {
+            codeBasic,
+        }
     },
+    methods: {
 
-    // with html
-    withHtml() {
-      this.$swal({
-        title: '<span class="font-weight-bolder">HTML <u>example</u></span>',
-        icon: 'info',
-        html:
+        // basic
+        showAlert() {
+            this.$swal({
+                title: 'Any fool can use a computer',
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                buttonsStyling: false,
+            })
+        },
+
+        // whith title
+        withTitle() {
+            this.$swal({
+                title: 'The Internet?,',
+                text: 'That thing is still around?',
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                buttonsStyling: false,
+            })
+        },
+
+        // with footer
+        withFooter() {
+            this.$swal({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: '<a href="javascript:void(0)">Why do I have this issue?</a>',
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                buttonsStyling: false,
+            })
+        },
+
+        // with html
+        withHtml() {
+            this.$swal({
+                title: '<span class="font-weight-bolder">HTML <u>example</u></span>',
+                icon: 'info',
+                html:
           'You can use <span class="font-weight-bolder">bold text</span>, '
           + '<a href="https://pixinvent.com/" target="_blank">links</a> '
           + 'and other HTML tags',
-        showCloseButton: true,
-        showCancelButton: true,
-        focusConfirm: false,
-        confirmButtonText: 'Great!',
-        confirmButtonAriaLabel: 'Thumbs up, great!',
-        cancelButtonAriaLabel: 'Thumbs down',
-        customClass: {
-          confirmButton: 'btn btn-primary',
-          cancelButton: 'btn btn-outline-danger ml-1',
+                showCloseButton: true,
+                showCancelButton: true,
+                focusConfirm: false,
+                confirmButtonText: 'Great!',
+                confirmButtonAriaLabel: 'Thumbs up, great!',
+                cancelButtonAriaLabel: 'Thumbs down',
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                    cancelButton: 'btn btn-outline-danger ml-1',
+                },
+                buttonsStyling: false,
+            })
         },
-        buttonsStyling: false,
-      })
     },
-  },
 }
 </script>

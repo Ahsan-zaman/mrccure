@@ -17,14 +17,14 @@ import AppCustomizer from '@core/layouts/components/app-customizer/AppCustomizer
 import { $themeConfig } from '@themeConfig'
 
 export default {
-  components: {
-    LayoutHorizontal,
-    AppCustomizer,
-  },
-  data() {
-    return {
-      showCustomizer: $themeConfig.layout.customizer,
-    }
-  },
+    components: {
+        LayoutHorizontal,
+        AppCustomizer,
+    },
+    data() {
+        return {
+            showCustomizer: $themeConfig.layout.customizer,
+        }
+    },
 }
 </script>

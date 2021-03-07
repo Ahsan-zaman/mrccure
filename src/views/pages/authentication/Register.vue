@@ -208,7 +208,7 @@
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import VuexyLogo from '@core/layouts/components/Logo.vue'
 import {
-  BRow, BCol, BLink, BButton, BForm, BFormCheckbox, BFormGroup, BFormInput, BInputGroup, BInputGroupAppend, BImg, BCardTitle, BCardText,
+    BRow, BCol, BLink, BButton, BForm, BFormCheckbox, BFormGroup, BFormInput, BInputGroup, BInputGroupAppend, BImg, BCardTitle, BCardText,
 } from 'bootstrap-vue'
 import { required, email } from '@validations'
 import { togglePasswordVisibility } from '@core/mixins/ui/forms'
@@ -216,74 +216,74 @@ import store from '@/store/index'
 import useJwt from '@/auth/jwt/useJwt'
 
 export default {
-  components: {
-    VuexyLogo,
-    BRow,
-    BImg,
-    BCol,
-    BLink,
-    BButton,
-    BForm,
-    BCardText,
-    BCardTitle,
-    BFormCheckbox,
-    BFormGroup,
-    BFormInput,
-    BInputGroup,
-    BInputGroupAppend,
-    // validations
-    ValidationProvider,
-    ValidationObserver,
-  },
-  mixins: [togglePasswordVisibility],
-  data() {
-    return {
-      status: '',
-      username: '',
-      userEmail: '',
-      password: '',
-      sideImg: require('@/assets/images/pages/register-v2.svg'),
-      // validation
-      required,
-      email,
-    }
-  },
-  computed: {
-    passwordToggleIcon() {
-      return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'
+    components: {
+        VuexyLogo,
+        BRow,
+        BImg,
+        BCol,
+        BLink,
+        BButton,
+        BForm,
+        BCardText,
+        BCardTitle,
+        BFormCheckbox,
+        BFormGroup,
+        BFormInput,
+        BInputGroup,
+        BInputGroupAppend,
+        // validations
+        ValidationProvider,
+        ValidationObserver,
     },
-    imgUrl() {
-      if (store.state.appConfig.layout.skin === 'dark') {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.sideImg = require('@/assets/images/pages/register-v2-dark.svg')
-        return this.sideImg
-      }
-      return this.sideImg
-    },
-  },
-  methods: {
-    register() {
-      this.$refs.registerForm.validate().then(success => {
-        if (success) {
-          useJwt.register({
-            username: this.username,
-            email: this.userEmail,
-            password: this.password,
-          })
-            .then(response => {
-              useJwt.setToken(response.data.accessToken)
-              useJwt.setRefreshToken(response.data.refreshToken)
-              localStorage.setItem('userData', JSON.stringify(response.data.userData))
-              this.$ability.update(response.data.userData.ability)
-              this.$router.push('/')
-            })
-            .catch(error => {
-              this.$refs.registerForm.setErrors(error.response.data.error)
-            })
+    mixins: [togglePasswordVisibility],
+    data() {
+        return {
+            status: '',
+            username: '',
+            userEmail: '',
+            password: '',
+            sideImg: require('@/assets/images/pages/register-v2.svg'),
+            // validation
+            required,
+            email,
         }
-      })
     },
-  },
+    computed: {
+        passwordToggleIcon() {
+            return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'
+        },
+        imgUrl() {
+            if (store.state.appConfig.layout.skin === 'dark') {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.sideImg = require('@/assets/images/pages/register-v2-dark.svg')
+                return this.sideImg
+            }
+            return this.sideImg
+        },
+    },
+    methods: {
+        register() {
+            this.$refs.registerForm.validate().then(success => {
+                if (success) {
+                    useJwt.register({
+                        username: this.username,
+                        email: this.userEmail,
+                        password: this.password,
+                    })
+                        .then(response => {
+                            useJwt.setToken(response.data.accessToken)
+                            useJwt.setRefreshToken(response.data.refreshToken)
+                            localStorage.setItem('userData', JSON.stringify(response.data.userData))
+                            this.$ability.update(response.data.userData.ability)
+                            this.$router.push('/')
+                        })
+                        .catch(error => {
+                            this.$refs.registerForm.setErrors(error.response.data.error)
+                        })
+                }
+            })
+        },
+    },
 }
 /* eslint-disable global-require */
 </script>

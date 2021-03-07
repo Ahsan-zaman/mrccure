@@ -36,17 +36,17 @@ import FormLayoutDatalistHelper from './FormLayoutDatalistHelper.vue'
 import FormLayoutFeedbackHelper from './FormLayoutFeedbackHelper.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    FormLayoutHorizontal,
-    FormLayoutHorizontalIcon,
-    FormLayoutVertical,
-    FormLayoutVerticalIcon,
-    FormLayoutMultipleColumn,
-    FormLayoutDatalistHelper,
-    FormLayoutFeedbackHelper,
-  },
+        FormLayoutHorizontal,
+        FormLayoutHorizontalIcon,
+        FormLayoutVertical,
+        FormLayoutVerticalIcon,
+        FormLayoutMultipleColumn,
+        FormLayoutDatalistHelper,
+        FormLayoutFeedbackHelper,
+    },
 }
 </script>

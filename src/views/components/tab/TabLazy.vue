@@ -41,21 +41,21 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BTabs, BTab, BAlert,
+    BTabs, BTab, BAlert,
 } from 'bootstrap-vue'
 import { codeLazy } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BTabs,
-    BTab,
-    BAlert,
-  },
-  data() {
-    return {
-      codeLazy,
-    }
-  },
+    components: {
+        BCardCode,
+        BTabs,
+        BTab,
+        BAlert,
+    },
+    data() {
+        return {
+            codeLazy,
+        }
+    },
 }
 </script>

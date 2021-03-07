@@ -93,71 +93,71 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormTags,
-  BFormGroup,
-  BDropdown,
-  BDropdownForm,
-  BFormInput,
-  BDropdownDivider,
-  BDropdownItem,
-  BFormTag,
-  BDropdownText,
-  BCardText,
-} from 'bootstrap-vue'
-import { codeAdvanceCustom } from './code'
-
-export default {
-  components: {
-    BCardCode,
     BFormTags,
     BFormGroup,
     BDropdown,
     BDropdownForm,
     BFormInput,
     BDropdownDivider,
-    BCardText,
     BDropdownItem,
     BFormTag,
     BDropdownText,
-  },
-  data() {
-    return {
-      options: ['Apple', 'Orange', 'Banana', 'Lime', 'Peach', 'Chocolate', 'Strawberry'],
-      search: '',
-      value: [],
-      codeAdvanceCustom,
-    }
-  },
-  computed: {
-    criteria() {
-      // Compute the search criteria
-      return this.search.trim().toLowerCase()
-    },
-    availableOptions() {
-      const { criteria } = this
+    BCardText,
+} from 'bootstrap-vue'
+import { codeAdvanceCustom } from './code'
 
-      // Filter out already selected options
-      const options = this.options.filter(opt => this.value.indexOf(opt) === -1)
-      if (criteria) {
-        // Show only options that match criteria
-        return options.filter(opt => opt.toLowerCase().indexOf(criteria) > -1)
-      }
+export default {
+    components: {
+        BCardCode,
+        BFormTags,
+        BFormGroup,
+        BDropdown,
+        BDropdownForm,
+        BFormInput,
+        BDropdownDivider,
+        BCardText,
+        BDropdownItem,
+        BFormTag,
+        BDropdownText,
+    },
+    data() {
+        return {
+            options: ['Apple', 'Orange', 'Banana', 'Lime', 'Peach', 'Chocolate', 'Strawberry'],
+            search: '',
+            value: [],
+            codeAdvanceCustom,
+        }
+    },
+    computed: {
+        criteria() {
+            // Compute the search criteria
+            return this.search.trim().toLowerCase()
+        },
+        availableOptions() {
+            const { criteria } = this
 
-      // Show all options available
-      return options
+            // Filter out already selected options
+            const options = this.options.filter(opt => this.value.indexOf(opt) === -1)
+            if (criteria) {
+                // Show only options that match criteria
+                return options.filter(opt => opt.toLowerCase().indexOf(criteria) > -1)
+            }
+
+            // Show all options available
+            return options
+        },
+        searchDesc() {
+            if (this.criteria && this.availableOptions.length === 0) {
+                return 'There are no tags matching your search criteria'
+            }
+            return ''
+        },
     },
-    searchDesc() {
-      if (this.criteria && this.availableOptions.length === 0) {
-        return 'There are no tags matching your search criteria'
-      }
-      return ''
+    methods: {
+        onOptionClick({ option, addTag }) {
+            addTag(option)
+            this.search = ''
+        },
     },
-  },
-  methods: {
-    onOptionClick({ option, addTag }) {
-      addTag(option)
-      this.search = ''
-    },
-  },
 }
 </script>

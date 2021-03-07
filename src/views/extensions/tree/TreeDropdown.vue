@@ -18,36 +18,36 @@ import { VSelectTree } from 'vue-tree-halower'
 import { codeDropdown } from './code'
 
 export default {
-  components: {
-    VSelectTree,
-    BCardCode,
-  },
-  data() {
-    return {
-      codeDropdown,
-      initSelected: ['node-1'],
-      treeData: [
-        {
-          title: 'node1',
-          expanded: true,
-          children: [
-            {
-              title: 'node 1-1',
-              expanded: true,
-              children: [
+    components: {
+        VSelectTree,
+        BCardCode,
+    },
+    data() {
+        return {
+            codeDropdown,
+            initSelected: ['node-1'],
+            treeData: [
                 {
-                  title: 'node 1-1-1',
-                }, {
-                  title: 'node 1-1-2',
-                }, {
-                  title: 'node 1-1-3',
+                    title: 'node1',
+                    expanded: true,
+                    children: [
+                        {
+                            title: 'node 1-1',
+                            expanded: true,
+                            children: [
+                                {
+                                    title: 'node 1-1-1',
+                                }, {
+                                    title: 'node 1-1-2',
+                                }, {
+                                    title: 'node 1-1-3',
+                                },
+                            ],
+                        },
+                    ],
                 },
-              ],
-            },
-          ],
-        },
-      ],
-    }
-  },
+            ],
+        }
+    },
 }
 </script>

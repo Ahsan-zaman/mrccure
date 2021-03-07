@@ -71,27 +71,27 @@
 
 <script>
 import {
-  BCard, BBadge, BCardTitle, BCardText, BAvatar, BButton,
+    BCard, BBadge, BCardTitle, BCardText, BAvatar, BButton,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BCard,
-    BBadge,
-    BButton,
-    BAvatar,
-    BCardTitle,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  props: {
-    data: {
-      type: Object,
-      default: () => {},
+    components: {
+        BCard,
+        BBadge,
+        BButton,
+        BAvatar,
+        BCardTitle,
+        BCardText,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    props: {
+        data: {
+            type: Object,
+            default: () => {},
+        },
+    },
 }
 </script>

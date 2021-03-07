@@ -60,26 +60,26 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  VBPopover, BButton, BPopover,
+    VBPopover, BButton, BPopover,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeOption } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPopover,
-    BButton,
-  },
-  directives: {
-    'b-popover': VBPopover,
-    Ripple,
-  },
-  data() {
-    return {
-      delay: { show: 500, hide: 500 },
-      codeOption,
-    }
-  },
+    components: {
+        BCardCode,
+        BPopover,
+        BButton,
+    },
+    directives: {
+        'b-popover': VBPopover,
+        Ripple,
+    },
+    data() {
+        return {
+            delay: { show: 500, hide: 500 },
+            codeOption,
+        }
+    },
 }
 </script>

@@ -25,11 +25,11 @@ import { BAlert, BCardText } from 'bootstrap-vue'
 import { codeAlertDefaut } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAlert,
-    BCardText,
-  },
-  data() { return { codeAlertDefaut } },
+    components: {
+        BCardCode,
+        BAlert,
+        BCardText,
+    },
+    data() { return { codeAlertDefaut } },
 }
 </script>

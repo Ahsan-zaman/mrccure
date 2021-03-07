@@ -44,28 +44,28 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardBody, BButton, BButtonGroup,
+    BCard, BCardHeader, BCardBody, BButton, BButtonGroup,
 } from 'bootstrap-vue'
 import VueApexCharts from 'vue-apexcharts'
 import Ripple from 'vue-ripple-directive'
 import apexChatData from './apexChartData'
 
 export default {
-  components: {
-    BCard,
-    VueApexCharts,
-    BCardHeader,
-    BCardBody,
-    BButton,
-    BButtonGroup,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      apexChatData,
-    }
-  },
+    components: {
+        BCard,
+        VueApexCharts,
+        BCardHeader,
+        BCardBody,
+        BButton,
+        BButtonGroup,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            apexChatData,
+        }
+    },
 }
 </script>

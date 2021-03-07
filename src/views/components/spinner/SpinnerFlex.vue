@@ -26,15 +26,15 @@ import { BSpinner, BCardText } from 'bootstrap-vue'
 import { codeFlex } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BSpinner,
-    BCardText,
-  },
-  data() {
-    return {
-      codeFlex,
-    }
-  },
+    components: {
+        BCardCode,
+        BSpinner,
+        BCardText,
+    },
+    data() {
+        return {
+            codeFlex,
+        }
+    },
 }
 </script>

@@ -65,16 +65,16 @@ import { BFormGroup, BFormInput, BCardText } from 'bootstrap-vue'
 import { codeHorizontalSize } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormGroup,
-    BFormInput,
-    BCardText,
-  },
-  data() {
-    return {
-      codeHorizontalSize,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormGroup,
+        BFormInput,
+        BCardText,
+    },
+    data() {
+        return {
+            codeHorizontalSize,
+        }
+    },
 }
 </script>

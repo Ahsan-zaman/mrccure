@@ -32,16 +32,16 @@ import FormInputGroupButton from './FormInputGroupButton.vue'
 import FormInputGroupDropdown from './FormInputGroupDropdown.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    FormInputGroupBasic,
-    FormInputGroupMerged,
-    FormInputGroupCheckboxRadio,
-    FormInputGroupSize,
-    FormInputGroupButton,
-    FormInputGroupDropdown,
-  },
+        FormInputGroupBasic,
+        FormInputGroupMerged,
+        FormInputGroupCheckboxRadio,
+        FormInputGroupSize,
+        FormInputGroupButton,
+        FormInputGroupDropdown,
+    },
 }
 </script>

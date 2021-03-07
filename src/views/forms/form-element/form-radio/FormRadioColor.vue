@@ -69,16 +69,16 @@ import { BFormRadio, BCardText } from 'bootstrap-vue'
 import { codeColor } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormRadio,
-    BCardText,
-  },
-  data() {
-    return {
-      Selected: 'e',
-      codeColor,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormRadio,
+        BCardText,
+    },
+    data() {
+        return {
+            Selected: 'e',
+            codeColor,
+        }
+    },
 }
 </script>

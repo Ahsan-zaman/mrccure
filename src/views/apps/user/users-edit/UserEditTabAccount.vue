@@ -207,7 +207,7 @@
 
 <script>
 import {
-  BButton, BMedia, BAvatar, BRow, BCol, BFormGroup, BFormInput, BForm, BTable, BCard, BCardHeader, BCardTitle, BFormCheckbox,
+    BButton, BMedia, BAvatar, BRow, BCol, BFormGroup, BFormInput, BForm, BTable, BCard, BCardHeader, BCardTitle, BFormCheckbox,
 } from 'bootstrap-vue'
 import { avatarText } from '@core/utils/filter'
 import vSelect from 'vue-select'
@@ -216,105 +216,105 @@ import { ref } from '@vue/composition-api'
 import useUsersList from '../users-list/useUsersList'
 
 export default {
-  components: {
-    BButton,
-    BMedia,
-    BAvatar,
-    BRow,
-    BCol,
-    BFormGroup,
-    BFormInput,
-    BForm,
-    BTable,
-    BCard,
-    BCardHeader,
-    BCardTitle,
-    BFormCheckbox,
-    vSelect,
-  },
-  props: {
-    userData: {
-      type: Object,
-      required: true,
+    components: {
+        BButton,
+        BMedia,
+        BAvatar,
+        BRow,
+        BCol,
+        BFormGroup,
+        BFormInput,
+        BForm,
+        BTable,
+        BCard,
+        BCardHeader,
+        BCardTitle,
+        BFormCheckbox,
+        vSelect,
     },
-  },
-  setup(props) {
-    const { resolveUserRoleVariant } = useUsersList()
+    props: {
+        userData: {
+            type: Object,
+            required: true,
+        },
+    },
+    setup(props) {
+        const { resolveUserRoleVariant } = useUsersList()
 
-    const roleOptions = [
-      { label: 'Admin', value: 'admin' },
-      { label: 'Author', value: 'author' },
-      { label: 'Editor', value: 'editor' },
-      { label: 'Maintainer', value: 'maintainer' },
-      { label: 'Subscriber', value: 'subscriber' },
-    ]
+        const roleOptions = [
+            { label: 'Admin', value: 'admin' },
+            { label: 'Author', value: 'author' },
+            { label: 'Editor', value: 'editor' },
+            { label: 'Maintainer', value: 'maintainer' },
+            { label: 'Subscriber', value: 'subscriber' },
+        ]
 
-    const statusOptions = [
-      { label: 'Pending', value: 'pending' },
-      { label: 'Active', value: 'active' },
-      { label: 'Inactive', value: 'inactive' },
-    ]
+        const statusOptions = [
+            { label: 'Pending', value: 'pending' },
+            { label: 'Active', value: 'active' },
+            { label: 'Inactive', value: 'inactive' },
+        ]
 
-    const permissionsData = [
-      {
-        module: 'Admin',
-        read: true,
-        write: false,
-        create: false,
-        delete: false,
-      },
-      {
-        module: 'Staff',
-        read: false,
-        write: true,
-        create: false,
-        delete: false,
-      },
-      {
-        module: 'Author',
-        read: true,
-        write: false,
-        create: true,
-        delete: false,
-      },
-      {
-        module: 'Contributor',
-        read: false,
-        write: false,
-        create: false,
-        delete: false,
-      },
-      {
-        module: 'User',
-        read: false,
-        write: false,
-        create: false,
-        delete: true,
-      },
-    ]
+        const permissionsData = [
+            {
+                module: 'Admin',
+                read: true,
+                write: false,
+                create: false,
+                delete: false,
+            },
+            {
+                module: 'Staff',
+                read: false,
+                write: true,
+                create: false,
+                delete: false,
+            },
+            {
+                module: 'Author',
+                read: true,
+                write: false,
+                create: true,
+                delete: false,
+            },
+            {
+                module: 'Contributor',
+                read: false,
+                write: false,
+                create: false,
+                delete: false,
+            },
+            {
+                module: 'User',
+                read: false,
+                write: false,
+                create: false,
+                delete: true,
+            },
+        ]
 
-    // ? Demo Purpose => Update image on click of update
-    const refInputEl = ref(null)
-    const previewEl = ref(null)
+        // ? Demo Purpose => Update image on click of update
+        const refInputEl = ref(null)
+        const previewEl = ref(null)
 
-    const { inputImageRenderer } = useInputImageRenderer(refInputEl, base64 => {
-      // eslint-disable-next-line no-param-reassign
-      props.userData.avatar = base64
-    })
+        const { inputImageRenderer } = useInputImageRenderer(refInputEl, base64 => {
+            // eslint-disable-next-line no-param-reassign
+            props.userData.avatar = base64
+        })
 
-    return {
-      resolveUserRoleVariant,
-      avatarText,
-      roleOptions,
-      statusOptions,
-      permissionsData,
+        return {
+            resolveUserRoleVariant,
+            avatarText,
+            roleOptions,
+            statusOptions,
+            permissionsData,
 
-      //  ? Demo - Update Image on click of update button
-      refInputEl,
-      previewEl,
-      inputImageRenderer,
-    }
-  },
+            //  ? Demo - Update Image on click of update button
+            refInputEl,
+            previewEl,
+            inputImageRenderer,
+        }
+    },
 }
 </script>
 

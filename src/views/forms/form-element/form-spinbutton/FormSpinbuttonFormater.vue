@@ -35,22 +35,22 @@ import { BFormSpinbutton, BCardText } from 'bootstrap-vue'
 import { codeFormater } from './code'
 
 export default {
-  components: {
-    BFormSpinbutton,
-    BCardText,
-    BCardCode,
-  },
-  data() {
-    return {
-      value: 0,
-      days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      codeFormater,
-    }
-  },
-  methods: {
-    dayFormatter(value) {
-      return this.days[value]
+    components: {
+        BFormSpinbutton,
+        BCardText,
+        BCardCode,
     },
-  },
+    data() {
+        return {
+            value: 0,
+            days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            codeFormater,
+        }
+    },
+    methods: {
+        dayFormatter(value) {
+            return this.days[value]
+        },
+    },
 }
 </script>

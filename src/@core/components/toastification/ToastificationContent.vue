@@ -44,31 +44,31 @@
 import { BAvatar } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BAvatar,
-  },
-  props: {
-    variant: {
-      type: String,
-      default: 'primary',
+    components: {
+        BAvatar,
     },
-    icon: {
-      type: String,
-      default: null,
+    props: {
+        variant: {
+            type: String,
+            default: 'primary',
+        },
+        icon: {
+            type: String,
+            default: null,
+        },
+        title: {
+            type: String,
+            default: null,
+        },
+        text: {
+            type: String,
+            default: null,
+        },
+        hideClose: {
+            type: Boolean,
+            default: false,
+        },
     },
-    title: {
-      type: String,
-      default: null,
-    },
-    text: {
-      type: String,
-      default: null,
-    },
-    hideClose: {
-      type: Boolean,
-      default: false,
-    },
-  },
 }
 </script>
 

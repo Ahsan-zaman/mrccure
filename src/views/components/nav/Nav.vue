@@ -48,20 +48,20 @@ import NavSquareBorder from './NavSquareBorder.vue'
 import NavDivider from './NavDivider.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    NavBasic,
-    NavBorder,
-    NavFill,
-    NavJustified,
-    NavAlignment,
-    NavDropdown,
-    NavVertical,
-    NavVerticalBorder,
-    NavSquareBorder,
-    NavDivider,
-  },
+        NavBasic,
+        NavBorder,
+        NavFill,
+        NavJustified,
+        NavAlignment,
+        NavDropdown,
+        NavVertical,
+        NavVerticalBorder,
+        NavSquareBorder,
+        NavDivider,
+    },
 }
 </script>

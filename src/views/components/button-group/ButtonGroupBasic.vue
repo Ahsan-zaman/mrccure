@@ -40,19 +40,19 @@ import Ripple from 'vue-ripple-directive'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BButtonGroup,
-    BButton,
-    BCardText,
-    BCardCode,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeBasic,
-    }
-  },
+    components: {
+        BButtonGroup,
+        BButton,
+        BCardText,
+        BCardCode,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeBasic,
+        }
+    },
 }
 </script>

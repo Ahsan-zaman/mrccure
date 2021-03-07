@@ -35,23 +35,23 @@ import ButtonLink from './ButtonLink.vue'
 import ButtonCheckboxRadio from './ButtonCheckboxRadio.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    ButtonFilled,
-    ButtonFlat,
-    ButtonBlock,
-    ButtonSize,
-    ButtonRelief,
-    ButtonIcons,
-    ButtonIconsOnly,
-    ButtonBorder,
-    ButtonGradient,
-    ButtonRounded,
-    ButtonRouter,
-    ButtonLink,
-    ButtonCheckboxRadio,
-  },
+        ButtonFilled,
+        ButtonFlat,
+        ButtonBlock,
+        ButtonSize,
+        ButtonRelief,
+        ButtonIcons,
+        ButtonIconsOnly,
+        ButtonBorder,
+        ButtonGradient,
+        ButtonRounded,
+        ButtonRouter,
+        ButtonLink,
+        ButtonCheckboxRadio,
+    },
 }
 </script>

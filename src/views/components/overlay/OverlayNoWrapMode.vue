@@ -62,27 +62,27 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BOverlay, BButton, BCard, BCardText,
+    BOverlay, BButton, BCard, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeNoWrapMode } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BOverlay,
-    BButton,
-    BCard,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      show: false,
-      codeNoWrapMode,
-    }
-  },
+    components: {
+        BCardCode,
+        BOverlay,
+        BButton,
+        BCard,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            show: false,
+            codeNoWrapMode,
+        }
+    },
 }
 </script>

@@ -52,26 +52,26 @@ import { BCalendar, BButton, BCardText } from 'bootstrap-vue'
 import { codeSlot } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCalendar,
-    BButton,
-    BCardText,
-  },
-  data() {
-    return {
-      value: null,
-      codeSlot,
-    }
-  },
-  methods: {
-    setToday() {
-      const now = new Date()
-      this.value = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+    components: {
+        BCardCode,
+        BCalendar,
+        BButton,
+        BCardText,
     },
-    clearDate() {
-      this.value = ''
+    data() {
+        return {
+            value: null,
+            codeSlot,
+        }
     },
-  },
+    methods: {
+        setToday() {
+            const now = new Date()
+            this.value = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+        },
+        clearDate() {
+            this.value = ''
+        },
+    },
 }
 </script>

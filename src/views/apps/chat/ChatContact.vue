@@ -42,28 +42,28 @@ import { formatDateToMonthShort } from '@core/utils/filter'
 import useChat from './useChat'
 
 export default {
-  components: {
-    BAvatar,
-    BBadge,
-  },
-  props: {
-    tag: {
-      type: String,
-      default: 'div',
+    components: {
+        BAvatar,
+        BBadge,
     },
-    user: {
-      type: Object,
-      required: true,
+    props: {
+        tag: {
+            type: String,
+            default: 'div',
+        },
+        user: {
+            type: Object,
+            required: true,
+        },
+        isChatContact: {
+            type: Boolean,
+            dedfault: false,
+        },
     },
-    isChatContact: {
-      type: Boolean,
-      dedfault: false,
+    setup() {
+        const { resolveAvatarBadgeVariant } = useChat()
+        return { formatDateToMonthShort, resolveAvatarBadgeVariant }
     },
-  },
-  setup() {
-    const { resolveAvatarBadgeVariant } = useChat()
-    return { formatDateToMonthShort, resolveAvatarBadgeVariant }
-  },
 }
 </script>
 

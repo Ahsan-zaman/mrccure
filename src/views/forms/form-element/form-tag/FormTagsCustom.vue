@@ -68,30 +68,30 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormTags, BFormTag, BFormGroup, BFormSelect, BCardText,
+    BFormTags, BFormTag, BFormGroup, BFormSelect, BCardText,
 } from 'bootstrap-vue'
 import { codeCustom } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormTags,
-    BFormGroup,
-    BFormSelect,
-    BFormTag,
-    BCardText,
-  },
-  data() {
-    return {
-      options: ['Apple', 'Orange', 'Banana', 'Lime', 'Peach', 'Chocolate', 'Strawberry'],
-      value: [],
-      codeCustom,
-    }
-  },
-  computed: {
-    availableOptions() {
-      return this.options.filter(opt => this.value.indexOf(opt) === -1)
+    components: {
+        BCardCode,
+        BFormTags,
+        BFormGroup,
+        BFormSelect,
+        BFormTag,
+        BCardText,
     },
-  },
+    data() {
+        return {
+            options: ['Apple', 'Orange', 'Banana', 'Lime', 'Peach', 'Chocolate', 'Strawberry'],
+            value: [],
+            codeCustom,
+        }
+    },
+    computed: {
+        availableOptions() {
+            return this.options.filter(opt => this.value.indexOf(opt) === -1)
+        },
+    },
 }
 </script>

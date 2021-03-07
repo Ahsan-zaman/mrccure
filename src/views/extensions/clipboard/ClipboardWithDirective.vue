@@ -31,50 +31,50 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BFormInput, BFormGroup, BButton, BCardText,
+    BFormInput, BFormGroup, BButton, BCardText,
 } from 'bootstrap-vue'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
 import Ripple from 'vue-ripple-directive'
 import { codeDirective } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormInput,
-    BFormGroup,
-    BButton,
-    BCardText,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      message: 'Copy Me!',
-      codeDirective,
-    }
-  },
-  methods: {
-    onCopy() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Text copied',
-          icon: 'BellIcon',
-        },
-      })
+    components: {
+        BCardCode,
+        BFormInput,
+        BFormGroup,
+        BButton,
+        BCardText,
+        // eslint-disable-next-line vue/no-unused-components
+        ToastificationContent,
     },
-    onError() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Failed to copy texts!',
-          icon: 'BellIcon',
-        },
-      })
+    directives: {
+        Ripple,
     },
-  },
+    data() {
+        return {
+            message: 'Copy Me!',
+            codeDirective,
+        }
+    },
+    methods: {
+        onCopy() {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Text copied',
+                    icon: 'BellIcon',
+                },
+            })
+        },
+        onError() {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Failed to copy texts!',
+                    icon: 'BellIcon',
+                },
+            })
+        },
+    },
 }
 </script>

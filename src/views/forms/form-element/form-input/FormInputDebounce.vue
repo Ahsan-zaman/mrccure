@@ -31,16 +31,16 @@ import { BFormInput, BCardText } from 'bootstrap-vue'
 import { codeDebounce } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormInput,
-    BCardText,
-  },
-  data() {
-    return {
-      value: '',
-      codeDebounce,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormInput,
+        BCardText,
+    },
+    data() {
+        return {
+            value: '',
+            codeDebounce,
+        }
+    },
 }
 </script>

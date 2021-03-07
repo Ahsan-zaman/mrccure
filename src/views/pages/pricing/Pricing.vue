@@ -288,49 +288,49 @@
 
 <script>
 import {
-  BFormCheckbox, BRow, BCol, BCard, BImg, BCardText, BListGroup, BListGroupItem, BButton, BBadge,
+    BFormCheckbox, BRow, BCol, BCard, BImg, BCardText, BListGroup, BListGroupItem, BButton, BBadge,
 } from 'bootstrap-vue'
 import AppCollapse from '@core/components/app-collapse/AppCollapse.vue'
 import AppCollapseItem from '@core/components/app-collapse/AppCollapseItem.vue'
 import Ripple from 'vue-ripple-directive'
 /* eslint-disable global-require */
 export default {
-  components: {
-    BFormCheckbox,
-    BButton,
-    BCardText,
-    BListGroup,
-    BListGroupItem,
-    BRow,
-    BCol,
-    BCard,
-    BBadge,
-    BImg,
-    AppCollapseItem,
-    AppCollapse,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      status: 'monthly',
-      monthlyPlanShow: true,
-      pricing: {},
-    }
-  },
-  created() {
-    this.$http.get('/pricing/data').then(res => { this.pricing = res.data })
-  },
-  methods: {
-    tooglePlan() {
-      if (this.status === 'monthly') {
-        this.monthlyPlanShow = true
-      } else {
-        this.monthlyPlanShow = false
-      }
+    components: {
+        BFormCheckbox,
+        BButton,
+        BCardText,
+        BListGroup,
+        BListGroupItem,
+        BRow,
+        BCol,
+        BCard,
+        BBadge,
+        BImg,
+        AppCollapseItem,
+        AppCollapse,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            status: 'monthly',
+            monthlyPlanShow: true,
+            pricing: {},
+        }
+    },
+    created() {
+        this.$http.get('/pricing/data').then(res => { this.pricing = res.data })
+    },
+    methods: {
+        tooglePlan() {
+            if (this.status === 'monthly') {
+                this.monthlyPlanShow = true
+            } else {
+                this.monthlyPlanShow = false
+            }
+        },
+    },
 }
 /* eslint-disable global-require */
 </script>

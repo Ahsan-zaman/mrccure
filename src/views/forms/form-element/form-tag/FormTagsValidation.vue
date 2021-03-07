@@ -48,36 +48,36 @@ import { BFormTags, BFormGroup, BCardText } from 'bootstrap-vue'
 import { codeValidation } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormTags,
-    BCardText,
-    BFormGroup,
-  },
-  data() {
-    return {
-      tags: [],
-      dirty: false,
-      codeValidation,
-    }
-  },
-  computed: {
-    state() {
-      // Overall component validation state
-      return this.dirty ? this.tags.length > 2 && this.tags.length < 9 : null
+    components: {
+        BCardCode,
+        BFormTags,
+        BCardText,
+        BFormGroup,
     },
-  },
-  watch: {
-    tags() {
-      // Set the dirty flag on first change to the tags array
-      this.dirty = true
+    data() {
+        return {
+            tags: [],
+            dirty: false,
+            codeValidation,
+        }
     },
-  },
-  methods: {
-    tagValidator(tag) {
-      // Individual tag validator function
-      return tag === tag.toLowerCase() && tag.length > 2 && tag.length < 6
+    computed: {
+        state() {
+            // Overall component validation state
+            return this.dirty ? this.tags.length > 2 && this.tags.length < 9 : null
+        },
     },
-  },
+    watch: {
+        tags() {
+            // Set the dirty flag on first change to the tags array
+            this.dirty = true
+        },
+    },
+    methods: {
+        tagValidator(tag) {
+            // Individual tag validator function
+            return tag === tag.toLowerCase() && tag.length > 2 && tag.length < 6
+        },
+    },
 }
 </script>

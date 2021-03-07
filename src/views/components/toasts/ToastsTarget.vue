@@ -79,30 +79,30 @@ import Ripple from 'vue-ripple-directive'
 import { codeTarget } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      counter: 0,
-      codeTarget,
-    }
-  },
-  methods: {
-    toast(toaster, append = false) {
-      this.counter += 1
-      this.$bvToast.toast(`Toast ${this.counter} body content`, {
-        title: `Toaster ${toaster}`,
-        toaster,
-        solid: false,
-        appendToast: append,
-      })
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            counter: 0,
+            codeTarget,
+        }
+    },
+    methods: {
+        toast(toaster, append = false) {
+            this.counter += 1
+            this.$bvToast.toast(`Toast ${this.counter} body content`, {
+                title: `Toaster ${toaster}`,
+                toaster,
+                solid: false,
+                appendToast: append,
+            })
+        },
+    },
 }
 </script>

@@ -80,7 +80,7 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BBadge, BRow, BCol, BCardText,
+    BBadge, BRow, BCol, BCardText,
 } from 'bootstrap-vue'
 import draggable from 'vuedraggable'
 import Prism from 'vue-prism-component'
@@ -89,21 +89,21 @@ import 'prismjs/themes/prism-tomorrow.css'
 import { codeClone } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BBadge,
-    draggable,
-    BCardText,
-    BRow,
-    Prism,
-    BCol,
-  },
-  data() {
-    return {
-      codeClone,
-      list1: ['youtube', 'google', 'facebook', 'twitter', 'instagram', 'pinterest', 'tinder', 'slack', 'discord', 'github', 'gitlab'],
-      list2: ['google', 'youtube'],
-    }
-  },
+    components: {
+        BCardCode,
+        BBadge,
+        draggable,
+        BCardText,
+        BRow,
+        Prism,
+        BCol,
+    },
+    data() {
+        return {
+            codeClone,
+            list1: ['youtube', 'google', 'facebook', 'twitter', 'instagram', 'pinterest', 'tinder', 'slack', 'discord', 'github', 'gitlab'],
+            list2: ['google', 'youtube'],
+        }
+    },
 }
 </script>

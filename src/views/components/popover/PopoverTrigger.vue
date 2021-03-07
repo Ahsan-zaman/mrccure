@@ -55,25 +55,25 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  VBPopover, BButton, BCardText,
+    VBPopover, BButton, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeTrigger } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    'b-popover': VBPopover,
-    Ripple,
-  },
-  data() {
-    return {
-      codeTrigger,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
+    },
+    directives: {
+        'b-popover': VBPopover,
+        Ripple,
+    },
+    data() {
+        return {
+            codeTrigger,
+        }
+    },
 }
 </script>

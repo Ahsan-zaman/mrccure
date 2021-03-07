@@ -48,15 +48,15 @@ import BCardCode from '@core/components/b-card-code'
 import { codeSize } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPaginationNav,
-    BCardText,
-  },
-  data() {
-    return {
-      codeSize,
-    }
-  },
+    components: {
+        BCardCode,
+        BPaginationNav,
+        BCardText,
+    },
+    data() {
+        return {
+            codeSize,
+        }
+    },
 }
 </script>

@@ -285,7 +285,7 @@
 
 <script>
 import {
-  BForm, BCard, BCardHeader, BCardTitle, BCardText, BCardBody, BRow, BCol, BFormGroup, BFormInput, BButton, BFormInvalidFeedback,
+    BForm, BCard, BCardHeader, BCardTitle, BCardText, BCardBody, BRow, BCol, BFormGroup, BFormInput, BButton, BFormInvalidFeedback,
 } from 'bootstrap-vue'
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import vSelect from 'vue-select'
@@ -293,60 +293,60 @@ import { required, integer } from '@validations'
 import formValidation from '@core/comp-functions/forms/form-validation'
 
 export default {
-  components: {
+    components: {
     // BSV
-    BForm,
-    BCard,
-    BCardHeader,
-    BCardTitle,
-    BCardText,
-    BCardBody,
-    BRow,
-    BCol,
-    BFormGroup,
-    BFormInput,
-    BButton,
-    BFormInvalidFeedback,
+        BForm,
+        BCard,
+        BCardHeader,
+        BCardTitle,
+        BCardText,
+        BCardBody,
+        BRow,
+        BCol,
+        BFormGroup,
+        BFormInput,
+        BButton,
+        BFormInvalidFeedback,
 
-    // Form Validation
-    ValidationProvider,
-    ValidationObserver,
+        // Form Validation
+        ValidationProvider,
+        ValidationObserver,
 
-    // 3rd party
-    vSelect,
-  },
-  props: {
-    addressDetails: {
-      type: Object,
-      required: true,
+        // 3rd party
+        vSelect,
     },
-  },
-  setup(_, { emit }) {
-    const {
-      refFormObserver,
-      getValidationState,
-      resetForm,
-    } = formValidation(() => {})
+    props: {
+        addressDetails: {
+            type: Object,
+            required: true,
+        },
+    },
+    setup(_, { emit }) {
+        const {
+            refFormObserver,
+            getValidationState,
+            resetForm,
+        } = formValidation(() => {})
 
-    const onSubmit = () => {
-      emit('next-step')
-    }
+        const onSubmit = () => {
+            emit('next-step')
+        }
 
-    return {
+        return {
 
-      // Form
-      onSubmit,
+            // Form
+            onSubmit,
 
-      // Form Validation
-      refFormObserver,
-      getValidationState,
-      resetForm,
+            // Form Validation
+            refFormObserver,
+            getValidationState,
+            resetForm,
 
-      // FOrm Validators
-      required,
-      integer,
-    }
-  },
+            // FOrm Validators
+            required,
+            integer,
+        }
+    },
 }
 </script>
 

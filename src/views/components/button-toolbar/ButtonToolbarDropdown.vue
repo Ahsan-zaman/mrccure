@@ -64,28 +64,28 @@
 
 <script>
 import {
-  BButtonToolbar, BButtonGroup, BButton, BDropdown, BDropdownItem,
+    BButtonToolbar, BButtonGroup, BButton, BDropdown, BDropdownItem,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import Ripple from 'vue-ripple-directive'
 import { codeDropdown } from './code'
 
 export default {
-  components: {
-    BButtonToolbar,
-    BButtonGroup,
-    BButton,
-    BDropdown,
-    BCardCode,
-    BDropdownItem,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeDropdown,
-    }
-  },
+    components: {
+        BButtonToolbar,
+        BButtonGroup,
+        BButton,
+        BDropdown,
+        BCardCode,
+        BDropdownItem,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeDropdown,
+        }
+    },
 }
 </script>

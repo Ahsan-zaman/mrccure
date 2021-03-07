@@ -25,15 +25,15 @@ import { BFormTextarea, BCardText } from 'bootstrap-vue'
 import { codeDefault } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormTextarea,
-  },
-  data() {
-    return {
-      codeDefault,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormTextarea,
+    },
+    data() {
+        return {
+            codeDefault,
+        }
+    },
 }
 </script>

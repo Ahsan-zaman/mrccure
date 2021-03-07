@@ -31,16 +31,16 @@ import SidebarFooter from './SidebarFooter.vue'
 import SidebarWithoutBackdrop from './SidebarWithoutBackdrop.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    SidebarBasic,
-    SidebarPlacement,
-    SidebarVariant,
-    SidebarHeader,
-    SidebarFooter,
-    SidebarWithoutBackdrop,
-  },
+        SidebarBasic,
+        SidebarPlacement,
+        SidebarVariant,
+        SidebarHeader,
+        SidebarFooter,
+        SidebarWithoutBackdrop,
+    },
 }
 </script>

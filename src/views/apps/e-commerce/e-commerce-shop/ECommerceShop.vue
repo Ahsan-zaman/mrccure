@@ -228,7 +228,7 @@
 
 <script>
 import {
-  BDropdown, BDropdownItem, BFormRadioGroup, BFormRadio, BRow, BCol, BInputGroup, BInputGroupAppend, BFormInput, BCard, BCardBody, BLink, BImg, BCardText, BButton, BPagination,
+    BDropdown, BDropdownItem, BFormRadioGroup, BFormRadio, BRow, BCol, BInputGroup, BInputGroupAppend, BFormInput, BCard, BCardBody, BLink, BImg, BCardText, BButton, BPagination,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { watch } from '@vue/composition-api'
@@ -238,89 +238,89 @@ import { useShopFiltersSortingAndPagination, useShopUi, useShopRemoteData } from
 import { useEcommerceUi } from '../useEcommerce'
 
 export default {
-  directives: {
-    Ripple,
-  },
-  components: {
+    directives: {
+        Ripple,
+    },
+    components: {
     // BSV
-    BDropdown,
-    BDropdownItem,
-    BFormRadioGroup,
-    BFormRadio,
-    BRow,
-    BCol,
-    BInputGroup,
-    BInputGroupAppend,
-    BFormInput,
-    BCard,
-    BCardBody,
-    BLink,
-    BImg,
-    BCardText,
-    BButton,
-    BPagination,
+        BDropdown,
+        BDropdownItem,
+        BFormRadioGroup,
+        BFormRadio,
+        BRow,
+        BCol,
+        BInputGroup,
+        BInputGroupAppend,
+        BFormInput,
+        BCard,
+        BCardBody,
+        BLink,
+        BImg,
+        BCardText,
+        BButton,
+        BPagination,
 
-    // SFC
-    ShopLeftFilterSidebar,
-  },
-  setup() {
-    const {
-      filters, filterOptions, sortBy, sortByOptions,
-    } = useShopFiltersSortingAndPagination()
+        // SFC
+        ShopLeftFilterSidebar,
+    },
+    setup() {
+        const {
+            filters, filterOptions, sortBy, sortByOptions,
+        } = useShopFiltersSortingAndPagination()
 
-    const { handleCartActionClick, toggleProductInWishlist } = useEcommerceUi()
+        const { handleCartActionClick, toggleProductInWishlist } = useEcommerceUi()
 
-    const {
-      itemView, itemViewOptions, totalProducts,
-    } = useShopUi()
+        const {
+            itemView, itemViewOptions, totalProducts,
+        } = useShopUi()
 
-    const { products, fetchProducts } = useShopRemoteData()
+        const { products, fetchProducts } = useShopRemoteData()
 
-    const { mqShallShowLeftSidebar } = useResponsiveAppLeftSidebarVisibility()
+        const { mqShallShowLeftSidebar } = useResponsiveAppLeftSidebarVisibility()
 
-    // Wrapper Function for `fetchProducts` which can be triggered initially and upon changes of filters
-    const fetchShopProducts = () => {
-      fetchProducts({
-        q: filters.value.q,
-        sortBy: sortBy.value.value,
-        page: filters.value.page,
-        perPage: filters.value.perPage,
-      })
-        .then(response => {
-          products.value = response.data.products
-          totalProducts.value = response.data.total
+        // Wrapper Function for `fetchProducts` which can be triggered initially and upon changes of filters
+        const fetchShopProducts = () => {
+            fetchProducts({
+                q: filters.value.q,
+                sortBy: sortBy.value.value,
+                page: filters.value.page,
+                perPage: filters.value.perPage,
+            })
+                .then(response => {
+                    products.value = response.data.products
+                    totalProducts.value = response.data.total
+                })
+        }
+
+        fetchShopProducts()
+
+        watch([filters, sortBy], () => {
+            fetchShopProducts()
+        }, {
+            deep: true,
         })
-    }
 
-    fetchShopProducts()
+        return {
+            // useShopFiltersSortingAndPagination
+            filters,
+            filterOptions,
+            sortBy,
+            sortByOptions,
 
-    watch([filters, sortBy], () => {
-      fetchShopProducts()
-    }, {
-      deep: true,
-    })
+            // useShopUi
+            itemView,
+            itemViewOptions,
+            totalProducts,
+            toggleProductInWishlist,
+            handleCartActionClick,
 
-    return {
-      // useShopFiltersSortingAndPagination
-      filters,
-      filterOptions,
-      sortBy,
-      sortByOptions,
+            // useShopRemoteData
+            products,
 
-      // useShopUi
-      itemView,
-      itemViewOptions,
-      totalProducts,
-      toggleProductInWishlist,
-      handleCartActionClick,
-
-      // useShopRemoteData
-      products,
-
-      // mqShallShowLeftSidebar
-      mqShallShowLeftSidebar,
-    }
-  },
+            // mqShallShowLeftSidebar
+            mqShallShowLeftSidebar,
+        }
+    },
 }
 </script>
 

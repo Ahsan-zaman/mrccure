@@ -69,25 +69,25 @@
 
 <script>
 import {
-  BPagination, BFormRadio, BCardText,
+    BPagination, BFormRadio, BCardText,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code'
 import { codeAlignment } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPagination,
-    BFormRadio,
-    BCardText,
-  },
-  data() {
-    return {
-      selected: 'default',
-      codeAlignment,
-      currentPage: 1,
-      rows: 100,
-    }
-  },
+    components: {
+        BCardCode,
+        BPagination,
+        BFormRadio,
+        BCardText,
+    },
+    data() {
+        return {
+            selected: 'default',
+            codeAlignment,
+            currentPage: 1,
+            rows: 100,
+        }
+    },
 }
 </script>

@@ -59,45 +59,45 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardBody, BRow, BCol,
+    BCard, BCardHeader, BCardBody, BRow, BCol,
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BCardHeader,
-    BCardBody,
-    vSelect,
-  },
-  props: {
-    roleFilter: {
-      type: [String, null],
-      default: null,
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BCardHeader,
+        BCardBody,
+        vSelect,
     },
-    planFilter: {
-      type: [String, null],
-      default: null,
+    props: {
+        roleFilter: {
+            type: [String, null],
+            default: null,
+        },
+        planFilter: {
+            type: [String, null],
+            default: null,
+        },
+        statusFilter: {
+            type: [String, null],
+            default: null,
+        },
+        roleOptions: {
+            type: Array,
+            required: true,
+        },
+        planOptions: {
+            type: Array,
+            required: true,
+        },
+        statusOptions: {
+            type: Array,
+            required: true,
+        },
     },
-    statusFilter: {
-      type: [String, null],
-      default: null,
-    },
-    roleOptions: {
-      type: Array,
-      required: true,
-    },
-    planOptions: {
-      type: Array,
-      required: true,
-    },
-    statusOptions: {
-      type: Array,
-      required: true,
-    },
-  },
 }
 </script>
 

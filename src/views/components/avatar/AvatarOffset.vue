@@ -47,16 +47,16 @@ import { BAvatar, BCardText } from 'bootstrap-vue'
 import { codeBadgeOffset } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAvatar,
+    components: {
+        BCardCode,
+        BAvatar,
 
-    BCardText,
-  },
-  data() {
-    return {
-      codeBadgeOffset,
-    }
-  },
+        BCardText,
+    },
+    data() {
+        return {
+            codeBadgeOffset,
+        }
+    },
 }
 </script>

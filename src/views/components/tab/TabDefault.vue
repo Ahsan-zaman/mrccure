@@ -48,16 +48,16 @@ import { BTabs, BTab, BCardText } from 'bootstrap-vue'
 import { codeDefault } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BTabs,
-    BCardText,
-    BTab,
-  },
-  data() {
-    return {
-      codeDefault,
-    }
-  },
+    components: {
+        BCardCode,
+        BTabs,
+        BCardText,
+        BTab,
+    },
+    data() {
+        return {
+            codeDefault,
+        }
+    },
 }
 </script>

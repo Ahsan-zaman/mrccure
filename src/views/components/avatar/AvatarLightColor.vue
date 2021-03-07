@@ -45,15 +45,15 @@ import { BCardText, BAvatar } from 'bootstrap-vue'
 import { codeColorLight } from './code'
 
 export default {
-  components: {
-    BAvatar,
-    BCardCode,
-    BCardText,
-  },
-  data() {
-    return {
-      codeColorLight,
-    }
-  },
+    components: {
+        BAvatar,
+        BCardCode,
+        BCardText,
+    },
+    data() {
+        return {
+            codeColorLight,
+        }
+    },
 }
 </script>

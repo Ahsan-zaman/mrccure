@@ -19,27 +19,27 @@
 <script>
 import BCardCode from '@/@core/components/b-card-code/BCardCode.vue'
 import {
-  LMap, LTileLayer, LMarker, LPopup,
+    LMap, LTileLayer, LMarker, LPopup,
 } from 'vue2-leaflet'
 import { codePopup } from './code'
 
 export default {
-  components: {
-    LMap,
-    LTileLayer,
-    LMarker,
-    LPopup,
-    BCardCode,
-  },
-  data() {
-    return {
-      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      zoom: 8,
-      center: [47.313220, -1.319482],
-      markerLatLng: [47.313220, -1.319482, { draggable: 'true' }],
-      codePopup,
-    }
-  },
+    components: {
+        LMap,
+        LTileLayer,
+        LMarker,
+        LPopup,
+        BCardCode,
+    },
+    data() {
+        return {
+            url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            zoom: 8,
+            center: [47.313220, -1.319482],
+            markerLatLng: [47.313220, -1.319482, { draggable: 'true' }],
+            codePopup,
+        }
+    },
 }
 </script>
 

@@ -81,82 +81,82 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardTitle, BDropdown, BDropdownItem, BCardBody, BRow, BCol, BCardText,
+    BCard, BCardHeader, BCardTitle, BDropdown, BDropdownItem, BCardBody, BRow, BCol, BCardText,
 } from 'bootstrap-vue'
 import VueApexCharts from 'vue-apexcharts'
 import { $themeColors } from '@themeConfig'
 
 export default {
-  components: {
-    VueApexCharts,
-    BCard,
-    BCardHeader,
-    BCardTitle,
-    BDropdown,
-    BDropdownItem,
-    BCardText,
-    BCardBody,
-    BRow,
-    BCol,
-  },
-  props: {
-    data: {
-      type: Object,
-      default: () => {},
+    components: {
+        VueApexCharts,
+        BCard,
+        BCardHeader,
+        BCardTitle,
+        BDropdown,
+        BDropdownItem,
+        BCardText,
+        BCardBody,
+        BRow,
+        BCol,
     },
-  },
-  data() {
-    return {
-      supportTrackerRadialBar: {
-        chartOptions: {
-          plotOptions: {
-            radialBar: {
-              size: 150,
-              offsetY: 20,
-              startAngle: -150,
-              endAngle: 150,
-              hollow: {
-                size: '65%',
-              },
-              track: {
-                background: '#fff',
-                strokeWidth: '100%',
-              },
-              dataLabels: {
-                name: {
-                  offsetY: -5,
-                  color: '#5e5873',
-                  fontSize: '1rem',
-                },
-                value: {
-                  offsetY: 15,
-                  color: '#5e5873',
-                  fontSize: '1.714rem',
-                },
-              },
-            },
-          },
-          colors: [$themeColors.danger],
-          fill: {
-            type: 'gradient',
-            gradient: {
-              shade: 'dark',
-              type: 'horizontal',
-              shadeIntensity: 0.5,
-              gradientToColors: [$themeColors.primary],
-              inverseColors: true,
-              opacityFrom: 1,
-              opacityTo: 1,
-              stops: [0, 100],
-            },
-          },
-          stroke: {
-            dashArray: 8,
-          },
-          labels: ['Completed Tickets'],
+    props: {
+        data: {
+            type: Object,
+            default: () => {},
         },
-      },
-    }
-  },
+    },
+    data() {
+        return {
+            supportTrackerRadialBar: {
+                chartOptions: {
+                    plotOptions: {
+                        radialBar: {
+                            size: 150,
+                            offsetY: 20,
+                            startAngle: -150,
+                            endAngle: 150,
+                            hollow: {
+                                size: '65%',
+                            },
+                            track: {
+                                background: '#fff',
+                                strokeWidth: '100%',
+                            },
+                            dataLabels: {
+                                name: {
+                                    offsetY: -5,
+                                    color: '#5e5873',
+                                    fontSize: '1rem',
+                                },
+                                value: {
+                                    offsetY: 15,
+                                    color: '#5e5873',
+                                    fontSize: '1.714rem',
+                                },
+                            },
+                        },
+                    },
+                    colors: [$themeColors.danger],
+                    fill: {
+                        type: 'gradient',
+                        gradient: {
+                            shade: 'dark',
+                            type: 'horizontal',
+                            shadeIntensity: 0.5,
+                            gradientToColors: [$themeColors.primary],
+                            inverseColors: true,
+                            opacityFrom: 1,
+                            opacityTo: 1,
+                            stops: [0, 100],
+                        },
+                    },
+                    stroke: {
+                        dashArray: 8,
+                    },
+                    labels: ['Completed Tickets'],
+                },
+            },
+        }
+    },
 }
 </script>

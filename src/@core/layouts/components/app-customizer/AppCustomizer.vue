@@ -179,125 +179,125 @@
 
 <script>
 import {
-  BLink, BFormRadioGroup, BFormGroup, BFormCheckbox,
+    BLink, BFormRadioGroup, BFormGroup, BFormCheckbox,
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 import useAppCustomizer from './useAppCustomizer'
 
 export default {
-  components: {
+    components: {
     // BSV
-    BLink,
-    BFormRadioGroup,
-    BFormCheckbox,
-    BFormGroup,
+        BLink,
+        BFormRadioGroup,
+        BFormCheckbox,
+        BFormGroup,
 
-    // 3rd party
-    vSelect,
-    VuePerfectScrollbar,
+        // 3rd party
+        vSelect,
+        VuePerfectScrollbar,
 
-  },
-  setup() {
-    const {
-      // Vertical Menu
-      isVerticalMenuCollapsed,
+    },
+    setup() {
+        const {
+            // Vertical Menu
+            isVerticalMenuCollapsed,
 
-      // Customizer
-      isCustomizerOpen,
+            // Customizer
+            isCustomizerOpen,
 
-      // Skin
-      skin,
-      skinOptions,
+            // Skin
+            skin,
+            skinOptions,
 
-      // Content Width
-      contentWidth,
-      contentWidthOptions,
+            // Content Width
+            contentWidth,
+            contentWidthOptions,
 
-      // RTL
-      isRTL,
+            // RTL
+            isRTL,
 
-      // routerTransition
-      routerTransition,
-      routerTransitionOptions,
+            // routerTransition
+            routerTransition,
+            routerTransitionOptions,
 
-      // Layout Type
-      layoutType,
-      layoutTypeOptions,
+            // Layout Type
+            layoutType,
+            layoutTypeOptions,
 
-      // NavMenu Hidden
-      isNavMenuHidden,
+            // NavMenu Hidden
+            isNavMenuHidden,
 
-      // Navbar
-      navbarColors,
-      navbarTypes,
-      navbarBackgroundColor,
-      navbarType,
+            // Navbar
+            navbarColors,
+            navbarTypes,
+            navbarBackgroundColor,
+            navbarType,
 
-      // Footer
-      footerTypes,
-      footerType,
-    } = useAppCustomizer()
+            // Footer
+            footerTypes,
+            footerType,
+        } = useAppCustomizer()
 
-    if (layoutType.value === 'horizontal') {
-      // Remove semi-dark skin option in horizontal layout
-      const skinSemiDarkIndex = skinOptions.findIndex(s => s.value === 'semi-dark')
-      delete skinOptions[skinSemiDarkIndex]
+        if (layoutType.value === 'horizontal') {
+            // Remove semi-dark skin option in horizontal layout
+            const skinSemiDarkIndex = skinOptions.findIndex(s => s.value === 'semi-dark')
+            delete skinOptions[skinSemiDarkIndex]
 
-      // Remove menu hidden radio in horizontal layout => As we already have switch for it
-      const menuHiddneIndex = navbarTypes.findIndex(t => t.value === 'hidden')
-      delete navbarTypes[menuHiddneIndex]
-    }
+            // Remove menu hidden radio in horizontal layout => As we already have switch for it
+            const menuHiddneIndex = navbarTypes.findIndex(t => t.value === 'hidden')
+            delete navbarTypes[menuHiddneIndex]
+        }
 
-    // Perfect Scrollbar
-    const perfectScrollbarSettings = {
-      maxScrollbarLength: 60,
-      wheelPropagation: false,
-    }
+        // Perfect Scrollbar
+        const perfectScrollbarSettings = {
+            maxScrollbarLength: 60,
+            wheelPropagation: false,
+        }
 
-    return {
-      // Vertical Menu
-      isVerticalMenuCollapsed,
+        return {
+            // Vertical Menu
+            isVerticalMenuCollapsed,
 
-      // Customizer
-      isCustomizerOpen,
+            // Customizer
+            isCustomizerOpen,
 
-      // Skin
-      skin,
-      skinOptions,
+            // Skin
+            skin,
+            skinOptions,
 
-      // Content Width
-      contentWidth,
-      contentWidthOptions,
+            // Content Width
+            contentWidth,
+            contentWidthOptions,
 
-      // RTL
-      isRTL,
+            // RTL
+            isRTL,
 
-      // routerTransition
-      routerTransition,
-      routerTransitionOptions,
+            // routerTransition
+            routerTransition,
+            routerTransitionOptions,
 
-      // Layout Type
-      layoutType,
-      layoutTypeOptions,
+            // Layout Type
+            layoutType,
+            layoutTypeOptions,
 
-      // NavMenu Hidden
-      isNavMenuHidden,
+            // NavMenu Hidden
+            isNavMenuHidden,
 
-      // Navbar
-      navbarColors,
-      navbarTypes,
-      navbarBackgroundColor,
-      navbarType,
+            // Navbar
+            navbarColors,
+            navbarTypes,
+            navbarBackgroundColor,
+            navbarType,
 
-      // Footer
-      footerTypes,
-      footerType,
+            // Footer
+            footerTypes,
+            footerType,
 
-      // Perfect Scrollbar
-      perfectScrollbarSettings,
-    }
-  },
+            // Perfect Scrollbar
+            perfectScrollbarSettings,
+        }
+    },
 }
 </script>
 

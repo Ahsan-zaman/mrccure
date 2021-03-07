@@ -38,22 +38,22 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormInput, BRow, BCol, BCardText,
+    BFormInput, BRow, BCol, BCardText,
 } from 'bootstrap-vue'
 import { codeFloatinLabel } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormInput,
-    BRow,
-    BCol,
-  },
-  data() {
-    return {
-      codeFloatinLabel,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormInput,
+        BRow,
+        BCol,
+    },
+    data() {
+        return {
+            codeFloatinLabel,
+        }
+    },
 }
 </script>

@@ -35,24 +35,24 @@
 
 <script>
 import {
-  BCard, BAvatar, BButton,
+    BCard, BAvatar, BButton,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BCard,
-    BAvatar,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  props: {
-    suggestions: {
-      type: Array,
-      default: () => [],
+    components: {
+        BCard,
+        BAvatar,
+        BButton,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    props: {
+        suggestions: {
+            type: Array,
+            default: () => [],
+        },
+    },
 }
 </script>

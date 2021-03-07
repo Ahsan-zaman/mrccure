@@ -62,61 +62,61 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BOverlay, BInputGroup, BFormInput, BInputGroupAppend, BButton, BSpinner, BCardText,
+    BOverlay, BInputGroup, BFormInput, BInputGroupAppend, BButton, BSpinner, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeBusyState } from './code'
 
 export default {
-  components: {
-    BOverlay,
-    BInputGroup,
-    BFormInput,
-    BInputGroupAppend,
-    BButton,
-    BCardText,
-    BSpinner,
-    BCardCode,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      value: 'Some value',
-      busy: false,
-      timeout: null,
-      codeBusyState,
-    }
-  },
-  beforeDestroy() {
-    this.clearTimeout()
-  },
-  methods: {
-    clearTimeout() {
-      if (this.timeout) {
-        clearTimeout(this.timeout)
-        this.timeout = null
-      }
+    components: {
+        BOverlay,
+        BInputGroup,
+        BFormInput,
+        BInputGroupAppend,
+        BButton,
+        BCardText,
+        BSpinner,
+        BCardCode,
     },
-    setTimeout(callback) {
-      this.clearTimeout()
-      this.timeout = setTimeout(() => {
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            value: 'Some value',
+            busy: false,
+            timeout: null,
+            codeBusyState,
+        }
+    },
+    beforeDestroy() {
         this.clearTimeout()
-        callback()
-      }, 5000)
     },
-    onHidden() {
-      // Return focus to the button
-      this.$refs.button.focus()
+    methods: {
+        clearTimeout() {
+            if (this.timeout) {
+                clearTimeout(this.timeout)
+                this.timeout = null
+            }
+        },
+        setTimeout(callback) {
+            this.clearTimeout()
+            this.timeout = setTimeout(() => {
+                this.clearTimeout()
+                callback()
+            }, 5000)
+        },
+        onHidden() {
+            // Return focus to the button
+            this.$refs.button.focus()
+        },
+        onClick() {
+            this.busy = true
+            // Simulate an async request
+            this.setTimeout(() => {
+                this.busy = false
+            })
+        },
     },
-    onClick() {
-      this.busy = true
-      // Simulate an async request
-      this.setTimeout(() => {
-        this.busy = false
-      })
-    },
-  },
 }
 </script>

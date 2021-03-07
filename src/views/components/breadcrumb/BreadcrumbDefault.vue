@@ -16,26 +16,26 @@ import BCardCode from '@core/components/b-card-code'
 import { codeDefault } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BBreadcrumb,
-  },
-  data() {
-    return {
-      codeDefault,
-      items: [
-        {
-          text: 'Dashboard',
-        },
-        {
-          text: 'Library',
-        },
-        {
-          text: 'Data',
-          active: true,
-        },
-      ],
-    }
-  },
+    components: {
+        BCardCode,
+        BBreadcrumb,
+    },
+    data() {
+        return {
+            codeDefault,
+            items: [
+                {
+                    text: 'Dashboard',
+                },
+                {
+                    text: 'Library',
+                },
+                {
+                    text: 'Data',
+                    active: true,
+                },
+            ],
+        }
+    },
 }
 </script>

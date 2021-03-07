@@ -32,16 +32,16 @@ import { BFormSpinbutton, BCardText } from 'bootstrap-vue'
 import { codeWrap } from './code'
 
 export default {
-  components: {
-    BFormSpinbutton,
-    BCardCode,
-    BCardText,
-  },
-  data() {
-    return {
-      codeWrap,
+    components: {
+        BFormSpinbutton,
+        BCardCode,
+        BCardText,
+    },
+    data() {
+        return {
+            codeWrap,
 
-    }
-  },
+        }
+    },
 }
 </script>

@@ -25,18 +25,18 @@ import AlertAnimation from './AlertAnimation.vue'
 import AlertExample from './AlertExample.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    AlertDefault,
-    AlertTitle,
-    AlertIcon,
-    AlertColor,
-    AlertAutoDismiss,
-    AlertVModelSupport,
-    AlertAnimation,
-    AlertExample,
-  },
+        AlertDefault,
+        AlertTitle,
+        AlertIcon,
+        AlertColor,
+        AlertAutoDismiss,
+        AlertVModelSupport,
+        AlertAnimation,
+        AlertExample,
+    },
 }
 </script>

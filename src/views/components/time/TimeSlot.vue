@@ -50,27 +50,27 @@ import { BTime, BButton, BCardText } from 'bootstrap-vue'
 import { codeSlot } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BTime,
-    BCardText,
-    BButton,
-  },
-  data() {
-    return {
-      value: null,
-      codeSlot,
-    }
-  },
-  methods: {
-    setNow() {
-      const now = new Date()
-      // Grab the HH:mm:ss part of the time string
-      this.value = now.toTimeString().slice(0, 8)
+    components: {
+        BCardCode,
+        BTime,
+        BCardText,
+        BButton,
     },
-    clearTime() {
-      this.value = ''
+    data() {
+        return {
+            value: null,
+            codeSlot,
+        }
     },
-  },
+    methods: {
+        setNow() {
+            const now = new Date()
+            // Grab the HH:mm:ss part of the time string
+            this.value = now.toTimeString().slice(0, 8)
+        },
+        clearTime() {
+            this.value = ''
+        },
+    },
 }
 </script>

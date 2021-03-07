@@ -61,46 +61,46 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardTitle, BDropdown, BDropdownItem, BCardBody,
+    BCard, BCardHeader, BCardTitle, BDropdown, BDropdownItem, BCardBody,
 } from 'bootstrap-vue'
 import VueApexCharts from 'vue-apexcharts'
 import { $themeColors } from '@themeConfig'
 
 export default {
-  components: {
-    BCard,
-    BCardHeader,
-    BCardTitle,
-    BDropdown,
-    BDropdownItem,
-    BCardBody,
-    VueApexCharts,
-  },
-  data() {
-    return {
-      chartData: {},
-      sessionsByDeviceDonut: {
-        series: [58.6, 34.9, 6.5],
-        chartOptions: {
-          chart: {
-            toolbar: {
-              show: false,
+    components: {
+        BCard,
+        BCardHeader,
+        BCardTitle,
+        BDropdown,
+        BDropdownItem,
+        BCardBody,
+        VueApexCharts,
+    },
+    data() {
+        return {
+            chartData: {},
+            sessionsByDeviceDonut: {
+                series: [58.6, 34.9, 6.5],
+                chartOptions: {
+                    chart: {
+                        toolbar: {
+                            show: false,
+                        },
+                    },
+                    labels: ['Desktop', 'Mobile', 'Tablet'],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    legend: { show: false },
+                    comparedResult: [2, -3, 8],
+                    stroke: { width: 0 },
+                    colors: [$themeColors.primary, $themeColors.warning, $themeColors.danger],
+                },
             },
-          },
-          labels: ['Desktop', 'Mobile', 'Tablet'],
-          dataLabels: {
-            enabled: false,
-          },
-          legend: { show: false },
-          comparedResult: [2, -3, 8],
-          stroke: { width: 0 },
-          colors: [$themeColors.primary, $themeColors.warning, $themeColors.danger],
-        },
-      },
-    }
-  },
-  created() {
-    this.$http.get('/card/card-analytics/sessions-device').then(res => { this.chartData = res.data })
-  },
+        }
+    },
+    created() {
+        this.$http.get('/card/card-analytics/sessions-device').then(res => { this.chartData = res.data })
+    },
 }
 </script>

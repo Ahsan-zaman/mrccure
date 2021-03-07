@@ -32,22 +32,22 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BNav, BNavItem, BDropdownDivider, BCardText,
+    BNav, BNavItem, BDropdownDivider, BCardText,
 } from 'bootstrap-vue'
 import { codeDivider } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BNav,
-    BNavItem,
-    BDropdownDivider,
-    BCardText,
-  },
-  data() {
-    return {
-      codeDivider,
-    }
-  },
+    components: {
+        BCardCode,
+        BNav,
+        BNavItem,
+        BDropdownDivider,
+        BCardText,
+    },
+    data() {
+        return {
+            codeDivider,
+        }
+    },
 }
 </script>

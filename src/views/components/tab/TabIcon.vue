@@ -64,16 +64,16 @@ import { BTabs, BTab, BCardText } from 'bootstrap-vue'
 import { codeIcon } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BTabs,
-    BTab,
-  },
-  data() {
-    return {
-      codeIcon,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BTabs,
+        BTab,
+    },
+    data() {
+        return {
+            codeIcon,
+        }
+    },
 }
 </script>

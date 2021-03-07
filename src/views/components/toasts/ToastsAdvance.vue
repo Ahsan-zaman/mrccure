@@ -33,48 +33,48 @@ import Ripple from 'vue-ripple-directive'
 import { codeAdvance } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-    // eslint-disable-next-line
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
+        // eslint-disable-next-line
     BSpinner,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      count: 0,
-      codeAdvance,
-    }
-  },
-  methods: {
-    popToast() {
-      // Use a shorter name for this.$createElement
-      const h = this.$createElement
-      // Increment the toast count
-      this.count += 1
-      // Create the message
-      const vNodesMsg = h('p', { class: ['text-center', 'mb-0'] }, [
-        h('b-spinner', { props: { type: 'grow', small: true } }),
-        ' Flashy ',
-        h('strong', 'toast'),
-        ` message #${this.count} `,
-        h('b-spinner', { props: { type: 'grow', small: true } }),
-      ])
-      // Create the title
-      const vNodesTitle = h('div', { class: ['d-flex', 'flex-grow-1', 'align-items-baseline', 'mr-2'] }, [
-        h('strong', { class: 'mr-2' }, 'The Title'),
-        h('small', { class: 'ml-auto font-italics' }, '5 minutes ago'),
-      ])
-      // Pass the VNodes as an array for message and title
-      this.$bvToast.toast([vNodesMsg], {
-        title: [vNodesTitle],
-        solid: false,
-        variant: 'info',
-      })
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            count: 0,
+            codeAdvance,
+        }
+    },
+    methods: {
+        popToast() {
+            // Use a shorter name for this.$createElement
+            const h = this.$createElement
+            // Increment the toast count
+            this.count += 1
+            // Create the message
+            const vNodesMsg = h('p', { class: ['text-center', 'mb-0'] }, [
+                h('b-spinner', { props: { type: 'grow', small: true } }),
+                ' Flashy ',
+                h('strong', 'toast'),
+                ` message #${this.count} `,
+                h('b-spinner', { props: { type: 'grow', small: true } }),
+            ])
+            // Create the title
+            const vNodesTitle = h('div', { class: ['d-flex', 'flex-grow-1', 'align-items-baseline', 'mr-2'] }, [
+                h('strong', { class: 'mr-2' }, 'The Title'),
+                h('small', { class: 'ml-auto font-italics' }, '5 minutes ago'),
+            ])
+            // Pass the VNodes as an array for message and title
+            this.$bvToast.toast([vNodesMsg], {
+                title: [vNodesTitle],
+                solid: false,
+                variant: 'info',
+            })
+        },
+    },
 }
 </script>

@@ -33,16 +33,16 @@ import { BNav, BNavItem, BCardText } from 'bootstrap-vue'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BNav,
-    BNavItem,
-    BCardText,
-  },
-  data() {
-    return {
-      codeBasic,
-    }
-  },
+    components: {
+        BCardCode,
+        BNav,
+        BNavItem,
+        BCardText,
+    },
+    data() {
+        return {
+            codeBasic,
+        }
+    },
 }
 </script>

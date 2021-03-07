@@ -26,15 +26,15 @@ import VueSelectSize from './VueSelectSize.vue'
 import VueSelectMultiSize from './VueSelectMultiSize.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    VueSelectBasic,
-    VueSelectMultiple,
-    VueSelectSize,
-    VueSelectMultiSize,
-  },
+        VueSelectBasic,
+        VueSelectMultiple,
+        VueSelectSize,
+        VueSelectMultiSize,
+    },
 }
 </script>
 

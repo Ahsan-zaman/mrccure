@@ -20,15 +20,15 @@
 import { BCard, BCardText } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard,
-    BCardText,
-  },
-  props: {
-    aboutData: {
-      type: Object,
-      default: () => {},
+    components: {
+        BCard,
+        BCardText,
     },
-  },
+    props: {
+        aboutData: {
+            type: Object,
+            default: () => {},
+        },
+    },
 }
 </script>

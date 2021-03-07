@@ -28,16 +28,16 @@ import { BFormDatepicker, BCardText } from 'bootstrap-vue'
 import { codeFullWith } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormDatepicker,
-  },
-  data() {
-    return {
-      value: '',
-      codeFullWith,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormDatepicker,
+    },
+    data() {
+        return {
+            value: '',
+            codeFullWith,
+        }
+    },
 }
 </script>

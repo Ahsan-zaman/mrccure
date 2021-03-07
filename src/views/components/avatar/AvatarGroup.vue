@@ -45,16 +45,16 @@ import { BAvatarGroup, BAvatar, BCardText } from 'bootstrap-vue'
 import { codeGroup } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAvatarGroup,
-    BAvatar,
-    BCardText,
-  },
-  data() {
-    return {
-      codeGroup,
-    }
-  },
+    components: {
+        BCardCode,
+        BAvatarGroup,
+        BAvatar,
+        BCardText,
+    },
+    data() {
+        return {
+            codeGroup,
+        }
+    },
 }
 </script>

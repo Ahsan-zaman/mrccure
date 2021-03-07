@@ -597,7 +597,7 @@ import { heightTransition } from '@core/mixins/ui/transition'
 import Ripple from 'vue-ripple-directive'
 import store from '@/store'
 import {
-  BRow, BCol, BCard, BCardBody, BButton, BCardText, BForm, BFormGroup, BFormInput, BInputGroup, BInputGroupPrepend, BFormTextarea, BFormCheckbox, BPopover, VBToggle,
+    BRow, BCol, BCard, BCardBody, BButton, BCardText, BForm, BFormGroup, BFormInput, BInputGroup, BInputGroupPrepend, BFormTextarea, BFormCheckbox, BPopover, VBToggle,
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import flatPickr from 'vue-flatpickr-component'
@@ -605,147 +605,147 @@ import invoiceStoreModule from '../invoiceStoreModule'
 import InvoiceSidebarAddNewCustomer from '../InvoiceSidebarAddNewCustomer.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BCardBody,
-    BButton,
-    BCardText,
-    BForm,
-    BFormGroup,
-    BFormInput,
-    BInputGroup,
-    BInputGroupPrepend,
-    BFormTextarea,
-    BFormCheckbox,
-    BPopover,
-    flatPickr,
-    vSelect,
-    Logo,
-    InvoiceSidebarAddNewCustomer,
-  },
-  directives: {
-    Ripple,
-    'b-toggle': VBToggle,
-
-  },
-  mixins: [heightTransition],
-  mounted() {
-    this.initTrHeight()
-  },
-  created() {
-    window.addEventListener('resize', this.initTrHeight)
-  },
-  destroyed() {
-    window.removeEventListener('resize', this.initTrHeight)
-  },
-  methods: {
-    addNewItemInItemForm() {
-      this.$refs.form.style.overflow = 'hidden'
-      this.invoiceData.items.push(JSON.parse(JSON.stringify(this.itemFormBlankItem)))
-
-      this.$nextTick(() => {
-        this.trAddHeight(this.$refs.row[0].offsetHeight)
-        setTimeout(() => {
-          this.$refs.form.style.overflow = null
-        }, 350)
-      })
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BCardBody,
+        BButton,
+        BCardText,
+        BForm,
+        BFormGroup,
+        BFormInput,
+        BInputGroup,
+        BInputGroupPrepend,
+        BFormTextarea,
+        BFormCheckbox,
+        BPopover,
+        flatPickr,
+        vSelect,
+        Logo,
+        InvoiceSidebarAddNewCustomer,
     },
-    removeItem(index) {
-      this.invoiceData.items.splice(index, 1)
-      this.trTrimHeight(this.$refs.row[0].offsetHeight)
+    directives: {
+        Ripple,
+        'b-toggle': VBToggle,
+
     },
-    initTrHeight() {
-      this.trSetHeight(null)
-      this.$nextTick(() => {
-        this.trSetHeight(this.$refs.form.scrollHeight)
-      })
+    mixins: [heightTransition],
+    mounted() {
+        this.initTrHeight()
     },
-  },
-  setup() {
-    const INVOICE_APP_STORE_MODULE_NAME = 'app-invoice'
+    created() {
+        window.addEventListener('resize', this.initTrHeight)
+    },
+    destroyed() {
+        window.removeEventListener('resize', this.initTrHeight)
+    },
+    methods: {
+        addNewItemInItemForm() {
+            this.$refs.form.style.overflow = 'hidden'
+            this.invoiceData.items.push(JSON.parse(JSON.stringify(this.itemFormBlankItem)))
 
-    // Register module
-    if (!store.hasModule(INVOICE_APP_STORE_MODULE_NAME)) store.registerModule(INVOICE_APP_STORE_MODULE_NAME, invoiceStoreModule)
+            this.$nextTick(() => {
+                this.trAddHeight(this.$refs.row[0].offsetHeight)
+                setTimeout(() => {
+                    this.$refs.form.style.overflow = null
+                }, 350)
+            })
+        },
+        removeItem(index) {
+            this.invoiceData.items.splice(index, 1)
+            this.trTrimHeight(this.$refs.row[0].offsetHeight)
+        },
+        initTrHeight() {
+            this.trSetHeight(null)
+            this.$nextTick(() => {
+                this.trSetHeight(this.$refs.form.scrollHeight)
+            })
+        },
+    },
+    setup() {
+        const INVOICE_APP_STORE_MODULE_NAME = 'app-invoice'
 
-    // UnRegister on leave
-    onUnmounted(() => {
-      if (store.hasModule(INVOICE_APP_STORE_MODULE_NAME)) store.unregisterModule(INVOICE_APP_STORE_MODULE_NAME)
-    })
+        // Register module
+        if (!store.hasModule(INVOICE_APP_STORE_MODULE_NAME)) store.registerModule(INVOICE_APP_STORE_MODULE_NAME, invoiceStoreModule)
 
-    const clients = ref([])
-    store.dispatch('app-invoice/fetchClients')
-      .then(response => { clients.value = response.data })
+        // UnRegister on leave
+        onUnmounted(() => {
+            if (store.hasModule(INVOICE_APP_STORE_MODULE_NAME)) store.unregisterModule(INVOICE_APP_STORE_MODULE_NAME)
+        })
 
-    const itemFormBlankItem = {
-      item: null,
-      cost: 0,
-      qty: 0,
-      description: '',
-    }
+        const clients = ref([])
+        store.dispatch('app-invoice/fetchClients')
+            .then(response => { clients.value = response.data })
 
-    const invoiceData = ref({
-      id: 5037,
-      client: null,
+        const itemFormBlankItem = {
+            item: null,
+            cost: 0,
+            qty: 0,
+            description: '',
+        }
 
-      // ? Set single Item in form for adding data
-      items: [JSON.parse(JSON.stringify(itemFormBlankItem))],
+        const invoiceData = ref({
+            id: 5037,
+            client: null,
 
-      salesPerson: '',
-      note: 'It was a pleasure working with you and your team. We hope you will keep us in mind for future freelance projects. Thank You!',
-      paymentMethod: null,
-    })
+            // ? Set single Item in form for adding data
+            items: [JSON.parse(JSON.stringify(itemFormBlankItem))],
 
-    const itemsOptions = [
-      {
-        itemTitle: 'App Design',
-        cost: 24,
-        qty: 1,
-        description: 'Designed UI kit & app pages.',
-      },
-      {
-        itemTitle: 'App Customization',
-        cost: 26,
-        qty: 1,
-        description: 'Customization & Bug Fixes.',
-      },
-      {
-        itemTitle: 'ABC Template',
-        cost: 28,
-        qty: 1,
-        description: 'Bootstrap 4 admin template.',
-      },
-      {
-        itemTitle: 'App Development',
-        cost: 32,
-        qty: 1,
-        description: 'Native App Development.',
-      },
-    ]
+            salesPerson: '',
+            note: 'It was a pleasure working with you and your team. We hope you will keep us in mind for future freelance projects. Thank You!',
+            paymentMethod: null,
+        })
 
-    const updateItemForm = (index, val) => {
-      const { cost, qty, description } = val
-      invoiceData.value.items[index].cost = cost
-      invoiceData.value.items[index].qty = qty
-      invoiceData.value.items[index].description = description
-    }
+        const itemsOptions = [
+            {
+                itemTitle: 'App Design',
+                cost: 24,
+                qty: 1,
+                description: 'Designed UI kit & app pages.',
+            },
+            {
+                itemTitle: 'App Customization',
+                cost: 26,
+                qty: 1,
+                description: 'Customization & Bug Fixes.',
+            },
+            {
+                itemTitle: 'ABC Template',
+                cost: 28,
+                qty: 1,
+                description: 'Bootstrap 4 admin template.',
+            },
+            {
+                itemTitle: 'App Development',
+                cost: 32,
+                qty: 1,
+                description: 'Native App Development.',
+            },
+        ]
 
-    const paymentMethods = [
-      'Bank Account',
-      'PayPal',
-      'UPI Transfer',
-    ]
+        const updateItemForm = (index, val) => {
+            const { cost, qty, description } = val
+            invoiceData.value.items[index].cost = cost
+            invoiceData.value.items[index].qty = qty
+            invoiceData.value.items[index].description = description
+        }
 
-    return {
-      invoiceData,
-      clients,
-      itemsOptions,
-      updateItemForm,
-      itemFormBlankItem,
-      paymentMethods,
-    }
-  },
+        const paymentMethods = [
+            'Bank Account',
+            'PayPal',
+            'UPI Transfer',
+        ]
+
+        return {
+            invoiceData,
+            clients,
+            itemsOptions,
+            updateItemForm,
+            itemFormBlankItem,
+            paymentMethods,
+        }
+    },
 }
 </script>
 

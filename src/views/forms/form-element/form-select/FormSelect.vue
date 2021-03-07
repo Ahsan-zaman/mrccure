@@ -32,16 +32,16 @@ import FormSelectControlSize from './FormSelectControlSize.vue'
 import FormSelectStates from './FormSelectStates.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    FormSelectBasic,
-    FormSelectStandard,
-    FormSelectSize,
-    FormSelectMultiple,
-    FormSelectControlSize,
-    FormSelectStates,
-  },
+        FormSelectBasic,
+        FormSelectStandard,
+        FormSelectSize,
+        FormSelectMultiple,
+        FormSelectControlSize,
+        FormSelectStates,
+    },
 }
 </script>

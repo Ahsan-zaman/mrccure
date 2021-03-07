@@ -112,22 +112,22 @@ import AccountSettingSocial from './AccountSettingSocial.vue'
 import AccountSettingNotification from './AccountSettingNotification.vue'
 
 export default {
-  components: {
-    BTabs,
-    BTab,
-    AccountSettingGeneral,
-    AccountSettingPassword,
-    AccountSettingInformation,
-    AccountSettingSocial,
-    AccountSettingNotification,
-  },
-  data() {
-    return {
-      options: {},
-    }
-  },
-  beforeCreate() {
-    this.$http.get('/account-setting/data').then(res => { this.options = res.data })
-  },
+    components: {
+        BTabs,
+        BTab,
+        AccountSettingGeneral,
+        AccountSettingPassword,
+        AccountSettingInformation,
+        AccountSettingSocial,
+        AccountSettingNotification,
+    },
+    data() {
+        return {
+            options: {},
+        }
+    },
+    beforeCreate() {
+        this.$http.get('/account-setting/data').then(res => { this.options = res.data })
+    },
 }
 </script>

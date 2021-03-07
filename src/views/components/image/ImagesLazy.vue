@@ -28,16 +28,16 @@ import { BImgLazy, BCardText } from 'bootstrap-vue'
 import { codeLazy } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    // eslint-disable-next-line vue/no-unused-components
-    BImgLazy,
-    BCardText,
-  },
-  data() {
-    return {
-      codeLazy,
-    }
-  },
+    components: {
+        BCardCode,
+        // eslint-disable-next-line vue/no-unused-components
+        BImgLazy,
+        BCardText,
+    },
+    data() {
+        return {
+            codeLazy,
+        }
+    },
 }
 </script>

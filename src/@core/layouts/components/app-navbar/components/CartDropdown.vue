@@ -110,59 +110,59 @@
 
 <script>
 import {
-  BNavItemDropdown, BBadge, BMedia, BLink, BImg, BFormSpinbutton, BButton,
+    BNavItemDropdown, BBadge, BMedia, BLink, BImg, BFormSpinbutton, BButton,
 } from 'bootstrap-vue'
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BNavItemDropdown,
-    BBadge,
-    BMedia,
-    BLink,
-    BImg,
-    BFormSpinbutton,
-    VuePerfectScrollbar,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      items: [],
-      perfectScrollbarSettings: {
-        maxScrollbarLength: 60,
-        wheelPropagation: false,
-      },
-    }
-  },
-  computed: {
-    totalAmount() {
-      let total = 0
-      this.items.forEach(i => { total += i.price })
-      return total
+    components: {
+        BNavItemDropdown,
+        BBadge,
+        BMedia,
+        BLink,
+        BImg,
+        BFormSpinbutton,
+        VuePerfectScrollbar,
+        BButton,
     },
-  },
-  methods: {
-    fetchItems() {
-      this.$store.dispatch('app-ecommerce/fetchCartProducts')
-        .then(response => {
-          this.items = response.data.products
-        })
+    directives: {
+        Ripple,
     },
-    removeItemFromCart(productId) {
-      this.$store.dispatch('app-ecommerce/removeProductFromCart', { productId })
-        .then(() => {
-          const itemIndex = this.items.findIndex(p => p.id === productId)
-          this.items.splice(itemIndex, 1)
+    data() {
+        return {
+            items: [],
+            perfectScrollbarSettings: {
+                maxScrollbarLength: 60,
+                wheelPropagation: false,
+            },
+        }
+    },
+    computed: {
+        totalAmount() {
+            let total = 0
+            this.items.forEach(i => { total += i.price })
+            return total
+        },
+    },
+    methods: {
+        fetchItems() {
+            this.$store.dispatch('app-ecommerce/fetchCartProducts')
+                .then(response => {
+                    this.items = response.data.products
+                })
+        },
+        removeItemFromCart(productId) {
+            this.$store.dispatch('app-ecommerce/removeProductFromCart', { productId })
+                .then(() => {
+                    const itemIndex = this.items.findIndex(p => p.id === productId)
+                    this.items.splice(itemIndex, 1)
 
-          // Update count in cart items state
-          this.$store.commit('app-ecommerce/UPDATE_CART_ITEMS_COUNT', this.items.length)
-        })
+                    // Update count in cart items state
+                    this.$store.commit('app-ecommerce/UPDATE_CART_ITEMS_COUNT', this.items.length)
+                })
+        },
     },
-  },
 }
 </script>
 

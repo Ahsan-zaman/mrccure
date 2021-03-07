@@ -103,36 +103,36 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  VBPopover, BButton, BPopover, BCardText,
+    VBPopover, BButton, BPopover, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeMethod } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPopover,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    'b-popover': VBPopover,
-    Ripple,
-  },
-  data() {
-    return {
-      show: false,
-      disabled: false,
-      codeMethod,
-    }
-  },
-  methods: {
-    showPopover() {
-      this.$root.$emit('bv::show::popover', 'popover-button-1')
+    components: {
+        BCardCode,
+        BPopover,
+        BButton,
+        BCardText,
     },
-    hidePopover() {
-      this.$root.$emit('bv::hide::popover', 'popover-button-2')
+    directives: {
+        'b-popover': VBPopover,
+        Ripple,
     },
-  },
+    data() {
+        return {
+            show: false,
+            disabled: false,
+            codeMethod,
+        }
+    },
+    methods: {
+        showPopover() {
+            this.$root.$emit('bv::show::popover', 'popover-button-1')
+        },
+        hidePopover() {
+            this.$root.$emit('bv::hide::popover', 'popover-button-2')
+        },
+    },
 }
 </script>

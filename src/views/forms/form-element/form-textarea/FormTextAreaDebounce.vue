@@ -34,16 +34,16 @@ import { BFormTextarea, BCardText } from 'bootstrap-vue'
 import { codeDebounce } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormTextarea,
-    BCardText,
-  },
-  data() {
-    return {
-      value: '',
-      codeDebounce,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormTextarea,
+        BCardText,
+    },
+    data() {
+        return {
+            value: '',
+            codeDebounce,
+        }
+    },
 }
 </script>

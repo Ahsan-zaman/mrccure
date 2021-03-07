@@ -60,20 +60,20 @@ import Ripple from 'vue-ripple-directive'
 import { codeFade } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BOverlay,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      show: false,
-      codeFade,
-    }
-  },
+    components: {
+        BCardCode,
+        BOverlay,
+        BButton,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            show: false,
+            codeFade,
+        }
+    },
 }
 </script>

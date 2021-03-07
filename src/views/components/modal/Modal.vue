@@ -56,22 +56,22 @@ import ModalBasic from './ModalBasic.vue'
 import ModalMethod from './ModalMethod.vue'
 
 export default {
-  components: {
-    BCol,
-    BRow,
+    components: {
+        BCol,
+        BRow,
 
-    ModalFooterButtonSizing,
-    ModalMultipleSupport,
-    ModalPrevent,
-    ModalSizes,
-    ModalVariant,
-    ModalVmodal,
-    ModalTheme,
-    ModalDisbaleFoooter,
-    ModalMessageBox,
-    ModalBasic,
-    ModalMethod,
-    ModalFormScroll,
-  },
+        ModalFooterButtonSizing,
+        ModalMultipleSupport,
+        ModalPrevent,
+        ModalSizes,
+        ModalVariant,
+        ModalVmodal,
+        ModalTheme,
+        ModalDisbaleFoooter,
+        ModalMessageBox,
+        ModalBasic,
+        ModalMethod,
+        ModalFormScroll,
+    },
 }
 </script>

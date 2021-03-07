@@ -86,18 +86,18 @@ import BCardCode from '@core/components/b-card-code'
 import { codeColorOption } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPagination,
-    BCardText,
-  },
-  data() {
-    return {
-      codeColorOption,
-      currentPage: 4,
-      perPage: 1,
-      rows: 200,
-    }
-  },
+    components: {
+        BCardCode,
+        BPagination,
+        BCardText,
+    },
+    data() {
+        return {
+            codeColorOption,
+            currentPage: 4,
+            perPage: 1,
+            rows: 200,
+        }
+    },
 }
 </script>

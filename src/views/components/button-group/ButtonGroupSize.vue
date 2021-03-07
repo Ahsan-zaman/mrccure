@@ -100,19 +100,19 @@ import Ripple from 'vue-ripple-directive'
 import { codeSize } from './code'
 
 export default {
-  components: {
-    BButtonGroup,
-    BButton,
-    BCardText,
-    BCardCode,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeSize,
-    }
-  },
+    components: {
+        BButtonGroup,
+        BButton,
+        BCardText,
+        BCardCode,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeSize,
+        }
+    },
 }
 </script>

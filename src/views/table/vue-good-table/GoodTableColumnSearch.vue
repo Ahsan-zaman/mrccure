@@ -150,108 +150,108 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BAvatar, BBadge, BPagination, BFormGroup, BFormInput, BFormSelect, BDropdown, BDropdownItem,
+    BAvatar, BBadge, BPagination, BFormGroup, BFormInput, BFormSelect, BDropdown, BDropdownItem,
 } from 'bootstrap-vue'
 import { VueGoodTable } from 'vue-good-table'
 import store from '@/store/index'
 import { codeColumnSearch } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    VueGoodTable,
-    BAvatar,
-    BBadge,
-    BPagination,
-    BFormGroup,
-    BFormInput,
-    BFormSelect,
-    BDropdown,
-    BDropdownItem,
-  },
-  data() {
-    return {
-      pageLength: 3,
-      dir: false,
-      codeColumnSearch,
-      columns: [
-        {
-          label: 'Name',
-          field: 'fullName',
-          filterOptions: {
-            enabled: true,
-            placeholder: 'Search Name',
-          },
-        },
-        {
-          label: 'Email',
-          field: 'email',
-          filterOptions: {
-            enabled: true,
-            placeholder: 'Search Email',
-          },
-        },
-        {
-          label: 'Date',
-          field: 'startDate',
-          filterOptions: {
-            enabled: true,
-            placeholder: 'Search Date',
-          },
-        },
-        {
-          label: 'Salary',
-          field: 'salary',
-          filterOptions: {
-            enabled: true,
-            placeholder: 'Search Salary',
-          },
-        },
-        {
-          label: 'Status',
-          field: 'status',
-          filterOptions: {
-            enabled: true,
-            placeholder: 'Search Status',
-          },
-        },
-        {
-          label: 'Action',
-          field: 'action',
-        },
-      ],
-      rows: [],
-      searchTerm: '',
-    }
-  },
-  computed: {
-    statusVariant() {
-      const statusColor = {
-        /* eslint-disable key-spacing */
-        Current      : 'light-primary',
-        Professional : 'light-success',
-        Rejected     : 'light-danger',
-        Resigned     : 'light-warning',
-        Applied      : 'light-info',
-        /* eslint-enable key-spacing */
-      }
+    components: {
+        BCardCode,
+        VueGoodTable,
+        BAvatar,
+        BBadge,
+        BPagination,
+        BFormGroup,
+        BFormInput,
+        BFormSelect,
+        BDropdown,
+        BDropdownItem,
+    },
+    data() {
+        return {
+            pageLength: 3,
+            dir: false,
+            codeColumnSearch,
+            columns: [
+                {
+                    label: 'Name',
+                    field: 'fullName',
+                    filterOptions: {
+                        enabled: true,
+                        placeholder: 'Search Name',
+                    },
+                },
+                {
+                    label: 'Email',
+                    field: 'email',
+                    filterOptions: {
+                        enabled: true,
+                        placeholder: 'Search Email',
+                    },
+                },
+                {
+                    label: 'Date',
+                    field: 'startDate',
+                    filterOptions: {
+                        enabled: true,
+                        placeholder: 'Search Date',
+                    },
+                },
+                {
+                    label: 'Salary',
+                    field: 'salary',
+                    filterOptions: {
+                        enabled: true,
+                        placeholder: 'Search Salary',
+                    },
+                },
+                {
+                    label: 'Status',
+                    field: 'status',
+                    filterOptions: {
+                        enabled: true,
+                        placeholder: 'Search Status',
+                    },
+                },
+                {
+                    label: 'Action',
+                    field: 'action',
+                },
+            ],
+            rows: [],
+            searchTerm: '',
+        }
+    },
+    computed: {
+        statusVariant() {
+            const statusColor = {
+                /* eslint-disable key-spacing */
+                Current      : 'light-primary',
+                Professional : 'light-success',
+                Rejected     : 'light-danger',
+                Resigned     : 'light-warning',
+                Applied      : 'light-info',
+                /* eslint-enable key-spacing */
+            }
 
-      return status => statusColor[status]
+            return status => statusColor[status]
+        },
+        direction() {
+            if (store.state.appConfig.isRTL) {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.dir = true
+                return this.dir
+            }
+            // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+            this.dir = false
+            return this.dir
+        },
     },
-    direction() {
-      if (store.state.appConfig.isRTL) {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.dir = true
-        return this.dir
-      }
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.dir = false
-      return this.dir
+    created() {
+        this.$http.get('/good-table/basic')
+            .then(res => { this.rows = res.data })
     },
-  },
-  created() {
-    this.$http.get('/good-table/basic')
-      .then(res => { this.rows = res.data })
-  },
 }
 </script>

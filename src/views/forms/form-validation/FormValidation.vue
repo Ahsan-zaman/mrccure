@@ -30,17 +30,17 @@ import FormValidationLocale from './FormValidationLocale.vue'
 import FormValidationExtend from './FormValidationExtend.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    FormValidationSimple,
-    FormValidationMultiple,
-    FormValidationTypes,
-    FormValidationPlaceholder,
-    FormValidationPlaceholderArguments,
-    FormValidationLocale,
-    FormValidationExtend,
-  },
+        FormValidationSimple,
+        FormValidationMultiple,
+        FormValidationTypes,
+        FormValidationPlaceholder,
+        FormValidationPlaceholderArguments,
+        FormValidationLocale,
+        FormValidationExtend,
+    },
 }
 </script>

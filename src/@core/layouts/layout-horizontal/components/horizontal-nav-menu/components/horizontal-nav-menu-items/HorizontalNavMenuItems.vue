@@ -17,25 +17,25 @@ import HorizontalNavMenuHeaderLink from '../horizontal-nav-menu-header-link/Hori
 import HorizontalNavMenuHeaderGroup from '../horizontal-nav-menu-header-group/HorizontalNavMenuHeaderGroup.vue'
 
 export default {
-  components: {
-    HorizontalNavMenuHeaderLink,
-    HorizontalNavMenuHeaderGroup,
-  },
-  props: {
-    items: {
-      type: Array,
-      required: true,
+    components: {
+        HorizontalNavMenuHeaderLink,
+        HorizontalNavMenuHeaderGroup,
     },
-  },
-  setup() {
-    const resolveNavComponent = item => {
-      if (item.children) return 'horizontal-nav-menu-header-group'
-      return 'horizontal-nav-menu-header-link'
-    }
+    props: {
+        items: {
+            type: Array,
+            required: true,
+        },
+    },
+    setup() {
+        const resolveNavComponent = item => {
+            if (item.children) return 'horizontal-nav-menu-header-group'
+            return 'horizontal-nav-menu-header-link'
+        }
 
-    return {
-      resolveNavComponent,
-    }
-  },
+        return {
+            resolveNavComponent,
+        }
+    },
 }
 </script>

@@ -29,56 +29,56 @@
 
 <script>
 import {
-  BCard, BTable, BCardBody, BCardTitle, BCardSubTitle, BFormCheckbox,
+    BCard, BTable, BCardBody, BCardTitle, BCardSubTitle, BFormCheckbox,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard, BTable, BCardBody, BCardTitle, BCardSubTitle, BFormCheckbox,
-  },
-  setup() {
-    const permissionsData = [
-      {
-        module: 'Admin',
-        read: true,
-        write: false,
-        create: false,
-        delete: false,
-      },
-      {
-        module: 'Staff',
-        read: false,
-        write: true,
-        create: false,
-        delete: false,
-      },
-      {
-        module: 'Author',
-        read: true,
-        write: false,
-        create: true,
-        delete: false,
-      },
-      {
-        module: 'Contributor',
-        read: false,
-        write: false,
-        create: false,
-        delete: false,
-      },
-      {
-        module: 'User',
-        read: false,
-        write: false,
-        create: false,
-        delete: true,
-      },
-    ]
+    components: {
+        BCard, BTable, BCardBody, BCardTitle, BCardSubTitle, BFormCheckbox,
+    },
+    setup() {
+        const permissionsData = [
+            {
+                module: 'Admin',
+                read: true,
+                write: false,
+                create: false,
+                delete: false,
+            },
+            {
+                module: 'Staff',
+                read: false,
+                write: true,
+                create: false,
+                delete: false,
+            },
+            {
+                module: 'Author',
+                read: true,
+                write: false,
+                create: true,
+                delete: false,
+            },
+            {
+                module: 'Contributor',
+                read: false,
+                write: false,
+                create: false,
+                delete: false,
+            },
+            {
+                module: 'User',
+                read: false,
+                write: false,
+                create: false,
+                delete: true,
+            },
+        ]
 
-    return {
-      permissionsData,
-    }
-  },
+        return {
+            permissionsData,
+        }
+    },
 }
 </script>
 

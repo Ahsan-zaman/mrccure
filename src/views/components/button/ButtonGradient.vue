@@ -42,15 +42,15 @@ import BCardCode from '@core/components/b-card-code'
 import { codeButtonGradient } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-  },
-  data() {
-    return {
-      codeButtonGradient,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
+    },
+    data() {
+        return {
+            codeButtonGradient,
+        }
+    },
 }
 </script>

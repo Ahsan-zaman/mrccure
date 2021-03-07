@@ -36,66 +36,66 @@ import { $themeColors } from '@themeConfig'
 import { lineChartOptions } from './chartOptions'
 
 export default {
-  components: {
-    VueApexCharts,
-    BCard,
-    BCardBody,
-    BAvatar,
-  },
-  props: {
-    icon: {
-      type: String,
-      required: true,
+    components: {
+        VueApexCharts,
+        BCard,
+        BCardBody,
+        BAvatar,
     },
-    statistic: {
-      type: [Number, String],
-      required: true,
+    props: {
+        icon: {
+            type: String,
+            required: true,
+        },
+        statistic: {
+            type: [Number, String],
+            required: true,
+        },
+        statisticTitle: {
+            type: String,
+            default: '',
+        },
+        color: {
+            type: String,
+            default: 'primary',
+        },
+        chartData: {
+            type: Array,
+            default: () => [],
+        },
+        chartOptions: {
+            type: Object,
+            default: null,
+        },
     },
-    statisticTitle: {
-      type: String,
-      default: '',
-    },
-    color: {
-      type: String,
-      default: 'primary',
-    },
-    chartData: {
-      type: Array,
-      default: () => [],
-    },
-    chartOptions: {
-      type: Object,
-      default: null,
-    },
-  },
-  computed: {
-    chartOptionsComputed() {
-      if (this.chartOptions === null) {
-        const options = JSON.parse(JSON.stringify(lineChartOptions))
+    computed: {
+        chartOptionsComputed() {
+            if (this.chartOptions === null) {
+                const options = JSON.parse(JSON.stringify(lineChartOptions))
 
-        options.fill.gradient.gradientToColors = [this.gradientToColor(this.color)]
-        options.colors = [$themeColors[this.color]]
+                options.fill.gradient.gradientToColors = [this.gradientToColor(this.color)]
+                options.colors = [$themeColors[this.color]]
 
-        return options
-      }
-      return this.chartOptions
+                return options
+            }
+            return this.chartOptions
+        },
     },
-  },
-  methods: {
-    gradientToColor(color) {
-      const gradientToColors = {
-        primary: '#A9A2F6',
-        success: '#55DD92',
-        warning: '#ffc085',
-        danger: '#F97794',
-        info: '#59E0F0',
-        secondary: '#B4B9BF',
-        light: '#D0D4DB',
-        dark: '#919191',
-      }
+    methods: {
+        gradientToColor(color) {
+            const gradientToColors = {
+                primary: '#A9A2F6',
+                success: '#55DD92',
+                warning: '#ffc085',
+                danger: '#F97794',
+                info: '#59E0F0',
+                secondary: '#B4B9BF',
+                light: '#D0D4DB',
+                dark: '#919191',
+            }
 
-      return gradientToColors[color]
+            return gradientToColors[color]
+        },
     },
-  },
 }
 </script>

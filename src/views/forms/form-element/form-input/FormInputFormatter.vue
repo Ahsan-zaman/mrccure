@@ -53,23 +53,23 @@ import { BFormInput, BFormGroup, BCardText } from 'bootstrap-vue'
 import { codeFormatter } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormInput,
-    BCardText,
-    BFormGroup,
-  },
-  data() {
-    return {
-      text1: '',
-      text2: '',
-      codeFormatter,
-    }
-  },
-  methods: {
-    formatter(value) {
-      return value.toLowerCase()
+    components: {
+        BCardCode,
+        BFormInput,
+        BCardText,
+        BFormGroup,
     },
-  },
+    data() {
+        return {
+            text1: '',
+            text2: '',
+            codeFormatter,
+        }
+    },
+    methods: {
+        formatter(value) {
+            return value.toLowerCase()
+        },
+    },
 }
 </script>

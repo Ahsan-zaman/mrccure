@@ -46,36 +46,36 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BTabs, BTab, BNavItem, BButton,
+    BTabs, BTab, BNavItem, BButton,
 } from 'bootstrap-vue'
 import { codeDynamic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BTabs,
-    BTab,
-    BNavItem,
-    BButton,
-  },
-  data() {
-    return {
-      tabs: [1],
-      tabCounter: 1,
-      codeDynamic,
-    }
-  },
-  methods: {
-    closeTab(x) {
-      for (let i = 0; i < this.tabs.length; i += 1) {
-        if (this.tabs[i] === x) {
-          this.tabs.splice(i, 1)
+    components: {
+        BCardCode,
+        BTabs,
+        BTab,
+        BNavItem,
+        BButton,
+    },
+    data() {
+        return {
+            tabs: [1],
+            tabCounter: 1,
+            codeDynamic,
         }
-      }
     },
-    newTab() {
-      this.tabs.push((this.tabCounter += 1))
+    methods: {
+        closeTab(x) {
+            for (let i = 0; i < this.tabs.length; i += 1) {
+                if (this.tabs[i] === x) {
+                    this.tabs.splice(i, 1)
+                }
+            }
+        },
+        newTab() {
+            this.tabs.push((this.tabCounter += 1))
+        },
     },
-  },
 }
 </script>

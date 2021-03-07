@@ -62,15 +62,15 @@ import { BProgress, BCardText } from 'bootstrap-vue'
 import { codeColored } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BProgress,
-    BCardText,
-  },
-  data() {
-    return {
-      codeColored,
-    }
-  },
+    components: {
+        BCardCode,
+        BProgress,
+        BCardText,
+    },
+    data() {
+        return {
+            codeColored,
+        }
+    },
 }
 </script>

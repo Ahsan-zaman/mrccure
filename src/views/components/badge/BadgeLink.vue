@@ -31,15 +31,15 @@ import { BBadge, BCardText } from 'bootstrap-vue'
 import { codeLink } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BBadge,
-  },
-  data() {
-    return {
-      codeLink,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BBadge,
+    },
+    data() {
+        return {
+            codeLink,
+        }
+    },
 }
 </script>

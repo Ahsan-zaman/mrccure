@@ -53,26 +53,26 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BToast, BButton, BImg, BCardText,
+    BToast, BButton, BImg, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeToastDelay } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BToast,
-    BButton,
-    BImg,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeToastDelay,
-    }
-  },
+    components: {
+        BCardCode,
+        BToast,
+        BButton,
+        BImg,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeToastDelay,
+        }
+    },
 }
 </script>

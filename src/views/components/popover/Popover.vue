@@ -23,17 +23,17 @@ import PopoverVariant from './PopoverVariant.vue'
 import PopoverAdvance from './PopoverAdvance.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    PopoverPosition,
-    PopoverTrigger,
-    PopoverOption,
-    PopoverMethod,
-    PopoverEvent,
-    PopoverVariant,
-    PopoverAdvance,
-  },
+        PopoverPosition,
+        PopoverTrigger,
+        PopoverOption,
+        PopoverMethod,
+        PopoverEvent,
+        PopoverVariant,
+        PopoverAdvance,
+    },
 }
 </script>

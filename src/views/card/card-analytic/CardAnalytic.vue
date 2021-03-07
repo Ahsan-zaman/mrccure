@@ -59,22 +59,22 @@ import CardAnalyticRevenueReport from './CardAnalyticRevenueReport.vue'
 import CardAnalyticEarningsChart from './CardAnalyticEarningsChart.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    CardAnalyticSessionsByDevice,
-    CardAnalyticProductOrders,
-    CardAnalyticCustomers,
-    CardAnalyticSalesRadarChart,
-    CardAnalyticSupportTracker,
-    CardAnalyticRevenue,
-    CardAnalyticGoalOverview,
-    CardAnalyticAvgSessions,
-    CardAnalyticSaleLineChart,
-    CardAnalyticRevenueReport,
-    CardAnalyticEarningsChart,
-  },
+        CardAnalyticSessionsByDevice,
+        CardAnalyticProductOrders,
+        CardAnalyticCustomers,
+        CardAnalyticSalesRadarChart,
+        CardAnalyticSupportTracker,
+        CardAnalyticRevenue,
+        CardAnalyticGoalOverview,
+        CardAnalyticAvgSessions,
+        CardAnalyticSaleLineChart,
+        CardAnalyticRevenueReport,
+        CardAnalyticEarningsChart,
+    },
 }
 </script>
 

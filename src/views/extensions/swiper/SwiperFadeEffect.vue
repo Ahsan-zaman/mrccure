@@ -46,38 +46,38 @@ import 'swiper/css/swiper.css'
 import { codeFadeEffect } from './code'
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-    BCardCode,
-    BImg,
-  },
-  data() {
-    return {
-      codeFadeEffect,
+    components: {
+        Swiper,
+        SwiperSlide,
+        BCardCode,
+        BImg,
+    },
+    data() {
+        return {
+            codeFadeEffect,
 
-      /* eslint-disable global-require */
-      swiperData: [
-        { img: require('@/assets/images/banner/banner-20.jpg') },
-        { img: require('@/assets/images/banner/banner-19.jpg') },
-        { img: require('@/assets/images/banner/banner-18.jpg') },
-        { img: require('@/assets/images/banner/banner-17.jpg') },
-        { img: require('@/assets/images/banner/banner-16.jpg') },
-      ],
-      /* eslint-disable global-require */
+            /* eslint-disable global-require */
+            swiperData: [
+                { img: require('@/assets/images/banner/banner-20.jpg') },
+                { img: require('@/assets/images/banner/banner-19.jpg') },
+                { img: require('@/assets/images/banner/banner-18.jpg') },
+                { img: require('@/assets/images/banner/banner-17.jpg') },
+                { img: require('@/assets/images/banner/banner-16.jpg') },
+            ],
+            /* eslint-disable global-require */
 
-      swiperOptions: {
-        spaceBetween: 30,
-        effect: 'fade',
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      },
-    }
-  },
+            swiperOptions: {
+                spaceBetween: 30,
+                effect: 'fade',
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            },
+        }
+    },
 }
 </script>

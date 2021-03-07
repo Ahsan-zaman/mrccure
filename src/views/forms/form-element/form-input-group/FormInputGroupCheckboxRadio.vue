@@ -80,27 +80,27 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BInputGroup, BFormInput, BInputGroupPrepend, BRow, BCol, BFormCheckbox, BFormRadio, BFormGroup,
+    BInputGroup, BFormInput, BInputGroupPrepend, BRow, BCol, BFormCheckbox, BFormRadio, BFormGroup,
 } from 'bootstrap-vue'
 import { codeCheckboxRadio } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormInput,
-    BInputGroup,
-    BInputGroupPrepend,
-    BRow,
-    BCol,
-    BFormCheckbox,
-    BFormRadio,
-    BFormGroup,
-  },
-  data() {
-    return {
-      codeCheckboxRadio,
-      radio1: 'radio2',
-    }
-  },
+    components: {
+        BCardCode,
+        BFormInput,
+        BInputGroup,
+        BInputGroupPrepend,
+        BRow,
+        BCol,
+        BFormCheckbox,
+        BFormRadio,
+        BFormGroup,
+    },
+    data() {
+        return {
+            codeCheckboxRadio,
+            radio1: 'radio2',
+        }
+    },
 }
 </script>

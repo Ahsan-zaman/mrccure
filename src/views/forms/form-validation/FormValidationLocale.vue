@@ -59,44 +59,44 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormInput, BFormGroup, BButton, BRow, BCol, BCardText,
+    BFormInput, BFormGroup, BButton, BRow, BCol, BCardText,
 } from 'bootstrap-vue'
 import { ValidationProvider, ValidationObserver, localize } from 'vee-validate'
 import { password, required } from '@validations'
 import { codeLocale } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormInput,
-    BFormGroup,
-    BButton,
-    BCardText,
-    BRow,
-    BCol,
-    ValidationProvider,
-    ValidationObserver,
-  },
-  data() {
-    return {
-      // ? Default locale for VeeValidate is 'en'
-      locale: 'en',
-      email: '',
-      passwordValue: '',
-      password,
-      required,
-      codeLocale,
-    }
-  },
-  methods: {
-    switchLoc() {
-      // switch the locale.
-      this.locale = this.locale === 'en' ? 'ar' : 'en'
-      localize(this.locale)
-
-      // re-validate to re-generate the messages.
-      this.$refs.form.validate()
+    components: {
+        BCardCode,
+        BFormInput,
+        BFormGroup,
+        BButton,
+        BCardText,
+        BRow,
+        BCol,
+        ValidationProvider,
+        ValidationObserver,
     },
-  },
+    data() {
+        return {
+            // ? Default locale for VeeValidate is 'en'
+            locale: 'en',
+            email: '',
+            passwordValue: '',
+            password,
+            required,
+            codeLocale,
+        }
+    },
+    methods: {
+        switchLoc() {
+            // switch the locale.
+            this.locale = this.locale === 'en' ? 'ar' : 'en'
+            localize(this.locale)
+
+            // re-validate to re-generate the messages.
+            this.$refs.form.validate()
+        },
+    },
 }
 </script>

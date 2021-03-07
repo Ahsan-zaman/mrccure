@@ -72,28 +72,28 @@ import profileBottom from './profileBottom.vue'
 
 /* eslint-disable global-require */
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    ProfileHeader,
-    ProfileAbout,
-    ProfileSuggestedPages,
-    ProfileTwitterFeed,
-    ProfilePost,
-    ProfileLatestPhotos,
-    ProfileSuggestion,
-    ProfilePolls,
-    profileBottom,
-  },
-  data() {
-    return {
-      profileData: { },
-    }
-  },
-  created() {
-    this.$http.get('/profile/data').then(res => { this.profileData = res.data })
-  },
+        ProfileHeader,
+        ProfileAbout,
+        ProfileSuggestedPages,
+        ProfileTwitterFeed,
+        ProfilePost,
+        ProfileLatestPhotos,
+        ProfileSuggestion,
+        ProfilePolls,
+        profileBottom,
+    },
+    data() {
+        return {
+            profileData: { },
+        }
+    },
+    created() {
+        this.$http.get('/profile/data').then(res => { this.profileData = res.data })
+    },
 }
 /* eslint-disable global-require */
 </script>

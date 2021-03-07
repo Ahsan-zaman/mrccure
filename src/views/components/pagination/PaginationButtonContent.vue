@@ -85,19 +85,19 @@ import BCardCode from '@core/components/b-card-code'
 import { codeContent } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPagination,
-    BSpinner,
-    BCardText,
-  },
-  data() {
-    return {
-      codeContent,
-      currentPage: 1,
-      perPage: 10,
-      rows: 100,
-    }
-  },
+    components: {
+        BCardCode,
+        BPagination,
+        BSpinner,
+        BCardText,
+    },
+    data() {
+        return {
+            codeContent,
+            currentPage: 1,
+            perPage: 10,
+            rows: 100,
+        }
+    },
 }
 </script>

@@ -42,12 +42,12 @@ import AppCollapseItem from '@core/components/app-collapse/AppCollapseItem.vue'
 import { codeHover } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    AppCollapse,
-    AppCollapseItem,
-    BCardText,
-  },
-  data() { return { codeHover } },
+    components: {
+        BCardCode,
+        AppCollapse,
+        AppCollapseItem,
+        BCardText,
+    },
+    data() { return { codeHover } },
 }
 </script>

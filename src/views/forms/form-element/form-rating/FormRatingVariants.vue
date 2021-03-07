@@ -92,18 +92,18 @@ import { BFormRating, BFormRadio, BCardText } from 'bootstrap-vue'
 import { codeVariant } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormRadio,
-    BFormRating,
-    BCardText,
-  },
-  data() {
-    return {
-      value: 3,
-      selected: 'primary',
-      codeVariant,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormRadio,
+        BFormRating,
+        BCardText,
+    },
+    data() {
+        return {
+            value: 3,
+            selected: 'primary',
+            codeVariant,
+        }
+    },
 }
 </script>

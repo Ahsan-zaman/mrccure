@@ -46,16 +46,16 @@ import BCardCode from '@core/components/b-card-code'
 import { codeCarouselCaption } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCarousel,
-    BCarouselSlide,
-    BCardText,
-  },
-  data() {
-    return {
-      codeCarouselCaption,
-    }
-  },
+    components: {
+        BCardCode,
+        BCarousel,
+        BCarouselSlide,
+        BCardText,
+    },
+    data() {
+        return {
+            codeCarouselCaption,
+        }
+    },
 }
 </script>

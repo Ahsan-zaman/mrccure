@@ -30,16 +30,16 @@ import { BTime, BCardText } from 'bootstrap-vue'
 import { codeSpinbutton } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BTime,
-    BCardText,
-  },
-  data() {
-    return {
-      value: '',
-      codeSpinbutton,
-    }
-  },
+    components: {
+        BCardCode,
+        BTime,
+        BCardText,
+    },
+    data() {
+        return {
+            value: '',
+            codeSpinbutton,
+        }
+    },
 }
 </script>

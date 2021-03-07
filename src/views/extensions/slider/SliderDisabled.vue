@@ -37,35 +37,35 @@ import store from '@/store/index'
 import { codeDisabled } from './code'
 
 export default {
-  components: {
-    BCardText,
-    VueSlider,
-    BCardCode,
-  },
-  data() {
-    return {
-      codeDisabled,
-      dir: 'ltr',
-      value1: 0,
-      value2: [0, 50],
-      dotOptions: [{
-        disabled: false,
-      }, {
-        disabled: true,
-      }],
-    }
-  },
-  computed: {
-    direction() {
-      if (store.state.appConfig.isRTL) {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.dir = 'rtl'
-        return this.dir
-      }
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.dir = 'ltr'
-      return this.dir
+    components: {
+        BCardText,
+        VueSlider,
+        BCardCode,
     },
-  },
+    data() {
+        return {
+            codeDisabled,
+            dir: 'ltr',
+            value1: 0,
+            value2: [0, 50],
+            dotOptions: [{
+                disabled: false,
+            }, {
+                disabled: true,
+            }],
+        }
+    },
+    computed: {
+        direction() {
+            if (store.state.appConfig.isRTL) {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.dir = 'rtl'
+                return this.dir
+            }
+            // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+            this.dir = 'ltr'
+            return this.dir
+        },
+    },
 }
 </script>

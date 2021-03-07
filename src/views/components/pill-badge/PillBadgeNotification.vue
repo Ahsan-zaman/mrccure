@@ -47,14 +47,14 @@ import BCardCode from '@core/components/b-card-code'
 import { codeNotification } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-  },
-  data() {
-    return {
-      codeNotification,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+    },
+    data() {
+        return {
+            codeNotification,
+        }
+    },
 }
 </script>

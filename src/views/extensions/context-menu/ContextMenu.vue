@@ -10,10 +10,10 @@ import ContextMenuSimple from './ContextMenuSimple.vue'
 import ContextMenuCloseOnClick from './ContextMenuCloseOnClick.vue'
 
 export default {
-  components: {
-    ContextMenuSimple,
-    ContextMenuCloseOnClick,
-  },
+    components: {
+        ContextMenuSimple,
+        ContextMenuCloseOnClick,
+    },
 }
 </script>
 

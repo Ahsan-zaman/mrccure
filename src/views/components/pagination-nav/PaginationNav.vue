@@ -40,18 +40,18 @@ import PaginationNavPill from './PaginationNavPill.vue'
 import PaginationNavAlignment from './PaginationNavAlignment.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    PaginationNavBasic,
-    PaginationNavArray,
-    PaginationNavNumberGen,
-    PaginationNavButtonContent,
-    PaginationNavGoto,
-    PaginationNavSize,
-    PaginationNavPill,
-    PaginationNavAlignment,
-  },
+        PaginationNavBasic,
+        PaginationNavArray,
+        PaginationNavNumberGen,
+        PaginationNavButtonContent,
+        PaginationNavGoto,
+        PaginationNavSize,
+        PaginationNavPill,
+        PaginationNavAlignment,
+    },
 }
 </script>

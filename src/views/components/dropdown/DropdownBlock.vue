@@ -64,17 +64,17 @@ import Ripple from 'vue-ripple-directive'
 import { codeBlock } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BDropdown,
-    BDropdownItem,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return { codeBlock }
-  },
+    components: {
+        BCardCode,
+        BDropdown,
+        BDropdownItem,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return { codeBlock }
+    },
 }
 </script>

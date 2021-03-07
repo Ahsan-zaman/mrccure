@@ -49,16 +49,16 @@ import AppCollapse from '@core/components/app-collapse/AppCollapse.vue'
 import AppCollapseItem from '@core/components/app-collapse/AppCollapseItem.vue'
 
 export default {
-  components: {
-    BAvatar,
-    AppCollapseItem,
-    AppCollapse,
-  },
-  props: {
-    options: {
-      type: Object,
-      default: () => {},
+    components: {
+        BAvatar,
+        AppCollapseItem,
+        AppCollapse,
     },
-  },
+    props: {
+        options: {
+            type: Object,
+            default: () => {},
+        },
+    },
 }
 </script>

@@ -88,22 +88,22 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormDatepicker, BRow, BCol, BCardText,
+    BFormDatepicker, BRow, BCol, BCardText,
 } from 'bootstrap-vue'
 import { codeVariant } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormDatepicker,
-    BRow,
-    BCol,
-  },
-  data() {
-    return {
-      codeVariant,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormDatepicker,
+        BRow,
+        BCol,
+    },
+    data() {
+        return {
+            codeVariant,
+        }
+    },
 }
 </script>

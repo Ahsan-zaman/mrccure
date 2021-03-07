@@ -50,28 +50,28 @@
 
 <script>
 import {
-  BRow, BCol, BCard, BCardText, BCardTitle,
+    BRow, BCol, BCard, BCardText, BCardTitle,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BCardText,
-    BCardTitle,
-  },
-  data() {
-    return {
-      solidColor: [
-        { bg: 'primary', title: 'Primary card title' },
-        { bg: 'secondary', title: 'Secondary card title' },
-        { bg: 'success', title: 'Success card title' },
-        { bg: 'danger', title: 'Danger card title' },
-        { bg: 'warning', title: 'Warning card title' },
-        { bg: 'info', title: 'Info card title' },
-      ],
-    }
-  },
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BCardText,
+        BCardTitle,
+    },
+    data() {
+        return {
+            solidColor: [
+                { bg: 'primary', title: 'Primary card title' },
+                { bg: 'secondary', title: 'Secondary card title' },
+                { bg: 'success', title: 'Success card title' },
+                { bg: 'danger', title: 'Danger card title' },
+                { bg: 'warning', title: 'Warning card title' },
+                { bg: 'info', title: 'Info card title' },
+            ],
+        }
+    },
 }
 </script>

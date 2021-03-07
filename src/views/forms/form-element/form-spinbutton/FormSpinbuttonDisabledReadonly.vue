@@ -49,23 +49,23 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormSpinbutton, BRow, BCol, BCardText,
+    BFormSpinbutton, BRow, BCol, BCardText,
 } from 'bootstrap-vue'
 import { codeDisabledReadonly } from './code'
 
 export default {
-  components: {
-    BFormSpinbutton,
-    BCardCode,
-    BCardText,
-    BRow,
-    BCol,
-  },
-  data() {
-    return {
-      value: 50,
-      codeDisabledReadonly,
-    }
-  },
+    components: {
+        BFormSpinbutton,
+        BCardCode,
+        BCardText,
+        BRow,
+        BCol,
+    },
+    data() {
+        return {
+            value: 50,
+            codeDisabledReadonly,
+        }
+    },
 }
 </script>

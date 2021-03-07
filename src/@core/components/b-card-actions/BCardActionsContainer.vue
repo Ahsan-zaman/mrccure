@@ -41,15 +41,15 @@
 
 <script>
 export default {
-  props: {
-    isCollapsed: {
-      type: Boolean,
-      requried: true,
+    props: {
+        isCollapsed: {
+            type: Boolean,
+            requried: true,
+        },
+        availableActions: {
+            type: Array,
+            default: () => [],
+        },
     },
-    availableActions: {
-      type: Array,
-      default: () => [],
-    },
-  },
 }
 </script>

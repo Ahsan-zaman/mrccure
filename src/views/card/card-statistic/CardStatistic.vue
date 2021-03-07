@@ -256,62 +256,62 @@ import CardStatisticProfitChart from './CardStatisticProfitChart.vue'
 import CardStatisticsGroup from './CardStatisticsGroup.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    StatisticCardVertical,
-    StatisticCardHorizontal,
-    StatisticCardWithAreaChart,
-    StatisticCardWithLineChart,
-    CardStatisticOrderChart,
-    CardStatisticProfitChart,
-    CardStatisticsGroup,
-  },
-  data() {
-    return {
-      // Area charts
-      subscribersGained: {},
-      revenueGenerated: {},
-      quarterlySales: {},
-      ordersRecevied: {},
+    components: {
+        BRow,
+        BCol,
+        StatisticCardVertical,
+        StatisticCardHorizontal,
+        StatisticCardWithAreaChart,
+        StatisticCardWithLineChart,
+        CardStatisticOrderChart,
+        CardStatisticProfitChart,
+        CardStatisticsGroup,
+    },
+    data() {
+        return {
+            // Area charts
+            subscribersGained: {},
+            revenueGenerated: {},
+            quarterlySales: {},
+            ordersRecevied: {},
 
-      // Line Charts
-      siteTraffic: {},
-      activeUsers: {},
-      newsletter: {},
-    }
-  },
-  created() {
+            // Line Charts
+            siteTraffic: {},
+            activeUsers: {},
+            newsletter: {},
+        }
+    },
+    created() {
     // Subscribers gained
-    this.$http.get('/card/card-statistics/subscribers')
-      .then(response => { this.subscribersGained = response.data })
+        this.$http.get('/card/card-statistics/subscribers')
+            .then(response => { this.subscribersGained = response.data })
 
-    // Revenue Generated
-    this.$http.get('/card/card-statistics/revenue')
-      .then(response => { this.revenueGenerated = response.data })
+        // Revenue Generated
+        this.$http.get('/card/card-statistics/revenue')
+            .then(response => { this.revenueGenerated = response.data })
 
-    // Sales
-    this.$http.get('/card/card-statistics/sales')
-      .then(response => { this.quarterlySales = response.data })
+        // Sales
+        this.$http.get('/card/card-statistics/sales')
+            .then(response => { this.quarterlySales = response.data })
 
-    // Orders
-    this.$http.get('/card/card-statistics/orders')
-      .then(response => { this.ordersRecevied = response.data })
+        // Orders
+        this.$http.get('/card/card-statistics/orders')
+            .then(response => { this.ordersRecevied = response.data })
 
-    // Site Traffic gained
-    this.$http.get('/card/card-statistics/site-traffic')
-      .then(response => { this.siteTraffic = response.data })
+        // Site Traffic gained
+        this.$http.get('/card/card-statistics/site-traffic')
+            .then(response => { this.siteTraffic = response.data })
 
-    // Active Users
-    this.$http.get('/card/card-statistics/active-users')
-      .then(response => { this.activeUsers = response.data })
+        // Active Users
+        this.$http.get('/card/card-statistics/active-users')
+            .then(response => { this.activeUsers = response.data })
 
-    // Newsletter
-    this.$http.get('/card/card-statistics/newsletter')
-      .then(response => { this.newsletter = response.data })
-  },
-  methods: {
-    kFormatter,
-  },
+        // Newsletter
+        this.$http.get('/card/card-statistics/newsletter')
+            .then(response => { this.newsletter = response.data })
+    },
+    methods: {
+        kFormatter,
+    },
 }
 </script>

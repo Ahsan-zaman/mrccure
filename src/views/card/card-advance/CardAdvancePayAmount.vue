@@ -85,37 +85,37 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardTitle, BCardBody, BRow, BCol, BFormGroup, BFormInput, BButton, BForm,
+    BCard, BCardHeader, BCardTitle, BCardBody, BRow, BCol, BFormGroup, BFormInput, BButton, BForm,
 } from 'bootstrap-vue'
 import Cleave from 'vue-cleave-component'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BCard,
-    BCardHeader,
-    BCardTitle,
-    BCardBody,
-    BRow,
-    BCol,
-    BForm,
-    BFormGroup,
-    BFormInput,
-    Cleave,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      cardNumber: '',
-      options: {
-        creditCard: {
-          creditCard: true,
-        },
-      },
-    }
-  },
+    components: {
+        BCard,
+        BCardHeader,
+        BCardTitle,
+        BCardBody,
+        BRow,
+        BCol,
+        BForm,
+        BFormGroup,
+        BFormInput,
+        Cleave,
+        BButton,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            cardNumber: '',
+            options: {
+                creditCard: {
+                    creditCard: true,
+                },
+            },
+        }
+    },
 }
 </script>

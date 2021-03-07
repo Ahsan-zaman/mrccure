@@ -48,24 +48,24 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BToast, BImg, BCardText, BCardBody,
+    BToast, BImg, BCardText, BCardBody,
 } from 'bootstrap-vue'
 import { codeTranslucent } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BToast,
-    BCardBody,
-    BImg,
-    BCardText,
-  },
-  data() {
-    return {
-      visible: true,
-      codeTranslucent,
-    }
-  },
+    components: {
+        BCardCode,
+        BToast,
+        BCardBody,
+        BImg,
+        BCardText,
+    },
+    data() {
+        return {
+            visible: true,
+            codeTranslucent,
+        }
+    },
 }
 </script>
 

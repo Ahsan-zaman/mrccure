@@ -44,19 +44,19 @@ import FormInputDebounce from './FormInputDebounce.vue'
 import FormInputFormatter from './FormInputFormatter.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    FormInputBasic,
-    FormInputSize,
-    FormInputHorizontalLableSize,
-    FormFloatingLabel,
-    FormInputContextualStates,
-    FormInputValidateTooltips,
-    FormInputDatalist,
-    FormInputDebounce,
-    FormInputFormatter,
-  },
+        FormInputBasic,
+        FormInputSize,
+        FormInputHorizontalLableSize,
+        FormFloatingLabel,
+        FormInputContextualStates,
+        FormInputValidateTooltips,
+        FormInputDatalist,
+        FormInputDebounce,
+        FormInputFormatter,
+    },
 }
 </script>

@@ -27,16 +27,16 @@ import VueSlider from 'vue-slider-component'
 import { codeRTL } from './code'
 
 export default {
-  components: {
-    BCardText,
-    VueSlider,
-    BCardCode,
-  },
-  data() {
-    return {
-      codeRTL,
-      value: 50,
-    }
-  },
+    components: {
+        BCardText,
+        VueSlider,
+        BCardCode,
+    },
+    data() {
+        return {
+            codeRTL,
+            value: 50,
+        }
+    },
 }
 </script>

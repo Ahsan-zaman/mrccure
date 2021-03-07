@@ -40,7 +40,7 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BButton, BSidebar, VBToggle, BCardText,
+    BButton, BSidebar, VBToggle, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeFooter } from './code'
@@ -48,22 +48,22 @@ import SidebarContent from './SidebarContent.vue'
 import SidebarContentFooter from './SidebarContentFooter.vue'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BSidebar,
-    BCardText,
-    SidebarContent,
-    SidebarContentFooter,
-  },
-  directives: {
-    'b-toggle': VBToggle,
-    Ripple,
-  },
-  data() {
-    return {
-      codeFooter,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BSidebar,
+        BCardText,
+        SidebarContent,
+        SidebarContentFooter,
+    },
+    directives: {
+        'b-toggle': VBToggle,
+        Ripple,
+    },
+    data() {
+        return {
+            codeFooter,
+        }
+    },
 }
 </script>

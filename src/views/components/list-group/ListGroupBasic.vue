@@ -24,14 +24,14 @@ import BCardCode from '@core/components/b-card-code'
 import { codeListGroupBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BListGroup,
-    BListGroupItem,
-    BCardText,
-  },
-  data() {
-    return { codeListGroupBasic }
-  },
+    components: {
+        BCardCode,
+        BListGroup,
+        BListGroupItem,
+        BCardText,
+    },
+    data() {
+        return { codeListGroupBasic }
+    },
 }
 </script>

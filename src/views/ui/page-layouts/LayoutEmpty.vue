@@ -18,8 +18,8 @@
 import { BAlert } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BAlert,
-  },
+    components: {
+        BAlert,
+    },
 }
 </script>

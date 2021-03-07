@@ -20,20 +20,20 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BTime, BCardText,
+    BTime, BCardText,
 } from 'bootstrap-vue'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BTime,
-  },
-  data() {
-    return {
-      codeBasic,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BTime,
+    },
+    data() {
+        return {
+            codeBasic,
+        }
+    },
 }
 </script>

@@ -39,28 +39,28 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BButton, BSidebar, VBToggle, BCardText,
+    BButton, BSidebar, VBToggle, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeVariant } from './code'
 import SidebarContent from './SidebarContent.vue'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BSidebar,
-    SidebarContent,
-    BCardText,
-  },
-  directives: {
-    'b-toggle': VBToggle,
-    Ripple,
-  },
-  data() {
-    return {
-      codeVariant,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BSidebar,
+        SidebarContent,
+        BCardText,
+    },
+    directives: {
+        'b-toggle': VBToggle,
+        Ripple,
+    },
+    data() {
+        return {
+            codeVariant,
+        }
+    },
 }
 </script>

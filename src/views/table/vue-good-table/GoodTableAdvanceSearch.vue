@@ -174,7 +174,7 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BAvatar, BPagination, BFormGroup, BFormInput, BFormSelect, BRow, BCol,
+    BAvatar, BPagination, BFormGroup, BFormInput, BFormSelect, BRow, BCol,
 } from 'bootstrap-vue'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
 import { VueGoodTable } from 'vue-good-table'
@@ -182,84 +182,84 @@ import store from '@/store/index'
 import { codeAdvance } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    VueGoodTable,
-    BAvatar,
-    BPagination,
-    BFormGroup,
-    BFormInput,
-    BFormSelect,
-    BRow,
-    BCol,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
-  data() {
-    return {
-      pageLength: 5,
-      dir: false,
-      codeAdvance,
-      columns: [
-        {
-          label: 'Name',
-          field: 'fullName',
-        },
-        {
-          label: 'Email',
-          field: 'email',
-        },
-        {
-          label: 'Post',
-          field: 'post',
-        },
-        {
-          label: 'City',
-          field: 'city',
-        },
-        {
-          label: 'Date',
-          field: 'startDate',
-        },
-        {
-          label: 'Salary',
-          field: 'salary',
-        },
-      ],
-      rows: [],
-      searchTerm: '',
-    }
-  },
-  computed: {
-    direction() {
-      if (store.state.appConfig.isRTL) {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.dir = true
-        return this.dir
-      }
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.dir = false
-      return this.dir
+    components: {
+        BCardCode,
+        VueGoodTable,
+        BAvatar,
+        BPagination,
+        BFormGroup,
+        BFormInput,
+        BFormSelect,
+        BRow,
+        BCol,
+        // eslint-disable-next-line vue/no-unused-components
+        ToastificationContent,
     },
-  },
-  created() {
-    this.$http.get('/good-table/advanced-search')
-      .then(res => { this.rows = res.data })
-  },
-  methods: {
-    advanceSearch(val) {
-      this.searchTerm = val
+    data() {
+        return {
+            pageLength: 5,
+            dir: false,
+            codeAdvance,
+            columns: [
+                {
+                    label: 'Name',
+                    field: 'fullName',
+                },
+                {
+                    label: 'Email',
+                    field: 'email',
+                },
+                {
+                    label: 'Post',
+                    field: 'post',
+                },
+                {
+                    label: 'City',
+                    field: 'city',
+                },
+                {
+                    label: 'Date',
+                    field: 'startDate',
+                },
+                {
+                    label: 'Salary',
+                    field: 'salary',
+                },
+            ],
+            rows: [],
+            searchTerm: '',
+        }
     },
-    onRowClick(params) {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: `Hello user! You have clicked on row ${params.row.id}`,
-          icon: 'UserIcon',
-          variant: 'success',
+    computed: {
+        direction() {
+            if (store.state.appConfig.isRTL) {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.dir = true
+                return this.dir
+            }
+            // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+            this.dir = false
+            return this.dir
         },
-      })
     },
-  },
+    created() {
+        this.$http.get('/good-table/advanced-search')
+            .then(res => { this.rows = res.data })
+    },
+    methods: {
+        advanceSearch(val) {
+            this.searchTerm = val
+        },
+        onRowClick(params) {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: `Hello user! You have clicked on row ${params.row.id}`,
+                    icon: 'UserIcon',
+                    variant: 'success',
+                },
+            })
+        },
+    },
 }
 </script>

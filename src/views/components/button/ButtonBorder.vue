@@ -64,14 +64,14 @@ import Ripple from 'vue-ripple-directive'
 import { codeButtonBorder } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() { return { codeButtonBorder } },
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() { return { codeButtonBorder } },
 }
 </script>

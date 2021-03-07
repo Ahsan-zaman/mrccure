@@ -31,16 +31,16 @@ import BCardCode from '@core/components/b-card-code'
 import { codeCarouselInterval } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCarousel,
-    BCarouselSlide,
-    BCardText,
-  },
-  data() {
-    return {
-      codeCarouselInterval,
-    }
-  },
+    components: {
+        BCardCode,
+        BCarousel,
+        BCarouselSlide,
+        BCardText,
+    },
+    data() {
+        return {
+            codeCarouselInterval,
+        }
+    },
 }
 </script>

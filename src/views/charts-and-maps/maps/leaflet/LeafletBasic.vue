@@ -25,25 +25,25 @@ import 'leaflet/dist/leaflet.css'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    LMap,
-    LTileLayer,
-    LCircle,
-    BCardCode,
-  },
-  data() {
-    return {
-      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      zoom: 8,
-      center: [47.313220, -1.319482],
-      circle: {
-        center: [47.413220, -1.0482],
-        radius: 4500,
-        color: '#EA5455',
-      },
-      codeBasic,
-    }
-  },
+    components: {
+        LMap,
+        LTileLayer,
+        LCircle,
+        BCardCode,
+    },
+    data() {
+        return {
+            url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            zoom: 8,
+            center: [47.313220, -1.319482],
+            circle: {
+                center: [47.413220, -1.0482],
+                radius: 4500,
+                color: '#EA5455',
+            },
+            codeBasic,
+        }
+    },
 }
 </script>
 

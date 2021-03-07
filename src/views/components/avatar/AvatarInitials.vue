@@ -40,15 +40,15 @@ import { BAvatar, BCardText } from 'bootstrap-vue'
 import { codeInitials } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAvatar,
-    BCardText,
-  },
-  data() {
-    return {
-      codeInitials,
-    }
-  },
+    components: {
+        BCardCode,
+        BAvatar,
+        BCardText,
+    },
+    data() {
+        return {
+            codeInitials,
+        }
+    },
 }
 </script>

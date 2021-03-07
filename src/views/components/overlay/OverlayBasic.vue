@@ -48,20 +48,20 @@ import Ripple from 'vue-ripple-directive'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BOverlay,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      show: false,
-      codeBasic,
-    }
-  },
+    components: {
+        BCardCode,
+        BOverlay,
+        BButton,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            show: false,
+            codeBasic,
+        }
+    },
 }
 </script>

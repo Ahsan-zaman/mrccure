@@ -35,54 +35,54 @@ import 'swiper/css/swiper.css'
 import { codeMultiRowSlides } from './code'
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-    BCardCode,
-    BImg,
-  },
-  data() {
-    return {
-      codeMultiRowSlides,
-      swiperData: [
-        /* eslint-disable global-require */
-        { img: require('@/assets/images/banner/banner-26.jpg') },
-        { img: require('@/assets/images/banner/banner-39.jpg') },
-        { img: require('@/assets/images/banner/banner-28.jpg') },
-        { img: require('@/assets/images/banner/banner-29.jpg') },
-        { img: require('@/assets/images/banner/banner-30.jpg') },
-        { img: require('@/assets/images/banner/banner-31.jpg') },
-        { img: require('@/assets/images/banner/banner-32.jpg') },
-        { img: require('@/assets/images/banner/banner-33.jpg') },
-        { img: require('@/assets/images/banner/banner-34.jpg') },
-        { img: require('@/assets/images/banner/banner-35.jpg') },
-        /* eslint-disable global-require */
-      ],
-      swiperOption: {
-        slidesPerView: 3,
-        slidesPerColumn: 2,
-        spaceBetween: 30,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-        },
-      },
-    }
-  },
+    components: {
+        Swiper,
+        SwiperSlide,
+        BCardCode,
+        BImg,
+    },
+    data() {
+        return {
+            codeMultiRowSlides,
+            swiperData: [
+                /* eslint-disable global-require */
+                { img: require('@/assets/images/banner/banner-26.jpg') },
+                { img: require('@/assets/images/banner/banner-39.jpg') },
+                { img: require('@/assets/images/banner/banner-28.jpg') },
+                { img: require('@/assets/images/banner/banner-29.jpg') },
+                { img: require('@/assets/images/banner/banner-30.jpg') },
+                { img: require('@/assets/images/banner/banner-31.jpg') },
+                { img: require('@/assets/images/banner/banner-32.jpg') },
+                { img: require('@/assets/images/banner/banner-33.jpg') },
+                { img: require('@/assets/images/banner/banner-34.jpg') },
+                { img: require('@/assets/images/banner/banner-35.jpg') },
+                /* eslint-disable global-require */
+            ],
+            swiperOption: {
+                slidesPerView: 3,
+                slidesPerColumn: 2,
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                },
+            },
+        }
+    },
 }
 </script>
 

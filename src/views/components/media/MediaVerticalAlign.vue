@@ -97,16 +97,16 @@ import { BMedia, BImg, BCardText } from 'bootstrap-vue'
 import { codeVerticalAlign } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BMedia,
-    BImg,
-  },
-  data() {
-    return {
-      codeVerticalAlign,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BMedia,
+        BImg,
+    },
+    data() {
+        return {
+            codeVerticalAlign,
+        }
+    },
 }
 </script>

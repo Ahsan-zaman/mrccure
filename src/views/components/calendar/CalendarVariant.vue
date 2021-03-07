@@ -29,15 +29,15 @@ import { BCalendar, BCardText } from 'bootstrap-vue'
 import { codeVariant } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCalendar,
-    BCardText,
-  },
-  data() {
-    return {
-      codeVariant,
-    }
-  },
+    components: {
+        BCardCode,
+        BCalendar,
+        BCardText,
+    },
+    data() {
+        return {
+            codeVariant,
+        }
+    },
 }
 </script>

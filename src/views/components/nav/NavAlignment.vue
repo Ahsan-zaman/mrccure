@@ -58,23 +58,23 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BNav, BNavItem, BFormRadio, BCardText,
+    BNav, BNavItem, BFormRadio, BCardText,
 } from 'bootstrap-vue'
 import { codeAlignment } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BNav,
-    BNavItem,
-    BCardText,
-    BFormRadio,
-  },
-  data() {
-    return {
-      selected: 'center',
-      codeAlignment,
-    }
-  },
+    components: {
+        BCardCode,
+        BNav,
+        BNavItem,
+        BCardText,
+        BFormRadio,
+    },
+    data() {
+        return {
+            selected: 'center',
+            codeAlignment,
+        }
+    },
 }
 </script>

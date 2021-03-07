@@ -57,15 +57,15 @@ import { BSpinner, BCardText } from 'bootstrap-vue'
 import { codeSize } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BSpinner,
-    BCardText,
-  },
-  data() {
-    return {
-      codeSize,
-    }
-  },
+    components: {
+        BCardCode,
+        BSpinner,
+        BCardText,
+    },
+    data() {
+        return {
+            codeSize,
+        }
+    },
 }
 </script>

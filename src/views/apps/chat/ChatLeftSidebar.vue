@@ -102,7 +102,7 @@
 
 <script>
 import {
-  BAvatar, BInputGroup, BInputGroupPrepend, BFormInput,
+    BAvatar, BInputGroup, BInputGroupPrepend, BFormInput,
 } from 'bootstrap-vue'
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 import { ref, computed } from '@vue/composition-api'
@@ -110,75 +110,75 @@ import ChatContact from './ChatContact.vue'
 import UserProfileSidebar from './UserProfileSidebar.vue'
 
 export default {
-  components: {
+    components: {
 
-    // BSV
-    BAvatar,
-    BInputGroup,
-    BInputGroupPrepend,
-    BFormInput,
+        // BSV
+        BAvatar,
+        BInputGroup,
+        BInputGroupPrepend,
+        BFormInput,
 
-    // 3rd party
-    VuePerfectScrollbar,
+        // 3rd party
+        VuePerfectScrollbar,
 
-    // SFC
-    ChatContact,
-    UserProfileSidebar,
-  },
-  props: {
-    chatsContacts: {
-      type: Array,
-      required: true,
+        // SFC
+        ChatContact,
+        UserProfileSidebar,
     },
-    contacts: {
-      type: Array,
-      required: true,
+    props: {
+        chatsContacts: {
+            type: Array,
+            required: true,
+        },
+        contacts: {
+            type: Array,
+            required: true,
+        },
+        shallShowUserProfileSidebar: {
+            type: Boolean,
+            required: true,
+        },
+        profileUserData: {
+            type: Object,
+            required: true,
+        },
+        profileUserMinimalData: {
+            type: Object,
+            required: true,
+        },
+        activeChatContactId: {
+            type: Number,
+            default: null,
+        },
+        mqShallShowLeftSidebar: {
+            type: Boolean,
+            required: true,
+        },
     },
-    shallShowUserProfileSidebar: {
-      type: Boolean,
-      required: true,
-    },
-    profileUserData: {
-      type: Object,
-      required: true,
-    },
-    profileUserMinimalData: {
-      type: Object,
-      required: true,
-    },
-    activeChatContactId: {
-      type: Number,
-      default: null,
-    },
-    mqShallShowLeftSidebar: {
-      type: Boolean,
-      required: true,
-    },
-  },
-  setup(props) {
-    const perfectScrollbarSettings = {
-      maxScrollbarLength: 150,
-    }
+    setup(props) {
+        const perfectScrollbarSettings = {
+            maxScrollbarLength: 150,
+        }
 
-    const resolveChatContact = userId => props.contacts.find(contact => contact.id === userId)
+        const resolveChatContact = userId => props.contacts.find(contact => contact.id === userId)
 
-    // Search Query
-    const searchQuery = ref('')
+        // Search Query
+        const searchQuery = ref('')
 
-    const searchFilterFunction = contact => contact.fullName.toLowerCase().includes(searchQuery.value.toLowerCase())
-    const filteredChatsContacts = computed(() => props.chatsContacts.filter(searchFilterFunction))
-    const filteredContacts = computed(() => props.contacts.filter(searchFilterFunction))
+        const searchFilterFunction = contact => contact.fullName.toLowerCase().includes(searchQuery.value.toLowerCase())
+        const filteredChatsContacts = computed(() => props.chatsContacts.filter(searchFilterFunction))
+        const filteredContacts = computed(() => props.contacts.filter(searchFilterFunction))
 
-    return {
-      // Search Query
-      searchQuery,
-      filteredChatsContacts,
-      filteredContacts,
+        return {
+            // Search Query
+            searchQuery,
+            filteredChatsContacts,
+            filteredContacts,
 
-      // UI
-      resolveChatContact,
-      perfectScrollbarSettings,
-    }
-  },
+            // UI
+            resolveChatContact,
+            perfectScrollbarSettings,
+        }
+    },
 }
 </script>

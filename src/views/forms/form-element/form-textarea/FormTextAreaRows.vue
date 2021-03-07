@@ -26,15 +26,15 @@ import { BFormTextarea, BCardText } from 'bootstrap-vue'
 import { codeRows } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormTextarea,
-    BCardText,
-  },
-  data() {
-    return {
-      codeRows,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormTextarea,
+        BCardText,
+    },
+    data() {
+        return {
+            codeRows,
+        }
+    },
 }
 </script>

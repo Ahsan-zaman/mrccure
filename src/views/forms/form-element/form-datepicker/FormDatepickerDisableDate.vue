@@ -24,27 +24,27 @@ import { BFormDatepicker, BCardText } from 'bootstrap-vue'
 import { codeDisableDate } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormDatepicker,
-  },
-  data() {
-    return {
-      value: '',
-      codeDisableDate,
-    }
-  },
-  methods: {
-    dateDisabled(ymd, date) {
-      // Disable weekends (Sunday = `0`, Saturday = `6`) and
-      // disable days that fall on the 13th of the month
-      const weekday = date.getDay()
-      const day = date.getDate()
-
-      // Return `true` if the date should be disabled
-      return weekday === 0 || weekday === 6 || day === 13
+    components: {
+        BCardCode,
+        BCardText,
+        BFormDatepicker,
     },
-  },
+    data() {
+        return {
+            value: '',
+            codeDisableDate,
+        }
+    },
+    methods: {
+        dateDisabled(ymd, date) {
+            // Disable weekends (Sunday = `0`, Saturday = `6`) and
+            // disable days that fall on the 13th of the month
+            const weekday = date.getDay()
+            const day = date.getDate()
+
+            // Return `true` if the date should be disabled
+            return weekday === 0 || weekday === 6 || day === 13
+        },
+    },
 }
 </script>

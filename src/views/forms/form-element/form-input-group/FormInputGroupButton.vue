@@ -42,25 +42,25 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BInputGroup, BFormInput, BInputGroupAppend, BInputGroupPrepend, BRow, BCol, BButton,
+    BInputGroup, BFormInput, BInputGroupAppend, BInputGroupPrepend, BRow, BCol, BButton,
 } from 'bootstrap-vue'
 import { codeButton } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormInput,
-    BInputGroup,
-    BInputGroupAppend,
-    BInputGroupPrepend,
-    BRow,
-    BCol,
-    BButton,
-  },
-  data() {
-    return {
-      codeButton,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormInput,
+        BInputGroup,
+        BInputGroupAppend,
+        BInputGroupPrepend,
+        BRow,
+        BCol,
+        BButton,
+    },
+    data() {
+        return {
+            codeButton,
+        }
+    },
 }
 </script>

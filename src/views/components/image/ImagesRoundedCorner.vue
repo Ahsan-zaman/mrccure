@@ -62,22 +62,22 @@ import { BImg, BCardText } from 'bootstrap-vue'
 import { codeRoundedCorner } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BImg,
-    BCardText,
-  },
-  data() {
-    return {
-      mainProps: {
-        blank: true,
-        blankColor: '#777',
-        width: 75,
-        height: 75,
-        class: 'm1',
-      },
-      codeRoundedCorner,
-    }
-  },
+    components: {
+        BCardCode,
+        BImg,
+        BCardText,
+    },
+    data() {
+        return {
+            mainProps: {
+                blank: true,
+                blankColor: '#777',
+                width: 75,
+                height: 75,
+                class: 'm1',
+            },
+            codeRoundedCorner,
+        }
+    },
 }
 </script>

@@ -55,15 +55,15 @@ import { BFormRating, BCardText } from 'bootstrap-vue'
 import { codeIcon } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormRating,
-    BCardText,
-  },
-  data() {
-    return {
-      codeIcon,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormRating,
+        BCardText,
+    },
+    data() {
+        return {
+            codeIcon,
+        }
+    },
 }
 </script>

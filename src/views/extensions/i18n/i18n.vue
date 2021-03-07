@@ -6,8 +6,8 @@
 import i18nChange from './i18nChange.vue'
 
 export default {
-  components: {
-    i18nChange,
-  },
+    components: {
+        i18nChange,
+    },
 }
 </script>

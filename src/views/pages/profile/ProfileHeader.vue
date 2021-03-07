@@ -129,29 +129,29 @@
 
 <script>
 import {
-  BCard, BImg, BNavbar, BNavbarToggle, BCollapse, BTabs, BNavItem, BButton,
+    BCard, BImg, BNavbar, BNavbarToggle, BCollapse, BTabs, BNavItem, BButton,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BCard,
-    BTabs,
-    BButton,
-    BNavItem,
-    BNavbar,
-    BNavbarToggle,
-    BCollapse,
-    BImg,
-  },
-  directives: {
-    Ripple,
-  },
-  props: {
-    headerData: {
-      type: Object,
-      default: () => {},
+    components: {
+        BCard,
+        BTabs,
+        BButton,
+        BNavItem,
+        BNavbar,
+        BNavbarToggle,
+        BCollapse,
+        BImg,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    props: {
+        headerData: {
+            type: Object,
+            default: () => {},
+        },
+    },
 }
 </script>

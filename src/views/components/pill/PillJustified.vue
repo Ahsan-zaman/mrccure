@@ -44,16 +44,16 @@ import { BTabs, BTab, BCardText } from 'bootstrap-vue'
 import { codeJustified } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BTabs,
-    BTab,
-  },
-  data() {
-    return {
-      codeJustified,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BTabs,
+        BTab,
+    },
+    data() {
+        return {
+            codeJustified,
+        }
+    },
 }
 </script>

@@ -84,48 +84,48 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BCarousel, BCarouselSlide, BButtonGroup, BButton, BCardText,
+    BCarousel, BCarouselSlide, BButtonGroup, BButton, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeProgrammaticSlide } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCarousel,
-    BCarouselSlide,
-    BButtonGroup,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      status: false,
-      codeProgrammaticSlide,
-    }
-  },
-  methods: {
-    prev() {
-      if (!this.status) {
-        this.$refs.myCarousel.prev()
-      }
+    components: {
+        BCardCode,
+        BCarousel,
+        BCarouselSlide,
+        BButtonGroup,
+        BButton,
+        BCardText,
     },
-    next() {
-      if (!this.status) {
-        this.$refs.myCarousel.next()
-      }
+    directives: {
+        Ripple,
     },
-    start() {
-      this.status = !this.status
-      if (this.status) {
-        this.$refs.myCarousel.pause()
-      } else {
-        this.$refs.myCarousel.start()
-      }
+    data() {
+        return {
+            status: false,
+            codeProgrammaticSlide,
+        }
     },
-  },
+    methods: {
+        prev() {
+            if (!this.status) {
+                this.$refs.myCarousel.prev()
+            }
+        },
+        next() {
+            if (!this.status) {
+                this.$refs.myCarousel.next()
+            }
+        },
+        start() {
+            this.status = !this.status
+            if (this.status) {
+                this.$refs.myCarousel.pause()
+            } else {
+                this.$refs.myCarousel.start()
+            }
+        },
+    },
 }
 </script>

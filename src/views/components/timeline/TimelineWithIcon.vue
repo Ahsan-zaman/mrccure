@@ -54,15 +54,15 @@ import AppTimelineItem from '@core/components/app-timeline/AppTimelineItem.vue'
 import { codeWithIcon } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    AppTimeline,
-    AppTimelineItem,
-  },
-  data() {
-    return {
-      codeWithIcon,
-    }
-  },
+    components: {
+        BCardCode,
+        AppTimeline,
+        AppTimelineItem,
+    },
+    data() {
+        return {
+            codeWithIcon,
+        }
+    },
 }
 </script>

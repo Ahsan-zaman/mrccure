@@ -40,33 +40,33 @@ import 'swiper/css/swiper.css'
 import { codeNavigation } from './code'
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-    BCardCode,
-    BImg,
-  },
-  data() {
-    return {
-      codeNavigation,
+    components: {
+        Swiper,
+        SwiperSlide,
+        BCardCode,
+        BImg,
+    },
+    data() {
+        return {
+            codeNavigation,
 
-      /* eslint-disable global-require */
-      swiperData: [
-        { img: require('@/assets/images/banner/banner-7.jpg') },
-        { img: require('@/assets/images/banner/banner-4.jpg') },
-        { img: require('@/assets/images/banner/banner-14.jpg') },
-        { img: require('@/assets/images/banner/banner-3.jpg') },
-        { img: require('@/assets/images/banner/banner-2.jpg') },
-      ],
-      /* eslint-disable global-require */
+            /* eslint-disable global-require */
+            swiperData: [
+                { img: require('@/assets/images/banner/banner-7.jpg') },
+                { img: require('@/assets/images/banner/banner-4.jpg') },
+                { img: require('@/assets/images/banner/banner-14.jpg') },
+                { img: require('@/assets/images/banner/banner-3.jpg') },
+                { img: require('@/assets/images/banner/banner-2.jpg') },
+            ],
+            /* eslint-disable global-require */
 
-      swiperOptions: {
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      },
-    }
-  },
+            swiperOptions: {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            },
+        }
+    },
 }
 </script>

@@ -14,11 +14,11 @@ import { BRow, BCol } from 'bootstrap-vue'
 import FormRepeaterBasic from './FormRepeaterBasic.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    FormRepeaterBasic,
-  },
+        FormRepeaterBasic,
+    },
 }
 </script>

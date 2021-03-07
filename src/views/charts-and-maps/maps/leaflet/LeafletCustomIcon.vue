@@ -41,7 +41,7 @@
 import { BImg } from 'bootstrap-vue'
 import BCardCode from '@/@core/components/b-card-code/BCardCode.vue'
 import {
-  LMap, LTileLayer, LMarker, LIcon,
+    LMap, LTileLayer, LMarker, LIcon,
 } from 'vue2-leaflet'
 import { latLng, icon, Icon } from 'leaflet'
 import { codeCustomIcon } from './code'
@@ -49,35 +49,35 @@ import { codeCustomIcon } from './code'
 // eslint-disable-next-line no-underscore-dangle
 delete Icon.Default.prototype._getIconUrl
 Icon.Default.mergeOptions({
-  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-  iconUrl: require('leaflet/dist/images/marker-icon.png'),
-  shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+    iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+    iconUrl: require('leaflet/dist/images/marker-icon.png'),
+    shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
 })
 
 export default {
-  name: 'Icon',
-  components: {
-    BImg,
-    BCardCode,
-    LMap,
-    LTileLayer,
-    LMarker,
-    LIcon,
-  },
-  data() {
-    return {
-      zoom: 13,
-      center: latLng(47.41322, -1.219482),
-      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      icon: icon({
-        iconUrl: require('@/assets/images/misc/leaf-green.png'),
-        iconSize: [50, 50],
-        iconAnchor: [16, 37],
-      }),
-      codeCustomIcon,
-    }
-  },
+    name: 'Icon',
+    components: {
+        BImg,
+        BCardCode,
+        LMap,
+        LTileLayer,
+        LMarker,
+        LIcon,
+    },
+    data() {
+        return {
+            zoom: 13,
+            center: latLng(47.41322, -1.219482),
+            url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+            icon: icon({
+                iconUrl: require('@/assets/images/misc/leaf-green.png'),
+                iconSize: [50, 50],
+                iconAnchor: [16, 37],
+            }),
+            codeCustomIcon,
+        }
+    },
 }
 /* eslint-disable global-require */
 </script>

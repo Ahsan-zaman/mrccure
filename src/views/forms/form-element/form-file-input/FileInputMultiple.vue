@@ -26,15 +26,15 @@ import { BFormFile, BCardText } from 'bootstrap-vue'
 import { codeMultiple } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormFile,
-    BCardText,
-  },
-  data() {
-    return {
-      codeMultiple,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormFile,
+        BCardText,
+    },
+    data() {
+        return {
+            codeMultiple,
+        }
+    },
 }
 </script>

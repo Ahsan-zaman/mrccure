@@ -33,16 +33,16 @@ import { BFormSpinbutton, BCardText } from 'bootstrap-vue'
 import { codeMinMax } from './code'
 
 export default {
-  components: {
-    BFormSpinbutton,
-    BCardCode,
-    BCardText,
-  },
-  data() {
-    return {
-      value: 5,
-      codeMinMax,
-    }
-  },
+    components: {
+        BFormSpinbutton,
+        BCardCode,
+        BCardText,
+    },
+    data() {
+        return {
+            value: 5,
+            codeMinMax,
+        }
+    },
 }
 </script>

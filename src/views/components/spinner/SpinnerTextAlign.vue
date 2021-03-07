@@ -23,15 +23,15 @@ import { BSpinner, BCardText } from 'bootstrap-vue'
 import { codeTextAlign } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BSpinner,
-    BCardText,
-  },
-  data() {
-    return {
-      codeTextAlign,
-    }
-  },
+    components: {
+        BCardCode,
+        BSpinner,
+        BCardText,
+    },
+    data() {
+        return {
+            codeTextAlign,
+        }
+    },
 }
 </script>

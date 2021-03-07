@@ -108,56 +108,56 @@
 
 <script>
 import {
-  BButton, BForm, BFormGroup, BFormInput, BRow, BCol, BCard, BInputGroup, BInputGroupAppend,
+    BButton, BForm, BFormGroup, BFormInput, BRow, BCol, BCard, BInputGroup, BInputGroupAppend,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BButton,
-    BForm,
-    BFormGroup,
-    BFormInput,
-    BRow,
-    BCol,
-    BCard,
-    BInputGroup,
-    BInputGroupAppend,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      passwordValueOld: '',
-      newPasswordValue: '',
-      RetypePassword: '',
-      passwordFieldTypeOld: 'password',
-      passwordFieldTypeNew: 'password',
-      passwordFieldTypeRetype: 'password',
-    }
-  },
-  computed: {
-    passwordToggleIconOld() {
-      return this.passwordFieldTypeOld === 'password' ? 'EyeIcon' : 'EyeOffIcon'
+    components: {
+        BButton,
+        BForm,
+        BFormGroup,
+        BFormInput,
+        BRow,
+        BCol,
+        BCard,
+        BInputGroup,
+        BInputGroupAppend,
     },
-    passwordToggleIconNew() {
-      return this.passwordFieldTypeNew === 'password' ? 'EyeIcon' : 'EyeOffIcon'
+    directives: {
+        Ripple,
     },
-    passwordToggleIconRetype() {
-      return this.passwordFieldTypeRetype === 'password' ? 'EyeIcon' : 'EyeOffIcon'
+    data() {
+        return {
+            passwordValueOld: '',
+            newPasswordValue: '',
+            RetypePassword: '',
+            passwordFieldTypeOld: 'password',
+            passwordFieldTypeNew: 'password',
+            passwordFieldTypeRetype: 'password',
+        }
     },
-  },
-  methods: {
-    togglePasswordOld() {
-      this.passwordFieldTypeOld = this.passwordFieldTypeOld === 'password' ? 'text' : 'password'
+    computed: {
+        passwordToggleIconOld() {
+            return this.passwordFieldTypeOld === 'password' ? 'EyeIcon' : 'EyeOffIcon'
+        },
+        passwordToggleIconNew() {
+            return this.passwordFieldTypeNew === 'password' ? 'EyeIcon' : 'EyeOffIcon'
+        },
+        passwordToggleIconRetype() {
+            return this.passwordFieldTypeRetype === 'password' ? 'EyeIcon' : 'EyeOffIcon'
+        },
     },
-    togglePasswordNew() {
-      this.passwordFieldTypeNew = this.passwordFieldTypeNew === 'password' ? 'text' : 'password'
+    methods: {
+        togglePasswordOld() {
+            this.passwordFieldTypeOld = this.passwordFieldTypeOld === 'password' ? 'text' : 'password'
+        },
+        togglePasswordNew() {
+            this.passwordFieldTypeNew = this.passwordFieldTypeNew === 'password' ? 'text' : 'password'
+        },
+        togglePasswordRetype() {
+            this.passwordFieldTypeRetype = this.passwordFieldTypeRetype === 'password' ? 'text' : 'password'
+        },
     },
-    togglePasswordRetype() {
-      this.passwordFieldTypeRetype = this.passwordFieldTypeRetype === 'password' ? 'text' : 'password'
-    },
-  },
 }
 </script>

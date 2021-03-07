@@ -74,16 +74,16 @@ import BCardCode from '@core/components/b-card-code'
 import { codeButtonContent } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPaginationNav,
-    BCardText,
-    BSpinner,
-  },
-  data() {
-    return {
-      codeButtonContent,
-    }
-  },
+    components: {
+        BCardCode,
+        BPaginationNav,
+        BCardText,
+        BSpinner,
+    },
+    data() {
+        return {
+            codeButtonContent,
+        }
+    },
 }
 </script>

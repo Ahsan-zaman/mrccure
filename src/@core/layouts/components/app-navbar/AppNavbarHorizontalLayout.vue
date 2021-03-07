@@ -35,7 +35,7 @@
 
 <script>
 import {
-  BLink, BNavbarNav,
+    BLink, BNavbarNav,
 } from 'bootstrap-vue'
 import Bookmarks from './components/Bookmarks.vue'
 import Locale from './components/Locale.vue'
@@ -46,25 +46,25 @@ import NotificationDropdown from './components/NotificationDropdown.vue'
 import UserDropdown from './components/UserDropdown.vue'
 
 export default {
-  components: {
-    BLink,
+    components: {
+        BLink,
 
-    // Navbar Components
-    BNavbarNav,
-    Bookmarks,
-    Locale,
-    DarkToggler,
-    SearchBar,
-    CartDropdown,
-    NotificationDropdown,
-    UserDropdown,
-  },
-  props: {
-    toggleVerticalMenuActive: {
-      type: Function,
-      default: () => {},
+        // Navbar Components
+        BNavbarNav,
+        Bookmarks,
+        Locale,
+        DarkToggler,
+        SearchBar,
+        CartDropdown,
+        NotificationDropdown,
+        UserDropdown,
     },
-  },
+    props: {
+        toggleVerticalMenuActive: {
+            type: Function,
+            default: () => {},
+        },
+    },
 
 }
 </script>

@@ -123,91 +123,91 @@ import mixinLayoutHorizontal from './mixinLayoutHorizontal'
 /* eslint-enable import/order */
 
 export default {
-  components: {
-    AppBreadcrumb,
-    AppNavbarHorizontalLayout,
-    AppNavbarHorizontalLayoutBrand,
-    AppFooter,
-    HorizontalNavMenu,
+    components: {
+        AppBreadcrumb,
+        AppNavbarHorizontalLayout,
+        AppNavbarHorizontalLayoutBrand,
+        AppFooter,
+        HorizontalNavMenu,
 
-    BNavbar,
+        BNavbar,
 
-    // Content Renderer
-    LayoutContentRendererDefault,
-    LayoutContentRendererLeft,
-    LayoutContentRendererLeftDetached,
+        // Content Renderer
+        LayoutContentRendererDefault,
+        LayoutContentRendererLeft,
+        LayoutContentRendererLeftDetached,
 
-    // Vertical Menu
-    VerticalNavMenu,
-  },
-  mixins: [mixinLayoutHorizontal],
-  computed: {
-    layoutContentRenderer() {
-      const rendererType = this.$route.meta.contentRenderer
-      if (rendererType === 'sidebar-left') return 'layout-content-renderer-left'
-      if (rendererType === 'sidebar-left-detached') return 'layout-content-renderer-left-detached'
-      return 'layout-content-renderer-default'
+        // Vertical Menu
+        VerticalNavMenu,
     },
-  },
-  setup() {
-    const {
-      skin,
-      navbarType,
-      footerType,
-      routerTransition,
-      isNavMenuHidden,
-    } = useAppConfig()
+    mixins: [mixinLayoutHorizontal],
+    computed: {
+        layoutContentRenderer() {
+            const rendererType = this.$route.meta.contentRenderer
+            if (rendererType === 'sidebar-left') return 'layout-content-renderer-left'
+            if (rendererType === 'sidebar-left-detached') return 'layout-content-renderer-left-detached'
+            return 'layout-content-renderer-default'
+        },
+    },
+    setup() {
+        const {
+            skin,
+            navbarType,
+            footerType,
+            routerTransition,
+            isNavMenuHidden,
+        } = useAppConfig()
 
-    // Vertical Menu
-    const {
-      isVerticalMenuActive, toggleVerticalMenuActive, overlayClasses, resizeHandler,
-    } = useVerticalLayout(navbarType, footerType)
+        // Vertical Menu
+        const {
+            isVerticalMenuActive, toggleVerticalMenuActive, overlayClasses, resizeHandler,
+        } = useVerticalLayout(navbarType, footerType)
 
-    // Resize handler
-    resizeHandler()
-    window.addEventListener('resize', resizeHandler)
-    onUnmounted(() => {
-      window.removeEventListener('resize', resizeHandler)
-    })
+        // Resize handler
+        resizeHandler()
+        window.addEventListener('resize', resizeHandler)
+        onUnmounted(() => {
+            window.removeEventListener('resize', resizeHandler)
+        })
 
-    const {
-      navbarMenuTypeClass,
-      layoutClasses,
-      footerTypeClass,
-    } = useLayoutHorizontal(navbarType, footerType, isVerticalMenuActive)
+        const {
+            navbarMenuTypeClass,
+            layoutClasses,
+            footerTypeClass,
+        } = useLayoutHorizontal(navbarType, footerType, isVerticalMenuActive)
 
-    // Scroll Listener
-    const { scrolledTo } = useScrollListener()
+        // Scroll Listener
+        const { scrolledTo } = useScrollListener()
 
-    return {
-      // skin
-      skin,
+        return {
+            // skin
+            skin,
 
-      // Layout
-      layoutClasses,
+            // Layout
+            layoutClasses,
 
-      // Navbar
-      navbarType,
-      navbarMenuTypeClass,
+            // Navbar
+            navbarType,
+            navbarMenuTypeClass,
 
-      // Menu Hidden
-      isNavMenuHidden,
+            // Menu Hidden
+            isNavMenuHidden,
 
-      // Router Transition
-      routerTransition,
+            // Router Transition
+            routerTransition,
 
-      // Footer
-      footerTypeClass,
+            // Footer
+            footerTypeClass,
 
-      // Scroll Listeners
-      scrolledTo,
+            // Scroll Listeners
+            scrolledTo,
 
-      // Vertical Menu
-      isVerticalMenuActive,
-      toggleVerticalMenuActive,
-      overlayClasses,
-    }
-  },
+            // Vertical Menu
+            isVerticalMenuActive,
+            toggleVerticalMenuActive,
+            overlayClasses,
+        }
+    },
 }
 </script>
 

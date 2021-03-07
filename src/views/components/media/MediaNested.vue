@@ -52,16 +52,16 @@ import { BMedia, BImg, BCardText } from 'bootstrap-vue'
 import { codeNested } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BMedia,
-    BCardText,
-    BImg,
-  },
-  data() {
-    return {
-      codeNested,
-    }
-  },
+    components: {
+        BCardCode,
+        BMedia,
+        BCardText,
+        BImg,
+    },
+    data() {
+        return {
+            codeNested,
+        }
+    },
 }
 </script>

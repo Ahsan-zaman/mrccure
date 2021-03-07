@@ -128,33 +128,33 @@
 
 <script>
 import {
-  BRow, BCol, BCard, BCardText, BLink, BListGroup, BListGroupItem, BCardTitle, BCardBody,
+    BRow, BCol, BCard, BCardText, BLink, BListGroup, BListGroupItem, BCardTitle, BCardBody,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BCardText,
-    BLink,
-    BCardTitle,
-    BListGroup,
-    BListGroupItem,
-    BCardBody,
-  },
-  data() {
-    return {
-      listData: [
-        { text: 'Cras justo odio' },
-        { text: 'Dapibus ac facilisis in' },
-        { text: 'Vestibulum at eros' },
-      ],
-      kitchenSinkList: [
-        { text: 'Cras justo odio' },
-        { text: 'Vestibulum at eros' },
-      ],
-    }
-  },
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BCardText,
+        BLink,
+        BCardTitle,
+        BListGroup,
+        BListGroupItem,
+        BCardBody,
+    },
+    data() {
+        return {
+            listData: [
+                { text: 'Cras justo odio' },
+                { text: 'Dapibus ac facilisis in' },
+                { text: 'Vestibulum at eros' },
+            ],
+            kitchenSinkList: [
+                { text: 'Cras justo odio' },
+                { text: 'Vestibulum at eros' },
+            ],
+        }
+    },
 }
 </script>

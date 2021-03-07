@@ -39,35 +39,35 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormRadioGroup, BFormCheckboxGroup, BFormGroup, BRow, BCol,
+    BFormRadioGroup, BFormCheckboxGroup, BFormGroup, BRow, BCol,
 } from 'bootstrap-vue'
 import { codeCheckboxRadio } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormRadioGroup,
-    BFormCheckboxGroup,
-    BFormGroup,
-    BRow,
-    BCol,
-  },
-  data() {
-    return {
-      codeCheckboxRadio,
-      selectedCheckbox: ['active'],
-      optionsChekcbox: [
-        { text: 'Active', value: 'active' },
-        { text: 'Checkbox', value: 'checkbox' },
-        { text: 'Checkbox', value: 'checkbox2' },
-      ],
-      selectedRadio: 'active',
-      optionsRadio: [
-        { text: 'Active', value: 'active' },
-        { text: 'Radio', value: 'radio' },
-        { text: 'Radio', value: 'radio2' },
-      ],
-    }
-  },
+    components: {
+        BCardCode,
+        BFormRadioGroup,
+        BFormCheckboxGroup,
+        BFormGroup,
+        BRow,
+        BCol,
+    },
+    data() {
+        return {
+            codeCheckboxRadio,
+            selectedCheckbox: ['active'],
+            optionsChekcbox: [
+                { text: 'Active', value: 'active' },
+                { text: 'Checkbox', value: 'checkbox' },
+                { text: 'Checkbox', value: 'checkbox2' },
+            ],
+            selectedRadio: 'active',
+            optionsRadio: [
+                { text: 'Active', value: 'active' },
+                { text: 'Radio', value: 'radio' },
+                { text: 'Radio', value: 'radio2' },
+            ],
+        }
+    },
 }
 </script>

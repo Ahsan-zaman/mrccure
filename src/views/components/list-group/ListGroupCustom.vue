@@ -56,16 +56,16 @@ import BCardCode from '@core/components/b-card-code'
 import { codeCustom } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BListGroup,
-    BListGroupItem,
-    BCardText,
-  },
-  data() {
-    return {
-      codeCustom,
-    }
-  },
+    components: {
+        BCardCode,
+        BListGroup,
+        BListGroupItem,
+        BCardText,
+    },
+    data() {
+        return {
+            codeCustom,
+        }
+    },
 }
 </script>

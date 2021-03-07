@@ -54,25 +54,25 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormInput, BRow, BCol, BFormInvalidFeedback, BFormValidFeedback, BCardText, BFormGroup,
+    BFormInput, BRow, BCol, BFormInvalidFeedback, BFormValidFeedback, BCardText, BFormGroup,
 } from 'bootstrap-vue'
 import { codeStates } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormInput,
-    BCardText,
-    BFormInvalidFeedback,
-    BFormValidFeedback,
-    BRow,
-    BFormGroup,
-    BCol,
-  },
-  data() {
-    return {
-      codeStates,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormInput,
+        BCardText,
+        BFormInvalidFeedback,
+        BFormValidFeedback,
+        BRow,
+        BFormGroup,
+        BCol,
+    },
+    data() {
+        return {
+            codeStates,
+        }
+    },
 }
 </script>

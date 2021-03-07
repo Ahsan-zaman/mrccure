@@ -76,16 +76,16 @@
 
 <script>
 import {
-  BRow, BCol, BCard, BCardText, BCardTitle,
+    BRow, BCol, BCard, BCardText, BCardTitle,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BCardText,
-    BCardTitle,
-  },
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BCardText,
+        BCardTitle,
+    },
 }
 </script>

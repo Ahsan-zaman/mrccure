@@ -49,62 +49,62 @@
 
 <script>
 import {
-  BRow, BCol, BForm, BFormGroup, BFormInput, BButton, BInputGroup, BInputGroupPrepend,
+    BRow, BCol, BForm, BFormGroup, BFormInput, BButton, BInputGroup, BInputGroupPrepend,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BRow, BCol, BForm, BFormGroup, BFormInput, BButton, BInputGroup, BInputGroupPrepend,
-  },
-  setup() {
-    const userDataSocial = {
-      twitter: 'https://www.twitter.com/adoptionism744',
-      facebook: 'https://www.facebook.com/adoptionism664',
-      instagram: 'https://www.instagram.com/adopt-ionism744',
-      github: 'https://www.github.com/madop818',
-      codepen: 'https://www.codepen.com/adoptism243',
-      slack: '@adoptionism744',
-    }
+    components: {
+        BRow, BCol, BForm, BFormGroup, BFormInput, BButton, BInputGroup, BInputGroupPrepend,
+    },
+    setup() {
+        const userDataSocial = {
+            twitter: 'https://www.twitter.com/adoptionism744',
+            facebook: 'https://www.facebook.com/adoptionism664',
+            instagram: 'https://www.instagram.com/adopt-ionism744',
+            github: 'https://www.github.com/madop818',
+            codepen: 'https://www.codepen.com/adoptism243',
+            slack: '@adoptionism744',
+        }
 
-    // ? dataField is field name of `userDataSocial` object
-    const socialInputs = [
-      {
-        icon: 'TwitterIcon',
-        dataField: 'twitter',
-        label: 'Twitter',
-      },
-      {
-        icon: 'FacebookIcon',
-        dataField: 'facebook',
-        label: 'facebook',
-      },
-      {
-        icon: 'InstagramIcon',
-        dataField: 'instagram',
-        label: 'instagram',
-      },
-      {
-        icon: 'GithubIcon',
-        dataField: 'github',
-        label: 'github',
-      },
-      {
-        icon: 'CodepenIcon',
-        dataField: 'codepen',
-        label: 'codepen',
-      },
-      {
-        icon: 'SlackIcon',
-        dataField: 'slack',
-        label: 'slack',
-      },
-    ]
+        // ? dataField is field name of `userDataSocial` object
+        const socialInputs = [
+            {
+                icon: 'TwitterIcon',
+                dataField: 'twitter',
+                label: 'Twitter',
+            },
+            {
+                icon: 'FacebookIcon',
+                dataField: 'facebook',
+                label: 'facebook',
+            },
+            {
+                icon: 'InstagramIcon',
+                dataField: 'instagram',
+                label: 'instagram',
+            },
+            {
+                icon: 'GithubIcon',
+                dataField: 'github',
+                label: 'github',
+            },
+            {
+                icon: 'CodepenIcon',
+                dataField: 'codepen',
+                label: 'codepen',
+            },
+            {
+                icon: 'SlackIcon',
+                dataField: 'slack',
+                label: 'slack',
+            },
+        ]
 
-    return {
-      userDataSocial,
-      socialInputs,
-    }
-  },
+        return {
+            userDataSocial,
+            socialInputs,
+        }
+    },
 }
 </script>
 

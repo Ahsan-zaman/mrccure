@@ -32,32 +32,32 @@
 
 <script>
 export default {
-  props: {
-    variant: {
-      type: String,
-      default: 'primary',
+    props: {
+        variant: {
+            type: String,
+            default: 'primary',
+        },
+        title: {
+            type: String,
+            default: null,
+        },
+        subtitle: {
+            type: String,
+            default: null,
+        },
+        time: {
+            type: String,
+            default: null,
+        },
+        icon: {
+            type: String,
+            default: null,
+        },
+        fillBorder: {
+            type: Boolean,
+            default: false,
+        },
     },
-    title: {
-      type: String,
-      default: null,
-    },
-    subtitle: {
-      type: String,
-      default: null,
-    },
-    time: {
-      type: String,
-      default: null,
-    },
-    icon: {
-      type: String,
-      default: null,
-    },
-    fillBorder: {
-      type: Boolean,
-      default: false,
-    },
-  },
 }
 </script>
 

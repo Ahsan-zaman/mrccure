@@ -35,57 +35,57 @@ import 'swiper/css/swiper.css'
 import { codeResponsive } from './code'
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-    BCardCode,
-    BImg,
-  },
-  data() {
-    return {
-      codeResponsive,
+    components: {
+        Swiper,
+        SwiperSlide,
+        BCardCode,
+        BImg,
+    },
+    data() {
+        return {
+            codeResponsive,
 
-      /* eslint-disable global-require */
-      swiperData: [
-        { img: require('@/assets/images/banner/banner-30.jpg') },
-        { img: require('@/assets/images/banner/banner-31.jpg') },
-        { img: require('@/assets/images/banner/banner-32.jpg') },
-        { img: require('@/assets/images/banner/banner-33.jpg') },
-        { img: require('@/assets/images/banner/banner-34.jpg') },
-        { img: require('@/assets/images/banner/banner-35.jpg') },
-        { img: require('@/assets/images/banner/banner-36.jpg') },
-        { img: require('@/assets/images/banner/banner-37.jpg') },
-        { img: require('@/assets/images/banner/banner-38.jpg') },
-      ],
-      /* eslint-disable global-require */
+            /* eslint-disable global-require */
+            swiperData: [
+                { img: require('@/assets/images/banner/banner-30.jpg') },
+                { img: require('@/assets/images/banner/banner-31.jpg') },
+                { img: require('@/assets/images/banner/banner-32.jpg') },
+                { img: require('@/assets/images/banner/banner-33.jpg') },
+                { img: require('@/assets/images/banner/banner-34.jpg') },
+                { img: require('@/assets/images/banner/banner-35.jpg') },
+                { img: require('@/assets/images/banner/banner-36.jpg') },
+                { img: require('@/assets/images/banner/banner-37.jpg') },
+                { img: require('@/assets/images/banner/banner-38.jpg') },
+            ],
+            /* eslint-disable global-require */
 
-      swiperOptions: {
-        slidesPerView: 5,
-        spaceBetween: 50,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-        },
-      },
-    }
-  },
+            swiperOptions: {
+                slidesPerView: 5,
+                spaceBetween: 50,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    },
+                },
+            },
+        }
+    },
 }
 </script>

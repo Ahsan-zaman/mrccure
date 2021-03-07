@@ -236,41 +236,41 @@
 
 <script>
 import {
-  BButton, BForm, BFormGroup, BFormInput, BRow, BCol, BCard, BCardText, BLink, BAvatar,
+    BButton, BForm, BFormGroup, BFormInput, BRow, BCol, BCard, BCardText, BLink, BAvatar,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BButton,
-    BForm,
-    BFormGroup,
-    BFormInput,
-    BRow,
-    BCol,
-    BCard,
-    BCardText,
-    BLink,
-    BAvatar,
-  },
-  directives: {
-    Ripple,
-  },
-  props: {
-    socialData: {
-      type: Object,
-      default: () => {},
+    components: {
+        BButton,
+        BForm,
+        BFormGroup,
+        BFormInput,
+        BRow,
+        BCol,
+        BCard,
+        BCardText,
+        BLink,
+        BAvatar,
     },
-  },
-  data() {
-    return {
-      localOptions: JSON.parse(JSON.stringify(this.socialData)),
-    }
-  },
-  methods: {
-    resetForm() {
-      this.localOptions = JSON.parse(JSON.stringify(this.socialData))
+    directives: {
+        Ripple,
     },
-  },
+    props: {
+        socialData: {
+            type: Object,
+            default: () => {},
+        },
+    },
+    data() {
+        return {
+            localOptions: JSON.parse(JSON.stringify(this.socialData)),
+        }
+    },
+    methods: {
+        resetForm() {
+            this.localOptions = JSON.parse(JSON.stringify(this.socialData))
+        },
+    },
 }
 </script>

@@ -87,36 +87,36 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  VBTooltip, BButton, BTooltip, BCardText,
+    VBTooltip, BButton, BTooltip, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeMethods } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BTooltip,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    'b-tooltip': VBTooltip,
-    Ripple,
-  },
-  data() {
-    return {
-      show: false,
-      disabled: false,
-      codeMethods,
-    }
-  },
-  methods: {
-    showTooltip() {
-      this.$root.$emit('bv::show::tooltip', 'tooltip-button-1')
+    components: {
+        BCardCode,
+        BTooltip,
+        BButton,
+        BCardText,
     },
-    hideTooltip() {
-      this.$root.$emit('bv::hide::tooltip', 'tooltip-button-2')
+    directives: {
+        'b-tooltip': VBTooltip,
+        Ripple,
     },
-  },
+    data() {
+        return {
+            show: false,
+            disabled: false,
+            codeMethods,
+        }
+    },
+    methods: {
+        showTooltip() {
+            this.$root.$emit('bv::show::tooltip', 'tooltip-button-1')
+        },
+        hideTooltip() {
+            this.$root.$emit('bv::hide::tooltip', 'tooltip-button-2')
+        },
+    },
 }
 </script>

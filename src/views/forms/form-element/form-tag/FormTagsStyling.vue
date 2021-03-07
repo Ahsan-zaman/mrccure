@@ -34,16 +34,16 @@ import { BFormTags, BCardText } from 'bootstrap-vue'
 import { codeStyling } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormTags,
-  },
-  data() {
-    return {
-      value: ['apple', 'orange', 'grape'],
-      codeStyling,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormTags,
+    },
+    data() {
+        return {
+            value: ['apple', 'orange', 'grape'],
+            codeStyling,
+        }
+    },
 }
 </script>

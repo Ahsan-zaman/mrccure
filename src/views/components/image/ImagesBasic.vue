@@ -28,16 +28,16 @@ import { BImg, BCardText } from 'bootstrap-vue'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    // eslint-disable-next-line vue/no-unused-components
-    BImg,
-  },
-  data() {
-    return {
-      codeBasic,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        // eslint-disable-next-line vue/no-unused-components
+        BImg,
+    },
+    data() {
+        return {
+            codeBasic,
+        }
+    },
 }
 </script>

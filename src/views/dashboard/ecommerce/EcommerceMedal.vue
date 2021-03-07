@@ -26,30 +26,30 @@
 
 <script>
 import {
-  BCard, BCardText, BLink, BButton, BImg,
+    BCard, BCardText, BLink, BButton, BImg,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { kFormatter } from '@core/utils/filter'
 
 export default {
-  components: {
-    BCard,
-    BCardText,
-    BLink,
-    BImg,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  props: {
-    data: {
-      type: Object,
-      default: () => {},
+    components: {
+        BCard,
+        BCardText,
+        BLink,
+        BImg,
+        BButton,
     },
-  },
-  methods: {
-    kFormatter,
-  },
+    directives: {
+        Ripple,
+    },
+    props: {
+        data: {
+            type: Object,
+            default: () => {},
+        },
+    },
+    methods: {
+        kFormatter,
+    },
 }
 </script>

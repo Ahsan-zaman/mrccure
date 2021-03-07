@@ -34,33 +34,33 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormRadioGroup, BFormInvalidFeedback, BFormValidFeedback, BCardText,
+    BFormRadioGroup, BFormInvalidFeedback, BFormValidFeedback, BCardText,
 } from 'bootstrap-vue'
 import { codeStates } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormRadioGroup,
-    BFormInvalidFeedback,
-    BFormValidFeedback,
-  },
-  data() {
-    return {
-      value: null,
-      options: [
-        { text: 'First radio', value: 'first' },
-        { text: 'Second radio', value: 'second' },
-        { text: 'Third radio', value: 'third' },
-      ],
-      codeStates,
-    }
-  },
-  computed: {
-    state() {
-      return Boolean(this.value)
+    components: {
+        BCardCode,
+        BCardText,
+        BFormRadioGroup,
+        BFormInvalidFeedback,
+        BFormValidFeedback,
     },
-  },
+    data() {
+        return {
+            value: null,
+            options: [
+                { text: 'First radio', value: 'first' },
+                { text: 'Second radio', value: 'second' },
+                { text: 'Third radio', value: 'third' },
+            ],
+            codeStates,
+        }
+    },
+    computed: {
+        state() {
+            return Boolean(this.value)
+        },
+    },
 }
 </script>

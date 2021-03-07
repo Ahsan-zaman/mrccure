@@ -20,15 +20,15 @@ import { BSpinner, BCardText } from 'bootstrap-vue'
 import { codeBorder } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BSpinner,
-    BCardText,
-  },
-  data() {
-    return {
-      codeBorder,
-    }
-  },
+    components: {
+        BCardCode,
+        BSpinner,
+        BCardText,
+    },
+    data() {
+        return {
+            codeBorder,
+        }
+    },
 }
 </script>

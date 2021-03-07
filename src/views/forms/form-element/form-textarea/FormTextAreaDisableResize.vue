@@ -29,15 +29,15 @@ import { BFormTextarea, BCardText } from 'bootstrap-vue'
 import { codeDisableResize } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormTextarea,
-    BCardText,
-  },
-  data() {
-    return {
-      codeDisableResize,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormTextarea,
+        BCardText,
+    },
+    data() {
+        return {
+            codeDisableResize,
+        }
+    },
 }
 </script>

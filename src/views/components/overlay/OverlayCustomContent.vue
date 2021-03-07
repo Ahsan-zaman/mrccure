@@ -63,30 +63,30 @@ import Ripple from 'vue-ripple-directive'
 import { codeCustomContent } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BOverlay,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      show: false,
-      codeCustomContent,
-    }
-  },
-  methods: {
-    onShown() {
-      // Focus the cancel button when the overlay is showing
-      this.$refs.cancel.focus()
+    components: {
+        BCardCode,
+        BCardText,
+        BOverlay,
+        BButton,
     },
-    onHidden() {
-      // Focus the show button when the overlay is removed
-      this.$refs.show.focus()
+    directives: {
+        Ripple,
     },
-  },
+    data() {
+        return {
+            show: false,
+            codeCustomContent,
+        }
+    },
+    methods: {
+        onShown() {
+            // Focus the cancel button when the overlay is showing
+            this.$refs.cancel.focus()
+        },
+        onHidden() {
+            // Focus the show button when the overlay is removed
+            this.$refs.show.focus()
+        },
+    },
 }
 </script>

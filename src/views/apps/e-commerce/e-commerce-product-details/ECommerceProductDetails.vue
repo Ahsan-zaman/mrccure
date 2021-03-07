@@ -189,7 +189,7 @@ import { useRouter } from '@core/utils/utils'
 import store from '@/store'
 import { ref } from '@vue/composition-api'
 import {
-  BCard, BCardBody, BRow, BCol, BImg, BCardText, BLink, BButton, BDropdown, BDropdownItem, BAlert,
+    BCard, BCardBody, BRow, BCol, BImg, BCardText, BLink, BButton, BDropdown, BDropdownItem, BAlert,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import ECommerceProductDetailsItemFeatures from './ECommerceProductDetailsItemFeatures.vue'
@@ -197,66 +197,66 @@ import ECommerceProductDetailsRelatedProducts from './ECommerceProductDetailsRel
 import { useEcommerceUi } from '../useEcommerce'
 
 export default {
-  directives: {
-    Ripple,
-  },
-  components: {
+    directives: {
+        Ripple,
+    },
+    components: {
     // BSV
-    BCard,
-    BCardBody,
-    BRow,
-    BCol,
-    BImg,
-    BCardText,
-    BLink,
-    BButton,
-    BDropdown,
-    BDropdownItem,
-    BAlert,
+        BCard,
+        BCardBody,
+        BRow,
+        BCol,
+        BImg,
+        BCardText,
+        BLink,
+        BButton,
+        BDropdown,
+        BDropdownItem,
+        BAlert,
 
-    // SFC
-    ECommerceProductDetailsItemFeatures,
-    ECommerceProductDetailsRelatedProducts,
-  },
-  setup() {
-    const { handleCartActionClick, toggleProductInWishlist } = useEcommerceUi()
+        // SFC
+        ECommerceProductDetailsItemFeatures,
+        ECommerceProductDetailsRelatedProducts,
+    },
+    setup() {
+        const { handleCartActionClick, toggleProductInWishlist } = useEcommerceUi()
 
-    const product = ref(null)
+        const product = ref(null)
 
-    // Remote Data
-    const fetchProduct = () => {
-      // Get product  id from URL
-      const { route } = useRouter()
-      const productSlug = route.value.params.slug
-      const productId = productSlug.substring(productSlug.lastIndexOf('-') + 1)
+        // Remote Data
+        const fetchProduct = () => {
+            // Get product  id from URL
+            const { route } = useRouter()
+            const productSlug = route.value.params.slug
+            const productId = productSlug.substring(productSlug.lastIndexOf('-') + 1)
 
-      store.dispatch('app-ecommerce/fetchProduct', { productId })
-        .then(response => {
-          product.value = response.data.product
-        })
-        .catch(error => {
-          if (error.response.status === 404) {
-            product.value = undefined
-          }
-        })
-    }
+            store.dispatch('app-ecommerce/fetchProduct', { productId })
+                .then(response => {
+                    product.value = response.data.product
+                })
+                .catch(error => {
+                    if (error.response.status === 404) {
+                        product.value = undefined
+                    }
+                })
+        }
 
-    // UI
-    const selectedColor = ref(null)
+        // UI
+        const selectedColor = ref(null)
 
-    fetchProduct()
+        fetchProduct()
 
-    return {
+        return {
 
-      // Fetched Product
-      product,
+            // Fetched Product
+            product,
 
-      // UI
-      selectedColor,
-      handleCartActionClick,
-      toggleProductInWishlist,
-    }
-  },
+            // UI
+            selectedColor,
+            handleCartActionClick,
+            toggleProductInWishlist,
+        }
+    },
 }
 </script>
 

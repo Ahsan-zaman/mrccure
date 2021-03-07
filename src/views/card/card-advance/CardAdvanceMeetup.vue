@@ -81,39 +81,39 @@
 
 <script>
 import {
-  BCard, BImg, BCardBody, BCardText, BCardTitle, BMedia, BMediaAside, BAvatar, BAvatarGroup, VBTooltip, BMediaBody,
+    BCard, BImg, BCardBody, BCardText, BCardTitle, BMedia, BMediaAside, BAvatar, BAvatarGroup, VBTooltip, BMediaBody,
 } from 'bootstrap-vue'
 /* eslint-disable global-require */
 export default {
-  components: {
-    BCard,
-    BImg,
-    BCardBody,
-    BCardText,
-    BCardTitle,
-    BMedia,
-    BMediaAside,
-    BAvatar,
-    BAvatarGroup,
-    BMediaBody,
-  },
-  directives: {
-    'b-tooltip': VBTooltip,
-  },
-  data() {
-    return {
-      mediaData: [
-        { avatar: 'CalendarIcon', title: 'Sat, May 25, 2020', subtitle: '10:AM to 6:PM' },
-        { avatar: 'MapPinIcon', title: 'Central Park', subtitle: 'Manhattan, New york City' },
-      ],
-      avatars: [
-        { avatar: require('@/assets/images/portrait/small/avatar-s-9.jpg'), fullName: 'Billy Hopkins' },
-        { avatar: require('@/assets/images/portrait/small/avatar-s-6.jpg'), fullName: 'Amy Carson' },
-        { avatar: require('@/assets/images/portrait/small/avatar-s-8.jpg'), fullName: 'Brandon Miles' },
-        { avatar: require('@/assets/images/portrait/small/avatar-s-7.jpg'), fullName: 'Daisy Weber' },
-        { avatar: require('@/assets/images/portrait/small/avatar-s-20.jpg'), fullName: 'Jenny Looper' },
-      ],
-    }
-  },
+    components: {
+        BCard,
+        BImg,
+        BCardBody,
+        BCardText,
+        BCardTitle,
+        BMedia,
+        BMediaAside,
+        BAvatar,
+        BAvatarGroup,
+        BMediaBody,
+    },
+    directives: {
+        'b-tooltip': VBTooltip,
+    },
+    data() {
+        return {
+            mediaData: [
+                { avatar: 'CalendarIcon', title: 'Sat, May 25, 2020', subtitle: '10:AM to 6:PM' },
+                { avatar: 'MapPinIcon', title: 'Central Park', subtitle: 'Manhattan, New york City' },
+            ],
+            avatars: [
+                { avatar: require('@/assets/images/portrait/small/avatar-s-9.jpg'), fullName: 'Billy Hopkins' },
+                { avatar: require('@/assets/images/portrait/small/avatar-s-6.jpg'), fullName: 'Amy Carson' },
+                { avatar: require('@/assets/images/portrait/small/avatar-s-8.jpg'), fullName: 'Brandon Miles' },
+                { avatar: require('@/assets/images/portrait/small/avatar-s-7.jpg'), fullName: 'Daisy Weber' },
+                { avatar: require('@/assets/images/portrait/small/avatar-s-20.jpg'), fullName: 'Jenny Looper' },
+            ],
+        }
+    },
 }
 </script>

@@ -20,26 +20,26 @@ import { quillEditor } from 'vue-quill-editor'
 import { codeBubble } from './code'
 
 export default {
-  components: {
-    quillEditor,
-    BCardCode,
-    BCardText,
-  },
-  data() {
-    return {
-      codeBubble,
-      editorOption: {
-        theme: 'bubble',
-        syntax: false,
-        modules: {
-          toolbar: [
-            ['bold', 'italic'],
-            [{ header: [1, 2, 3, 4, 5, 6, false] }],
-            ['link', 'image'],
-          ],
-        },
-      },
-      content: `<h1 class="ql-align-center">Quill Rich Text Editor</h1>
+    components: {
+        quillEditor,
+        BCardCode,
+        BCardText,
+    },
+    data() {
+        return {
+            codeBubble,
+            editorOption: {
+                theme: 'bubble',
+                syntax: false,
+                modules: {
+                    toolbar: [
+                        ['bold', 'italic'],
+                        [{ header: [1, 2, 3, 4, 5, 6, false] }],
+                        ['link', 'image'],
+                    ],
+                },
+            },
+            content: `<h1 class="ql-align-center">Quill Rich Text Editor</h1>
                     <p class="card-text"><br /></p>
                     <p class="card-text">
                       Quill is a free, <a href="https://github.com/quilljs/quill/">open source</a> WYSIWYG editor built
@@ -68,7 +68,7 @@ var quill = new Quill('#editor', {
     theme: 'bubble'
 });
 // Open your browser's developer console to try out the API!</pre>`,
-    }
-  },
+        }
+    },
 }
 </script>

@@ -51,26 +51,26 @@ import Ripple from 'vue-ripple-directive'
 import { codeIndeterminate } from './code'
 
 export default {
-  components: {
-    BFormCheckbox,
-    BCardCode,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      checked: true,
-      indeterminate: true,
-      codeIndeterminate,
-    }
-  },
-  methods: {
-    toggleIndeterminate() {
-      this.indeterminate = !this.indeterminate
+    components: {
+        BFormCheckbox,
+        BCardCode,
+        BButton,
+        BCardText,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            checked: true,
+            indeterminate: true,
+            codeIndeterminate,
+        }
+    },
+    methods: {
+        toggleIndeterminate() {
+            this.indeterminate = !this.indeterminate
+        },
+    },
 }
 </script>

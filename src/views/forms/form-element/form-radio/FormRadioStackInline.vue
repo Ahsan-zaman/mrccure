@@ -54,22 +54,22 @@ import { BFormRadioGroup, BFormGroup, BCardText } from 'bootstrap-vue'
 import { codeInlineStack } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormRadioGroup,
-    BFormGroup,
-  },
-  data() {
-    return {
-      selected: 'first',
-      options: [
-        { text: 'First radio', value: 'first' },
-        { text: 'Second radio', value: 'second' },
-        { text: 'Third radio', value: 'third' },
-      ],
-      codeInlineStack,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormRadioGroup,
+        BFormGroup,
+    },
+    data() {
+        return {
+            selected: 'first',
+            options: [
+                { text: 'First radio', value: 'first' },
+                { text: 'Second radio', value: 'second' },
+                { text: 'Third radio', value: 'third' },
+            ],
+            codeInlineStack,
+        }
+    },
 }
 </script>

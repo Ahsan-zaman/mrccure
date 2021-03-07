@@ -30,16 +30,16 @@ import { BFormRating, BCardText } from 'bootstrap-vue'
 import { codeClearButton } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormRating,
-    BCardText,
-  },
-  data() {
-    return {
-      value: 2.5,
-      codeClearButton,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormRating,
+        BCardText,
+    },
+    data() {
+        return {
+            value: 2.5,
+            codeClearButton,
+        }
+    },
 }
 </script>

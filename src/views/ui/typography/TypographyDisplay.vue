@@ -46,19 +46,19 @@
 
 <script>
 import {
-  BCard, BCardBody, BCardText, BCardTitle, BTableSimple, BTr, BTbody, BTd,
+    BCard, BCardBody, BCardText, BCardTitle, BTableSimple, BTr, BTbody, BTd,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard,
-    BCardBody,
-    BCardText,
-    BCardTitle,
-    BTableSimple,
-    BTr,
-    BTbody,
-    BTd,
-  },
+    components: {
+        BCard,
+        BCardBody,
+        BCardText,
+        BCardTitle,
+        BTableSimple,
+        BTr,
+        BTbody,
+        BTd,
+    },
 }
 </script>

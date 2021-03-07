@@ -33,24 +33,24 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardBody, BCardTitle, BBadge,
+    BCard, BCardHeader, BCardBody, BCardTitle, BBadge,
 } from 'bootstrap-vue'
 import ChartjsComponentBubbleChart from './charts-components/ChartjsComponentBubbleChart.vue'
 import chartjsData from './chartjsData'
 
 export default {
-  components: {
-    ChartjsComponentBubbleChart,
-    BCard,
-    BBadge,
-    BCardHeader,
-    BCardTitle,
-    BCardBody,
-  },
-  data() {
-    return {
-      chartjsData,
-    }
-  },
+    components: {
+        ChartjsComponentBubbleChart,
+        BCard,
+        BBadge,
+        BCardHeader,
+        BCardTitle,
+        BCardBody,
+    },
+    data() {
+        return {
+            chartjsData,
+        }
+    },
 }
 </script>

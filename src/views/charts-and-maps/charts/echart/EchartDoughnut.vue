@@ -18,34 +18,34 @@ import { BCard } from 'bootstrap-vue'
 import AppEchartDoughnut from '@core/components/charts/echart/AppEchartDoughnut.vue'
 
 export default {
-  components: {
-    BCard,
-    AppEchartDoughnut,
-  },
-  data() {
-    return {
-      series: [
-        {
-          name: 'Visit source',
-          type: 'pie',
-          radius: ['50%', '70%'],
-          avoidLabelOverlap: false,
-          label: {
-            show: false,
-          },
-          labelLine: {
-            show: false,
-          },
-          data: [
-            { value: 335, name: 'Point One' },
-            { value: 310, name: 'Point Two' },
-            { value: 234, name: 'Point Three' },
-            { value: 435, name: 'Point Four' },
-          ],
-        },
-      ],
-    }
-  },
+    components: {
+        BCard,
+        AppEchartDoughnut,
+    },
+    data() {
+        return {
+            series: [
+                {
+                    name: 'Visit source',
+                    type: 'pie',
+                    radius: ['50%', '70%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        show: false,
+                    },
+                    labelLine: {
+                        show: false,
+                    },
+                    data: [
+                        { value: 335, name: 'Point One' },
+                        { value: 310, name: 'Point Two' },
+                        { value: 234, name: 'Point Three' },
+                        { value: 435, name: 'Point Four' },
+                    ],
+                },
+            ],
+        }
+    },
 }
 </script>
 

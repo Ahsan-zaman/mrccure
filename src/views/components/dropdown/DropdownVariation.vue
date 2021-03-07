@@ -133,25 +133,6 @@
 
 <script>
 import {
-  BButton,
-  BDropdown,
-  BDropdownDivider,
-  BDropdownForm,
-  BDropdownGroup,
-  BDropdownItem,
-  BFormCheckbox,
-  BFormGroup,
-  BFormInput,
-  BCardText,
-} from 'bootstrap-vue'
-import BCardCode from '@core/components/b-card-code'
-import Ripple from 'vue-ripple-directive'
-import { codeDropdownVariation } from './code'
-
-export default {
-  components: {
-    BCardCode,
-    BCardText,
     BButton,
     BDropdown,
     BDropdownDivider,
@@ -161,16 +142,35 @@ export default {
     BFormCheckbox,
     BFormGroup,
     BFormInput,
-  },
-  directives: {
-    Ripple,
-  },
-  data() { return { codeDropdownVariation } },
-  methods: {
-    onClick() {
-      // Close the menu and (by passing true) return focus to the toggle button
-      this.$refs.dropdown.hide(true)
+    BCardText,
+} from 'bootstrap-vue'
+import BCardCode from '@core/components/b-card-code'
+import Ripple from 'vue-ripple-directive'
+import { codeDropdownVariation } from './code'
+
+export default {
+    components: {
+        BCardCode,
+        BCardText,
+        BButton,
+        BDropdown,
+        BDropdownDivider,
+        BDropdownForm,
+        BDropdownGroup,
+        BDropdownItem,
+        BFormCheckbox,
+        BFormGroup,
+        BFormInput,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() { return { codeDropdownVariation } },
+    methods: {
+        onClick() {
+            // Close the menu and (by passing true) return focus to the toggle button
+            this.$refs.dropdown.hide(true)
+        },
+    },
 }
 </script>

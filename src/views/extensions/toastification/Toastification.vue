@@ -17,14 +17,14 @@ import ToastificationIcon from './ToastificationIcon.vue'
 import ToastificationTimeout from './ToastificationTimeout.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    ToastificationVariant,
-    ToastificationPosition,
-    ToastificationIcon,
-    ToastificationTimeout,
-  },
+        ToastificationVariant,
+        ToastificationPosition,
+        ToastificationIcon,
+        ToastificationTimeout,
+    },
 }
 </script>

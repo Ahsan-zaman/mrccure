@@ -113,28 +113,28 @@ import flatPickr from 'vue-flatpickr-component'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    flatPickr,
-    BCardCode,
-    BFormGroup,
-  },
-  data() {
-    return {
-      date: null,
-      dateDefault: null,
-      timePicker: null,
-      dateNtim: null,
-      multiDate: null,
-      rangeDate: null,
-      humanDate: null,
-      disableDate: null,
-      inlineDate: null,
-      codeBasic,
-    }
-  },
+        flatPickr,
+        BCardCode,
+        BFormGroup,
+    },
+    data() {
+        return {
+            date: null,
+            dateDefault: null,
+            timePicker: null,
+            dateNtim: null,
+            multiDate: null,
+            rangeDate: null,
+            humanDate: null,
+            disableDate: null,
+            inlineDate: null,
+            codeBasic,
+        }
+    },
 }
 </script>
 

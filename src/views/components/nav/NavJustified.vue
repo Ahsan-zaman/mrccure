@@ -33,16 +33,16 @@ import { BNav, BNavItem, BCardText } from 'bootstrap-vue'
 import { codeJustified } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BNav,
-    BNavItem,
-    BCardText,
-  },
-  data() {
-    return {
-      codeJustified,
-    }
-  },
+    components: {
+        BCardCode,
+        BNav,
+        BNavItem,
+        BCardText,
+    },
+    data() {
+        return {
+            codeJustified,
+        }
+    },
 }
 </script>

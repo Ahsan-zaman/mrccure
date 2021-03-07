@@ -73,14 +73,14 @@ import Ripple from 'vue-ripple-directive'
 import { codeButtonRounded } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() { return { codeButtonRounded } },
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() { return { codeButtonRounded } },
 }
 </script>

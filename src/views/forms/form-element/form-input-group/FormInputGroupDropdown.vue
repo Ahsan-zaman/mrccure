@@ -66,35 +66,35 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BInputGroup,
-  BFormInput,
-  BInputGroupPrepend,
-  BInputGroupAppend,
-  BDropdown,
-  BDropdownItem,
-  BDropdownDivider,
-  BRow,
-  BCol,
+    BInputGroup,
+    BFormInput,
+    BInputGroupPrepend,
+    BInputGroupAppend,
+    BDropdown,
+    BDropdownItem,
+    BDropdownDivider,
+    BRow,
+    BCol,
 } from 'bootstrap-vue'
 import { codeDropdown } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormInput,
-    BInputGroup,
-    BInputGroupPrepend,
-    BInputGroupAppend,
-    BDropdownDivider,
-    BDropdown,
-    BDropdownItem,
-    BRow,
-    BCol,
-  },
-  data() {
-    return {
-      codeDropdown,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormInput,
+        BInputGroup,
+        BInputGroupPrepend,
+        BInputGroupAppend,
+        BDropdownDivider,
+        BDropdown,
+        BDropdownItem,
+        BRow,
+        BCol,
+    },
+    data() {
+        return {
+            codeDropdown,
+        }
+    },
 }
 </script>

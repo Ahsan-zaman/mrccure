@@ -15,14 +15,14 @@ import QuillEditorBubble from './QuillEditorBubble.vue'
 import QuillEditorCustom from './QuillEditorCustom.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    QuillEditorSnow,
-    QuillEditorBubble,
-    QuillEditorCustom,
-  },
+        QuillEditorSnow,
+        QuillEditorBubble,
+        QuillEditorCustom,
+    },
 }
 </script>
 

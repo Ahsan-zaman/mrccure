@@ -90,23 +90,23 @@
 
 <script>
 import {
-  BRow, BCol, BCard, BTab, BTabs, BCardText, BCardTitle, BButton,
+    BRow, BCol, BCard, BTab, BTabs, BCardText, BCardTitle, BButton,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BTab,
-    BTabs,
-    BCardText,
-    BCardTitle,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BTab,
+        BTabs,
+        BCardText,
+        BCardTitle,
+        BButton,
+    },
+    directives: {
+        Ripple,
+    },
 }
 </script>

@@ -48,18 +48,18 @@ import BCardCode from '@core/components/b-card-code'
 import { codeSeparated } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPagination,
-    BCardText,
-  },
-  data() {
-    return {
-      codeSeparated,
-      currentPage: 1,
-      perPage: 1,
-      rows: 200,
-    }
-  },
+    components: {
+        BCardCode,
+        BPagination,
+        BCardText,
+    },
+    data() {
+        return {
+            codeSeparated,
+            currentPage: 1,
+            perPage: 1,
+            rows: 200,
+        }
+    },
 }
 </script>

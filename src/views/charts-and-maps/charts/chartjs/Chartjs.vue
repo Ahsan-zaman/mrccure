@@ -64,20 +64,20 @@ import ChartjsBubbleChart from './ChartjsBubbleChart.vue'
 import ChartjsScatterChart from './ChartjsScatterChart.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BLink,
+    components: {
+        BRow,
+        BCol,
+        BLink,
 
-    ChartjsBarChart,
-    ChartjsLineChart,
-    ChartjsLineAreaChart,
-    ChartjsRadarChart,
-    ChartjsPolarAreaChart,
-    ChartjsDoughnutChart,
-    ChartjsHorizontalBarChart,
-    ChartjsScatterChart,
-    ChartjsBubbleChart,
-  },
+        ChartjsBarChart,
+        ChartjsLineChart,
+        ChartjsLineAreaChart,
+        ChartjsRadarChart,
+        ChartjsPolarAreaChart,
+        ChartjsDoughnutChart,
+        ChartjsHorizontalBarChart,
+        ChartjsScatterChart,
+        ChartjsBubbleChart,
+    },
 }
 </script>

@@ -135,32 +135,32 @@ import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 import { BAvatar } from 'bootstrap-vue'
 
 export default {
-  components: {
+    components: {
     // BSV
-    BAvatar,
+        BAvatar,
 
-    // 3rd Party
-    VuePerfectScrollbar,
-  },
-  props: {
-    shallShowActiveChatContactSidebar: {
-      type: Boolean,
-      required: true,
+        // 3rd Party
+        VuePerfectScrollbar,
     },
-    contact: {
-      type: Object,
-      required: true,
+    props: {
+        shallShowActiveChatContactSidebar: {
+            type: Boolean,
+            required: true,
+        },
+        contact: {
+            type: Object,
+            required: true,
+        },
     },
-  },
-  setup() {
-    const perfectScrollbarSettings = {
-      maxScrollbarLength: 150,
-    }
+    setup() {
+        const perfectScrollbarSettings = {
+            maxScrollbarLength: 150,
+        }
 
-    return {
-      perfectScrollbarSettings,
-    }
-  },
+        return {
+            perfectScrollbarSettings,
+        }
+    },
 }
 </script>
 

@@ -113,38 +113,38 @@
 
 <script>
 import {
-  BSidebar, BForm, BFormGroup, BFormInput, BFormTextarea, BButton, BBadge,
+    BSidebar, BForm, BFormGroup, BFormInput, BFormTextarea, BButton, BBadge,
 } from 'bootstrap-vue'
 import { ref } from '@vue/composition-api'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BSidebar, BForm, BFormGroup, BFormInput, BFormTextarea, BButton, BBadge,
-  },
-  directives: {
-    Ripple,
-  },
-  setup() {
-    const sendInvoiceData = ref({
-      from: 'shelbyComapny@email.com',
-      to: 'qConsolidated@email.com',
-      subject: 'Invoice of purchased Admin Templates',
-      message: `Dear Queen Consolidated,
+    components: {
+        BSidebar, BForm, BFormGroup, BFormInput, BFormTextarea, BButton, BBadge,
+    },
+    directives: {
+        Ripple,
+    },
+    setup() {
+        const sendInvoiceData = ref({
+            from: 'shelbyComapny@email.com',
+            to: 'qConsolidated@email.com',
+            subject: 'Invoice of purchased Admin Templates',
+            message: `Dear Queen Consolidated,
 
 Thank you for your business, always a pleasure to work with you!
 
 We have generated a new invoice in the amount of $95.59
 
 We would appreciate payment of this invoice by 05/11/2019`,
-      // ? Need to handle how you want to send item
-      // * You can also send link to download invoice in message
-    })
+            // ? Need to handle how you want to send item
+            // * You can also send link to download invoice in message
+        })
 
-    return {
-      sendInvoiceData,
-    }
-  },
+        return {
+            sendInvoiceData,
+        }
+    },
 }
 </script>
 

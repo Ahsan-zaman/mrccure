@@ -152,16 +152,16 @@ import { BTab, BTabs, BCardText } from 'bootstrap-vue'
 import { codeThemes } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BTab,
-    BTabs,
-  },
-  data() {
-    return {
-      codeThemes,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BTab,
+        BTabs,
+    },
+    data() {
+        return {
+            codeThemes,
+        }
+    },
 }
 </script>

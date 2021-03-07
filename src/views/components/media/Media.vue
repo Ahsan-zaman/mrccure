@@ -36,17 +36,17 @@ import MediaVerticalAlign from './MediaVerticalAlign.vue'
 import MediaNoBody from './MediaNoBody.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    MediaLeftAlign,
-    MediaRightAlign,
-    MediaLeftAlignBorder,
-    MediaRightAlignBorder,
-    MediaNested,
-    MediaVerticalAlign,
-    MediaNoBody,
-  },
+        MediaLeftAlign,
+        MediaRightAlign,
+        MediaLeftAlignBorder,
+        MediaRightAlignBorder,
+        MediaNested,
+        MediaVerticalAlign,
+        MediaNoBody,
+    },
 }
 </script>

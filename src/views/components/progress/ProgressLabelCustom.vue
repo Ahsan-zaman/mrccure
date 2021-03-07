@@ -64,18 +64,18 @@ import { BProgress, BProgressBar, BCardText } from 'bootstrap-vue'
 import { codeCustomLabel } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BProgress,
-    BProgressBar,
-    BCardText,
-  },
-  data() {
-    return {
-      codeCustomLabel,
-      value: 33.333333333,
-      max: 50,
-    }
-  },
+    components: {
+        BCardCode,
+        BProgress,
+        BProgressBar,
+        BCardText,
+    },
+    data() {
+        return {
+            codeCustomLabel,
+            value: 33.333333333,
+            max: 50,
+        }
+    },
 }
 </script>

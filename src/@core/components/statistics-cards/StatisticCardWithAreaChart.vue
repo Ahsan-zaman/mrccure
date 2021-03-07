@@ -37,47 +37,47 @@ import { $themeColors } from '@themeConfig'
 import { areaChartOptions } from './chartOptions'
 
 export default {
-  components: {
-    VueApexCharts,
-    BCard,
-    BCardBody,
-    BAvatar,
-  },
-  props: {
-    icon: {
-      type: String,
-      required: true,
+    components: {
+        VueApexCharts,
+        BCard,
+        BCardBody,
+        BAvatar,
     },
-    statistic: {
-      type: [Number, String],
-      required: true,
+    props: {
+        icon: {
+            type: String,
+            required: true,
+        },
+        statistic: {
+            type: [Number, String],
+            required: true,
+        },
+        statisticTitle: {
+            type: String,
+            default: '',
+        },
+        color: {
+            type: String,
+            default: 'primary',
+        },
+        chartData: {
+            type: Array,
+            default: () => [],
+        },
+        chartOptions: {
+            type: Object,
+            default: null,
+        },
     },
-    statisticTitle: {
-      type: String,
-      default: '',
+    computed: {
+        chartOptionsComputed() {
+            if (this.chartOptions === null) {
+                const options = JSON.parse(JSON.stringify(areaChartOptions))
+                options.theme.monochrome.color = $themeColors[this.color]
+                return options
+            }
+            return this.chartOptions
+        },
     },
-    color: {
-      type: String,
-      default: 'primary',
-    },
-    chartData: {
-      type: Array,
-      default: () => [],
-    },
-    chartOptions: {
-      type: Object,
-      default: null,
-    },
-  },
-  computed: {
-    chartOptionsComputed() {
-      if (this.chartOptions === null) {
-        const options = JSON.parse(JSON.stringify(areaChartOptions))
-        options.theme.monochrome.color = $themeColors[this.color]
-        return options
-      }
-      return this.chartOptions
-    },
-  },
 }
 </script>

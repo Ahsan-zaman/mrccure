@@ -45,24 +45,24 @@ import 'prismjs/themes/prism-tomorrow.css'
 import { codeSimple } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    draggable,
-    BListGroupItem,
-    Prism,
-    BCardText,
-  },
-  data() {
-    return {
-      codeSimple,
-      list:
+    components: {
+        BCardCode,
+        draggable,
+        BListGroupItem,
+        Prism,
+        BCardText,
+    },
+    data() {
+        return {
+            codeSimple,
+            list:
       [
-        'Marzipan I love I love. Soufflé donut I love gummi bears powder. Candy danish biscuit.',
-        'Halvah bonbon bonbon brownie sugar plum. Halvah I love cupcake I love.',
-        'Cake muffin icing topping wafer topping gummi bears apple pie.',
-        'Cotton candy gummi bears bear claw cake brownie jelly-o lemon drops croissant sweet roll.',
+          'Marzipan I love I love. Soufflé donut I love gummi bears powder. Candy danish biscuit.',
+          'Halvah bonbon bonbon brownie sugar plum. Halvah I love cupcake I love.',
+          'Cake muffin icing topping wafer topping gummi bears apple pie.',
+          'Cotton candy gummi bears bear claw cake brownie jelly-o lemon drops croissant sweet roll.',
       ],
-    }
-  },
+        }
+    },
 }
 </script>

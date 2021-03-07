@@ -23,17 +23,17 @@ import ToastsLinks from './ToastsLinks.vue'
 import ToastsAdvance from './ToastsAdvance.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    ToastsBasic,
-    ToastsTranslucent,
-    ToastsDelay,
-    ToastsTarget,
-    ToastsVariants,
-    ToastsLinks,
-    ToastsAdvance,
-  },
+        ToastsBasic,
+        ToastsTranslucent,
+        ToastsDelay,
+        ToastsTarget,
+        ToastsVariants,
+        ToastsLinks,
+        ToastsAdvance,
+    },
 }
 </script>

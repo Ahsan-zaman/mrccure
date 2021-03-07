@@ -122,20 +122,20 @@
 
 <script>
 import {
-  BRow, BCol, BCardGroup, BCard, BCardText,
+    BRow, BCol, BCardGroup, BCard, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCardGroup,
-    BCard,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
+    components: {
+        BRow,
+        BCol,
+        BCardGroup,
+        BCard,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
 }
 </script>

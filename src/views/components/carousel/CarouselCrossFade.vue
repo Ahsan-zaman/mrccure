@@ -33,16 +33,16 @@ import BCardCode from '@core/components/b-card-code'
 import { codeCarouselCrossfade } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCarousel,
-    BCarouselSlide,
-    BCardText,
-  },
-  data() {
-    return {
-      codeCarouselCrossfade,
-    }
-  },
+    components: {
+        BCardCode,
+        BCarousel,
+        BCarouselSlide,
+        BCardText,
+    },
+    data() {
+        return {
+            codeCarouselCrossfade,
+        }
+    },
 }
 </script>

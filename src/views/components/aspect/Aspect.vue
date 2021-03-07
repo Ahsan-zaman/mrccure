@@ -11,10 +11,10 @@ import { BRow, BCol } from 'bootstrap-vue'
 import AspectDefault from './AspectDefault.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    AspectDefault,
-  },
+    components: {
+        BRow,
+        BCol,
+        AspectDefault,
+    },
 }
 </script>

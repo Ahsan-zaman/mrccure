@@ -15,13 +15,13 @@ import ButtonGroupSize from './ButtonGroupSize.vue'
 import ButtonGroupDropdownSupport from './ButtonGroupDropdownSupport.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    ButtonGroupBasic,
-    ButtonGroupSize,
-    ButtonGroupDropdownSupport,
-  },
+        ButtonGroupBasic,
+        ButtonGroupSize,
+        ButtonGroupDropdownSupport,
+    },
 }
 </script>

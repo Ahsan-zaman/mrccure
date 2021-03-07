@@ -53,34 +53,34 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormDatepicker, BInputGroup, BInputGroupAppend, BFormInput, BCardText,
+    BFormDatepicker, BInputGroup, BInputGroupAppend, BFormInput, BCardText,
 } from 'bootstrap-vue'
 import { codeButtonOnly } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormDatepicker,
-    BInputGroup,
-    BInputGroupAppend,
-    BFormInput,
-  },
-  data() {
-    return {
-      value: '',
-      formatted: '',
-      selected: '',
-      codeButtonOnly,
-    }
-  },
-  methods: {
-    onContext(ctx) {
-      // The date formatted in the locale, or the `label-no-date-selected` string
-      this.formatted = ctx.selectedFormatted
-      // The following will be an empty string until a valid date is entered
-      this.selected = ctx.selectedYMD
+    components: {
+        BCardCode,
+        BCardText,
+        BFormDatepicker,
+        BInputGroup,
+        BInputGroupAppend,
+        BFormInput,
     },
-  },
+    data() {
+        return {
+            value: '',
+            formatted: '',
+            selected: '',
+            codeButtonOnly,
+        }
+    },
+    methods: {
+        onContext(ctx) {
+            // The date formatted in the locale, or the `label-no-date-selected` string
+            this.formatted = ctx.selectedFormatted
+            // The following will be an empty string until a valid date is entered
+            this.selected = ctx.selectedYMD
+        },
+    },
 }
 </script>

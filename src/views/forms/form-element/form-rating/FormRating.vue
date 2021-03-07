@@ -56,22 +56,22 @@ import FormRatingInternationalization from './FormRatingInternationalization.vue
 import FormRatingClearButton from './FormRatingClearButton.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    FormRatingDefault,
-    FormRatingNumberOfStars,
-    FormRatingVariants,
-    FormRatingBorderless,
-    FormRatingSize,
-    FormRatingShowValue,
-    FormRatingState,
-    FormRatingInlineMode,
-    FormRatingIcon,
-    FormRatingInputGroup,
-    FormRatingInternationalization,
-    FormRatingClearButton,
-  },
+        FormRatingDefault,
+        FormRatingNumberOfStars,
+        FormRatingVariants,
+        FormRatingBorderless,
+        FormRatingSize,
+        FormRatingShowValue,
+        FormRatingState,
+        FormRatingInlineMode,
+        FormRatingIcon,
+        FormRatingInputGroup,
+        FormRatingInternationalization,
+        FormRatingClearButton,
+    },
 }
 </script>

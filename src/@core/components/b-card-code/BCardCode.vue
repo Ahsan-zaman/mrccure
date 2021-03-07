@@ -61,49 +61,49 @@
 
 <script>
 import {
-  BCard, BCardTitle, BCardSubTitle, BCardBody, BCollapse,
+    BCard, BCardTitle, BCardSubTitle, BCardBody, BCollapse,
 } from 'bootstrap-vue'
 import 'prismjs'
 import 'prismjs/themes/prism-tomorrow.css'
 import Prism from 'vue-prism-component'
 
 export default {
-  components: {
-    BCard,
-    BCardTitle,
-    BCardSubTitle,
-    BCardBody,
-    BCollapse,
-    Prism,
-  },
-  inheritAttrs: false,
-  props: {
-    collapsed: {
-      type: Boolean,
-      default: false,
+    components: {
+        BCard,
+        BCardTitle,
+        BCardSubTitle,
+        BCardBody,
+        BCollapse,
+        Prism,
     },
-    codeLanguage: {
-      default: 'markup',
-      type: String,
+    inheritAttrs: false,
+    props: {
+        collapsed: {
+            type: Boolean,
+            default: false,
+        },
+        codeLanguage: {
+            default: 'markup',
+            type: String,
+        },
     },
-  },
-  data() {
-    return {
-      parentID: '',
-      code_visible: false,
-    }
-  },
-  computed: {
-    cardAttrs() {
-      const cardAttrs = JSON.parse(JSON.stringify(this.$attrs))
-      delete cardAttrs.title
-      delete cardAttrs['sub-title']
-      return cardAttrs
+    data() {
+        return {
+            parentID: '',
+            code_visible: false,
+        }
     },
-  },
-  created() {
-    this.parentID = String(Math.floor(Math.random() * 10) + 1)
-  },
+    computed: {
+        cardAttrs() {
+            const cardAttrs = JSON.parse(JSON.stringify(this.$attrs))
+            delete cardAttrs.title
+            delete cardAttrs['sub-title']
+            return cardAttrs
+        },
+    },
+    created() {
+        this.parentID = String(Math.floor(Math.random() * 10) + 1)
+    },
 }
 </script>
 

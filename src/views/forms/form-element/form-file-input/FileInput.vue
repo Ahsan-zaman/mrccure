@@ -48,20 +48,20 @@ import FileInputDirectory from './FileInputDirectory.vue'
 import FileInputSlot from './FileInputSlot.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    FileInputBasic,
-    FileInputMultiple,
-    FileInputDragDrop,
-    FileInputLimiting,
-    FileInputSize,
-    FileInputFormatter,
-    FileInputContextualState,
-    FileInputClearing,
-    FileInputDirectory,
-    FileInputSlot,
-  },
+        FileInputBasic,
+        FileInputMultiple,
+        FileInputDragDrop,
+        FileInputLimiting,
+        FileInputSize,
+        FileInputFormatter,
+        FileInputContextualState,
+        FileInputClearing,
+        FileInputDirectory,
+        FileInputSlot,
+    },
 }
 </script>

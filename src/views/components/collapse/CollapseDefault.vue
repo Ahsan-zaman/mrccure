@@ -54,12 +54,12 @@ import AppCollapseItem from '@core/components/app-collapse/AppCollapseItem.vue'
 import { codeCollapseDefault } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    AppCollapse,
-    AppCollapseItem,
-    BCardText,
-  },
-  data() { return { codeCollapseDefault } },
+    components: {
+        BCardCode,
+        AppCollapse,
+        AppCollapseItem,
+        BCardText,
+    },
+    data() { return { codeCollapseDefault } },
 }
 </script>

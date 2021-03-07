@@ -34,54 +34,54 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardBody, BCollapse,
+    BCard, BCardHeader, BCardBody, BCollapse,
 } from 'bootstrap-vue'
 import { v4 as uuidv4 } from 'uuid'
 
 export default {
-  components: {
-    BCard,
-    BCardHeader,
-    BCardBody,
-    BCollapse,
-  },
-  props: {
-    isVisible: {
-      type: Boolean,
-      default: false,
+    components: {
+        BCard,
+        BCardHeader,
+        BCardBody,
+        BCollapse,
     },
-    title: {
-      type: String,
-      required: true,
+    props: {
+        isVisible: {
+            type: Boolean,
+            default: false,
+        },
+        title: {
+            type: String,
+            required: true,
+        },
     },
-  },
-  data() {
-    return {
-      visible: false,
-      collapseItemID: '',
-      openOnHover: this.$parent.hover,
-    }
-  },
-  computed: {
-    accordion() {
-      return this.$parent.accordion ? `accordion-${this.$parent.collapseID}` : null
+    data() {
+        return {
+            visible: false,
+            collapseItemID: '',
+            openOnHover: this.$parent.hover,
+        }
     },
-  },
-  created() {
-    this.collapseItemID = uuidv4()
-    this.visible = this.isVisible
-  },
-  methods: {
-    updateVisible(val = true) {
-      this.visible = val
-      this.$emit('visible', val)
+    computed: {
+        accordion() {
+            return this.$parent.accordion ? `accordion-${this.$parent.collapseID}` : null
+        },
     },
-    collapseOpen() {
-      if (this.openOnHover) this.updateVisible(true)
+    created() {
+        this.collapseItemID = uuidv4()
+        this.visible = this.isVisible
     },
-    collapseClose() {
-      if (this.openOnHover) this.updateVisible(false)
+    methods: {
+        updateVisible(val = true) {
+            this.visible = val
+            this.$emit('visible', val)
+        },
+        collapseOpen() {
+            if (this.openOnHover) this.updateVisible(true)
+        },
+        collapseClose() {
+            if (this.openOnHover) this.updateVisible(false)
+        },
     },
-  },
 }
 </script>

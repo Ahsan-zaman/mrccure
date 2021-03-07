@@ -86,66 +86,66 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  VBTooltip, BButton, BTooltip,
+    VBTooltip, BButton, BTooltip,
 } from 'bootstrap-vue'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
 import Ripple from 'vue-ripple-directive'
 import { codeEvent } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BTooltip,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
-  directives: {
-    'b-tooltip': VBTooltip,
-    Ripple,
-  },
-  data() {
-    return {
-      codeEvent,
-    }
-  },
-  methods: {
-    onShow() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Show Event Tooltip',
-          icon: 'BellIcon',
-        },
-      })
+    components: {
+        BCardCode,
+        BButton,
+        BTooltip,
+        // eslint-disable-next-line vue/no-unused-components
+        ToastificationContent,
     },
-    onShown() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Shown Event Tooltip',
-          icon: 'BellIcon',
-        },
-      })
+    directives: {
+        'b-tooltip': VBTooltip,
+        Ripple,
     },
-    onHide() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Hide Event Tooltip',
-          icon: 'BellIcon',
-        },
-      })
+    data() {
+        return {
+            codeEvent,
+        }
     },
-    onHidden() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Hidden Event Tooltip',
-          icon: 'BellIcon',
+    methods: {
+        onShow() {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Show Event Tooltip',
+                    icon: 'BellIcon',
+                },
+            })
         },
-      })
+        onShown() {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Shown Event Tooltip',
+                    icon: 'BellIcon',
+                },
+            })
+        },
+        onHide() {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Hide Event Tooltip',
+                    icon: 'BellIcon',
+                },
+            })
+        },
+        onHidden() {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Hidden Event Tooltip',
+                    icon: 'BellIcon',
+                },
+            })
+        },
     },
-  },
 }
 </script>

@@ -103,15 +103,15 @@
 import { BButton } from 'bootstrap-vue'
 
 export default {
-  name: 'VxTour',
-  components: {
-    BButton,
-  },
-  props: {
-    steps: {
-      required: true,
-      type: Array,
+    name: 'VxTour',
+    components: {
+        BButton,
     },
-  },
+    props: {
+        steps: {
+            required: true,
+            type: Array,
+        },
+    },
 }
 </script>

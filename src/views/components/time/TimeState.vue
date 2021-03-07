@@ -35,31 +35,31 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormRadioGroup, BFormGroup, BFormRadio, BTime,
+    BFormRadioGroup, BFormGroup, BFormRadio, BTime,
 } from 'bootstrap-vue'
 import { codeState } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BTime,
-    BFormRadioGroup,
-    BFormGroup,
-    BFormRadio,
-  },
-  data() {
-    return {
-      state: 'disabled',
-      codeState,
-    }
-  },
-  computed: {
-    disabled() {
-      return this.state === 'disabled'
+    components: {
+        BCardCode,
+        BTime,
+        BFormRadioGroup,
+        BFormGroup,
+        BFormRadio,
     },
-    readonly() {
-      return this.state === 'readonly'
+    data() {
+        return {
+            state: 'disabled',
+            codeState,
+        }
     },
-  },
+    computed: {
+        disabled() {
+            return this.state === 'disabled'
+        },
+        readonly() {
+            return this.state === 'readonly'
+        },
+    },
 }
 </script>

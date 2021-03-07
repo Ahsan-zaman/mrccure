@@ -93,21 +93,21 @@ import { BImg, BCardText } from 'bootstrap-vue'
 import { codeBlank } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BImg,
-  },
-  data() {
-    return {
-      mainProps: {
-        blank: true,
-        width: 75,
-        height: 75,
-        class: 'm1',
-      },
-      codeBlank,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BImg,
+    },
+    data() {
+        return {
+            mainProps: {
+                blank: true,
+                width: 75,
+                height: 75,
+                class: 'm1',
+            },
+            codeBlank,
+        }
+    },
 }
 </script>

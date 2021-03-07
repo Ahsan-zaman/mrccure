@@ -44,29 +44,29 @@ import { BFormTags, BCardText } from 'bootstrap-vue'
 import { codeDetecting } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormTags,
-    BCardText,
-  },
-  data() {
-    return {
-      tags: [],
-      validTags: [],
-      invalidTags: [],
-      duplicateTags: [],
-      codeDetecting,
-    }
-  },
-  methods: {
-    onTagState(valid, invalid, duplicate) {
-      this.validTags = valid
-      this.invalidTags = invalid
-      this.duplicateTags = duplicate
+    components: {
+        BCardCode,
+        BFormTags,
+        BCardText,
     },
-    validator(tag) {
-      return tag.length > 2 && tag.length < 6
+    data() {
+        return {
+            tags: [],
+            validTags: [],
+            invalidTags: [],
+            duplicateTags: [],
+            codeDetecting,
+        }
     },
-  },
+    methods: {
+        onTagState(valid, invalid, duplicate) {
+            this.validTags = valid
+            this.invalidTags = invalid
+            this.duplicateTags = duplicate
+        },
+        validator(tag) {
+            return tag.length > 2 && tag.length < 6
+        },
+    },
 }
 </script>

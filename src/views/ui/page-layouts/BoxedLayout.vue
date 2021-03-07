@@ -26,21 +26,21 @@ import Ecommerce from '@/views/dashboard/ecommerce/Ecommerce.vue'
 import { BAlert, BLink } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BAlert,
-    BLink,
-    Ecommerce,
-  },
-  data() {
-    return {
-      contentWidth: this.$store.state.appConfig.layout.contentWidth,
-    }
-  },
-  created() {
-    this.$store.commit('appConfig/UPDATE_CONTENT_WIDTH', 'boxed')
-  },
-  destroyed() {
-    this.$store.commit('appConfig/UPDATE_CONTENT_WIDTH', this.contentWidth)
-  },
+    components: {
+        BAlert,
+        BLink,
+        Ecommerce,
+    },
+    data() {
+        return {
+            contentWidth: this.$store.state.appConfig.layout.contentWidth,
+        }
+    },
+    created() {
+        this.$store.commit('appConfig/UPDATE_CONTENT_WIDTH', 'boxed')
+    },
+    destroyed() {
+        this.$store.commit('appConfig/UPDATE_CONTENT_WIDTH', this.contentWidth)
+    },
 }
 </script>

@@ -41,17 +41,17 @@ import { BFormSpinbutton, BAlert, BCardText } from 'bootstrap-vue'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BFormSpinbutton,
-    BCardCode,
-    BCardText,
-    BAlert,
-  },
-  data() {
-    return {
-      value: 50,
-      codeBasic,
-    }
-  },
+    components: {
+        BFormSpinbutton,
+        BCardCode,
+        BCardText,
+        BAlert,
+    },
+    data() {
+        return {
+            value: 50,
+            codeBasic,
+        }
+    },
 }
 </script>

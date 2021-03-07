@@ -56,30 +56,30 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormSpinbutton, BRow, BCol, BCardText,
+    BFormSpinbutton, BRow, BCol, BCardText,
 } from 'bootstrap-vue'
 import { codeSlots } from './code'
 
 export default {
-  components: {
-    BFormSpinbutton,
-    BCardCode,
-    BCardText,
-    BRow,
-    BCol,
-  },
-  data() {
-    return {
-      value: 50,
-      codeSlots,
-      day: 0,
-      days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-    }
-  },
-  methods: {
-    dayFormatter(value) {
-      return this.days[value]
+    components: {
+        BFormSpinbutton,
+        BCardCode,
+        BCardText,
+        BRow,
+        BCol,
     },
-  },
+    data() {
+        return {
+            value: 50,
+            codeSlots,
+            day: 0,
+            days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        }
+    },
+    methods: {
+        dayFormatter(value) {
+            return this.days[value]
+        },
+    },
 }
 </script>

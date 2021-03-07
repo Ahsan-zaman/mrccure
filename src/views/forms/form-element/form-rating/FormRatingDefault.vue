@@ -27,17 +27,17 @@ import { BFormRating, BCardText } from 'bootstrap-vue'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormRating,
-    BCardText,
-  },
-  data() {
-    return {
-      value: null,
-      value2: 2.67,
-      codeBasic,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormRating,
+        BCardText,
+    },
+    data() {
+        return {
+            value: null,
+            value2: 2.67,
+            codeBasic,
+        }
+    },
 }
 </script>

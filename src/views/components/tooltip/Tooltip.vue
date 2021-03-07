@@ -21,15 +21,15 @@ import TooltipMethod from './TooltipMethod.vue'
 import TooltipEvent from './TooltipEvent.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    TooltipPosition,
-    TooltipVariant,
-    TooltipTrigger,
-    TooltipOption,
-    TooltipMethod,
-    TooltipEvent,
-  },
+    components: {
+        BRow,
+        BCol,
+        TooltipPosition,
+        TooltipVariant,
+        TooltipTrigger,
+        TooltipOption,
+        TooltipMethod,
+        TooltipEvent,
+    },
 }
 </script>

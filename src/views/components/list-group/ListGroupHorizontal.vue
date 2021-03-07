@@ -37,23 +37,23 @@
 
 <script>
 import {
-  BListGroup, BListGroupItem, BCardText, BAlert,
+    BListGroup, BListGroupItem, BCardText, BAlert,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code'
 import { codeListGroupHorizontal } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BListGroup,
-    BCardText,
-    BListGroupItem,
-    BAlert,
-  },
-  data() {
-    return {
-      codeListGroupHorizontal,
-    }
-  },
+    components: {
+        BCardCode,
+        BListGroup,
+        BCardText,
+        BListGroupItem,
+        BAlert,
+    },
+    data() {
+        return {
+            codeListGroupHorizontal,
+        }
+    },
 }
 </script>

@@ -51,17 +51,17 @@ import BCardCode from '@core/components/b-card-code'
 import { codeGoto } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPaginationNav,
-    BCardText,
-  },
-  data() {
-    return {
-      pages: 100,
-      currentPage: 5,
-      codeGoto,
-    }
-  },
+    components: {
+        BCardCode,
+        BPaginationNav,
+        BCardText,
+    },
+    data() {
+        return {
+            pages: 100,
+            currentPage: 5,
+            codeGoto,
+        }
+    },
 }
 </script>

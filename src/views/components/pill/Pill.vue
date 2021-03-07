@@ -32,15 +32,15 @@ import PillAlignment from './PillAlignment.vue'
 import PillThemes from './PillThemes.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    PillBasic,
-    PillFilled,
-    PillVertical,
-    PillJustified,
-    PillAlignment,
-    PillThemes,
-  },
+    components: {
+        BRow,
+        BCol,
+        PillBasic,
+        PillFilled,
+        PillVertical,
+        PillJustified,
+        PillAlignment,
+        PillThemes,
+    },
 }
 </script>

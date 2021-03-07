@@ -51,56 +51,56 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardTitle, BCardText, BCardBody, BRow, BCol, BMedia, BMediaAside, BAvatar, BMediaBody,
+    BCard, BCardHeader, BCardTitle, BCardText, BCardBody, BRow, BCol, BMedia, BMediaAside, BAvatar, BMediaBody,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BCardHeader,
-    BCardTitle,
-    BCardText,
-    BCardBody,
-    BMedia,
-    BAvatar,
-    BMediaAside,
-    BMediaBody,
-  },
-  data() {
-    return {
-      statisticsItems: [
-        {
-          icon: 'TrendingUpIcon',
-          color: 'light-primary',
-          title: '230k',
-          subtitle: 'Sales',
-          customClass: 'mb-2 mb-xl-0',
-        },
-        {
-          icon: 'UserIcon',
-          color: 'light-info',
-          title: '8.549k',
-          subtitle: 'Customers',
-          customClass: 'mb-2 mb-xl-0',
-        },
-        {
-          icon: 'BoxIcon',
-          color: 'light-danger',
-          title: '1.423k',
-          subtitle: 'Products',
-          customClass: 'mb-2 mb-sm-0',
-        },
-        {
-          icon: 'DollarSignIcon',
-          color: 'light-success',
-          title: '$9745',
-          subtitle: 'Revenue',
-          customClass: '',
-        },
-      ],
-    }
-  },
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BCardHeader,
+        BCardTitle,
+        BCardText,
+        BCardBody,
+        BMedia,
+        BAvatar,
+        BMediaAside,
+        BMediaBody,
+    },
+    data() {
+        return {
+            statisticsItems: [
+                {
+                    icon: 'TrendingUpIcon',
+                    color: 'light-primary',
+                    title: '230k',
+                    subtitle: 'Sales',
+                    customClass: 'mb-2 mb-xl-0',
+                },
+                {
+                    icon: 'UserIcon',
+                    color: 'light-info',
+                    title: '8.549k',
+                    subtitle: 'Customers',
+                    customClass: 'mb-2 mb-xl-0',
+                },
+                {
+                    icon: 'BoxIcon',
+                    color: 'light-danger',
+                    title: '1.423k',
+                    subtitle: 'Products',
+                    customClass: 'mb-2 mb-sm-0',
+                },
+                {
+                    icon: 'DollarSignIcon',
+                    color: 'light-success',
+                    title: '$9745',
+                    subtitle: 'Revenue',
+                    customClass: '',
+                },
+            ],
+        }
+    },
 }
 </script>

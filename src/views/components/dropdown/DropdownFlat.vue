@@ -149,23 +149,23 @@
 
 <script>
 import {
-  BDropdown, BDropdownItem, BDropdownDivider, BCardText,
+    BDropdown, BDropdownItem, BDropdownDivider, BCardText,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code'
 import Ripple from 'vue-ripple-directive'
 import { codeFlat } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BDropdown,
-    BDropdownDivider,
-    BDropdownItem,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() { return { codeFlat } },
+    components: {
+        BCardCode,
+        BDropdown,
+        BDropdownDivider,
+        BDropdownItem,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() { return { codeFlat } },
 }
 </script>

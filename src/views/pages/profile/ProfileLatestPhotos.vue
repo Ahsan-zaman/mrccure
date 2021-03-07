@@ -28,22 +28,22 @@
 
 <script>
 import {
-  BCard, BRow, BCol, BLink, BImg,
+    BCard, BRow, BCol, BLink, BImg,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard,
-    BRow,
-    BCol,
-    BLink,
-    BImg,
-  },
-  props: {
-    latestImages: {
-      type: Array,
-      default: () => [],
+    components: {
+        BCard,
+        BRow,
+        BCol,
+        BLink,
+        BImg,
     },
-  },
+    props: {
+        latestImages: {
+            type: Array,
+            default: () => [],
+        },
+    },
 }
 </script>

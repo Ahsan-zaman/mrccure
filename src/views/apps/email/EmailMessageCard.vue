@@ -132,25 +132,25 @@
 
 <script>
 import {
-  BDropdown, BDropdownItem, BCard, BCardHeader, BCardBody, BCardFooter, BAvatar, BLink, BImg,
+    BDropdown, BDropdownItem, BCard, BCardHeader, BCardBody, BCardFooter, BAvatar, BLink, BImg,
 } from 'bootstrap-vue'
 import { formatDate } from '@core/utils/filter'
 
 export default {
-  components: {
-    BDropdown, BDropdownItem, BCard, BCardHeader, BCardBody, BCardFooter, BAvatar, BLink, BImg,
-  },
-  props: {
-    message: {
-      type: Object,
-      required: true,
+    components: {
+        BDropdown, BDropdownItem, BCard, BCardHeader, BCardBody, BCardFooter, BAvatar, BLink, BImg,
     },
-  },
-  setup() {
-    return {
-      formatDate,
-    }
-  },
+    props: {
+        message: {
+            type: Object,
+            required: true,
+        },
+    },
+    setup() {
+        return {
+            formatDate,
+        }
+    },
 }
 </script>
 

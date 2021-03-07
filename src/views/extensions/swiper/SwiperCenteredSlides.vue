@@ -48,31 +48,31 @@ import 'swiper/css/swiper.css'
 import { codeCenterSlides } from './code'
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-    BCardCode,
-  },
-  data() {
-    return {
-      codeCenterSlides,
-      swiperData: [
-        { icon: 'GithubIcon', text: 'Getting Started' },
-        { icon: 'FacebookIcon', text: 'Pricing & Plans' },
-        { icon: 'TwitterIcon', text: 'Sales Question' },
-        { icon: 'InstagramIcon', text: 'Usage Guides' },
-        { icon: 'GitlabIcon', text: 'General Guide' },
-      ],
-      swiperOptions: {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 30,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      },
-    }
-  },
+    components: {
+        Swiper,
+        SwiperSlide,
+        BCardCode,
+    },
+    data() {
+        return {
+            codeCenterSlides,
+            swiperData: [
+                { icon: 'GithubIcon', text: 'Getting Started' },
+                { icon: 'FacebookIcon', text: 'Pricing & Plans' },
+                { icon: 'TwitterIcon', text: 'Sales Question' },
+                { icon: 'InstagramIcon', text: 'Usage Guides' },
+                { icon: 'GitlabIcon', text: 'General Guide' },
+            ],
+            swiperOptions: {
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            },
+        }
+    },
 }
 </script>

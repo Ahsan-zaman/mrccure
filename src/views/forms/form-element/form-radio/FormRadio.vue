@@ -23,16 +23,16 @@ import FormRadioOptionsArray from './FormRadioOptionsArray.vue'
 import FormRadioFieldNames from './FormRadioFieldNames.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    FormRadioBasic,
-    FormRadioCustom,
-    FormRadioColor,
-    FormRadioContextualStates,
-    FormRadioStackInline,
-    FormRadioOptionsArray,
-    FormRadioFieldNames,
-  },
+    components: {
+        BRow,
+        BCol,
+        FormRadioBasic,
+        FormRadioCustom,
+        FormRadioColor,
+        FormRadioContextualStates,
+        FormRadioStackInline,
+        FormRadioOptionsArray,
+        FormRadioFieldNames,
+    },
 }
 </script>

@@ -213,7 +213,7 @@
 
 <script>
 import {
-  BDropdown, BDropdownItem, BRow, BCol, BBadge, BCard, BLink,
+    BDropdown, BDropdownItem, BRow, BCol, BBadge, BCard, BLink,
 } from 'bootstrap-vue'
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 import { ref, watch } from '@vue/composition-api'
@@ -221,56 +221,56 @@ import useEmail from './useEmail'
 import EmailMessageCard from './EmailMessageCard.vue'
 
 export default {
-  components: {
+    components: {
 
-    // BSV
-    BDropdown,
-    BDropdownItem,
-    BRow,
-    BCol,
-    BBadge,
-    BCard,
-    BLink,
+        // BSV
+        BDropdown,
+        BDropdownItem,
+        BRow,
+        BCol,
+        BBadge,
+        BCard,
+        BLink,
 
-    // 3rd Party
-    VuePerfectScrollbar,
+        // 3rd Party
+        VuePerfectScrollbar,
 
-    // SFC
-    EmailMessageCard,
-  },
-  props: {
-    emailViewData: {
-      type: Object,
-      required: true,
+        // SFC
+        EmailMessageCard,
     },
-    opendedEmailMeta: {
-      type: Object,
-      required: true,
+    props: {
+        emailViewData: {
+            type: Object,
+            required: true,
+        },
+        opendedEmailMeta: {
+            type: Object,
+            required: true,
+        },
     },
-  },
-  setup(props) {
-    const { resolveLabelColor } = useEmail()
+    setup(props) {
+        const { resolveLabelColor } = useEmail()
 
-    const perfectScrollbarSettings = {
-      maxScrollbarLength: 150,
-    }
+        const perfectScrollbarSettings = {
+            maxScrollbarLength: 150,
+        }
 
-    const showWholeThread = ref(false)
+        const showWholeThread = ref(false)
 
-    watch(() => props.emailViewData.id, () => {
-      showWholeThread.value = false
-    })
+        watch(() => props.emailViewData.id, () => {
+            showWholeThread.value = false
+        })
 
-    return {
+        return {
 
-      // UI
-      perfectScrollbarSettings,
-      showWholeThread,
+            // UI
+            perfectScrollbarSettings,
+            showWholeThread,
 
-      // useEmail
-      resolveLabelColor,
-    }
-  },
+            // useEmail
+            resolveLabelColor,
+        }
+    },
 }
 </script>
 

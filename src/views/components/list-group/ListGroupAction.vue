@@ -48,16 +48,16 @@ import BCardCode from '@core/components/b-card-code'
 import { codeListGroupAction } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BListGroup,
-    BListGroupItem,
-    BCardText,
-  },
-  data() {
-    return {
-      codeListGroupAction,
-    }
-  },
+    components: {
+        BCardCode,
+        BListGroup,
+        BListGroupItem,
+        BCardText,
+    },
+    data() {
+        return {
+            codeListGroupAction,
+        }
+    },
 }
 </script>

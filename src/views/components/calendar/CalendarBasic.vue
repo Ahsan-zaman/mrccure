@@ -45,7 +45,7 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BRow, BCol, BCalendar, BCardText,
+    BRow, BCol, BCalendar, BCardText,
 } from 'bootstrap-vue'
 import Prism from 'vue-prism-component'
 import 'prismjs'
@@ -53,25 +53,25 @@ import 'prismjs/themes/prism-tomorrow.css'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BRow,
-    BCol,
-    BCalendar,
-    BCardText,
-    Prism,
-  },
-  data() {
-    return {
-      value: '',
-      context: null,
-      codeBasic,
-    }
-  },
-  methods: {
-    onContext(ctx) {
-      this.context = ctx
+    components: {
+        BCardCode,
+        BRow,
+        BCol,
+        BCalendar,
+        BCardText,
+        Prism,
     },
-  },
+    data() {
+        return {
+            value: '',
+            context: null,
+            codeBasic,
+        }
+    },
+    methods: {
+        onContext(ctx) {
+            this.context = ctx
+        },
+    },
 }
 </script>

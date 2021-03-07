@@ -8,9 +8,9 @@
 import useAppConfig from '@core/app-config/useAppConfig'
 
 export default {
-  setup() {
-    const { contentWidth } = useAppConfig()
-    return { contentWidth }
-  },
+    setup() {
+        const { contentWidth } = useAppConfig()
+        return { contentWidth }
+    },
 }
 </script>

@@ -107,40 +107,40 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BRow,
-  BCol,
-  BFormGroup,
-  BFormInput,
-  BFormCheckbox,
-  BForm,
-  BButton,
-  BFormText,
-  BFormDatalist,
-} from 'bootstrap-vue'
-import Ripple from 'vue-ripple-directive'
-import { codeHelper } from './code'
-
-export default {
-  components: {
-    BCardCode,
     BRow,
     BCol,
     BFormGroup,
     BFormInput,
     BFormCheckbox,
     BForm,
-    BFormText,
     BButton,
+    BFormText,
     BFormDatalist,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      options: ['Devloper', 'Manager', 'CEO', 'CTO', 'Full Stack Devloper'],
-      codeHelper,
-    }
-  },
+} from 'bootstrap-vue'
+import Ripple from 'vue-ripple-directive'
+import { codeHelper } from './code'
+
+export default {
+    components: {
+        BCardCode,
+        BRow,
+        BCol,
+        BFormGroup,
+        BFormInput,
+        BFormCheckbox,
+        BForm,
+        BFormText,
+        BButton,
+        BFormDatalist,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            options: ['Devloper', 'Manager', 'CEO', 'CTO', 'Full Stack Devloper'],
+            codeHelper,
+        }
+    },
 }
 </script>

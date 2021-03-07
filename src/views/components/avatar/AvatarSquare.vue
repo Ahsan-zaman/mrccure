@@ -30,15 +30,15 @@ import { BAvatar, BCardText } from 'bootstrap-vue'
 import { codeSquare } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAvatar,
-    BCardText,
-  },
-  data() {
-    return {
-      codeSquare,
-    }
-  },
+    components: {
+        BCardCode,
+        BAvatar,
+        BCardText,
+    },
+    data() {
+        return {
+            codeSquare,
+        }
+    },
 }
 </script>

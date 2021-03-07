@@ -74,74 +74,74 @@
 <script>
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 import {
-  BButton, BListGroup, BListGroupItem, BBadge,
+    BButton, BListGroup, BListGroupItem, BBadge,
 } from 'bootstrap-vue'
 import { isDynamicRouteActive } from '@core/utils/utils'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  directives: {
-    Ripple,
-  },
-  components: {
-
-    // BSV
-    BButton,
-    BListGroup,
-    BListGroupItem,
-    BBadge,
-
-    // 3rd Party
-    VuePerfectScrollbar,
-  },
-  props: {
-    shallShowEmailComposeModal: {
-      type: Boolean,
-      required: true,
+    directives: {
+        Ripple,
     },
-    emailsMeta: {
-      type: Object,
-      required: true,
+    components: {
+
+        // BSV
+        BButton,
+        BListGroup,
+        BListGroupItem,
+        BBadge,
+
+        // 3rd Party
+        VuePerfectScrollbar,
     },
-  },
-  setup() {
-    const perfectScrollbarSettings = {
-      maxScrollbarLength: 60,
-    }
+    props: {
+        shallShowEmailComposeModal: {
+            type: Boolean,
+            required: true,
+        },
+        emailsMeta: {
+            type: Object,
+            required: true,
+        },
+    },
+    setup() {
+        const perfectScrollbarSettings = {
+            maxScrollbarLength: 60,
+        }
 
-    const emailFilters = [
-      { title: 'Inbox', icon: 'MailIcon', route: { name: 'apps-email' } },
-      { title: 'Sent', icon: 'SendIcon', route: { name: 'apps-email-folder', params: { folder: 'sent' } } },
-      { title: 'Draft', icon: 'Edit2Icon', route: { name: 'apps-email-folder', params: { folder: 'draft' } } },
-      { title: 'Starred', icon: 'StarIcon', route: { name: 'apps-email-folder', params: { folder: 'starred' } } },
-      { title: 'Spam', icon: 'InfoIcon', route: { name: 'apps-email-folder', params: { folder: 'spam' } } },
-      { title: 'Trash', icon: 'TrashIcon', route: { name: 'apps-email-folder', params: { folder: 'trash' } } },
-    ]
+        const emailFilters = [
+            { title: 'Inbox', icon: 'MailIcon', route: { name: 'apps-email' } },
+            { title: 'Sent', icon: 'SendIcon', route: { name: 'apps-email-folder', params: { folder: 'sent' } } },
+            { title: 'Draft', icon: 'Edit2Icon', route: { name: 'apps-email-folder', params: { folder: 'draft' } } },
+            { title: 'Starred', icon: 'StarIcon', route: { name: 'apps-email-folder', params: { folder: 'starred' } } },
+            { title: 'Spam', icon: 'InfoIcon', route: { name: 'apps-email-folder', params: { folder: 'spam' } } },
+            { title: 'Trash', icon: 'TrashIcon', route: { name: 'apps-email-folder', params: { folder: 'trash' } } },
+        ]
 
-    const emailLabel = [
-      { title: 'Personal', color: 'success', route: { name: 'apps-email-label', params: { label: 'personal' } } },
-      { title: 'Company', color: 'primary', route: { name: 'apps-email-label', params: { label: 'company' } } },
-      { title: 'Important', color: 'warning', route: { name: 'apps-email-label', params: { label: 'important' } } },
-      { title: 'Private', color: 'danger', route: { name: 'apps-email-label', params: { label: 'private' } } },
-    ]
+        const emailLabel = [
+            { title: 'Personal', color: 'success', route: { name: 'apps-email-label', params: { label: 'personal' } } },
+            { title: 'Company', color: 'primary', route: { name: 'apps-email-label', params: { label: 'company' } } },
+            { title: 'Important', color: 'warning', route: { name: 'apps-email-label', params: { label: 'important' } } },
+            { title: 'Private', color: 'danger', route: { name: 'apps-email-label', params: { label: 'private' } } },
+        ]
 
-    const resolveFilterBadgeColor = filter => {
-      if (filter === 'Draft') return 'light-warning'
-      if (filter === 'Spam') return 'light-danger'
-      return 'light-primary'
-    }
+        const resolveFilterBadgeColor = filter => {
+            if (filter === 'Draft') return 'light-warning'
+            if (filter === 'Spam') return 'light-danger'
+            return 'light-primary'
+        }
 
-    return {
-      // UI
-      perfectScrollbarSettings,
-      isDynamicRouteActive,
-      resolveFilterBadgeColor,
+        return {
+            // UI
+            perfectScrollbarSettings,
+            isDynamicRouteActive,
+            resolveFilterBadgeColor,
 
-      // Filter & Labels
-      emailFilters,
-      emailLabel,
-    }
-  },
+            // Filter & Labels
+            emailFilters,
+            emailLabel,
+        }
+    },
 }
 </script>
 

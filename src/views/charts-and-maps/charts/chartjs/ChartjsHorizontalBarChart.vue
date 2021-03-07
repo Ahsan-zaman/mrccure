@@ -36,28 +36,28 @@
 
 <script>
 import {
-  BCard, BCardBody, BCardHeader, BCardTitle, BCardSubTitle,
+    BCard, BCardBody, BCardHeader, BCardTitle, BCardSubTitle,
 } from 'bootstrap-vue'
 import flatPickr from 'vue-flatpickr-component'
 import ChartjsComponentHorizontalBarChart from './charts-components/ChartjsComponentHorizontalBarChart.vue'
 import chartjsData from './chartjsData'
 
 export default {
-  components: {
-    BCard,
-    BCardBody,
-    BCardHeader,
-    BCardTitle,
-    BCardSubTitle,
-    flatPickr,
-    ChartjsComponentHorizontalBarChart,
-  },
-  data() {
-    return {
-      chartjsData,
-      rangePicker: ['2019-05-01', '2019-05-10'],
-    }
-  },
+    components: {
+        BCard,
+        BCardBody,
+        BCardHeader,
+        BCardTitle,
+        BCardSubTitle,
+        flatPickr,
+        ChartjsComponentHorizontalBarChart,
+    },
+    data() {
+        return {
+            chartjsData,
+            rangePicker: ['2019-05-01', '2019-05-10'],
+        }
+    },
 }
 </script>
 

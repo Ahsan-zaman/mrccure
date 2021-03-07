@@ -360,71 +360,71 @@
 
 <script>
 import {
-  BFormInput, BMedia, BAvatar, BMediaAside, BMediaBody, BImg, BLink, BFormGroup, BInputGroup, BInputGroupAppend,
-  BCard, BRow, BCol, BBadge, BCardText, BDropdown, BDropdownItem, BForm, BFormTextarea, BFormCheckbox, BButton,
+    BFormInput, BMedia, BAvatar, BMediaAside, BMediaBody, BImg, BLink, BFormGroup, BInputGroup, BInputGroupAppend,
+    BCard, BRow, BCol, BBadge, BCardText, BDropdown, BDropdownItem, BForm, BFormTextarea, BFormCheckbox, BButton,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { kFormatter } from '@core/utils/filter'
 import ContentWithSidebar from '@core/layouts/components/content-with-sidebar/ContentWithSidebar.vue'
 
 export default {
-  components: {
-    BFormInput,
-    BMedia,
-    BAvatar,
-    BMediaAside,
-    BMediaBody,
-    BLink,
-    BCard,
-    BRow,
-    BCol,
-    BFormGroup,
-    BInputGroup,
-    BInputGroupAppend,
-    BImg,
-    BBadge,
-    BCardText,
-    BDropdown,
-    BForm,
-    BDropdownItem,
-    BFormTextarea,
-    BFormCheckbox,
-    BButton,
-    ContentWithSidebar,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      search_query: '',
-      commentCheckmark: '',
-      blogDetail: [],
-      blogSidebar: {},
-      socialShareIcons: [
-        'GithubIcon',
-        'GitlabIcon',
-        'FacebookIcon',
-        'TwitterIcon',
-        'LinkedinIcon',
-      ],
-    }
-  },
-  created() {
-    this.$http.get('/blog/list/data/detail').then(res => { this.blogDetail = res.data })
-    this.$http.get('/blog/list/data/sidebar').then(res => { this.blogSidebar = res.data })
-  },
-  methods: {
-    kFormatter,
-    tagsColor(tag) {
-      if (tag === 'Quote') return 'light-info'
-      if (tag === 'Gaming') return 'light-danger'
-      if (tag === 'Fashion') return 'light-primary'
-      if (tag === 'Video') return 'light-warning'
-      if (tag === 'Food') return 'light-success'
-      return 'light-primary'
+    components: {
+        BFormInput,
+        BMedia,
+        BAvatar,
+        BMediaAside,
+        BMediaBody,
+        BLink,
+        BCard,
+        BRow,
+        BCol,
+        BFormGroup,
+        BInputGroup,
+        BInputGroupAppend,
+        BImg,
+        BBadge,
+        BCardText,
+        BDropdown,
+        BForm,
+        BDropdownItem,
+        BFormTextarea,
+        BFormCheckbox,
+        BButton,
+        ContentWithSidebar,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            search_query: '',
+            commentCheckmark: '',
+            blogDetail: [],
+            blogSidebar: {},
+            socialShareIcons: [
+                'GithubIcon',
+                'GitlabIcon',
+                'FacebookIcon',
+                'TwitterIcon',
+                'LinkedinIcon',
+            ],
+        }
+    },
+    created() {
+        this.$http.get('/blog/list/data/detail').then(res => { this.blogDetail = res.data })
+        this.$http.get('/blog/list/data/sidebar').then(res => { this.blogSidebar = res.data })
+    },
+    methods: {
+        kFormatter,
+        tagsColor(tag) {
+            if (tag === 'Quote') return 'light-info'
+            if (tag === 'Gaming') return 'light-danger'
+            if (tag === 'Fashion') return 'light-primary'
+            if (tag === 'Video') return 'light-warning'
+            if (tag === 'Food') return 'light-success'
+            return 'light-primary'
+        },
+    },
 }
 </script>
 

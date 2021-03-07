@@ -47,23 +47,23 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BImg, BContainer, BRow, BCol, BCardText,
+    BImg, BContainer, BRow, BCol, BCardText,
 } from 'bootstrap-vue'
 import { codeThumbnails } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BImg,
-    BContainer,
-    BCardText,
-    BRow,
-    BCol,
-  },
-  data() {
-    return {
-      codeThumbnails,
-    }
-  },
+    components: {
+        BCardCode,
+        BImg,
+        BContainer,
+        BCardText,
+        BRow,
+        BCol,
+    },
+    data() {
+        return {
+            codeThumbnails,
+        }
+    },
 }
 </script>

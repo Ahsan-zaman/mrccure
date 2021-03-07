@@ -41,25 +41,25 @@
 
 <script>
 import {
-  BCard, BCardTitle, BCardBody, BCardHeader, BDropdown, BDropdownItem,
+    BCard, BCardTitle, BCardBody, BCardHeader, BDropdown, BDropdownItem,
 } from 'bootstrap-vue'
 import ChartjsComponentPolarAreaChart from './charts-components/ChartjsComponentPolarAreaChart.vue'
 import chartjsData from './chartjsData'
 
 export default {
-  components: {
-    ChartjsComponentPolarAreaChart,
-    BCard,
-    BCardTitle,
-    BCardBody,
-    BCardHeader,
-    BDropdown,
-    BDropdownItem,
-  },
-  data() {
-    return {
-      chartjsData,
-    }
-  },
+    components: {
+        ChartjsComponentPolarAreaChart,
+        BCard,
+        BCardTitle,
+        BCardBody,
+        BCardHeader,
+        BDropdown,
+        BDropdownItem,
+    },
+    data() {
+        return {
+            chartjsData,
+        }
+    },
 }
 </script>

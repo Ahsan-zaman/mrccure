@@ -31,21 +31,21 @@ import FormTextAreaDebounce from './FormTextAreaDebounce.vue'
 import FormTextAreaCounter from './FormTextAreaCounter.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    FormTextAreaDefault,
-    FormTextAreaRows,
-    FormTextAreaFloatingLabel,
-    FormTextAreaStates,
-    FormTextAreaSize,
-    FormTextAreaDisableResize,
-    FormTextAreaAutoHeight,
-    FormatterTextArea,
-    FormTextAreaReadonly,
-    FormTextAreaDebounce,
-    FormTextAreaCounter,
-  },
+        FormTextAreaDefault,
+        FormTextAreaRows,
+        FormTextAreaFloatingLabel,
+        FormTextAreaStates,
+        FormTextAreaSize,
+        FormTextAreaDisableResize,
+        FormTextAreaAutoHeight,
+        FormatterTextArea,
+        FormTextAreaReadonly,
+        FormTextAreaDebounce,
+        FormTextAreaCounter,
+    },
 }
 </script>

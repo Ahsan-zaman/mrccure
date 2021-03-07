@@ -107,35 +107,35 @@
 
 <script>
 import {
-  BRow, BCol, BCard, BFormRadioGroup, BLink,
+    BRow, BCol, BCard, BFormRadioGroup, BLink,
 } from 'bootstrap-vue'
 import VueSlider from 'vue-slider-component'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BFormRadioGroup,
-    BLink,
-    BCard,
+    components: {
+        BRow,
+        BCol,
+        BFormRadioGroup,
+        BLink,
+        BCard,
 
-    // 3rd Party
-    VueSlider,
-  },
-  props: {
-    filters: {
-      type: Object,
-      required: true,
+        // 3rd Party
+        VueSlider,
     },
-    filterOptions: {
-      type: Object,
-      required: true,
+    props: {
+        filters: {
+            type: Object,
+            required: true,
+        },
+        filterOptions: {
+            type: Object,
+            required: true,
+        },
+        mqShallShowLeftSidebar: {
+            type: Boolean,
+            required: true,
+        },
     },
-    mqShallShowLeftSidebar: {
-      type: Boolean,
-      required: true,
-    },
-  },
 }
 </script>
 

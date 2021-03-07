@@ -48,17 +48,17 @@ import { BPagination, BCardText } from 'bootstrap-vue'
 import { codeSize } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPagination,
-    BCardText,
-  },
-  data() {
-    return {
-      codeSize,
-      currentPage: 1,
-      rows: 100,
-    }
-  },
+    components: {
+        BCardCode,
+        BPagination,
+        BCardText,
+    },
+    data() {
+        return {
+            codeSize,
+            currentPage: 1,
+            rows: 100,
+        }
+    },
 }
 </script>

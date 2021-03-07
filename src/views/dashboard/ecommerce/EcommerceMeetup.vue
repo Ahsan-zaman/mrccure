@@ -82,30 +82,30 @@
 
 <script>
 import {
-  BCard, BImg, BCardBody, BCardText, BCardTitle, BMedia, BMediaAside, BAvatar, BAvatarGroup, VBTooltip, BMediaBody,
+    BCard, BImg, BCardBody, BCardText, BCardTitle, BMedia, BMediaAside, BAvatar, BAvatarGroup, VBTooltip, BMediaBody,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard,
-    BImg,
-    BCardBody,
-    BCardText,
-    BCardTitle,
-    BMedia,
-    BMediaAside,
-    BAvatar,
-    BAvatarGroup,
-    BMediaBody,
-  },
-  directives: {
-    'b-tooltip': VBTooltip,
-  },
-  props: {
-    data: {
-      type: Object,
-      default: () => {},
+    components: {
+        BCard,
+        BImg,
+        BCardBody,
+        BCardText,
+        BCardTitle,
+        BMedia,
+        BMediaAside,
+        BAvatar,
+        BAvatarGroup,
+        BMediaBody,
     },
-  },
+    directives: {
+        'b-tooltip': VBTooltip,
+    },
+    props: {
+        data: {
+            type: Object,
+            default: () => {},
+        },
+    },
 }
 </script>

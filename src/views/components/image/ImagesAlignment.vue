@@ -48,16 +48,16 @@ import { BImg, BCardText } from 'bootstrap-vue'
 import { codeAlignment } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    // eslint-disable-next-line vue/no-unused-components
-    BImg,
-  },
-  data() {
-    return {
-      codeAlignment,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        // eslint-disable-next-line vue/no-unused-components
+        BImg,
+    },
+    data() {
+        return {
+            codeAlignment,
+        }
+    },
 }
 </script>

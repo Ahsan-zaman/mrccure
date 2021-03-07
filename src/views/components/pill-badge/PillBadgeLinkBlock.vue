@@ -58,22 +58,22 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BBadge, BRow, BCol, BCardText,
+    BBadge, BRow, BCol, BCardText,
 } from 'bootstrap-vue'
 import { codeLinkBadge, codeLinkBlock } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BBadge,
-    BRow,
-    BCol,
-  },
-  data() {
-    return {
-      codeLinkBadge, codeLinkBlock,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BBadge,
+        BRow,
+        BCol,
+    },
+    data() {
+        return {
+            codeLinkBadge, codeLinkBlock,
+        }
+    },
 }
 </script>

@@ -49,21 +49,21 @@ import Ripple from 'vue-ripple-directive'
 import { codeVsupport } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAlert,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    'height-fade': heightFade,
-    Ripple,
-  },
-  data() {
-    return {
-      showDismissibleAlert: false,
-      codeVsupport,
-    }
-  },
+    components: {
+        BCardCode,
+        BAlert,
+        BButton,
+        BCardText,
+    },
+    directives: {
+        'height-fade': heightFade,
+        Ripple,
+    },
+    data() {
+        return {
+            showDismissibleAlert: false,
+            codeVsupport,
+        }
+    },
 }
 </script>

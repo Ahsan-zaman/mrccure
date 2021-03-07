@@ -52,21 +52,21 @@ import CalendarCustomClass from './CalendarCustomClass.vue'
 import CalendarInternationalization from './CalendarInternationalization.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    CalendarBasic,
-    CalendarDisableReadonlyStates,
-    CalendarMinMaxRange,
-    CalendarDisableDate,
-    CalendarVariant,
-    CalendarWidth,
-    CalendarStringFormat,
-    CalendarBorderPadding,
-    CalendarSlot,
-    CalendarCustomClass,
-    CalendarInternationalization,
-  },
+        CalendarBasic,
+        CalendarDisableReadonlyStates,
+        CalendarMinMaxRange,
+        CalendarDisableDate,
+        CalendarVariant,
+        CalendarWidth,
+        CalendarStringFormat,
+        CalendarBorderPadding,
+        CalendarSlot,
+        CalendarCustomClass,
+        CalendarInternationalization,
+    },
 }
 </script>

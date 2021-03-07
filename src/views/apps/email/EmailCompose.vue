@@ -258,7 +258,7 @@
 
 <script>
 import {
-  BDropdown, BDropdownItem, BForm, BFormInput, BAvatar, BDropdownDivider,
+    BDropdown, BDropdownItem, BForm, BFormInput, BAvatar, BDropdownDivider,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { ref } from '@vue/composition-api'
@@ -266,80 +266,80 @@ import { quillEditor } from 'vue-quill-editor'
 import vSelect from 'vue-select'
 
 export default {
-  directives: {
-    Ripple,
-  },
-  components: {
-
-    // BSV
-    BDropdown,
-    BDropdownItem,
-    BForm,
-    BFormInput,
-    BAvatar,
-    BDropdownDivider,
-
-    // 3rd Party
-    quillEditor,
-    vSelect,
-  },
-  model: {
-    prop: 'shallShowEmailComposeModal',
-    event: 'update:shall-show-email-compose-modal',
-  },
-  props: {
-    shallShowEmailComposeModal: {
-      type: Boolean,
-      required: true,
+    directives: {
+        Ripple,
     },
-  },
-  setup(_, { emit }) {
-    const composeData = ref({})
-    const showCcField = ref(false)
-    const showBccField = ref(false)
+    components: {
 
-    const editorOption = {
-      modules: {
-        toolbar: '#quill-toolbar',
-      },
-      placeholder: 'Message',
-    }
+        // BSV
+        BDropdown,
+        BDropdownItem,
+        BForm,
+        BFormInput,
+        BAvatar,
+        BDropdownDivider,
 
-    /* eslint-disable global-require */
-    const emailToOptions = [
-      { avatar: require('@/assets/images/avatars/1-small.png'), name: 'Jane Foster' },
-      { avatar: require('@/assets/images/avatars/3-small.png'), name: 'Donna Frank' },
-      { avatar: require('@/assets/images/avatars/5-small.png'), name: 'Gabrielle Robertson' },
-      { avatar: require('@/assets/images/avatars/7-small.png'), name: 'Lori Spears' },
-      { avatar: require('@/assets/images/avatars/9-small.png'), name: 'Sandy Vega' },
-      { avatar: require('@/assets/images/avatars/11-small.png'), name: 'Cheryl May' },
-    ]
-    /* eslint-enable global-require */
+        // 3rd Party
+        quillEditor,
+        vSelect,
+    },
+    model: {
+        prop: 'shallShowEmailComposeModal',
+        event: 'update:shall-show-email-compose-modal',
+    },
+    props: {
+        shallShowEmailComposeModal: {
+            type: Boolean,
+            required: true,
+        },
+    },
+    setup(_, { emit }) {
+        const composeData = ref({})
+        const showCcField = ref(false)
+        const showBccField = ref(false)
 
-    const sendEmail = () => {
-      composeData.value = {}
-      emit('update:shall-show-email-compose-modal', false)
+        const editorOption = {
+            modules: {
+                toolbar: '#quill-toolbar',
+            },
+            placeholder: 'Message',
+        }
 
-      // ? Send your Email
-    }
+        /* eslint-disable global-require */
+        const emailToOptions = [
+            { avatar: require('@/assets/images/avatars/1-small.png'), name: 'Jane Foster' },
+            { avatar: require('@/assets/images/avatars/3-small.png'), name: 'Donna Frank' },
+            { avatar: require('@/assets/images/avatars/5-small.png'), name: 'Gabrielle Robertson' },
+            { avatar: require('@/assets/images/avatars/7-small.png'), name: 'Lori Spears' },
+            { avatar: require('@/assets/images/avatars/9-small.png'), name: 'Sandy Vega' },
+            { avatar: require('@/assets/images/avatars/11-small.png'), name: 'Cheryl May' },
+        ]
+        /* eslint-enable global-require */
 
-    const discardEmail = () => {
-      composeData.value = {}
-      emit('update:shall-show-email-compose-modal', false)
-    }
+        const sendEmail = () => {
+            composeData.value = {}
+            emit('update:shall-show-email-compose-modal', false)
 
-    return {
-      composeData,
-      editorOption,
-      emailToOptions,
-      showCcField,
-      showBccField,
+            // ? Send your Email
+        }
 
-      // Email actions
-      sendEmail,
-      discardEmail,
-    }
-  },
+        const discardEmail = () => {
+            composeData.value = {}
+            emit('update:shall-show-email-compose-modal', false)
+        }
+
+        return {
+            composeData,
+            editorOption,
+            emailToOptions,
+            showCcField,
+            showBccField,
+
+            // Email actions
+            sendEmail,
+            discardEmail,
+        }
+    },
 }
 </script>
 

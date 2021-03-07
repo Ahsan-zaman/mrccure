@@ -28,17 +28,17 @@ import BCardCode from '@core/components/b-card-code'
 import { codeFlush } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BListGroup,
-    BCardText,
-    BListGroupItem,
-  },
+    components: {
+        BCardCode,
+        BListGroup,
+        BCardText,
+        BListGroupItem,
+    },
 
-  data() {
-    return {
-      codeFlush,
-    }
-  },
+    data() {
+        return {
+            codeFlush,
+        }
+    },
 }
 </script>

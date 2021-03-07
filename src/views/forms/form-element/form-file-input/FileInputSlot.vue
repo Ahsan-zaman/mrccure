@@ -39,16 +39,16 @@ import { BFormFile, BBadge, BCardText } from 'bootstrap-vue'
 import { codeSlot } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormFile,
-    BCardText,
-    BBadge,
-  },
-  data() {
-    return {
-      codeSlot,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormFile,
+        BCardText,
+        BBadge,
+    },
+    data() {
+        return {
+            codeSlot,
+        }
+    },
 }
 </script>

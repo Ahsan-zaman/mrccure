@@ -64,52 +64,52 @@ import 'prismjs/themes/prism-tomorrow.css'
 import { codeAnimation } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    draggable,
-    BListGroupItem,
-    BAvatar,
-    BCardText,
-    Prism,
-  },
-  data() {
-    return {
-      codeAnimation,
-      list: [{
-        name: 'Paz Joya',
-        email: 'girliness@spotlike.co.uk',
-      },
-      {
-        name: 'Sunshine Cose',
-        email: 'executrixship@equisized.edu',
-      },
-      {
-        name: 'Alba Dobbin',
-        email: 'bidding@demibob.or',
-      },
-      {
-        name: 'Marlin Hinchee',
-        email: 'preholding@scuffly.co.uk',
-      },
-      {
-        name: 'Leia Atienza',
-        email: 'unmeasurableness@interlamellar.co.uk',
-      },
-      {
-        name: 'Lashawna Vaudrainm',
-        email: 'soaking@khubber.com',
-      },
-      {
-        name: 'Liliana Henscheid',
-        email: 'lecideine@turndown.org',
-      },
-      {
-        name: 'Keven Kolter',
-        email: 'nontenure@anglicanum.co.uk',
-      },
-      ],
-    }
-  },
+    components: {
+        BCardCode,
+        draggable,
+        BListGroupItem,
+        BAvatar,
+        BCardText,
+        Prism,
+    },
+    data() {
+        return {
+            codeAnimation,
+            list: [{
+                name: 'Paz Joya',
+                email: 'girliness@spotlike.co.uk',
+            },
+            {
+                name: 'Sunshine Cose',
+                email: 'executrixship@equisized.edu',
+            },
+            {
+                name: 'Alba Dobbin',
+                email: 'bidding@demibob.or',
+            },
+            {
+                name: 'Marlin Hinchee',
+                email: 'preholding@scuffly.co.uk',
+            },
+            {
+                name: 'Leia Atienza',
+                email: 'unmeasurableness@interlamellar.co.uk',
+            },
+            {
+                name: 'Lashawna Vaudrainm',
+                email: 'soaking@khubber.com',
+            },
+            {
+                name: 'Liliana Henscheid',
+                email: 'lecideine@turndown.org',
+            },
+            {
+                name: 'Keven Kolter',
+                email: 'nontenure@anglicanum.co.uk',
+            },
+            ],
+        }
+    },
 }
 </script>
 

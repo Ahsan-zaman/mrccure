@@ -45,32 +45,32 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormDatepicker, BFormGroup, BFormRadio, BFormRadioGroup, BCardText,
+    BFormDatepicker, BFormGroup, BFormRadio, BFormRadioGroup, BCardText,
 } from 'bootstrap-vue'
 import { codeState } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormDatepicker,
-    BFormGroup,
-    BFormRadio,
-    BFormRadioGroup,
-  },
-  data() {
-    return {
-      state: 'disabled',
-      codeState,
-    }
-  },
-  computed: {
-    disabled() {
-      return this.state === 'disabled'
+    components: {
+        BCardCode,
+        BCardText,
+        BFormDatepicker,
+        BFormGroup,
+        BFormRadio,
+        BFormRadioGroup,
     },
-    readonly() {
-      return this.state === 'readonly'
+    data() {
+        return {
+            state: 'disabled',
+            codeState,
+        }
     },
-  },
+    computed: {
+        disabled() {
+            return this.state === 'disabled'
+        },
+        readonly() {
+            return this.state === 'readonly'
+        },
+    },
 }
 </script>

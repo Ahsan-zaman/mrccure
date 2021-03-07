@@ -2,19 +2,19 @@
 import { Radar } from 'vue-chartjs'
 
 export default {
-  extends: Radar,
-  props: {
-    data: {
-      type: Object,
-      default: null,
+    extends: Radar,
+    props: {
+        data: {
+            type: Object,
+            default: null,
+        },
+        options: {
+            type: Object,
+            default: null,
+        },
     },
-    options: {
-      type: Object,
-      default: null,
+    mounted() {
+        this.renderChart(this.data, this.options)
     },
-  },
-  mounted() {
-    this.renderChart(this.data, this.options)
-  },
 }
 </script>

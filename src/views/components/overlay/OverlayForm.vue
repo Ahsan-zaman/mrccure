@@ -147,89 +147,89 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BButton,
-  BOverlay,
-  BForm,
-  BProgress,
-  BFormGroup,
-  BInputGroup,
-  BInputGroupPrepend,
-  BFormInput,
-  BFormFile,
-  BCardText,
-} from 'bootstrap-vue'
-import Ripple from 'vue-ripple-directive'
-import { codeForm } from './code'
-
-export default {
-  components: {
     BButton,
     BOverlay,
     BForm,
     BProgress,
     BFormGroup,
     BInputGroup,
-    BCardCode,
     BInputGroupPrepend,
     BFormInput,
     BFormFile,
     BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      busy: false,
-      processing: false,
-      counter: 1,
-      interval: null,
-      codeForm,
-    }
-  },
-  beforeDestroy() {
-    this.clearInterval()
-  },
-  methods: {
-    clearInterval() {
-      if (this.interval) {
-        clearInterval(this.interval)
-        this.interval = null
-      }
+} from 'bootstrap-vue'
+import Ripple from 'vue-ripple-directive'
+import { codeForm } from './code'
+
+export default {
+    components: {
+        BButton,
+        BOverlay,
+        BForm,
+        BProgress,
+        BFormGroup,
+        BInputGroup,
+        BCardCode,
+        BInputGroupPrepend,
+        BFormInput,
+        BFormFile,
+        BCardText,
     },
-    onShown() {
-      // Focus the dialog prompt
-      this.$refs.dialog.focus()
+    directives: {
+        Ripple,
     },
-    onHidden() {
-      // In this case, we return focus to the submit button
-      // You may need to alter this based on your application requirements
-      this.$refs.submit.focus()
-    },
-    onSubmit() {
-      this.processing = false
-      this.busy = true
-    },
-    onCancel() {
-      this.busy = false
-    },
-    onOK() {
-      this.counter = 1
-      this.processing = true
-      // Simulate an async request
-      this.clearInterval()
-      this.interval = setInterval(() => {
-        if (this.counter < 20) {
-          this.counter += 1
-        } else {
-          this.clearInterval()
-          this.$nextTick(() => {
-            // eslint-disable-next-line
-            this.busy = this.processing = false
-          })
+    data() {
+        return {
+            busy: false,
+            processing: false,
+            counter: 1,
+            interval: null,
+            codeForm,
         }
-      }, 350)
     },
-  },
+    beforeDestroy() {
+        this.clearInterval()
+    },
+    methods: {
+        clearInterval() {
+            if (this.interval) {
+                clearInterval(this.interval)
+                this.interval = null
+            }
+        },
+        onShown() {
+            // Focus the dialog prompt
+            this.$refs.dialog.focus()
+        },
+        onHidden() {
+            // In this case, we return focus to the submit button
+            // You may need to alter this based on your application requirements
+            this.$refs.submit.focus()
+        },
+        onSubmit() {
+            this.processing = false
+            this.busy = true
+        },
+        onCancel() {
+            this.busy = false
+        },
+        onOK() {
+            this.counter = 1
+            this.processing = true
+            // Simulate an async request
+            this.clearInterval()
+            this.interval = setInterval(() => {
+                if (this.counter < 20) {
+                    this.counter += 1
+                } else {
+                    this.clearInterval()
+                    this.$nextTick(() => {
+                        // eslint-disable-next-line
+            this.busy = this.processing = false
+                    })
+                }
+            }, 350)
+        },
+    },
 }
 </script>

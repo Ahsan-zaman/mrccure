@@ -65,18 +65,18 @@ import Ripple from 'vue-ripple-directive'
 import { codeButtonFlat } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeButtonFlat,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeButtonFlat,
+        }
+    },
 }
 </script>

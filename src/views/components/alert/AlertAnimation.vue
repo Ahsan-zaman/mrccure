@@ -94,31 +94,31 @@ import Ripple from 'vue-ripple-directive'
 import { codeAnimation } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAlert,
-    BCardText,
-    BButton,
-  },
-  directives: {
-    heightFade,
-    Ripple,
-  },
-  data() {
-    return {
-      dismissSecs: 50,
-      dismissCountDown: 0,
-      showDismissibleAlert: false,
-      codeAnimation,
-    }
-  },
-  methods: {
-    countDownChanged(dismissCountDown) {
-      this.dismissCountDown = dismissCountDown
+    components: {
+        BCardCode,
+        BAlert,
+        BCardText,
+        BButton,
     },
-    showAlert() {
-      this.dismissCountDown = this.dismissSecs
+    directives: {
+        heightFade,
+        Ripple,
     },
-  },
+    data() {
+        return {
+            dismissSecs: 50,
+            dismissCountDown: 0,
+            showDismissibleAlert: false,
+            codeAnimation,
+        }
+    },
+    methods: {
+        countDownChanged(dismissCountDown) {
+            this.dismissCountDown = dismissCountDown
+        },
+        showAlert() {
+            this.dismissCountDown = this.dismissSecs
+        },
+    },
 }
 </script>

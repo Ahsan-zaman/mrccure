@@ -35,14 +35,14 @@ import TimelineCustomContent from './TimelineCustomContent.vue'
 import TimelineCustomContentWithIcon from './TimelineCustomContentWithIcon.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    TimelineBasic,
-    TimelineWithIcon,
-    TimelineCustomContent,
-    TimelineCustomContentWithIcon,
-  },
+    components: {
+        BRow,
+        BCol,
+        TimelineBasic,
+        TimelineWithIcon,
+        TimelineCustomContent,
+        TimelineCustomContentWithIcon,
+    },
 }
 </script>
 

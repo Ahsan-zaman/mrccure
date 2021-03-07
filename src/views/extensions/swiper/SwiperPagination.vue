@@ -37,32 +37,32 @@ import 'swiper/css/swiper.css'
 import { codePagination } from './code'
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-    BCardCode,
-    BImg,
-  },
-  data() {
-    return {
-      codePagination,
+    components: {
+        Swiper,
+        SwiperSlide,
+        BCardCode,
+        BImg,
+    },
+    data() {
+        return {
+            codePagination,
 
-      /* eslint-disable global-require */
-      swiperData: [
-        { img: require('@/assets/images/banner/banner-12.jpg') },
-        { img: require('@/assets/images/banner/banner-9.jpg') },
-        { img: require('@/assets/images/banner/banner-8.jpg') },
-        { img: require('@/assets/images/banner/banner-7.jpg') },
-        { img: require('@/assets/images/banner/banner-20.jpg') },
-      ],
-      /* eslint-disable global-require */
+            /* eslint-disable global-require */
+            swiperData: [
+                { img: require('@/assets/images/banner/banner-12.jpg') },
+                { img: require('@/assets/images/banner/banner-9.jpg') },
+                { img: require('@/assets/images/banner/banner-8.jpg') },
+                { img: require('@/assets/images/banner/banner-7.jpg') },
+                { img: require('@/assets/images/banner/banner-20.jpg') },
+            ],
+            /* eslint-disable global-require */
 
-      swiperOptions: {
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      },
-    }
-  },
+            swiperOptions: {
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            },
+        }
+    },
 }
 </script>

@@ -156,28 +156,28 @@
 
 <script>
 import {
-  BCard, BButton, BAvatar, BRow, BCol,
+    BCard, BButton, BAvatar, BRow, BCol,
 } from 'bootstrap-vue'
 import { avatarText } from '@core/utils/filter'
 import useUsersList from '../users-list/useUsersList'
 
 export default {
-  components: {
-    BCard, BButton, BRow, BCol, BAvatar,
-  },
-  props: {
-    userData: {
-      type: Object,
-      required: true,
+    components: {
+        BCard, BButton, BRow, BCol, BAvatar,
     },
-  },
-  setup() {
-    const { resolveUserRoleVariant } = useUsersList()
-    return {
-      avatarText,
-      resolveUserRoleVariant,
-    }
-  },
+    props: {
+        userData: {
+            type: Object,
+            required: true,
+        },
+    },
+    setup() {
+        const { resolveUserRoleVariant } = useUsersList()
+        return {
+            avatarText,
+            resolveUserRoleVariant,
+        }
+    },
 }
 </script>
 

@@ -80,15 +80,15 @@ import { BProgress, BCardText } from 'bootstrap-vue'
 import { codeLabel } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BProgress,
-    BCardText,
-  },
-  data() {
-    return {
-      codeLabel,
-    }
-  },
+    components: {
+        BCardCode,
+        BProgress,
+        BCardText,
+    },
+    data() {
+        return {
+            codeLabel,
+        }
+    },
 }
 </script>

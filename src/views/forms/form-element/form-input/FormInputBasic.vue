@@ -109,22 +109,22 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormInput, BRow, BCol, BFormGroup,
+    BFormInput, BRow, BCol, BFormGroup,
 } from 'bootstrap-vue'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormInput,
-    BFormGroup,
-    BRow,
-    BCol,
-  },
-  data() {
-    return {
-      codeBasic,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormInput,
+        BFormGroup,
+        BRow,
+        BCol,
+    },
+    data() {
+        return {
+            codeBasic,
+        }
+    },
 }
 </script>

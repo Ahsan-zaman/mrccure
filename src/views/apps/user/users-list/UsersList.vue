@@ -213,8 +213,8 @@
 
 <script>
 import {
-  BCard, BRow, BCol, BFormInput, BButton, BTable, BMedia, BAvatar, BLink,
-  BBadge, BDropdown, BDropdownItem, BPagination,
+    BCard, BRow, BCol, BFormInput, BButton, BTable, BMedia, BAvatar, BLink,
+    BBadge, BDropdown, BDropdownItem, BPagination,
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import store from '@/store'
@@ -226,121 +226,121 @@ import userStoreModule from '../userStoreModule'
 import UserListAddNew from './UserListAddNew.vue'
 
 export default {
-  components: {
-    UsersListFilters,
-    UserListAddNew,
+    components: {
+        UsersListFilters,
+        UserListAddNew,
 
-    BCard,
-    BRow,
-    BCol,
-    BFormInput,
-    BButton,
-    BTable,
-    BMedia,
-    BAvatar,
-    BLink,
-    BBadge,
-    BDropdown,
-    BDropdownItem,
-    BPagination,
+        BCard,
+        BRow,
+        BCol,
+        BFormInput,
+        BButton,
+        BTable,
+        BMedia,
+        BAvatar,
+        BLink,
+        BBadge,
+        BDropdown,
+        BDropdownItem,
+        BPagination,
 
-    vSelect,
-  },
-  setup() {
-    const USER_APP_STORE_MODULE_NAME = 'app-user'
+        vSelect,
+    },
+    setup() {
+        const USER_APP_STORE_MODULE_NAME = 'app-user'
 
-    // Register module
-    if (!store.hasModule(USER_APP_STORE_MODULE_NAME)) store.registerModule(USER_APP_STORE_MODULE_NAME, userStoreModule)
+        // Register module
+        if (!store.hasModule(USER_APP_STORE_MODULE_NAME)) store.registerModule(USER_APP_STORE_MODULE_NAME, userStoreModule)
 
-    // UnRegister on leave
-    onUnmounted(() => {
-      if (store.hasModule(USER_APP_STORE_MODULE_NAME)) store.unregisterModule(USER_APP_STORE_MODULE_NAME)
-    })
+        // UnRegister on leave
+        onUnmounted(() => {
+            if (store.hasModule(USER_APP_STORE_MODULE_NAME)) store.unregisterModule(USER_APP_STORE_MODULE_NAME)
+        })
 
-    const isAddNewUserSidebarActive = ref(false)
+        const isAddNewUserSidebarActive = ref(false)
 
-    const roleOptions = [
-      { label: 'Admin', value: 'admin' },
-      { label: 'Author', value: 'author' },
-      { label: 'Editor', value: 'editor' },
-      { label: 'Maintainer', value: 'maintainer' },
-      { label: 'Subscriber', value: 'subscriber' },
-    ]
+        const roleOptions = [
+            { label: 'Admin', value: 'admin' },
+            { label: 'Author', value: 'author' },
+            { label: 'Editor', value: 'editor' },
+            { label: 'Maintainer', value: 'maintainer' },
+            { label: 'Subscriber', value: 'subscriber' },
+        ]
 
-    const planOptions = [
-      { label: 'Basic', value: 'basic' },
-      { label: 'Company', value: 'company' },
-      { label: 'Enterprise', value: 'enterprise' },
-      { label: 'Team', value: 'team' },
-    ]
+        const planOptions = [
+            { label: 'Basic', value: 'basic' },
+            { label: 'Company', value: 'company' },
+            { label: 'Enterprise', value: 'enterprise' },
+            { label: 'Team', value: 'team' },
+        ]
 
-    const statusOptions = [
-      { label: 'Pending', value: 'pending' },
-      { label: 'Active', value: 'active' },
-      { label: 'Inactive', value: 'inactive' },
-    ]
+        const statusOptions = [
+            { label: 'Pending', value: 'pending' },
+            { label: 'Active', value: 'active' },
+            { label: 'Inactive', value: 'inactive' },
+        ]
 
-    const {
-      fetchUsers,
-      tableColumns,
-      perPage,
-      currentPage,
-      totalUsers,
-      dataMeta,
-      perPageOptions,
-      searchQuery,
-      sortBy,
-      isSortDirDesc,
-      refUserListTable,
-      refetchData,
+        const {
+            fetchUsers,
+            tableColumns,
+            perPage,
+            currentPage,
+            totalUsers,
+            dataMeta,
+            perPageOptions,
+            searchQuery,
+            sortBy,
+            isSortDirDesc,
+            refUserListTable,
+            refetchData,
 
-      // UI
-      resolveUserRoleVariant,
-      resolveUserRoleIcon,
-      resolveUserStatusVariant,
+            // UI
+            resolveUserRoleVariant,
+            resolveUserRoleIcon,
+            resolveUserStatusVariant,
 
-      // Extra Filters
-      roleFilter,
-      planFilter,
-      statusFilter,
-    } = useUsersList()
+            // Extra Filters
+            roleFilter,
+            planFilter,
+            statusFilter,
+        } = useUsersList()
 
-    return {
+        return {
 
-      // Sidebar
-      isAddNewUserSidebarActive,
+            // Sidebar
+            isAddNewUserSidebarActive,
 
-      fetchUsers,
-      tableColumns,
-      perPage,
-      currentPage,
-      totalUsers,
-      dataMeta,
-      perPageOptions,
-      searchQuery,
-      sortBy,
-      isSortDirDesc,
-      refUserListTable,
-      refetchData,
+            fetchUsers,
+            tableColumns,
+            perPage,
+            currentPage,
+            totalUsers,
+            dataMeta,
+            perPageOptions,
+            searchQuery,
+            sortBy,
+            isSortDirDesc,
+            refUserListTable,
+            refetchData,
 
-      // Filter
-      avatarText,
+            // Filter
+            avatarText,
 
-      // UI
-      resolveUserRoleVariant,
-      resolveUserRoleIcon,
-      resolveUserStatusVariant,
+            // UI
+            resolveUserRoleVariant,
+            resolveUserRoleIcon,
+            resolveUserStatusVariant,
 
-      roleOptions,
-      planOptions,
-      statusOptions,
+            roleOptions,
+            planOptions,
+            statusOptions,
 
-      // Extra Filters
-      roleFilter,
-      planFilter,
-      statusFilter,
-    }
-  },
+            // Extra Filters
+            roleFilter,
+            planFilter,
+            statusFilter,
+        }
+    },
 }
 </script>
 

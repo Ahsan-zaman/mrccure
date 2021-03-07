@@ -123,31 +123,31 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BRow, BCol, BFormGroup, BFormInput, BFormCheckbox, BForm, BButton, BInputGroup, BInputGroupPrepend,
+    BRow, BCol, BFormGroup, BFormInput, BFormCheckbox, BForm, BButton, BInputGroup, BInputGroupPrepend,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeVerticalIcon } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BRow,
-    BCol,
-    BFormGroup,
-    BFormInput,
-    BFormCheckbox,
-    BInputGroup,
-    BInputGroupPrepend,
-    BForm,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeVerticalIcon,
-    }
-  },
+    components: {
+        BCardCode,
+        BRow,
+        BCol,
+        BFormGroup,
+        BFormInput,
+        BFormCheckbox,
+        BInputGroup,
+        BInputGroupPrepend,
+        BForm,
+        BButton,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeVerticalIcon,
+        }
+    },
 }
 </script>

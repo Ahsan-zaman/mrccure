@@ -59,25 +59,25 @@ import Ripple from 'vue-ripple-directive'
 import { codeClearing } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormFile,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      file: null,
-      codeClearing,
-    }
-  },
-  methods: {
-    clearFiles() {
-      this.$refs['file-input'].reset()
+    components: {
+        BCardCode,
+        BFormFile,
+        BButton,
+        BCardText,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            file: null,
+            codeClearing,
+        }
+    },
+    methods: {
+        clearFiles() {
+            this.$refs['file-input'].reset()
+        },
+    },
 }
 </script>

@@ -60,7 +60,7 @@
 
 <script>
 import {
-  BRow, BCol, BFormGroup, BCardText,
+    BRow, BCol, BFormGroup, BCardText,
 } from 'bootstrap-vue'
 
 import BCardCode from '@core/components/b-card-code'
@@ -68,43 +68,43 @@ import vSelect from 'vue-select'
 import { codeVueBasic } from './code'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BFormGroup,
-    BCardText,
+    components: {
+        BRow,
+        BCol,
+        BFormGroup,
+        BCardText,
 
-    BCardCode,
-    vSelect,
-  },
-  data() {
-    return {
-      codeVueBasic,
-      selected: { title: 'Square' },
-      selected1: {
-        title: 'Aperture',
-        icon: 'ApertureIcon',
-      },
-      option: [{ title: 'Square' }, { title: 'Rectangle' }, { title: 'Rombo' }, { title: 'Romboid' }],
-      books: [
-        {
-          title: 'Aperture',
-          icon: 'ApertureIcon',
-        },
-        {
-          title: 'Codepen',
-          icon: 'CodepenIcon',
-        },
-        {
-          title: 'Globe ',
-          icon: 'GlobeIcon',
-        },
-        {
-          title: 'Instagram ',
-          icon: 'InstagramIcon',
-        },
-      ],
-    }
-  },
+        BCardCode,
+        vSelect,
+    },
+    data() {
+        return {
+            codeVueBasic,
+            selected: { title: 'Square' },
+            selected1: {
+                title: 'Aperture',
+                icon: 'ApertureIcon',
+            },
+            option: [{ title: 'Square' }, { title: 'Rectangle' }, { title: 'Rombo' }, { title: 'Romboid' }],
+            books: [
+                {
+                    title: 'Aperture',
+                    icon: 'ApertureIcon',
+                },
+                {
+                    title: 'Codepen',
+                    icon: 'CodepenIcon',
+                },
+                {
+                    title: 'Globe ',
+                    icon: 'GlobeIcon',
+                },
+                {
+                    title: 'Instagram ',
+                    icon: 'InstagramIcon',
+                },
+            ],
+        }
+    },
 }
 </script>

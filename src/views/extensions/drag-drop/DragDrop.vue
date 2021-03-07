@@ -17,14 +17,14 @@ import DragDropClone from './DragDropClone.vue'
 import DragDropAnimation from './DragDropAnimation.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    DragDropSimple,
-    DragDropMultipleList,
-    DragDropClone,
-    DragDropAnimation,
-  },
+        DragDropSimple,
+        DragDropMultipleList,
+        DragDropClone,
+        DragDropAnimation,
+    },
 }
 </script>

@@ -27,50 +27,50 @@ import AppTour from '@core/components/app-tour/AppTour.vue'
 import { codeTour } from './code'
 
 export default {
-  name: 'ShepherdExample',
-  components: {
-    BCardCode,
-    BButton,
-    AppTour,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeTour,
-      steps: [
-        {
-          target: '#tour-card',
-          header: {
-            title: 'Card',
-          },
-          content: 'This card contains demo for the tour.',
-        },
-        {
-          target: '#tour-card .icon-code',
-          header: {
-            title: 'View demo Source',
-          },
-          content: 'If you ever find your self confused, you can click on this code icon to check the source of current demo.',
-        },
-        {
-          target: '#tour-card .btn',
-          header: {
-            title: 'Trigger Tour',
-          },
-          content: 'You can click on this button to trigger the tour.',
-        },
-      ],
-    }
-  },
-  methods: {
-
-    // tour steps
-    tourStart() {
-      this.$tours.vuexyTour.start()
+    name: 'ShepherdExample',
+    components: {
+        BCardCode,
+        BButton,
+        AppTour,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeTour,
+            steps: [
+                {
+                    target: '#tour-card',
+                    header: {
+                        title: 'Card',
+                    },
+                    content: 'This card contains demo for the tour.',
+                },
+                {
+                    target: '#tour-card .icon-code',
+                    header: {
+                        title: 'View demo Source',
+                    },
+                    content: 'If you ever find your self confused, you can click on this code icon to check the source of current demo.',
+                },
+                {
+                    target: '#tour-card .btn',
+                    header: {
+                        title: 'Trigger Tour',
+                    },
+                    content: 'You can click on this button to trigger the tour.',
+                },
+            ],
+        }
+    },
+    methods: {
+
+        // tour steps
+        tourStart() {
+            this.$tours.vuexyTour.start()
+        },
+    },
 }
 </script>
 

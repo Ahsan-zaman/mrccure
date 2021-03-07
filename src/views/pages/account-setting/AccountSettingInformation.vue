@@ -110,7 +110,7 @@
 
 <script>
 import {
-  BButton, BForm, BFormGroup, BFormInput, BRow, BCol, BCard, BFormTextarea,
+    BButton, BForm, BFormGroup, BFormInput, BRow, BCol, BCard, BFormTextarea,
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import flatPickr from 'vue-flatpickr-component'
@@ -121,43 +121,43 @@ import Cleave from 'vue-cleave-component'
 import 'cleave.js/dist/addons/cleave-phone.us'
 
 export default {
-  components: {
-    BButton,
-    BForm,
-    BFormGroup,
-    BFormInput,
-    BRow,
-    BCol,
-    BCard,
-    BFormTextarea,
-    vSelect,
-    flatPickr,
-    Cleave,
-  },
-  directives: {
-    Ripple,
-  },
-  props: {
-    informationData: {
-      type: Object,
-      default: () => {},
+    components: {
+        BButton,
+        BForm,
+        BFormGroup,
+        BFormInput,
+        BRow,
+        BCol,
+        BCard,
+        BFormTextarea,
+        vSelect,
+        flatPickr,
+        Cleave,
     },
-  },
-  data() {
-    return {
-      countryOption: ['USA', 'India', 'Canada'],
-      localOptions: JSON.parse(JSON.stringify(this.informationData)),
-      clevePhone: {
-        phone: true,
-        phoneRegionCode: 'US',
-      },
-    }
-  },
-  methods: {
-    resetForm() {
-      this.localOptions = JSON.parse(JSON.stringify(this.informationData))
+    directives: {
+        Ripple,
     },
-  },
+    props: {
+        informationData: {
+            type: Object,
+            default: () => {},
+        },
+    },
+    data() {
+        return {
+            countryOption: ['USA', 'India', 'Canada'],
+            localOptions: JSON.parse(JSON.stringify(this.informationData)),
+            clevePhone: {
+                phone: true,
+                phoneRegionCode: 'US',
+            },
+        }
+    },
+    methods: {
+        resetForm() {
+            this.localOptions = JSON.parse(JSON.stringify(this.informationData))
+        },
+    },
 }
 </script>
 

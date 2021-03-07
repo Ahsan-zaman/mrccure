@@ -44,26 +44,26 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BOverlay, BButton, BCard, BCardText,
+    BOverlay, BButton, BCard, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeSpinner } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BOverlay,
-    BButton,
-    BCard,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeSpinner,
-    }
-  },
+    components: {
+        BCardCode,
+        BOverlay,
+        BButton,
+        BCard,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeSpinner,
+        }
+    },
 }
 </script>

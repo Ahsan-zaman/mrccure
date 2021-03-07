@@ -88,47 +88,47 @@
 
 <script>
 import {
-  BCard, BCardBody, BImg, BCardText, BLink, BButton,
+    BCard, BCardBody, BImg, BCardText, BLink, BButton,
 } from 'bootstrap-vue'
 import store from '@/store'
 import { ref } from '@vue/composition-api'
 import { useEcommerce, useEcommerceUi } from '../useEcommerce'
 
 export default {
-  components: {
-    BCard, BCardBody, BImg, BCardText, BLink, BButton,
-  },
-  setup() {
-    const { handleWishlistCartActionClick } = useEcommerceUi()
+    components: {
+        BCard, BCardBody, BImg, BCardText, BLink, BButton,
+    },
+    setup() {
+        const { handleWishlistCartActionClick } = useEcommerceUi()
 
-    const products = ref([])
+        const products = ref([])
 
-    const { removeProductFromWishlist } = useEcommerce()
-    const removeProductFromWishlistClick = product => {
-      removeProductFromWishlist(product.id)
-        .then(() => {
-          const productIndex = products.value.findIndex(p => p.id === product.id)
-          products.value.splice(productIndex, 1)
-        })
-    }
+        const { removeProductFromWishlist } = useEcommerce()
+        const removeProductFromWishlistClick = product => {
+            removeProductFromWishlist(product.id)
+                .then(() => {
+                    const productIndex = products.value.findIndex(p => p.id === product.id)
+                    products.value.splice(productIndex, 1)
+                })
+        }
 
-    const fetchWishlistProducts = () => {
-      store.dispatch('app-ecommerce/fetchWishlistProducts')
-        .then(response => {
-          products.value = response.data.products
-        })
-    }
+        const fetchWishlistProducts = () => {
+            store.dispatch('app-ecommerce/fetchWishlistProducts')
+                .then(response => {
+                    products.value = response.data.products
+                })
+        }
 
-    fetchWishlistProducts()
+        fetchWishlistProducts()
 
-    return {
-      products,
+        return {
+            products,
 
-      // UI
-      handleWishlistCartActionClick,
-      removeProductFromWishlistClick,
-    }
-  },
+            // UI
+            handleWishlistCartActionClick,
+            removeProductFromWishlistClick,
+        }
+    },
 }
 </script>
 

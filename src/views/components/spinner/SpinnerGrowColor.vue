@@ -30,16 +30,16 @@ import { BSpinner, BCardText } from 'bootstrap-vue'
 import { codeGrowColor } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BSpinner,
-    BCardText,
-  },
-  data() {
-    return {
-      variants: ['primary', 'secondary', 'danger', 'warning', 'success', 'info', 'light', 'dark'],
-      codeGrowColor,
-    }
-  },
+    components: {
+        BCardCode,
+        BSpinner,
+        BCardText,
+    },
+    data() {
+        return {
+            variants: ['primary', 'secondary', 'danger', 'warning', 'success', 'info', 'light', 'dark'],
+            codeGrowColor,
+        }
+    },
 }
 </script>

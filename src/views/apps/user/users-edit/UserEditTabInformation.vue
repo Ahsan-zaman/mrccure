@@ -274,56 +274,56 @@
 
 <script>
 import {
-  BRow, BCol, BForm, BFormGroup, BFormInput, BFormRadioGroup, BFormCheckboxGroup, BButton,
+    BRow, BCol, BForm, BFormGroup, BFormInput, BFormRadioGroup, BFormCheckboxGroup, BButton,
 } from 'bootstrap-vue'
 import flatPickr from 'vue-flatpickr-component'
 import { ref } from '@vue/composition-api'
 import vSelect from 'vue-select'
 
 export default {
-  components: {
-    BRow, BCol, BForm, BFormGroup, flatPickr, BFormInput, vSelect, BFormRadioGroup, BFormCheckboxGroup, BButton,
-  },
-  setup() {
-    const userDataInfo = ref({
-      dob: null,
-      mobile: '+6595895857',
-      website: 'https://rowboat.com/insititious/Angelo',
-      language: 'French',
-      gender: 'female',
-      contactOptions: ['Email', 'Message'],
-      addressLine1: 'A-65, Belvedere Streets',
-      addressLine2: '',
-      postcode: '',
-      city: 'New York',
-      state: '',
-      country: '',
-    })
+    components: {
+        BRow, BCol, BForm, BFormGroup, flatPickr, BFormInput, vSelect, BFormRadioGroup, BFormCheckboxGroup, BButton,
+    },
+    setup() {
+        const userDataInfo = ref({
+            dob: null,
+            mobile: '+6595895857',
+            website: 'https://rowboat.com/insititious/Angelo',
+            language: 'French',
+            gender: 'female',
+            contactOptions: ['Email', 'Message'],
+            addressLine1: 'A-65, Belvedere Streets',
+            addressLine2: '',
+            postcode: '',
+            city: 'New York',
+            state: '',
+            country: '',
+        })
 
-    const languageOptions = [
-      'English',
-      'Spanish',
-      'French',
-      'Russian',
-      'German',
-      'Arabic',
-      'Sanskrit',
-    ]
+        const languageOptions = [
+            'English',
+            'Spanish',
+            'French',
+            'Russian',
+            'German',
+            'Arabic',
+            'Sanskrit',
+        ]
 
-    const genderOptions = [
-      { text: 'Male', value: 'male' },
-      { text: 'Female', value: 'female' },
-    ]
+        const genderOptions = [
+            { text: 'Male', value: 'male' },
+            { text: 'Female', value: 'female' },
+        ]
 
-    const contactOptionsOptions = ['Email', 'Message', 'Phone']
+        const contactOptionsOptions = ['Email', 'Message', 'Phone']
 
-    return {
-      userDataInfo,
-      languageOptions,
-      genderOptions,
-      contactOptionsOptions,
-    }
-  },
+        return {
+            userDataInfo,
+            languageOptions,
+            genderOptions,
+            contactOptionsOptions,
+        }
+    },
 }
 </script>
 

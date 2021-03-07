@@ -47,41 +47,41 @@
 
 <script>
 import {
-  BButton, BFormGroup, BFormCheckboxGroup, BFormCheckbox, BImg,
+    BButton, BFormGroup, BFormCheckboxGroup, BFormCheckbox, BImg,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import useCalendarSidebar from './useCalendarSidebar'
 
 export default {
-  directives: {
-    Ripple,
-  },
-  components: {
-    BButton,
-    BImg,
-    BFormCheckbox,
-    BFormGroup,
-    BFormCheckboxGroup,
-  },
-  props: {
-    isEventHandlerSidebarActive: {
-      type: Boolean,
-      require: true,
+    directives: {
+        Ripple,
     },
-  },
-  setup() {
-    const {
-      calendarOptions,
-      selectedCalendars,
-      checkAll,
-    } = useCalendarSidebar()
+    components: {
+        BButton,
+        BImg,
+        BFormCheckbox,
+        BFormGroup,
+        BFormCheckboxGroup,
+    },
+    props: {
+        isEventHandlerSidebarActive: {
+            type: Boolean,
+            require: true,
+        },
+    },
+    setup() {
+        const {
+            calendarOptions,
+            selectedCalendars,
+            checkAll,
+        } = useCalendarSidebar()
 
-    return {
-      calendarOptions,
-      selectedCalendars,
-      checkAll,
-    }
-  },
+        return {
+            calendarOptions,
+            selectedCalendars,
+            checkAll,
+        }
+    },
 }
 </script>
 

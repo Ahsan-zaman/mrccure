@@ -49,24 +49,24 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormTimepicker, BInputGroup, BFormInput, BInputGroupAppend, BCardText,
+    BFormTimepicker, BInputGroup, BFormInput, BInputGroupAppend, BCardText,
 } from 'bootstrap-vue'
 import { codeButtonOnly } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormTimepicker,
-    BInputGroup,
-    BFormInput,
-    BCardText,
-    BInputGroupAppend,
-  },
-  data() {
-    return {
-      value: '',
-      codeButtonOnly,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormTimepicker,
+        BInputGroup,
+        BFormInput,
+        BCardText,
+        BInputGroupAppend,
+    },
+    data() {
+        return {
+            value: '',
+            codeButtonOnly,
+        }
+    },
 }
 </script>

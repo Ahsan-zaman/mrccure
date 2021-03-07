@@ -155,86 +155,86 @@
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import VuexyLogo from '@core/layouts/components/Logo.vue'
 import {
-  BRow, BCol, BCardTitle, BCardText, BForm, BFormGroup, BInputGroup, BInputGroupAppend, BLink, BFormInput, BButton, BImg,
+    BRow, BCol, BCardTitle, BCardText, BForm, BFormGroup, BInputGroup, BInputGroupAppend, BLink, BFormInput, BButton, BImg,
 } from 'bootstrap-vue'
 import { required } from '@validations'
 import store from '@/store/index'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
 
 export default {
-  components: {
-    VuexyLogo,
-    BRow,
-    BCol,
-    BButton,
-    BCardTitle,
-    BCardText,
-    BForm,
-    BFormGroup,
-    BImg,
-    BInputGroup,
-    BLink,
-    BFormInput,
-    BInputGroupAppend,
-    ValidationProvider,
-    ValidationObserver,
-  },
-  data() {
-    return {
-      userEmail: '',
-      cPassword: '',
-      password: '',
-      sideImg: require('@/assets/images/pages/reset-password-v2.svg'),
-      // validation
-      required,
+    components: {
+        VuexyLogo,
+        BRow,
+        BCol,
+        BButton,
+        BCardTitle,
+        BCardText,
+        BForm,
+        BFormGroup,
+        BImg,
+        BInputGroup,
+        BLink,
+        BFormInput,
+        BInputGroupAppend,
+        ValidationProvider,
+        ValidationObserver,
+    },
+    data() {
+        return {
+            userEmail: '',
+            cPassword: '',
+            password: '',
+            sideImg: require('@/assets/images/pages/reset-password-v2.svg'),
+            // validation
+            required,
 
-      // Toggle Password
-      password1FieldType: 'password',
-      password2FieldType: 'password',
-    }
-  },
-  computed: {
-    passwordToggleIcon() {
-      return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'
-    },
-    imgUrl() {
-      if (store.state.appConfig.layout.skin === 'dark') {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.sideImg = require('@/assets/images/pages/reset-password-v2-dark.svg')
-        return this.sideImg
-      }
-      return this.sideImg
-    },
-    password1ToggleIcon() {
-      return this.password1FieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'
-    },
-    password2ToggleIcon() {
-      return this.password2FieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'
-    },
-  },
-  methods: {
-    togglePassword1Visibility() {
-      this.password1FieldType = this.password1FieldType === 'password' ? 'text' : 'password'
-    },
-    togglePassword2Visibility() {
-      this.password2FieldType = this.password2FieldType === 'password' ? 'text' : 'password'
-    },
-    validationForm() {
-      this.$refs.simpleRules.validate().then(success => {
-        if (success) {
-          this.$toast({
-            component: ToastificationContent,
-            props: {
-              title: 'Form Submitted',
-              icon: 'EditIcon',
-              variant: 'success',
-            },
-          })
+            // Toggle Password
+            password1FieldType: 'password',
+            password2FieldType: 'password',
         }
-      })
     },
+    computed: {
+        passwordToggleIcon() {
+            return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'
+        },
+        imgUrl() {
+            if (store.state.appConfig.layout.skin === 'dark') {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.sideImg = require('@/assets/images/pages/reset-password-v2-dark.svg')
+                return this.sideImg
+            }
+            return this.sideImg
+        },
+        password1ToggleIcon() {
+            return this.password1FieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'
+        },
+        password2ToggleIcon() {
+            return this.password2FieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'
+        },
+    },
+    methods: {
+        togglePassword1Visibility() {
+            this.password1FieldType = this.password1FieldType === 'password' ? 'text' : 'password'
+        },
+        togglePassword2Visibility() {
+            this.password2FieldType = this.password2FieldType === 'password' ? 'text' : 'password'
+        },
+        validationForm() {
+            this.$refs.simpleRules.validate().then(success => {
+                if (success) {
+                    this.$toast({
+                        component: ToastificationContent,
+                        props: {
+                            title: 'Form Submitted',
+                            icon: 'EditIcon',
+                            variant: 'success',
+                        },
+                    })
+                }
+            })
+        },
 
-  },
+    },
 }
 </script>
 

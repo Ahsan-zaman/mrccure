@@ -57,47 +57,47 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardTitle, BDropdown, BDropdownItem, BCardBody,
+    BCard, BCardHeader, BCardTitle, BDropdown, BDropdownItem, BCardBody,
 } from 'bootstrap-vue'
 import VueApexCharts from 'vue-apexcharts'
 import { $themeColors } from '@themeConfig'
 
 export default {
-  components: {
-    BCard,
-    BCardHeader,
-    BCardTitle,
-    BDropdown,
-    BDropdownItem,
-    BCardBody,
-    VueApexCharts,
-  },
-  data() {
-    return {
-      chartData: {},
-      customersPie: {
-        series: [690, 258, 149],
-        chartOptions: {
-          chart: {
-            toolbar: {
-              show: false,
+    components: {
+        BCard,
+        BCardHeader,
+        BCardTitle,
+        BDropdown,
+        BDropdownItem,
+        BCardBody,
+        VueApexCharts,
+    },
+    data() {
+        return {
+            chartData: {},
+            customersPie: {
+                series: [690, 258, 149],
+                chartOptions: {
+                    chart: {
+                        toolbar: {
+                            show: false,
+                        },
+                    },
+                    labels: ['New', 'Returning', 'Referrals'],
+                    dataLabels: {
+                        enabled: false,
+                    },
+                    legend: { show: false },
+                    stroke: {
+                        width: 4,
+                    },
+                    colors: [$themeColors.primary, $themeColors.warning, $themeColors.danger],
+                },
             },
-          },
-          labels: ['New', 'Returning', 'Referrals'],
-          dataLabels: {
-            enabled: false,
-          },
-          legend: { show: false },
-          stroke: {
-            width: 4,
-          },
-          colors: [$themeColors.primary, $themeColors.warning, $themeColors.danger],
-        },
-      },
-    }
-  },
-  created() {
-    this.$http.get('/card/card-analytics/customers').then(res => { this.chartData = res.data })
-  },
+        }
+    },
+    created() {
+        this.$http.get('/card/card-analytics/customers').then(res => { this.chartData = res.data })
+    },
 }
 </script>

@@ -123,25 +123,25 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BTableSimple, BThead, BTr, BTh, BTd, BTbody, BTfoot,
+    BTableSimple, BThead, BTr, BTh, BTd, BTbody, BTfoot,
 } from 'bootstrap-vue'
 import { codeSimple } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BTableSimple,
-    BThead,
-    BTr,
-    BTh,
-    BTd,
-    BTbody,
-    BTfoot,
-  },
-  data() {
-    return {
-      codeSimple,
-    }
-  },
+    components: {
+        BCardCode,
+        BTableSimple,
+        BThead,
+        BTr,
+        BTh,
+        BTd,
+        BTbody,
+        BTfoot,
+    },
+    data() {
+        return {
+            codeSimple,
+        }
+    },
 }
 </script>

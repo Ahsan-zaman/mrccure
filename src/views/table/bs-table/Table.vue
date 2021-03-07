@@ -33,23 +33,23 @@ import TableSimple from './TableSimple.vue'
 import TableKitchenSink from './TableKitchenSink.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    TableBasic,
-    TableStyleOptions,
-    TableRowColStyle,
-    TableResponsive,
-    TableFormatterCallback,
-    TableCustomRender,
-    TableStickyColumnsHeaders,
-    TableRowdetailsSupport,
-    TableRowSelectSupport,
-    TableLightWeight,
-    TableSimple,
-    TableKitchenSink,
-  },
+        TableBasic,
+        TableStyleOptions,
+        TableRowColStyle,
+        TableResponsive,
+        TableFormatterCallback,
+        TableCustomRender,
+        TableStickyColumnsHeaders,
+        TableRowdetailsSupport,
+        TableRowSelectSupport,
+        TableLightWeight,
+        TableSimple,
+        TableKitchenSink,
+    },
 }
 </script>
 

@@ -38,14 +38,14 @@ import BCardCode from '@core/components/b-card-code'
 import { codeSlot } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BBreadcrumb,
-    BBreadcrumbItem,
-    BCardText,
-  },
-  data: () => ({
-    codeSlot,
-  }),
+    components: {
+        BCardCode,
+        BBreadcrumb,
+        BBreadcrumbItem,
+        BCardText,
+    },
+    data: () => ({
+        codeSlot,
+    }),
 }
 </script>

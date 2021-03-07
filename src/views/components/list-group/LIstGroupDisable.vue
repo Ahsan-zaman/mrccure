@@ -26,22 +26,22 @@
 
 <script>
 import {
-  BListGroup, BListGroupItem, BCardText,
+    BListGroup, BListGroupItem, BCardText,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code'
 import { codeListGroupDisable } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BListGroup,
-    BListGroupItem,
-    BCardText,
-  },
-  data() {
-    return {
-      codeListGroupDisable,
-    }
-  },
+    components: {
+        BCardCode,
+        BListGroup,
+        BListGroupItem,
+        BCardText,
+    },
+    data() {
+        return {
+            codeListGroupDisable,
+        }
+    },
 }
 </script>

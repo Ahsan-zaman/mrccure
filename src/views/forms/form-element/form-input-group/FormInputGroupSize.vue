@@ -35,20 +35,20 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BInputGroup, BFormInput,
+    BInputGroup, BFormInput,
 } from 'bootstrap-vue'
 import { codeSize } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormInput,
-    BInputGroup,
-  },
-  data() {
-    return {
-      codeSize,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormInput,
+        BInputGroup,
+    },
+    data() {
+        return {
+            codeSize,
+        }
+    },
 }
 </script>

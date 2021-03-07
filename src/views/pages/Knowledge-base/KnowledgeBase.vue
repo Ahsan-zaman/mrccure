@@ -75,37 +75,37 @@
 
 <script>
 import {
-  BRow, BCol, BCard, BCardBody, BForm, BInputGroup, BFormInput, BCardText, BInputGroupPrepend,
+    BRow, BCol, BCard, BCardBody, BForm, BInputGroup, BFormInput, BCardText, BInputGroupPrepend,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BCardBody,
-    BCardText,
-    BForm,
-    BInputGroup,
-    BInputGroupPrepend,
-    BFormInput,
-  },
-  data() {
-    return {
-      knowledgeBaseSearchQuery: '',
-      kb: [],
-
-    }
-  },
-  computed: {
-    filteredKB() {
-      const knowledgeBaseSearchQueryLower = this.knowledgeBaseSearchQuery.toLowerCase()
-      return this.kb.filter(item => item.title.toLowerCase().includes(knowledgeBaseSearchQueryLower) || item.desc.toLowerCase().includes(knowledgeBaseSearchQueryLower))
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BCardBody,
+        BCardText,
+        BForm,
+        BInputGroup,
+        BInputGroupPrepend,
+        BFormInput,
     },
-  },
-  created() {
-    this.$http.get('/kb/data/knowledge_base').then(res => { this.kb = res.data })
-  },
+    data() {
+        return {
+            knowledgeBaseSearchQuery: '',
+            kb: [],
+
+        }
+    },
+    computed: {
+        filteredKB() {
+            const knowledgeBaseSearchQueryLower = this.knowledgeBaseSearchQuery.toLowerCase()
+            return this.kb.filter(item => item.title.toLowerCase().includes(knowledgeBaseSearchQueryLower) || item.desc.toLowerCase().includes(knowledgeBaseSearchQueryLower))
+        },
+    },
+    created() {
+        this.$http.get('/kb/data/knowledge_base').then(res => { this.kb = res.data })
+    },
 }
 </script>
 

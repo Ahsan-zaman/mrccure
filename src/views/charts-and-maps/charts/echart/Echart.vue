@@ -40,18 +40,18 @@ import EchartRadar from './EchartRadar.vue'
 import EchartScatter from './EchartScatter.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    EchartLine,
-    EchartStackedArea,
-    EchartArea,
-    EchartBar,
-    EchartBarHorizontal,
-    EchartDoughnut,
-    EchartRadar,
-    EchartScatter,
-  },
+        EchartLine,
+        EchartStackedArea,
+        EchartArea,
+        EchartBar,
+        EchartBarHorizontal,
+        EchartDoughnut,
+        EchartRadar,
+        EchartScatter,
+    },
 }
 </script>

@@ -98,33 +98,33 @@ import store from '@/store/index'
 import { codebehavior } from './code'
 
 export default {
-  components: {
-    VueSlider,
-    BCardText,
-    BCardCode,
-  },
-  data() {
-    return {
-      codebehavior,
-      value: 10,
-      value1: 30,
-      value2: 50,
-      value3: [10, 40],
-      value4: [10, 50],
-      dir: 'ltr',
-    }
-  },
-  computed: {
-    direction() {
-      if (store.state.appConfig.isRTL) {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.dir = 'rtl'
-        return this.dir
-      }
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.dir = 'ltr'
-      return this.dir
+    components: {
+        VueSlider,
+        BCardText,
+        BCardCode,
     },
-  },
+    data() {
+        return {
+            codebehavior,
+            value: 10,
+            value1: 30,
+            value2: 50,
+            value3: [10, 40],
+            value4: [10, 50],
+            dir: 'ltr',
+        }
+    },
+    computed: {
+        direction() {
+            if (store.state.appConfig.isRTL) {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.dir = 'rtl'
+                return this.dir
+            }
+            // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+            this.dir = 'ltr'
+            return this.dir
+        },
+    },
 }
 </script>

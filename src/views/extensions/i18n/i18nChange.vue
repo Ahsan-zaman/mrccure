@@ -50,28 +50,28 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormRadio, BFormRadioGroup, BFormGroup, BCardText,
+    BFormRadio, BFormRadioGroup, BFormGroup, BCardText,
 } from 'bootstrap-vue'
 import { codeChange } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormGroup,
-    BFormRadio,
-    BCardText,
-    BFormRadioGroup,
-  },
-  data() {
-    return {
-      locale: this.$i18n.locale,
-      codeChange,
-    }
-  },
-  watch: {
-    locale(val) {
-      this.$i18n.locale = val
+    components: {
+        BCardCode,
+        BFormGroup,
+        BFormRadio,
+        BCardText,
+        BFormRadioGroup,
     },
-  },
+    data() {
+        return {
+            locale: this.$i18n.locale,
+            codeChange,
+        }
+    },
+    watch: {
+        locale(val) {
+            this.$i18n.locale = val
+        },
+    },
 }
 </script>

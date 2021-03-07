@@ -52,23 +52,23 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BMedia, BImg, BMediaAside, BMediaBody, BCardText,
+    BMedia, BImg, BMediaAside, BMediaBody, BCardText,
 } from 'bootstrap-vue'
 import { codeNoBody } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BMedia,
-    BImg,
-    BMediaAside,
-    BCardText,
-    BMediaBody,
-  },
-  data() {
-    return {
-      codeNoBody,
-    }
-  },
+    components: {
+        BCardCode,
+        BMedia,
+        BImg,
+        BMediaAside,
+        BCardText,
+        BMediaBody,
+    },
+    data() {
+        return {
+            codeNoBody,
+        }
+    },
 }
 </script>

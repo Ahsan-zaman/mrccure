@@ -197,7 +197,7 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BRow, BCol, BFormGroup, BInputGroupPrepend, BInputGroup,
+    BRow, BCol, BFormGroup, BInputGroupPrepend, BInputGroup,
 } from 'bootstrap-vue'
 import Cleave from 'vue-cleave-component'
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -205,65 +205,65 @@ import 'cleave.js/dist/addons/cleave-phone.us'
 import { codeMask } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormGroup,
-    BInputGroupPrepend,
-    BInputGroup,
-    Cleave,
-    BRow,
-    BCol,
-  },
-  data() {
-    return {
-      form: {
-        cardNumber: null,
-        date: null,
-        phone: null,
-      },
-      options: {
-        creditCard: {
-          creditCard: true,
-        },
-        date: {
-          date: true,
-          delimiter: '-',
-          datePattern: ['Y', 'm', 'd'],
-        },
-        phone: {
-          phone: true,
-          phoneRegionCode: 'US',
-        },
-        time: {
-          time: true,
-          timePattern: ['h', 'm', 's'],
-        },
-        number: {
-          numeral: true,
-          numeralThousandsGroupStyle: 'thousand',
-        },
-        block: {
-          blocks: [4, 3, 3],
-          uppercase: true,
-        },
-        delimiter: {
-          delimiter: '·',
-          blocks: [3, 3, 3],
-          uppercase: true,
-        },
-        customDelimiter: {
-          delimiters: ['.', '.', '-'],
-          blocks: [3, 3, 3, 2],
-          uppercase: true,
-        },
-        prefix: {
-          prefix: '+63',
-          blocks: [3, 3, 3, 4],
-          uppercase: true,
-        },
-      },
-      codeMask,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormGroup,
+        BInputGroupPrepend,
+        BInputGroup,
+        Cleave,
+        BRow,
+        BCol,
+    },
+    data() {
+        return {
+            form: {
+                cardNumber: null,
+                date: null,
+                phone: null,
+            },
+            options: {
+                creditCard: {
+                    creditCard: true,
+                },
+                date: {
+                    date: true,
+                    delimiter: '-',
+                    datePattern: ['Y', 'm', 'd'],
+                },
+                phone: {
+                    phone: true,
+                    phoneRegionCode: 'US',
+                },
+                time: {
+                    time: true,
+                    timePattern: ['h', 'm', 's'],
+                },
+                number: {
+                    numeral: true,
+                    numeralThousandsGroupStyle: 'thousand',
+                },
+                block: {
+                    blocks: [4, 3, 3],
+                    uppercase: true,
+                },
+                delimiter: {
+                    delimiter: '·',
+                    blocks: [3, 3, 3],
+                    uppercase: true,
+                },
+                customDelimiter: {
+                    delimiters: ['.', '.', '-'],
+                    blocks: [3, 3, 3, 2],
+                    uppercase: true,
+                },
+                prefix: {
+                    prefix: '+63',
+                    blocks: [3, 3, 3, 4],
+                    uppercase: true,
+                },
+            },
+            codeMask,
+        }
+    },
 }
 </script>

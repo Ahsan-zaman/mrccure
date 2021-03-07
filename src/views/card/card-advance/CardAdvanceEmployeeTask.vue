@@ -53,114 +53,114 @@
 
 <script>
 import {
-  BCard, BCardTitle, BCardHeader, BCardBody, BMedia, BMediaAside, BAvatar, BMediaBody,
+    BCard, BCardTitle, BCardHeader, BCardBody, BMedia, BMediaAside, BAvatar, BMediaBody,
 } from 'bootstrap-vue'
 import VueApexCharts from 'vue-apexcharts'
 import { $themeColors } from '@themeConfig'
 /* eslint-disable global-require */
 const $trackBgColor = '#e9ecef'
 export default {
-  components: {
-    BCard,
-    BCardTitle,
-    BCardHeader,
-    BCardBody,
-    BMedia,
-    BMediaAside,
-    BMediaBody,
-    BAvatar,
-    VueApexCharts,
-  },
-  data() {
-    return {
-      chartData: [],
-      chartColor: [$themeColors.primary, $themeColors.danger, $themeColors.success, $themeColors.secondary, $themeColors.warning, $themeColors.primary],
-      chartSeries: [45, 65, 60, 35, 65, 80],
-      employeeData: [
-        {
-          avatar: require('@/assets/images/portrait/small/avatar-s-9.jpg'),
-          userFullName: 'Ryan Harrington',
-          designation: 'iOS Developer',
-          duration: '9hr 20m',
-        },
-        {
-          avatar: require('@/assets/images/portrait/small/avatar-s-20.jpg'),
-          userFullName: 'Louisa Norton',
-          designation: 'UI Designer',
-          duration: '4hr 17m',
-        },
-        {
-          avatar: require('@/assets/images/portrait/small/avatar-s-1.jpg'),
-          userFullName: 'Jayden Duncan',
-          designation: 'Java Developer',
-          duration: '12hr 8m',
-        },
-        {
-          avatar: require('@/assets/images/portrait/small/avatar-s-20.jpg'),
-          userFullName: 'Cynthia Howell',
-          designation: 'Anguler Developer',
-          duration: '3hr 19m',
-        },
-        {
-          avatar: require('@/assets/images/portrait/small/avatar-s-16.jpg'),
-          userFullName: 'Helena Payne',
-          designation: 'Marketing',
-          duration: '9hr 50m',
-        },
-        {
-          avatar: require('@/assets/images/portrait/small/avatar-s-13.jpg'),
-          userFullName: 'Troy Jensen',
-          designation: 'iOS Developer',
-          duration: '4hr 48m',
-        },
-      ],
-      chart: {
-        series: [65],
-        options: {
-          grid: {
-            show: false,
-            padding: {
-              left: -15,
-              right: -15,
-              top: -12,
-              bottom: -15,
-            },
-          },
-          colors: [$themeColors.primary],
-          plotOptions: {
-            radialBar: {
-              hollow: {
-                size: '22%',
-              },
-              track: {
-                background: $trackBgColor,
-              },
-              dataLabels: {
-                showOn: 'always',
-                name: {
-                  show: false,
+    components: {
+        BCard,
+        BCardTitle,
+        BCardHeader,
+        BCardBody,
+        BMedia,
+        BMediaAside,
+        BMediaBody,
+        BAvatar,
+        VueApexCharts,
+    },
+    data() {
+        return {
+            chartData: [],
+            chartColor: [$themeColors.primary, $themeColors.danger, $themeColors.success, $themeColors.secondary, $themeColors.warning, $themeColors.primary],
+            chartSeries: [45, 65, 60, 35, 65, 80],
+            employeeData: [
+                {
+                    avatar: require('@/assets/images/portrait/small/avatar-s-9.jpg'),
+                    userFullName: 'Ryan Harrington',
+                    designation: 'iOS Developer',
+                    duration: '9hr 20m',
                 },
-                value: {
-                  show: false,
+                {
+                    avatar: require('@/assets/images/portrait/small/avatar-s-20.jpg'),
+                    userFullName: 'Louisa Norton',
+                    designation: 'UI Designer',
+                    duration: '4hr 17m',
                 },
-              },
+                {
+                    avatar: require('@/assets/images/portrait/small/avatar-s-1.jpg'),
+                    userFullName: 'Jayden Duncan',
+                    designation: 'Java Developer',
+                    duration: '12hr 8m',
+                },
+                {
+                    avatar: require('@/assets/images/portrait/small/avatar-s-20.jpg'),
+                    userFullName: 'Cynthia Howell',
+                    designation: 'Anguler Developer',
+                    duration: '3hr 19m',
+                },
+                {
+                    avatar: require('@/assets/images/portrait/small/avatar-s-16.jpg'),
+                    userFullName: 'Helena Payne',
+                    designation: 'Marketing',
+                    duration: '9hr 50m',
+                },
+                {
+                    avatar: require('@/assets/images/portrait/small/avatar-s-13.jpg'),
+                    userFullName: 'Troy Jensen',
+                    designation: 'iOS Developer',
+                    duration: '4hr 48m',
+                },
+            ],
+            chart: {
+                series: [65],
+                options: {
+                    grid: {
+                        show: false,
+                        padding: {
+                            left: -15,
+                            right: -15,
+                            top: -12,
+                            bottom: -15,
+                        },
+                    },
+                    colors: [$themeColors.primary],
+                    plotOptions: {
+                        radialBar: {
+                            hollow: {
+                                size: '22%',
+                            },
+                            track: {
+                                background: $trackBgColor,
+                            },
+                            dataLabels: {
+                                showOn: 'always',
+                                name: {
+                                    show: false,
+                                },
+                                value: {
+                                    show: false,
+                                },
+                            },
+                        },
+                    },
+                    stroke: {
+                        lineCap: 'round',
+                    },
+                },
             },
-          },
-          stroke: {
-            lineCap: 'round',
-          },
-        },
-      },
-    }
-  },
-  created() {
-    for (let i = 0; i < this.employeeData.length; i += 1) {
-      const chartClone = JSON.parse(JSON.stringify(this.chart))
-      chartClone.options.colors[0] = this.chartColor[i]
-      chartClone.series[0] = this.chartSeries[i]
-      this.chartData.push(chartClone)
-    }
-  },
+        }
+    },
+    created() {
+        for (let i = 0; i < this.employeeData.length; i += 1) {
+            const chartClone = JSON.parse(JSON.stringify(this.chart))
+            chartClone.options.colors[0] = this.chartColor[i]
+            chartClone.series[0] = this.chartSeries[i]
+            this.chartData.push(chartClone)
+        }
+    },
 }
 /* eslint-disable global-require */
 </script>

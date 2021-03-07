@@ -47,38 +47,38 @@ import useHorizontalNavMenuGroup from './useHorizontalNavMenuGroup'
 import mixinHorizontalNavMenuGroup from './mixinHorizontalNavMenuGroup'
 
 export default {
-  name: 'HorizontalNavMenuGroup',
-  components: {
-    HorizontalNavMenuLink,
-    BLink,
-  },
-  mixins: [mixinHorizontalNavMenuGroup],
-  props: {
-    item: {
-      type: Object,
-      required: true,
+    name: 'HorizontalNavMenuGroup',
+    components: {
+        HorizontalNavMenuLink,
+        BLink,
     },
-  },
-  setup(props) {
-    const {
-      refChildDropdown,
-      isActive,
-      isOpen,
-      updateGroupOpen,
-      updateIsActive,
-      openChildDropdownOnLeft,
-    } = useHorizontalNavMenuGroup(props.item)
+    mixins: [mixinHorizontalNavMenuGroup],
+    props: {
+        item: {
+            type: Object,
+            required: true,
+        },
+    },
+    setup(props) {
+        const {
+            refChildDropdown,
+            isActive,
+            isOpen,
+            updateGroupOpen,
+            updateIsActive,
+            openChildDropdownOnLeft,
+        } = useHorizontalNavMenuGroup(props.item)
 
-    return {
-      refChildDropdown,
-      openChildDropdownOnLeft,
-      resolveNavItemComponent,
-      isOpen,
-      isActive,
-      updateGroupOpen,
-      updateIsActive,
-    }
-  },
+        return {
+            refChildDropdown,
+            openChildDropdownOnLeft,
+            resolveNavItemComponent,
+            isOpen,
+            isActive,
+            updateGroupOpen,
+            updateIsActive,
+        }
+    },
 }
 </script>
 

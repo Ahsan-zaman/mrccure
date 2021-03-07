@@ -154,38 +154,38 @@
 
 <script>
 import {
-  BAvatar, BCard, BCardText, BImg, BLink, BRow, BCol, BAvatarGroup, VBTooltip, BFormTextarea, BButton, BFormGroup, BEmbed,
+    BAvatar, BCard, BCardText, BImg, BLink, BRow, BCol, BAvatarGroup, VBTooltip, BFormTextarea, BButton, BFormGroup, BEmbed,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { kFormatter } from '@core/utils/filter'
 
 export default {
-  components: {
-    BAvatar,
-    BCard,
-    BCardText,
-    BButton,
-    BFormTextarea,
-    BImg,
-    BFormGroup,
-    BRow,
-    BLink,
-    BCol,
-    BAvatarGroup,
-    BEmbed,
-  },
-  directives: {
-    'b-tooltip': VBTooltip,
-    Ripple,
-  },
-  props: {
-    posts: {
-      type: Array,
-      default: () => [],
+    components: {
+        BAvatar,
+        BCard,
+        BCardText,
+        BButton,
+        BFormTextarea,
+        BImg,
+        BFormGroup,
+        BRow,
+        BLink,
+        BCol,
+        BAvatarGroup,
+        BEmbed,
     },
-  },
-  methods: {
-    kFormatter,
-  },
+    directives: {
+        'b-tooltip': VBTooltip,
+        Ripple,
+    },
+    props: {
+        posts: {
+            type: Array,
+            default: () => [],
+        },
+    },
+    methods: {
+        kFormatter,
+    },
 }
 </script>

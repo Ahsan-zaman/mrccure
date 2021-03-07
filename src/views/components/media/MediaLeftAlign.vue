@@ -70,16 +70,16 @@ import { BMedia, BImg, BCardText } from 'bootstrap-vue'
 import { codeLeftAlign } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BMedia,
-    BImg,
-    BCardText,
-  },
-  data() {
-    return {
-      codeLeftAlign,
-    }
-  },
+    components: {
+        BCardCode,
+        BMedia,
+        BImg,
+        BCardText,
+    },
+    data() {
+        return {
+            codeLeftAlign,
+        }
+    },
 }
 </script>

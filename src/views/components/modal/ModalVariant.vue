@@ -115,39 +115,39 @@
 
 <script>
 import {
-  BButton, BModal, VBModal, BContainer, BRow, BCol, BFormSelect, BCardText,
+    BButton, BModal, VBModal, BContainer, BRow, BCol, BFormSelect, BCardText,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code'
 import Ripple from 'vue-ripple-directive'
 import { codeVariant } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCol,
-    BContainer,
-    BFormSelect,
-    BModal,
-    BCardText,
-    BRow,
-  },
-  directives: {
-    'b-modal': VBModal,
-    Ripple,
-  },
-  data() {
-    return {
-      bodyBgVariant: 'light',
-      bodyTextVariant: 'dark',
-      footerBgVariant: 'warning',
-      footerTextVariant: 'dark',
-      headerBgVariant: 'info',
-      headerTextVariant: 'primary',
-      show: false,
-      variants: ['primary', 'secondary', 'success', 'warning', 'danger', 'info', 'light', 'dark'],
-      codeVariant,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BCol,
+        BContainer,
+        BFormSelect,
+        BModal,
+        BCardText,
+        BRow,
+    },
+    directives: {
+        'b-modal': VBModal,
+        Ripple,
+    },
+    data() {
+        return {
+            bodyBgVariant: 'light',
+            bodyTextVariant: 'dark',
+            footerBgVariant: 'warning',
+            footerTextVariant: 'dark',
+            headerBgVariant: 'info',
+            headerTextVariant: 'primary',
+            show: false,
+            variants: ['primary', 'secondary', 'success', 'warning', 'danger', 'info', 'light', 'dark'],
+            codeVariant,
+        }
+    },
 }
 </script>

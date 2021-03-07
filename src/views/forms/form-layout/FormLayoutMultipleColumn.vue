@@ -118,29 +118,29 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BRow, BCol, BFormGroup, BFormInput, BFormCheckbox, BForm, BButton,
+    BRow, BCol, BFormGroup, BFormInput, BFormCheckbox, BForm, BButton,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeMultipleColumn } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BRow,
-    BCol,
-    BFormGroup,
-    BFormInput,
-    BFormCheckbox,
-    BForm,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeMultipleColumn,
-    }
-  },
+    components: {
+        BCardCode,
+        BRow,
+        BCol,
+        BFormGroup,
+        BFormInput,
+        BFormCheckbox,
+        BForm,
+        BButton,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeMultipleColumn,
+        }
+    },
 }
 </script>

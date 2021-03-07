@@ -37,19 +37,6 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormRating,
-  BInputGroup,
-  BInputGroupPrepend,
-  BButton,
-  BInputGroupAppend,
-  BInputGroupText,
-  BCardText,
-} from 'bootstrap-vue'
-import { codeInputGroup } from './code'
-
-export default {
-  components: {
-    BCardCode,
     BFormRating,
     BInputGroup,
     BInputGroupPrepend,
@@ -57,12 +44,25 @@ export default {
     BInputGroupAppend,
     BInputGroupText,
     BCardText,
-  },
-  data() {
-    return {
-      value: 3,
-      codeInputGroup,
-    }
-  },
+} from 'bootstrap-vue'
+import { codeInputGroup } from './code'
+
+export default {
+    components: {
+        BCardCode,
+        BFormRating,
+        BInputGroup,
+        BInputGroupPrepend,
+        BButton,
+        BInputGroupAppend,
+        BInputGroupText,
+        BCardText,
+    },
+    data() {
+        return {
+            value: 3,
+            codeInputGroup,
+        }
+    },
 }
 </script>

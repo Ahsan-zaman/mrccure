@@ -79,35 +79,35 @@ import store from '@/store/index'
 import { codeColors } from './code'
 
 export default {
-  components: {
-    BCardText,
-    VueSlider,
-    BCardCode,
-  },
-  data() {
-    return {
-      codeColors,
-      value: 50,
-      value1: [0, 50],
-      value2: [0, 30, 100],
-      value3: 45,
-      value4: [30, 60],
-      value5: [20, 40],
-      value6: [0, 20, 40, 60, 80, 100],
-      dir: 'ltr',
-    }
-  },
-  computed: {
-    direction() {
-      if (store.state.appConfig.isRTL) {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.dir = 'rtl'
-        return this.dir
-      }
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.dir = 'ltr'
-      return this.dir
+    components: {
+        BCardText,
+        VueSlider,
+        BCardCode,
     },
-  },
+    data() {
+        return {
+            codeColors,
+            value: 50,
+            value1: [0, 50],
+            value2: [0, 30, 100],
+            value3: 45,
+            value4: [30, 60],
+            value5: [20, 40],
+            value6: [0, 20, 40, 60, 80, 100],
+            dir: 'ltr',
+        }
+    },
+    computed: {
+        direction() {
+            if (store.state.appConfig.isRTL) {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.dir = 'rtl'
+                return this.dir
+            }
+            // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+            this.dir = 'ltr'
+            return this.dir
+        },
+    },
 }
 </script>

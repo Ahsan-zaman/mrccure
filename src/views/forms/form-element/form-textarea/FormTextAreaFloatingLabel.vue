@@ -27,15 +27,15 @@ import { BFormTextarea, BCardText } from 'bootstrap-vue'
 import { codeFloatingLabel } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormTextarea,
-  },
-  data() {
-    return {
-      codeFloatingLabel,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormTextarea,
+    },
+    data() {
+        return {
+            codeFloatingLabel,
+        }
+    },
 }
 </script>

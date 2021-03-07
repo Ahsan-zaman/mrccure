@@ -39,16 +39,16 @@ import { BFormTags, BCardText } from 'bootstrap-vue'
 import { codeSeparators } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormTags,
-  },
-  data() {
-    return {
-      value: ['one', 'two'],
-      codeSeparators,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormTags,
+    },
+    data() {
+        return {
+            value: ['one', 'two'],
+            codeSeparators,
+        }
+    },
 }
 </script>

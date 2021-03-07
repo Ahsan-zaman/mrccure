@@ -31,25 +31,25 @@ import { BFormSelect, BCardText } from 'bootstrap-vue'
 import { codeSize } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormSelect,
-    BCardText,
-  },
-  data() {
-    return {
-      selected: null,
-      codeSize,
-      options: [
-        { value: null, text: 'Please select some item' },
-        { value: 'a', text: 'This is option a' },
-        { value: 'b', text: 'Default Selected Option b' },
-        { value: 'c', text: 'This is option c' },
-        { value: 'd', text: 'This one is disabled', disabled: true },
-        { value: 'e', text: 'This is option e' },
-        { value: 'e', text: 'This is option f' },
-      ],
-    }
-  },
+    components: {
+        BCardCode,
+        BFormSelect,
+        BCardText,
+    },
+    data() {
+        return {
+            selected: null,
+            codeSize,
+            options: [
+                { value: null, text: 'Please select some item' },
+                { value: 'a', text: 'This is option a' },
+                { value: 'b', text: 'Default Selected Option b' },
+                { value: 'c', text: 'This is option c' },
+                { value: 'd', text: 'This one is disabled', disabled: true },
+                { value: 'e', text: 'This is option e' },
+                { value: 'e', text: 'This is option f' },
+            ],
+        }
+    },
 }
 </script>

@@ -35,29 +35,29 @@ import BCardCode from '@core/components/b-card-code'
 import { codeArray } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BPaginationNav,
-  },
-  data() {
-    return {
-      codeArray,
-      // Simple array of strings
-      pages1: ['?page=1', '?page=2', '?page=3'],
-      // Array of objects with string links
-      pages2: [
-        { link: '?page=1', text: 'One' },
-        { link: '?page=2', text: 'Two' },
-        { link: '?page=3', text: 'Three' },
-      ],
-      // Array of objects with router `to` locations
-      pages3: [
-        { link: { query: { page: 1 } }, text: 'Page 1' },
-        { link: { query: { page: 2 } }, text: 'Page 2' },
-        { link: { query: { page: 3 } }, text: 'Page 3' },
-      ],
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BPaginationNav,
+    },
+    data() {
+        return {
+            codeArray,
+            // Simple array of strings
+            pages1: ['?page=1', '?page=2', '?page=3'],
+            // Array of objects with string links
+            pages2: [
+                { link: '?page=1', text: 'One' },
+                { link: '?page=2', text: 'Two' },
+                { link: '?page=3', text: 'Three' },
+            ],
+            // Array of objects with router `to` locations
+            pages3: [
+                { link: { query: { page: 1 } }, text: 'Page 1' },
+                { link: { query: { page: 2 } }, text: 'Page 2' },
+                { link: { query: { page: 3 } }, text: 'Page 3' },
+            ],
+        }
+    },
 }
 </script>

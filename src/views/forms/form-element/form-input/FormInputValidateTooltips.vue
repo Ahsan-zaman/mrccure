@@ -105,33 +105,33 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormInput, BCol, BCardText, BForm, BFormRow, BFormValidFeedback, BFormInvalidFeedback, BButton,
+    BFormInput, BCol, BCardText, BForm, BFormRow, BFormValidFeedback, BFormInvalidFeedback, BButton,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeValidateTooltips } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormInput,
-    BCardText,
-    BForm,
-    BButton,
-    BFormRow,
-    BFormValidFeedback,
-    BFormInvalidFeedback,
-    BCol,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      value1: 'John',
-      value2: 'Doe',
-      value3: '',
-      codeValidateTooltips,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormInput,
+        BCardText,
+        BForm,
+        BButton,
+        BFormRow,
+        BFormValidFeedback,
+        BFormInvalidFeedback,
+        BCol,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            value1: 'John',
+            value2: 'Doe',
+            value3: '',
+            codeValidateTooltips,
+        }
+    },
 }
 </script>

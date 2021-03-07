@@ -34,23 +34,23 @@ import { BFormSelect, BCardText } from 'bootstrap-vue'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormSelect,
-    BCardText,
-  },
-  data() {
-    return {
-      selected: null,
-      options: [
-        { value: null, text: 'Please select an option' },
-        { value: 'a', text: 'This is First option' },
-        { value: 'b', text: 'Simple Option' },
-        { value: { C: '3PO' }, text: 'This is an option with object value' },
-        { value: 'd', text: 'This one is disabled', disabled: true },
-      ],
-      codeBasic,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormSelect,
+        BCardText,
+    },
+    data() {
+        return {
+            selected: null,
+            options: [
+                { value: null, text: 'Please select an option' },
+                { value: 'a', text: 'This is First option' },
+                { value: 'b', text: 'Simple Option' },
+                { value: { C: '3PO' }, text: 'This is an option with object value' },
+                { value: 'd', text: 'This one is disabled', disabled: true },
+            ],
+            codeBasic,
+        }
+    },
 }
 </script>

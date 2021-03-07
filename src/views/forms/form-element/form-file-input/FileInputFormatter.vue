@@ -23,23 +23,23 @@ import { BFormFile, BCardText } from 'bootstrap-vue'
 import { codeFormatter } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormFile,
-    BCardText,
-  },
-  data() {
-    return {
-      codeFormatter,
-    }
-  },
-  methods: {
-    formatNames(files) {
-      if (files.length === 1) {
-        return files[0].name
-      }
-      return `${files.length} files selected`
+    components: {
+        BCardCode,
+        BFormFile,
+        BCardText,
     },
-  },
+    data() {
+        return {
+            codeFormatter,
+        }
+    },
+    methods: {
+        formatNames(files) {
+            if (files.length === 1) {
+                return files[0].name
+            }
+            return `${files.length} files selected`
+        },
+    },
 }
 </script>

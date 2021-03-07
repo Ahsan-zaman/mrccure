@@ -25,29 +25,29 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BFormGroup, BInputGroup, BFormInput, BInputGroupAppend,
+    BFormGroup, BInputGroup, BFormInput, BInputGroupAppend,
 } from 'bootstrap-vue'
 import { codePasswordVisibility } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormGroup,
-    BInputGroup,
-    BFormInput,
-    BInputGroupAppend,
-  },
-  data() {
-    return {
-      password: '',
-      passwordFieldType: 'password',
-      codePasswordVisibility,
-    }
-  },
-  methods: {
-    passwordToggle() {
-      this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password'
+    components: {
+        BCardCode,
+        BFormGroup,
+        BInputGroup,
+        BFormInput,
+        BInputGroupAppend,
     },
-  },
+    data() {
+        return {
+            password: '',
+            passwordFieldType: 'password',
+            codePasswordVisibility,
+        }
+    },
+    methods: {
+        passwordToggle() {
+            this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password'
+        },
+    },
 }
 </script>

@@ -61,35 +61,35 @@
 import useAutoSuggest from './useAutoSuggest'
 
 export default {
-  props: {
-    inputProps: {
-      type: Object,
-      default: () => {},
+    props: {
+        inputProps: {
+            type: Object,
+            default: () => {},
+        },
+        data: {
+            type: Object,
+            required: true,
+        },
+        searchLimit: {
+            type: Number,
+            default: 4,
+        },
     },
-    data: {
-      type: Object,
-      required: true,
-    },
-    searchLimit: {
-      type: Number,
-      default: 4,
-    },
-  },
-  setup(props, { emit }) {
+    setup(props, { emit }) {
     // eslint-disable-next-line no-console
-    console.warn('This component is still in Development. Please do not use it.')
+        console.warn('This component is still in Development. Please do not use it.')
 
-    const { searchQuery, filteredData, resetsearchQuery } = useAutoSuggest(props)
+        const { searchQuery, filteredData, resetsearchQuery } = useAutoSuggest(props)
 
-    const suggestionSelected = suggestion => {
-      resetsearchQuery()
-      emit('suggestion-selected', suggestion)
-    }
+        const suggestionSelected = suggestion => {
+            resetsearchQuery()
+            emit('suggestion-selected', suggestion)
+        }
 
-    return {
-      searchQuery, filteredData, suggestionSelected,
-    }
-  },
+        return {
+            searchQuery, filteredData, suggestionSelected,
+        }
+    },
 }
 </script>
 

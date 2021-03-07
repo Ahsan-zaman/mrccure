@@ -26,21 +26,21 @@ import Ecommerce from '@/views/dashboard/ecommerce/Ecommerce.vue'
 import { BAlert, BLink } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BAlert,
-    BLink,
-    Ecommerce,
-  },
-  data() {
-    return {
-      isVerticalMenuCollapsed: this.$store.state.verticalMenu.isVerticalMenuCollapsed,
-    }
-  },
-  created() {
-    this.$store.commit('verticalMenu/UPDATE_VERTICAL_MENU_COLLAPSED', true)
-  },
-  destroyed() {
-    this.$store.commit('verticalMenu/UPDATE_VERTICAL_MENU_COLLAPSED', this.isVerticalMenuCollapsed)
-  },
+    components: {
+        BAlert,
+        BLink,
+        Ecommerce,
+    },
+    data() {
+        return {
+            isVerticalMenuCollapsed: this.$store.state.verticalMenu.isVerticalMenuCollapsed,
+        }
+    },
+    created() {
+        this.$store.commit('verticalMenu/UPDATE_VERTICAL_MENU_COLLAPSED', true)
+    },
+    destroyed() {
+        this.$store.commit('verticalMenu/UPDATE_VERTICAL_MENU_COLLAPSED', this.isVerticalMenuCollapsed)
+    },
 }
 </script>

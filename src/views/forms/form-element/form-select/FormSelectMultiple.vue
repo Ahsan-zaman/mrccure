@@ -30,25 +30,25 @@ import { BFormSelect, BCardText } from 'bootstrap-vue'
 import { codeMultiple } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormSelect,
-    BCardText,
-  },
-  data() {
-    return {
-      selected: ['b'],
-      codeMultiple,
-      options: [
-        { value: 'a', text: 'This is First option' },
-        { value: 'b', text: 'Default Selected Option' },
-        { value: 'c', text: 'This is another option' },
-        { value: 'd', text: 'This one is disabled', disabled: true },
-        { value: 'e', text: 'This is option e' },
-        { value: 'f', text: 'This is option f' },
-        { value: 'g', text: 'This is option g' },
-      ],
-    }
-  },
+    components: {
+        BCardCode,
+        BFormSelect,
+        BCardText,
+    },
+    data() {
+        return {
+            selected: ['b'],
+            codeMultiple,
+            options: [
+                { value: 'a', text: 'This is First option' },
+                { value: 'b', text: 'Default Selected Option' },
+                { value: 'c', text: 'This is another option' },
+                { value: 'd', text: 'This one is disabled', disabled: true },
+                { value: 'e', text: 'This is option e' },
+                { value: 'f', text: 'This is option f' },
+                { value: 'g', text: 'This is option g' },
+            ],
+        }
+    },
 }
 </script>

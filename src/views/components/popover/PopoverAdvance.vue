@@ -103,76 +103,76 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BPopover, BButton, BFormGroup, BFormInput, BCard, BCardText,
+    BPopover, BButton, BFormGroup, BFormInput, BCard, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { codeAdvance } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPopover,
-    BButton,
-    BFormGroup,
-    BCardText,
-    BFormInput,
-    BCard,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      input1: '',
-      input1state: null,
-      input2: '',
-      input2state: null,
-      input1Return: '',
-      input2Return: '',
-      popoverShow: false,
-      codeAdvance,
-    }
-  },
-  watch: {
-    input1(val) {
-      if (val) {
-        this.input1state = true
-      }
+    components: {
+        BCardCode,
+        BPopover,
+        BButton,
+        BFormGroup,
+        BCardText,
+        BFormInput,
+        BCard,
     },
-    input2(val) {
-      if (val) {
-        this.input2state = true
-      }
+    directives: {
+        Ripple,
     },
-  },
-  methods: {
-    onClose() {
-      this.popoverShow = false
+    data() {
+        return {
+            input1: '',
+            input1state: null,
+            input2: '',
+            input2state: null,
+            input1Return: '',
+            input2Return: '',
+            popoverShow: false,
+            codeAdvance,
+        }
     },
-    onOk() {
-      if (!this.input1) {
-        this.input1state = false
-      }
-      if (!this.input2) {
-        this.input2state = false
-      }
-      if (this.input1 && this.input2) {
-        this.onClose()
-        // Return our popover form results
-        this.input1Return = this.input1
-        this.input2Return = this.input2
-      }
+    watch: {
+        input1(val) {
+            if (val) {
+                this.input1state = true
+            }
+        },
+        input2(val) {
+            if (val) {
+                this.input2state = true
+            }
+        },
     },
-    onShow() {
-      // This is called just before the popover is shown
-      // Reset our popover form variables
-      this.input1 = ''
-      this.input2 = ''
-      this.input1state = null
-      this.input2state = null
-      this.input1Return = ''
-      this.input2Return = ''
+    methods: {
+        onClose() {
+            this.popoverShow = false
+        },
+        onOk() {
+            if (!this.input1) {
+                this.input1state = false
+            }
+            if (!this.input2) {
+                this.input2state = false
+            }
+            if (this.input1 && this.input2) {
+                this.onClose()
+                // Return our popover form results
+                this.input1Return = this.input1
+                this.input2Return = this.input2
+            }
+        },
+        onShow() {
+            // This is called just before the popover is shown
+            // Reset our popover form variables
+            this.input1 = ''
+            this.input2 = ''
+            this.input1state = null
+            this.input2state = null
+            this.input1Return = ''
+            this.input2Return = ''
+        },
     },
-  },
 }
 </script>

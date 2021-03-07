@@ -98,63 +98,63 @@
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import VuexyLogo from '@core/layouts/components/Logo.vue'
 import {
-  BRow, BCol, BLink, BCardTitle, BCardText, BImg, BForm, BFormGroup, BFormInput, BButton,
+    BRow, BCol, BLink, BCardTitle, BCardText, BImg, BForm, BFormGroup, BFormInput, BButton,
 } from 'bootstrap-vue'
 import { required, email } from '@validations'
 import store from '@/store/index'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
 
 export default {
-  components: {
-    VuexyLogo,
-    BRow,
-    BCol,
-    BLink,
-    BImg,
-    BForm,
-    BButton,
-    BFormGroup,
-    BFormInput,
-    BCardTitle,
-    BCardText,
-    ValidationProvider,
-    ValidationObserver,
-  },
-  data() {
-    return {
-      userEmail: '',
-      sideImg: require('@/assets/images/pages/forgot-password-v2.svg'),
-      // validation
-      required,
-      email,
-    }
-  },
-  computed: {
-    imgUrl() {
-      if (store.state.appConfig.layout.skin === 'dark') {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.sideImg = require('@/assets/images/pages/forgot-password-v2-dark.svg')
-        return this.sideImg
-      }
-      return this.sideImg
+    components: {
+        VuexyLogo,
+        BRow,
+        BCol,
+        BLink,
+        BImg,
+        BForm,
+        BButton,
+        BFormGroup,
+        BFormInput,
+        BCardTitle,
+        BCardText,
+        ValidationProvider,
+        ValidationObserver,
     },
-  },
-  methods: {
-    validationForm() {
-      this.$refs.simpleRules.validate().then(success => {
-        if (success) {
-          this.$toast({
-            component: ToastificationContent,
-            props: {
-              title: 'This is for UI purpose only.',
-              icon: 'EditIcon',
-              variant: 'success',
-            },
-          })
+    data() {
+        return {
+            userEmail: '',
+            sideImg: require('@/assets/images/pages/forgot-password-v2.svg'),
+            // validation
+            required,
+            email,
         }
-      })
     },
-  },
+    computed: {
+        imgUrl() {
+            if (store.state.appConfig.layout.skin === 'dark') {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.sideImg = require('@/assets/images/pages/forgot-password-v2-dark.svg')
+                return this.sideImg
+            }
+            return this.sideImg
+        },
+    },
+    methods: {
+        validationForm() {
+            this.$refs.simpleRules.validate().then(success => {
+                if (success) {
+                    this.$toast({
+                        component: ToastificationContent,
+                        props: {
+                            title: 'This is for UI purpose only.',
+                            icon: 'EditIcon',
+                            variant: 'success',
+                        },
+                    })
+                }
+            })
+        },
+    },
 }
 </script>
 

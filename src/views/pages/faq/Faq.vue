@@ -197,36 +197,36 @@
 
 <script>
 import {
-  BCard, BCardBody, BForm, BInputGroup, BFormInput, BCardText, BInputGroupPrepend, BTabs, BTab, BImg, BRow, BCol, BAvatar,
+    BCard, BCardBody, BForm, BInputGroup, BFormInput, BCardText, BInputGroupPrepend, BTabs, BTab, BImg, BRow, BCol, BAvatar,
 } from 'bootstrap-vue'
 import FaqQuestionAnswer from './FaqQuestionAnswer.vue'
 
 export default {
-  components: {
-    BForm,
-    BCard,
-    BRow,
-    BCol,
-    BAvatar,
-    BCardBody,
-    BInputGroup,
-    BFormInput,
-    BCardText,
-    BInputGroupPrepend,
-    BTabs,
-    BTab,
-    BImg,
-    FaqQuestionAnswer,
-  },
-  data() {
-    return {
-      faqSearchQuery: '',
-      faqData: {},
-    }
-  },
-  created() {
-    this.$http.get('/faq/data').then(res => { this.faqData = res.data })
-  },
+    components: {
+        BForm,
+        BCard,
+        BRow,
+        BCol,
+        BAvatar,
+        BCardBody,
+        BInputGroup,
+        BFormInput,
+        BCardText,
+        BInputGroupPrepend,
+        BTabs,
+        BTab,
+        BImg,
+        FaqQuestionAnswer,
+    },
+    data() {
+        return {
+            faqSearchQuery: '',
+            faqData: {},
+        }
+    },
+    created() {
+        this.$http.get('/faq/data').then(res => { this.faqData = res.data })
+    },
 }
 </script>
 

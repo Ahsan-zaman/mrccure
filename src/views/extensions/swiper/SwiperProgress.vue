@@ -44,37 +44,37 @@ import 'swiper/css/swiper.css'
 import { codeProgress } from './code'
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-    BCardCode,
-    BImg,
-  },
-  data() {
-    return {
-      codeProgress,
+    components: {
+        Swiper,
+        SwiperSlide,
+        BCardCode,
+        BImg,
+    },
+    data() {
+        return {
+            codeProgress,
 
-      /* eslint-disable global-require */
-      swiperData: [
-        { img: require('@/assets/images/banner/banner-8.jpg') },
-        { img: require('@/assets/images/banner/banner-7.jpg') },
-        { img: require('@/assets/images/banner/banner-20.jpg') },
-        { img: require('@/assets/images/banner/banner-4.jpg') },
-        { img: require('@/assets/images/banner/banner-5.jpg') },
-      ],
-      /* eslint-disable global-require */
+            /* eslint-disable global-require */
+            swiperData: [
+                { img: require('@/assets/images/banner/banner-8.jpg') },
+                { img: require('@/assets/images/banner/banner-7.jpg') },
+                { img: require('@/assets/images/banner/banner-20.jpg') },
+                { img: require('@/assets/images/banner/banner-4.jpg') },
+                { img: require('@/assets/images/banner/banner-5.jpg') },
+            ],
+            /* eslint-disable global-require */
 
-      swiperOptions: {
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'progressbar',
-        },
-      },
-    }
-  },
+            swiperOptions: {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'progressbar',
+                },
+            },
+        }
+    },
 }
 </script>

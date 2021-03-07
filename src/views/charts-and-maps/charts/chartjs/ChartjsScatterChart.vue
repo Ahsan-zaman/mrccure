@@ -42,29 +42,29 @@
 
 <script>
 import {
-  BCard, BCardBody, BCardTitle, BCardHeader, BButtonGroup, BButton,
+    BCard, BCardBody, BCardTitle, BCardHeader, BButtonGroup, BButton,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import ChartjsComponentScatterChart from './charts-components/ChartjsComponentScatterChart.vue'
 import chartjsData from './chartjsData'
 
 export default {
-  components: {
-    ChartjsComponentScatterChart,
-    BCard,
-    BCardBody,
-    BCardHeader,
-    BCardTitle,
-    BButtonGroup,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      chartjsData,
-    }
-  },
+    components: {
+        ChartjsComponentScatterChart,
+        BCard,
+        BCardBody,
+        BCardHeader,
+        BCardTitle,
+        BButtonGroup,
+        BButton,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            chartjsData,
+        }
+    },
 }
 </script>

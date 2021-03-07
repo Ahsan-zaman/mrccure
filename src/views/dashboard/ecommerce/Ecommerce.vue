@@ -113,39 +113,39 @@ import EcommerceGoalOverview from './EcommerceGoalOverview.vue'
 import EcommerceTransactions from './EcommerceTransactions.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    EcommerceMedal,
-    EcommerceStatistics,
-    EcommerceRevenueReport,
-    EcommerceOrderChart,
-    EcommerceProfitChart,
-    EcommerceEarningsChart,
-    EcommerceCompanyTable,
-    EcommerceMeetup,
-    EcommerceBrowserStates,
-    EcommerceGoalOverview,
-    EcommerceTransactions,
-  },
-  data() {
-    return {
-      data: {},
-    }
-  },
-  created() {
+        EcommerceMedal,
+        EcommerceStatistics,
+        EcommerceRevenueReport,
+        EcommerceOrderChart,
+        EcommerceProfitChart,
+        EcommerceEarningsChart,
+        EcommerceCompanyTable,
+        EcommerceMeetup,
+        EcommerceBrowserStates,
+        EcommerceGoalOverview,
+        EcommerceTransactions,
+    },
+    data() {
+        return {
+            data: {},
+        }
+    },
+    created() {
     // data
-    this.$http.get('/ecommerce/data')
-      .then(response => {
-        this.data = response.data
+        this.$http.get('/ecommerce/data')
+            .then(response => {
+                this.data = response.data
 
-        // ? Your API will return name of logged in user or you might just directly get name of logged in user
-        // ? This is just for demo purpose
-        const userData = getUserData()
-        this.data.congratulations.name = userData.fullName.split(' ')[0] || userData.username
-      })
-  },
+                // ? Your API will return name of logged in user or you might just directly get name of logged in user
+                // ? This is just for demo purpose
+                const userData = getUserData()
+                this.data.congratulations.name = userData.fullName.split(' ')[0] || userData.username
+            })
+    },
 }
 </script>
 

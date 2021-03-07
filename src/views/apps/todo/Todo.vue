@@ -174,11 +174,11 @@
 <script>
 import store from '@/store'
 import {
-  ref, watch, computed, onUnmounted,
+    ref, watch, computed, onUnmounted,
 } from '@vue/composition-api'
 import {
-  BFormInput, BInputGroup, BInputGroupPrepend, BDropdown, BDropdownItem,
-  BFormCheckbox, BBadge, BAvatar,
+    BFormInput, BInputGroup, BInputGroupPrepend, BDropdown, BDropdownItem,
+    BFormCheckbox, BBadge, BAvatar,
 } from 'bootstrap-vue'
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 import draggable from 'vuedraggable'
@@ -190,211 +190,211 @@ import todoStoreModule from './todoStoreModule'
 import TodoTaskHandlerSidebar from './TodoTaskHandlerSidebar.vue'
 
 export default {
-  components: {
-    BFormInput,
-    BInputGroup,
-    BInputGroupPrepend,
-    BDropdown,
-    BDropdownItem,
-    BFormCheckbox,
-    BBadge,
-    BAvatar,
-    draggable,
-    VuePerfectScrollbar,
+    components: {
+        BFormInput,
+        BInputGroup,
+        BInputGroupPrepend,
+        BDropdown,
+        BDropdownItem,
+        BFormCheckbox,
+        BBadge,
+        BAvatar,
+        draggable,
+        VuePerfectScrollbar,
 
-    // App SFC
-    TodoLeftSidebar,
-    TodoTaskHandlerSidebar,
-  },
-  setup() {
-    const TODO_APP_STORE_MODULE_NAME = 'app-todo'
+        // App SFC
+        TodoLeftSidebar,
+        TodoTaskHandlerSidebar,
+    },
+    setup() {
+        const TODO_APP_STORE_MODULE_NAME = 'app-todo'
 
-    // Register module
-    if (!store.hasModule(TODO_APP_STORE_MODULE_NAME)) store.registerModule(TODO_APP_STORE_MODULE_NAME, todoStoreModule)
+        // Register module
+        if (!store.hasModule(TODO_APP_STORE_MODULE_NAME)) store.registerModule(TODO_APP_STORE_MODULE_NAME, todoStoreModule)
 
-    // UnRegister on leave
-    onUnmounted(() => {
-      if (store.hasModule(TODO_APP_STORE_MODULE_NAME)) store.unregisterModule(TODO_APP_STORE_MODULE_NAME)
-    })
-
-    const { route, router } = useRouter()
-    const routeSortBy = computed(() => route.value.query.sort)
-    const routeQuery = computed(() => route.value.query.q)
-    const routeParams = computed(() => route.value.params)
-    watch(routeParams, () => {
-      // eslint-disable-next-line no-use-before-define
-      fetchTasks()
-    })
-
-    const tasks = ref([])
-
-    const sortOptions = [
-      'latest',
-      'title-asc',
-      'title-desc',
-      'assignee',
-      'due-date',
-    ]
-    const sortBy = ref(routeSortBy.value)
-    watch(routeSortBy, val => {
-      if (sortOptions.includes(val)) sortBy.value = val
-      else sortBy.value = val
-    })
-    const resetSortAndNavigate = () => {
-      const currentRouteQuery = JSON.parse(JSON.stringify(route.value.query))
-
-      delete currentRouteQuery.sort
-
-      router.replace({ name: route.name, query: currentRouteQuery }).catch(() => {})
-    }
-
-    const blankTask = {
-      id: null,
-      title: '',
-      dueDate: new Date(),
-      description: '',
-      assignee: null,
-      tags: [],
-      isCompleted: false,
-      isDeleted: false,
-      isImportant: false,
-    }
-    const task = ref(JSON.parse(JSON.stringify(blankTask)))
-    const clearTaskData = () => {
-      task.value = JSON.parse(JSON.stringify(blankTask))
-    }
-
-    const addTask = val => {
-      store.dispatch('app-todo/addTask', val)
-        .then(() => {
-          // eslint-disable-next-line no-use-before-define
-          fetchTasks()
+        // UnRegister on leave
+        onUnmounted(() => {
+            if (store.hasModule(TODO_APP_STORE_MODULE_NAME)) store.unregisterModule(TODO_APP_STORE_MODULE_NAME)
         })
-    }
-    const removeTask = () => {
-      store.dispatch('app-todo/removeTask', { id: task.value.id })
-        .then(() => {
-          // eslint-disable-next-line no-use-before-define
-          fetchTasks()
+
+        const { route, router } = useRouter()
+        const routeSortBy = computed(() => route.value.query.sort)
+        const routeQuery = computed(() => route.value.query.q)
+        const routeParams = computed(() => route.value.params)
+        watch(routeParams, () => {
+            // eslint-disable-next-line no-use-before-define
+            fetchTasks()
         })
-    }
-    const updateTask = taskData => {
-      store.dispatch('app-todo/updateTask', { task: taskData })
-        .then(() => {
-          // eslint-disable-next-line no-use-before-define
-          fetchTasks()
+
+        const tasks = ref([])
+
+        const sortOptions = [
+            'latest',
+            'title-asc',
+            'title-desc',
+            'assignee',
+            'due-date',
+        ]
+        const sortBy = ref(routeSortBy.value)
+        watch(routeSortBy, val => {
+            if (sortOptions.includes(val)) sortBy.value = val
+            else sortBy.value = val
         })
-    }
+        const resetSortAndNavigate = () => {
+            const currentRouteQuery = JSON.parse(JSON.stringify(route.value.query))
 
-    const perfectScrollbarSettings = {
-      maxScrollbarLength: 150,
-    }
+            delete currentRouteQuery.sort
 
-    const isTaskHandlerSidebarActive = ref(false)
+            router.replace({ name: route.name, query: currentRouteQuery }).catch(() => {})
+        }
 
-    const taskTags = [
-      { title: 'Team', color: 'primary', route: { name: 'apps-todo-tag', params: { tag: 'team' } } },
-      { title: 'Low', color: 'success', route: { name: 'apps-todo-tag', params: { tag: 'low' } } },
-      { title: 'Medium', color: 'warning', route: { name: 'apps-todo-tag', params: { tag: 'medium' } } },
-      { title: 'High', color: 'danger', route: { name: 'apps-todo-tag', params: { tag: 'high' } } },
-      { title: 'Update', color: 'info', route: { name: 'apps-todo-tag', params: { tag: 'update' } } },
-    ]
+        const blankTask = {
+            id: null,
+            title: '',
+            dueDate: new Date(),
+            description: '',
+            assignee: null,
+            tags: [],
+            isCompleted: false,
+            isDeleted: false,
+            isImportant: false,
+        }
+        const task = ref(JSON.parse(JSON.stringify(blankTask)))
+        const clearTaskData = () => {
+            task.value = JSON.parse(JSON.stringify(blankTask))
+        }
 
-    const resolveTagVariant = tag => {
-      if (tag === 'team') return 'primary'
-      if (tag === 'low') return 'success'
-      if (tag === 'medium') return 'warning'
-      if (tag === 'high') return 'danger'
-      if (tag === 'update') return 'info'
-      return 'primary'
-    }
+        const addTask = val => {
+            store.dispatch('app-todo/addTask', val)
+                .then(() => {
+                    // eslint-disable-next-line no-use-before-define
+                    fetchTasks()
+                })
+        }
+        const removeTask = () => {
+            store.dispatch('app-todo/removeTask', { id: task.value.id })
+                .then(() => {
+                    // eslint-disable-next-line no-use-before-define
+                    fetchTasks()
+                })
+        }
+        const updateTask = taskData => {
+            store.dispatch('app-todo/updateTask', { task: taskData })
+                .then(() => {
+                    // eslint-disable-next-line no-use-before-define
+                    fetchTasks()
+                })
+        }
 
-    const resolveAvatarVariant = tags => {
-      if (tags.includes('high')) return 'primary'
-      if (tags.includes('medium')) return 'warning'
-      if (tags.includes('low')) return 'success'
-      if (tags.includes('update')) return 'danger'
-      if (tags.includes('team')) return 'info'
-      return 'primary'
-    }
+        const perfectScrollbarSettings = {
+            maxScrollbarLength: 150,
+        }
 
-    // Search Query
-    const searchQuery = ref(routeQuery.value)
-    watch(routeQuery, val => {
-      searchQuery.value = val
-    })
-    // eslint-disable-next-line no-use-before-define
-    watch([searchQuery, sortBy], () => fetchTasks())
-    const updateRouteQuery = val => {
-      const currentRouteQuery = JSON.parse(JSON.stringify(route.value.query))
+        const isTaskHandlerSidebarActive = ref(false)
 
-      if (val) currentRouteQuery.q = val
-      else delete currentRouteQuery.q
+        const taskTags = [
+            { title: 'Team', color: 'primary', route: { name: 'apps-todo-tag', params: { tag: 'team' } } },
+            { title: 'Low', color: 'success', route: { name: 'apps-todo-tag', params: { tag: 'low' } } },
+            { title: 'Medium', color: 'warning', route: { name: 'apps-todo-tag', params: { tag: 'medium' } } },
+            { title: 'High', color: 'danger', route: { name: 'apps-todo-tag', params: { tag: 'high' } } },
+            { title: 'Update', color: 'info', route: { name: 'apps-todo-tag', params: { tag: 'update' } } },
+        ]
 
-      router.replace({ name: route.name, query: currentRouteQuery })
-    }
+        const resolveTagVariant = tag => {
+            if (tag === 'team') return 'primary'
+            if (tag === 'low') return 'success'
+            if (tag === 'medium') return 'warning'
+            if (tag === 'high') return 'danger'
+            if (tag === 'update') return 'info'
+            return 'primary'
+        }
 
-    const fetchTasks = () => {
-      store.dispatch('app-todo/fetchTasks', {
-        q: searchQuery.value,
-        filter: router.currentRoute.params.filter,
-        tag: router.currentRoute.params.tag,
-        sortBy: sortBy.value,
-      })
-        .then(response => {
-          tasks.value = response.data
+        const resolveAvatarVariant = tags => {
+            if (tags.includes('high')) return 'primary'
+            if (tags.includes('medium')) return 'warning'
+            if (tags.includes('low')) return 'success'
+            if (tags.includes('update')) return 'danger'
+            if (tags.includes('team')) return 'info'
+            return 'primary'
+        }
+
+        // Search Query
+        const searchQuery = ref(routeQuery.value)
+        watch(routeQuery, val => {
+            searchQuery.value = val
         })
-    }
+        // eslint-disable-next-line no-use-before-define
+        watch([searchQuery, sortBy], () => fetchTasks())
+        const updateRouteQuery = val => {
+            const currentRouteQuery = JSON.parse(JSON.stringify(route.value.query))
 
-    fetchTasks()
+            if (val) currentRouteQuery.q = val
+            else delete currentRouteQuery.q
 
-    const handleTaskClick = taskData => {
-      task.value = taskData
-      isTaskHandlerSidebarActive.value = true
-    }
+            router.replace({ name: route.name, query: currentRouteQuery })
+        }
 
-    // Single Task isCompleted update
-    const updateTaskIsCompleted = taskData => {
-      // eslint-disable-next-line no-param-reassign
-      taskData.isCompleted = !taskData.isCompleted
-      updateTask(taskData)
-    }
+        const fetchTasks = () => {
+            store.dispatch('app-todo/fetchTasks', {
+                q: searchQuery.value,
+                filter: router.currentRoute.params.filter,
+                tag: router.currentRoute.params.tag,
+                sortBy: sortBy.value,
+            })
+                .then(response => {
+                    tasks.value = response.data
+                })
+        }
 
-    const { mqShallShowLeftSidebar } = useResponsiveAppLeftSidebarVisibility()
+        fetchTasks()
 
-    return {
-      task,
-      tasks,
-      removeTask,
-      addTask,
-      updateTask,
-      clearTaskData,
-      taskTags,
-      searchQuery,
-      fetchTasks,
-      perfectScrollbarSettings,
-      updateRouteQuery,
-      resetSortAndNavigate,
+        const handleTaskClick = taskData => {
+            task.value = taskData
+            isTaskHandlerSidebarActive.value = true
+        }
 
-      // UI
-      resolveTagVariant,
-      resolveAvatarVariant,
-      isTaskHandlerSidebarActive,
+        // Single Task isCompleted update
+        const updateTaskIsCompleted = taskData => {
+            // eslint-disable-next-line no-param-reassign
+            taskData.isCompleted = !taskData.isCompleted
+            updateTask(taskData)
+        }
 
-      // Click Handler
-      handleTaskClick,
+        const { mqShallShowLeftSidebar } = useResponsiveAppLeftSidebarVisibility()
 
-      // Filters
-      formatDate,
-      avatarText,
+        return {
+            task,
+            tasks,
+            removeTask,
+            addTask,
+            updateTask,
+            clearTaskData,
+            taskTags,
+            searchQuery,
+            fetchTasks,
+            perfectScrollbarSettings,
+            updateRouteQuery,
+            resetSortAndNavigate,
 
-      // Single Task isCompleted update
-      updateTaskIsCompleted,
+            // UI
+            resolveTagVariant,
+            resolveAvatarVariant,
+            isTaskHandlerSidebarActive,
 
-      // Left Sidebar Responsive
-      mqShallShowLeftSidebar,
-    }
-  },
+            // Click Handler
+            handleTaskClick,
+
+            // Filters
+            formatDate,
+            avatarText,
+
+            // Single Task isCompleted update
+            updateTaskIsCompleted,
+
+            // Left Sidebar Responsive
+            mqShallShowLeftSidebar,
+        }
+    },
 }
 </script>
 

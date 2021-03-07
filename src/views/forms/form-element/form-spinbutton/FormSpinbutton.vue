@@ -60,23 +60,23 @@ import FormSpinbuttonFormater from './FormSpinbuttonFormater.vue'
 import FormSpinbuttonSlots from './FormSpinbuttonSlots.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    FormSpinbuttonBasic,
-    FormSpinbuttonMinMax,
-    FormSpinbuttonStep,
-    FormSpinbuttonWrap,
-    FormSpinbuttonSize,
-    FormSpinbuttonInline,
-    FormSpinbuttonVertical,
-    FormSpinbuttonLocale,
-    FormSpinbuttonDisabledReadonly,
-    FormSpinbuttonWidth,
-    FormSpinbuttonValidation,
-    FormSpinbuttonFormater,
-    FormSpinbuttonSlots,
-  },
+        FormSpinbuttonBasic,
+        FormSpinbuttonMinMax,
+        FormSpinbuttonStep,
+        FormSpinbuttonWrap,
+        FormSpinbuttonSize,
+        FormSpinbuttonInline,
+        FormSpinbuttonVertical,
+        FormSpinbuttonLocale,
+        FormSpinbuttonDisabledReadonly,
+        FormSpinbuttonWidth,
+        FormSpinbuttonValidation,
+        FormSpinbuttonFormater,
+        FormSpinbuttonSlots,
+    },
 }
 </script>

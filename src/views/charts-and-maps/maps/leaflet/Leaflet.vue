@@ -21,17 +21,17 @@ import LeafletGroup from './LeafletGroup.vue'
 import LeafletCustomIcon from './LeafletCustomIcon.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    LeafletBasic,
-    LeafletMarkerCirclePolygon,
-    LeafletPopup,
-    LeafletGeoJSON,
-    LeafletGroup,
-    LeafletCustomIcon,
-  },
+        LeafletBasic,
+        LeafletMarkerCirclePolygon,
+        LeafletPopup,
+        LeafletGeoJSON,
+        LeafletGroup,
+        LeafletCustomIcon,
+    },
 }
 </script>
 

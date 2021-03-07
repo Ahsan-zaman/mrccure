@@ -38,21 +38,21 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardBody, BBadge, BButton,
+    BCard, BCardHeader, BCardBody, BBadge, BButton,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
-  directives: {
-    Ripple,
-  },
-  components: {
-    BCard,
-    BCardHeader,
-    BCardBody,
-    BBadge,
-    BButton,
-  },
+    directives: {
+        Ripple,
+    },
+    components: {
+        BCard,
+        BCardHeader,
+        BCardBody,
+        BBadge,
+        BButton,
+    },
 }
 </script>
 

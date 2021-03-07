@@ -12,11 +12,11 @@ import TreeSearchTree from './TreeSearchTree.vue'
 import TreeAsyncTree from './TreeAsyncTree.vue'
 
 export default {
-  components: {
-    TreeDropdown,
-    TreeSearchTree,
-    TreeAsyncTree,
-  },
+    components: {
+        TreeDropdown,
+        TreeSearchTree,
+        TreeAsyncTree,
+    },
 }
 </script>
 

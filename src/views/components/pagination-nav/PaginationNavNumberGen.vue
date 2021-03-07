@@ -26,24 +26,24 @@ import BCardCode from '@core/components/b-card-code'
 import { codeNumberGen } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPaginationNav,
-    BCardText,
-  },
-  data() {
-    return {
-      links: ['#foo', '#bar', '#baz', '#faz'],
-      codeNumberGen,
-    }
-  },
-  methods: {
-    linkGen(pageNum) {
-      return this.links[pageNum - 1]
+    components: {
+        BCardCode,
+        BPaginationNav,
+        BCardText,
     },
-    pageGen(pageNum) {
-      return this.links[pageNum - 1].slice(1)
+    data() {
+        return {
+            links: ['#foo', '#bar', '#baz', '#faz'],
+            codeNumberGen,
+        }
     },
-  },
+    methods: {
+        linkGen(pageNum) {
+            return this.links[pageNum - 1]
+        },
+        pageGen(pageNum) {
+            return this.links[pageNum - 1].slice(1)
+        },
+    },
 }
 </script>

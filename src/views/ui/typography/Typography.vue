@@ -16,12 +16,12 @@ import TypographyList from './TypographyList.vue'
 import TypographyDescription from './TypographyDescription.vue'
 
 export default {
-  components: {
-    TypographyDefault,
-    TypographyDisplay,
-    TypographyBlockquotes,
-    TypographyList,
-    TypographyDescription,
-  },
+    components: {
+        TypographyDefault,
+        TypographyDisplay,
+        TypographyBlockquotes,
+        TypographyList,
+        TypographyDescription,
+    },
 }
 </script>

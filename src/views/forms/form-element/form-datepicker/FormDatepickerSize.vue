@@ -48,15 +48,15 @@ import { BFormDatepicker, BCardText } from 'bootstrap-vue'
 import { codeSize } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormDatepicker,
-  },
-  data() {
-    return {
-      codeSize,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormDatepicker,
+    },
+    data() {
+        return {
+            codeSize,
+        }
+    },
 }
 </script>

@@ -39,15 +39,15 @@ import { BFormRating, BCardText } from 'bootstrap-vue'
 import { codeInline } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormRating,
-    BCardText,
-  },
-  data() {
-    return {
-      codeInline,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormRating,
+        BCardText,
+    },
+    data() {
+        return {
+            codeInline,
+        }
+    },
 }
 </script>

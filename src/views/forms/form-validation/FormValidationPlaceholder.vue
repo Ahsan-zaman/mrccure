@@ -76,41 +76,41 @@
 import BCardCode from '@core/components/b-card-code'
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import {
-  BFormInput, BFormGroup, BForm, BRow, BCol, BButton, BCardText,
+    BFormInput, BFormGroup, BForm, BRow, BCol, BButton, BCardText,
 } from 'bootstrap-vue'
 import { required } from '@validations'
 import { codePlaceholder } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    ValidationProvider,
-    ValidationObserver,
-    BFormInput,
-    BFormGroup,
-    BCardText,
-    BForm,
-    BRow,
-    BCol,
-    BButton,
-  },
-  data() {
-    return {
-      passValue: '',
-      username: '',
-      required,
-      codePlaceholder,
-    }
-  },
-  methods: {
-    validationForm() {
-      this.$refs.simpleRules.validate().then(success => {
-        if (success) {
-          // eslint-disable-next-line
-          alert('login successfully')
-        }
-      })
+    components: {
+        BCardCode,
+        ValidationProvider,
+        ValidationObserver,
+        BFormInput,
+        BFormGroup,
+        BCardText,
+        BForm,
+        BRow,
+        BCol,
+        BButton,
     },
-  },
+    data() {
+        return {
+            passValue: '',
+            username: '',
+            required,
+            codePlaceholder,
+        }
+    },
+    methods: {
+        validationForm() {
+            this.$refs.simpleRules.validate().then(success => {
+                if (success) {
+                    // eslint-disable-next-line
+          alert('login successfully')
+                }
+            })
+        },
+    },
 }
 </script>

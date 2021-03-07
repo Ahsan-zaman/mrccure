@@ -48,20 +48,20 @@ import ListGroupFlush from './ListGroupFlush.vue'
 import ListGroupCustom from './ListGroupCustom.vue'
 
 export default {
-  components: {
-    BCol,
-    BRow,
+    components: {
+        BCol,
+        BRow,
 
-    ListGroupBadge,
-    ListGroupBasic,
-    ListGroupIcon,
-    ListGroupContextual,
-    ListGroupDisable,
-    ListGroupHorizontal,
-    ListGroupAction,
-    ListGroupActionButton,
-    ListGroupFlush,
-    ListGroupCustom,
-  },
+        ListGroupBadge,
+        ListGroupBasic,
+        ListGroupIcon,
+        ListGroupContextual,
+        ListGroupDisable,
+        ListGroupHorizontal,
+        ListGroupAction,
+        ListGroupActionButton,
+        ListGroupFlush,
+        ListGroupCustom,
+    },
 }
 </script>

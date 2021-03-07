@@ -49,72 +49,72 @@ import Ripple from 'vue-ripple-directive'
 import { codeTypes } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeTypes,
-    }
-  },
-  methods: {
-
-    // success
-    success() {
-      this.$swal({
-        title: 'Good job!',
-        text: 'You clicked the button!',
-        icon: 'success',
-        customClass: {
-          confirmButton: 'btn btn-primary',
-        },
-        buttonsStyling: false,
-      })
+    components: {
+        BCardCode,
+        BCardText,
+        BButton,
     },
-
-    // error
-    error() {
-      this.$swal({
-        title: 'Error!',
-        text: ' You clicked the button!',
-        icon: 'error',
-        customClass: {
-          confirmButton: 'btn btn-primary',
-        },
-        buttonsStyling: false,
-      })
+    directives: {
+        Ripple,
     },
-
-    // warning
-    warning() {
-      this.$swal({
-        title: 'Warning!',
-        text: ' You clicked the button!',
-        icon: 'warning',
-        customClass: {
-          confirmButton: 'btn btn-primary',
-        },
-        buttonsStyling: false,
-      })
+    data() {
+        return {
+            codeTypes,
+        }
     },
+    methods: {
 
-    // info
-    info() {
-      this.$swal({
-        title: 'Info!',
-        text: 'You clicked the button!',
-        icon: 'info',
-        customClass: {
-          confirmButton: 'btn btn-primary',
+        // success
+        success() {
+            this.$swal({
+                title: 'Good job!',
+                text: 'You clicked the button!',
+                icon: 'success',
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                buttonsStyling: false,
+            })
         },
-        buttonsStyling: false,
-      })
+
+        // error
+        error() {
+            this.$swal({
+                title: 'Error!',
+                text: ' You clicked the button!',
+                icon: 'error',
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                buttonsStyling: false,
+            })
+        },
+
+        // warning
+        warning() {
+            this.$swal({
+                title: 'Warning!',
+                text: ' You clicked the button!',
+                icon: 'warning',
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                buttonsStyling: false,
+            })
+        },
+
+        // info
+        info() {
+            this.$swal({
+                title: 'Info!',
+                text: 'You clicked the button!',
+                icon: 'info',
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                buttonsStyling: false,
+            })
+        },
     },
-  },
 }
 </script>

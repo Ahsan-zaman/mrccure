@@ -24,17 +24,17 @@ import ImagesBlank from './ImagesBlank.vue'
 import ImagesLazy from './ImagesLazy.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    ImagesBasic,
-    ImagesResponsive,
-    ImagesThumbnails,
-    ImagesRoundedCorner,
-    ImagesAlignment,
-    ImagesBlank,
-    ImagesLazy,
-  },
+        ImagesBasic,
+        ImagesResponsive,
+        ImagesThumbnails,
+        ImagesRoundedCorner,
+        ImagesAlignment,
+        ImagesBlank,
+        ImagesLazy,
+    },
 }
 </script>

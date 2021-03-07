@@ -27,20 +27,20 @@ import OverlayForm from './OverlayForm.vue'
 import OverlayBusyState from './OverlayBusyState.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    OverlayBasic,
-    OverlayBackdrop,
-    OverlayFade,
-    OverlaySpinner,
-    OverlayCornerRound,
-    OverlayCustomContent,
-    OverlayNoWrapMode,
-    OverlayForm,
-    OverlayBusyState,
-  },
+        OverlayBasic,
+        OverlayBackdrop,
+        OverlayFade,
+        OverlaySpinner,
+        OverlayCornerRound,
+        OverlayCustomContent,
+        OverlayNoWrapMode,
+        OverlayForm,
+        OverlayBusyState,
+    },
 }
 </script>
 

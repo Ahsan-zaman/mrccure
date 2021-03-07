@@ -48,20 +48,20 @@ import Ripple from 'vue-ripple-directive'
 import { codeVmodal } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BModal,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      modalShow: false,
-      codeVmodal,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BModal,
+        BCardText,
+    },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            modalShow: false,
+            codeVmodal,
+        }
+    },
 }
 </script>

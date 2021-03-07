@@ -51,28 +51,28 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardTitle, BCardText, BCardBody, BRow, BCol, BMedia, BMediaAside, BAvatar, BMediaBody,
+    BCard, BCardHeader, BCardTitle, BCardText, BCardBody, BRow, BCol, BMedia, BMediaAside, BAvatar, BMediaBody,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BCardHeader,
-    BCardTitle,
-    BCardText,
-    BCardBody,
-    BMedia,
-    BAvatar,
-    BMediaAside,
-    BMediaBody,
-  },
-  props: {
-    data: {
-      type: Array,
-      default: () => [],
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BCardHeader,
+        BCardTitle,
+        BCardText,
+        BCardBody,
+        BMedia,
+        BAvatar,
+        BMediaAside,
+        BMediaBody,
     },
-  },
+    props: {
+        data: {
+            type: Array,
+            default: () => [],
+        },
+    },
 }
 </script>

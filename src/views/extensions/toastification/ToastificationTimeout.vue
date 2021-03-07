@@ -48,36 +48,36 @@ import Ripple from 'vue-ripple-directive'
 import { codeTime } from './code'
 
 export default {
-  components: {
-    BButton,
-    BCardCode,
-    BCardText,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeTime,
-    }
-  },
-  methods: {
-    showToast(variant, timeout) {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Notification',
-          icon: 'BellIcon',
-          text: 'I do not think that word means what you think it means.',
-          variant,
-        },
-      },
-      {
-        timeout,
-      })
+    components: {
+        BButton,
+        BCardCode,
+        BCardText,
+        // eslint-disable-next-line vue/no-unused-components
+        ToastificationContent,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeTime,
+        }
+    },
+    methods: {
+        showToast(variant, timeout) {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Notification',
+                    icon: 'BellIcon',
+                    text: 'I do not think that word means what you think it means.',
+                    variant,
+                },
+            },
+            {
+                timeout,
+            })
+        },
+    },
 }
 </script>

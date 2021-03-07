@@ -84,27 +84,27 @@ import Ripple from 'vue-ripple-directive'
 import { codeVariant } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeVariant,
-    }
-  },
-  methods: {
-    makeToast(variant = null) {
-      this.$bvToast.toast('Toast body content', {
-        title: `Variant ${variant || 'default'}`,
-        variant,
-        solid: false,
-      })
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
     },
-  },
+    directives: {
+        Ripple,
+    },
+    data() {
+        return {
+            codeVariant,
+        }
+    },
+    methods: {
+        makeToast(variant = null) {
+            this.$bvToast.toast('Toast body content', {
+                title: `Variant ${variant || 'default'}`,
+                variant,
+                solid: false,
+            })
+        },
+    },
 }
 </script>

@@ -141,48 +141,48 @@
 
 <script>
 import {
-  BAvatar, BFormTextarea, BFormRadioGroup, BFormRadio, BFormCheckbox, BButton,
+    BAvatar, BFormTextarea, BFormRadioGroup, BFormRadio, BFormCheckbox, BButton,
 } from 'bootstrap-vue'
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 
 export default {
-  components: {
-    BAvatar,
-    BFormTextarea,
-    BFormRadioGroup,
-    BFormRadio,
-    BFormCheckbox,
-    BButton,
-    VuePerfectScrollbar,
-  },
-  props: {
-    shallShowUserProfileSidebar: {
-      type: Boolean,
-      required: true,
+    components: {
+        BAvatar,
+        BFormTextarea,
+        BFormRadioGroup,
+        BFormRadio,
+        BFormCheckbox,
+        BButton,
+        VuePerfectScrollbar,
     },
-    profileUserData: {
-      type: Object,
-      required: true,
+    props: {
+        shallShowUserProfileSidebar: {
+            type: Boolean,
+            required: true,
+        },
+        profileUserData: {
+            type: Object,
+            required: true,
+        },
+
     },
+    setup() {
+        const perfectScrollbarSettings = {
+            maxScrollbarLength: 150,
+        }
 
-  },
-  setup() {
-    const perfectScrollbarSettings = {
-      maxScrollbarLength: 150,
-    }
+        const userStatusOptions = [
+            { text: 'Active', value: 'online', radioVariant: 'success' },
+            { text: 'Do Not Disturb', value: 'busy', radioVariant: 'danger' },
+            { text: 'Away', value: 'away', radioVariant: 'warning' },
+            { text: 'Offline', value: 'offline', radioVariant: 'secondary' },
+        ]
 
-    const userStatusOptions = [
-      { text: 'Active', value: 'online', radioVariant: 'success' },
-      { text: 'Do Not Disturb', value: 'busy', radioVariant: 'danger' },
-      { text: 'Away', value: 'away', radioVariant: 'warning' },
-      { text: 'Offline', value: 'offline', radioVariant: 'secondary' },
-    ]
-
-    return {
-      perfectScrollbarSettings,
-      userStatusOptions,
-    }
-  },
+        return {
+            perfectScrollbarSettings,
+            userStatusOptions,
+        }
+    },
 }
 </script>
 

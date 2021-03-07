@@ -53,35 +53,35 @@
 <script>
 /* eslint-disable global-require */
 import {
-  BLink, BForm, BFormInput, BButton, BImg,
+    BLink, BForm, BFormInput, BButton, BImg,
 } from 'bootstrap-vue'
 import VuexyLogo from '@core/layouts/components/Logo.vue'
 import store from '@/store/index'
 
 export default {
-  components: {
-    VuexyLogo,
-    BLink,
-    BForm,
-    BButton,
-    BFormInput,
-    BImg,
-  },
-  data() {
-    return {
-      downImg: require('@/assets/images/pages/coming-soon.svg'),
-    }
-  },
-  computed: {
-    imgUrl() {
-      if (store.state.appConfig.layout.skin === 'dark') {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.downImg = require('@/assets/images/pages/coming-soon-dark.svg')
-        return this.downImg
-      }
-      return this.downImg
+    components: {
+        VuexyLogo,
+        BLink,
+        BForm,
+        BButton,
+        BFormInput,
+        BImg,
     },
-  },
+    data() {
+        return {
+            downImg: require('@/assets/images/pages/coming-soon.svg'),
+        }
+    },
+    computed: {
+        imgUrl() {
+            if (store.state.appConfig.layout.skin === 'dark') {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.downImg = require('@/assets/images/pages/coming-soon-dark.svg')
+                return this.downImg
+            }
+            return this.downImg
+        },
+    },
 }
 </script>
 

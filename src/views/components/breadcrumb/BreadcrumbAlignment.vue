@@ -34,27 +34,27 @@ import BCardCode from '@core/components/b-card-code'
 import { codeAlignment } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BBreadcrumb,
-    BCardText,
-  },
-  data() {
-    return {
-      codeAlignment,
-      items: [
-        {
-          text: 'Dashboard',
-        },
-        {
-          text: 'Library',
-        },
-        {
-          text: 'Data',
-          active: true,
-        },
-      ],
-    }
-  },
+    components: {
+        BCardCode,
+        BBreadcrumb,
+        BCardText,
+    },
+    data() {
+        return {
+            codeAlignment,
+            items: [
+                {
+                    text: 'Dashboard',
+                },
+                {
+                    text: 'Library',
+                },
+                {
+                    text: 'Data',
+                    active: true,
+                },
+            ],
+        }
+    },
 }
 </script>

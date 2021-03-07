@@ -37,39 +37,39 @@ import HorizontalNavMenuGroup from '../horizontal-nav-menu-group/HorizontalNavMe
 import HorizontalNavMenuLink from '../horizontal-nav-menu-link/HorizontalNavMenuLink.vue'
 
 export default {
-  components: {
-    BLink,
-    HorizontalNavMenuGroup,
-    HorizontalNavMenuLink,
-  },
-  mixins: [mixinHorizontalNavMenuHeaderGroup],
-  props: {
-    item: {
-      type: Object,
-      required: true,
+    components: {
+        BLink,
+        HorizontalNavMenuGroup,
+        HorizontalNavMenuLink,
     },
-  },
-  setup(props) {
-    const {
-      isActive,
-      updateIsActive,
-      isOpen,
-      updateGroupOpen,
+    mixins: [mixinHorizontalNavMenuHeaderGroup],
+    props: {
+        item: {
+            type: Object,
+            required: true,
+        },
+    },
+    setup(props) {
+        const {
+            isActive,
+            updateIsActive,
+            isOpen,
+            updateGroupOpen,
 
-      // ACL
-      hasAbilityToAccess,
-    } = useHorizontalNavMenuHeaderGroup(props.item)
+            // ACL
+            hasAbilityToAccess,
+        } = useHorizontalNavMenuHeaderGroup(props.item)
 
-    return {
-      isOpen,
-      isActive,
-      updateGroupOpen,
-      updateIsActive,
-      resolveHorizontalNavMenuItemComponent,
+        return {
+            isOpen,
+            isActive,
+            updateGroupOpen,
+            updateIsActive,
+            resolveHorizontalNavMenuItemComponent,
 
-      // ACL
-      hasAbilityToAccess,
-    }
-  },
+            // ACL
+            hasAbilityToAccess,
+        }
+    },
 }
 </script>

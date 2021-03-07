@@ -39,41 +39,41 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BProgress, BCardText, BRow, BCol,
+    BProgress, BCardText, BRow, BCol,
 } from 'bootstrap-vue'
 import { codeAnimated } from './code'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCardCode,
-    BProgress,
-    BCardText,
-  },
-  data() {
-    return {
-      codeAnimated,
-      bars: [
-        { variant: 'primary', value: 75 },
-        { variant: 'secondary', value: 75 },
-        { variant: 'success', value: 75 },
-        { variant: 'info', value: 75 },
-        { variant: 'danger', value: 75 },
-        { variant: 'warning', value: 75 },
-      ],
-      timer: null,
-    }
-  },
-  mounted() {
-    this.timer = setInterval(() => {
-      // eslint-disable-next-line
+    components: {
+        BRow,
+        BCol,
+        BCardCode,
+        BProgress,
+        BCardText,
+    },
+    data() {
+        return {
+            codeAnimated,
+            bars: [
+                { variant: 'primary', value: 75 },
+                { variant: 'secondary', value: 75 },
+                { variant: 'success', value: 75 },
+                { variant: 'info', value: 75 },
+                { variant: 'danger', value: 75 },
+                { variant: 'warning', value: 75 },
+            ],
+            timer: null,
+        }
+    },
+    mounted() {
+        this.timer = setInterval(() => {
+            // eslint-disable-next-line
       this.bars.forEach(bar => (bar.value = 25 + Math.random() * 75))
-    }, 2000)
-  },
-  beforeDestroy() {
-    clearInterval(this.timer)
-    this.timer = null
-  },
+        }, 2000)
+    },
+    beforeDestroy() {
+        clearInterval(this.timer)
+        this.timer = null
+    },
 }
 </script>

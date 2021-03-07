@@ -59,27 +59,27 @@
 
 <script>
 import {
-  BRow, BCol, BFormGroup, BCardText,
+    BRow, BCol, BFormGroup, BCardText,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code'
 import vSelect from 'vue-select'
 import { codeVueSize } from './code'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCardText,
-    BFormGroup,
-    BCardCode,
-    vSelect,
-  },
-  data() {
-    return {
-      selected: { title: 'Square' },
-      codeVueSize,
-      option: [{ title: 'Square' }, { title: 'Rectangle' }, { title: 'Rombo' }, { title: 'Romboid' }],
-    }
-  },
+    components: {
+        BRow,
+        BCol,
+        BCardText,
+        BFormGroup,
+        BCardCode,
+        vSelect,
+    },
+    data() {
+        return {
+            selected: { title: 'Square' },
+            codeVueSize,
+            option: [{ title: 'Square' }, { title: 'Rectangle' }, { title: 'Rombo' }, { title: 'Romboid' }],
+        }
+    },
 }
 </script>

@@ -53,17 +53,17 @@ import { BFormSpinbutton, BFormGroup, BCardText } from 'bootstrap-vue'
 import { codeWidth } from './code'
 
 export default {
-  components: {
-    BFormSpinbutton,
-    BFormGroup,
-    BCardText,
-    BCardCode,
-  },
-  data() {
-    return {
-      value: 0,
-      codeWidth,
-    }
-  },
+    components: {
+        BFormSpinbutton,
+        BFormGroup,
+        BCardText,
+        BCardCode,
+    },
+    data() {
+        return {
+            value: 0,
+            codeWidth,
+        }
+    },
 }
 </script>

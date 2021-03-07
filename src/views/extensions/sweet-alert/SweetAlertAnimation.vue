@@ -61,90 +61,90 @@ import 'animate.css'
 import { codeAnimation } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeAnimation,
-    }
-  },
-  methods: {
-
-    // bounce in method
-    bounceIn() {
-      this.$swal({
-        title: 'Bounce In Animation',
-        customClass: {
-          confirmButton: 'btn btn-primary',
-        },
-        showClass: {
-          popup: 'animate__animated animate__bounceIn',
-        },
-        buttonsStyling: false,
-      })
+    components: {
+        BCardCode,
+        BCardText,
+        BButton,
     },
-
-    // fade in
-    fadeIn() {
-      this.$swal({
-        title: 'Fade In Animation',
-        customClass: {
-          confirmButton: 'btn btn-primary',
-        },
-        showClass: {
-          popup: 'animate__animated animate__fadeIn',
-        },
-        buttonsStyling: false,
-      })
+    directives: {
+        Ripple,
     },
-
-    // flip in
-    flipIn() {
-      this.$swal({
-        title: 'Flip In Animation',
-        customClass: {
-          confirmButton: 'btn btn-primary',
-        },
-        showClass: {
-          popup: 'animate__animated animate__flipInX',
-        },
-        buttonsStyling: false,
-      })
+    data() {
+        return {
+            codeAnimation,
+        }
     },
+    methods: {
 
-    // tada
-    tada() {
-      this.$swal({
-        title: 'Tada Animation',
-        customClass: {
-          confirmButton: 'btn btn-primary',
+        // bounce in method
+        bounceIn() {
+            this.$swal({
+                title: 'Bounce In Animation',
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                showClass: {
+                    popup: 'animate__animated animate__bounceIn',
+                },
+                buttonsStyling: false,
+            })
         },
-        showClass: {
-          popup: 'animate__animated animate__tada',
-        },
-        buttonsStyling: false,
-      })
-    },
 
-    // shake
-    shake() {
-      this.$swal({
-        title: 'Shake Animation',
-        customClass: {
-          confirmButton: 'btn btn-primary',
+        // fade in
+        fadeIn() {
+            this.$swal({
+                title: 'Fade In Animation',
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                showClass: {
+                    popup: 'animate__animated animate__fadeIn',
+                },
+                buttonsStyling: false,
+            })
         },
-        showClass: {
-          popup: 'animate__animated animate__shakeX',
+
+        // flip in
+        flipIn() {
+            this.$swal({
+                title: 'Flip In Animation',
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                showClass: {
+                    popup: 'animate__animated animate__flipInX',
+                },
+                buttonsStyling: false,
+            })
         },
-        buttonsStyling: false,
-      })
+
+        // tada
+        tada() {
+            this.$swal({
+                title: 'Tada Animation',
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                showClass: {
+                    popup: 'animate__animated animate__tada',
+                },
+                buttonsStyling: false,
+            })
+        },
+
+        // shake
+        shake() {
+            this.$swal({
+                title: 'Shake Animation',
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                },
+                showClass: {
+                    popup: 'animate__animated animate__shakeX',
+                },
+                buttonsStyling: false,
+            })
+        },
     },
-  },
 }
 </script>

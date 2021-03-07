@@ -17,14 +17,14 @@ import FormWizardVertical from './FormWizardVertical.vue'
 import FormWizardVerticalIcon from './FormWizardVerticalIcon.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    FormWizardNumber,
-    FormWizardIcon,
-    FormWizardVertical,
-    FormWizardVerticalIcon,
-  },
+    components: {
+        BRow,
+        BCol,
+        FormWizardNumber,
+        FormWizardIcon,
+        FormWizardVertical,
+        FormWizardVerticalIcon,
+    },
 }
 </script>
 

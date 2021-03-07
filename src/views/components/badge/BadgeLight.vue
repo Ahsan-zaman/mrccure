@@ -44,15 +44,15 @@ import { BBadge, BCardText } from 'bootstrap-vue'
 import { codeLightBadges } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BBadge,
-  },
-  data() {
-    return {
-      codeLightBadges,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BBadge,
+    },
+    data() {
+        return {
+            codeLightBadges,
+        }
+    },
 }
 </script>

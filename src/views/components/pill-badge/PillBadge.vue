@@ -16,12 +16,12 @@ import PillBadgeNotification from './PillBadgeNotification.vue'
 import PillBadgeLinkBlock from './PillBadgeLinkBlock.vue'
 
 export default {
-  components: {
-    PillBadgeContextual,
-    PillBadgeGlow,
-    PillBadgeLight,
-    PillBadgeNotification,
-    PillBadgeLinkBlock,
-  },
+    components: {
+        PillBadgeContextual,
+        PillBadgeGlow,
+        PillBadgeLight,
+        PillBadgeNotification,
+        PillBadgeLinkBlock,
+    },
 }
 </script>

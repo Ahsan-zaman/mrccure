@@ -54,30 +54,30 @@ import Ripple from 'vue-ripple-directive'
 import { codeAutoDismiss } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAlert,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    'height-fade': heightFade,
-    Ripple,
-  },
-  data() {
-    return {
-      dismissSecs: 50,
-      dismissCountDown: 0,
-      codeAutoDismiss,
-    }
-  },
-  methods: {
-    countDownChanged(dismissCountDown) {
-      this.dismissCountDown = dismissCountDown
+    components: {
+        BCardCode,
+        BAlert,
+        BButton,
+        BCardText,
     },
-    showAlert() {
-      this.dismissCountDown = this.dismissSecs
+    directives: {
+        'height-fade': heightFade,
+        Ripple,
     },
-  },
+    data() {
+        return {
+            dismissSecs: 50,
+            dismissCountDown: 0,
+            codeAutoDismiss,
+        }
+    },
+    methods: {
+        countDownChanged(dismissCountDown) {
+            this.dismissCountDown = dismissCountDown
+        },
+        showAlert() {
+            this.dismissCountDown = this.dismissSecs
+        },
+    },
 }
 </script>

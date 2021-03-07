@@ -29,17 +29,17 @@ import CardBasicDecks from './CardBasicDecks.vue'
 import CardBasicColumns from './CardBasicColumns.vue'
 
 export default {
-  components: {
-    CardTitle,
-    CardContentTypes,
-    CardHeaderFooter,
-    CardTextAlignment,
-    CardNavigation,
-    CardImages,
-    CardStyleVariation,
-    CardBasicGroup,
-    CardBasicDecks,
-    CardBasicColumns,
-  },
+    components: {
+        CardTitle,
+        CardContentTypes,
+        CardHeaderFooter,
+        CardTextAlignment,
+        CardNavigation,
+        CardImages,
+        CardStyleVariation,
+        CardBasicGroup,
+        CardBasicDecks,
+        CardBasicColumns,
+    },
 }
 </script>

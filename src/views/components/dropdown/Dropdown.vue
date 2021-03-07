@@ -44,22 +44,22 @@ import DropdownFlat from './DropdownFlat.vue'
 import DropdownGradient from './DropdownGradient.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    DropdownBasic,
-    DropdownDirection,
-    DropdownSize,
-    DropdownSplit,
-    DropdownVariation,
-    DropdownBlock,
-    DropdownSubComponent,
-    DropdownLazy,
-    DropdownLink,
-    DropdownOutline,
-    DropdownFlat,
-    DropdownGradient,
-  },
+        DropdownBasic,
+        DropdownDirection,
+        DropdownSize,
+        DropdownSplit,
+        DropdownVariation,
+        DropdownBlock,
+        DropdownSubComponent,
+        DropdownLazy,
+        DropdownLink,
+        DropdownOutline,
+        DropdownFlat,
+        DropdownGradient,
+    },
 }
 </script>

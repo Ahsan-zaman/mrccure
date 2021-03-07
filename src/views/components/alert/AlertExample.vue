@@ -44,37 +44,37 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BAlert, BFormGroup, BFormInput, BCardText,
+    BAlert, BFormGroup, BFormInput, BCardText,
 } from 'bootstrap-vue'
 import { heightFade } from '@core/directives/animations'
 import { codeExample } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAlert,
-    BFormGroup,
-    BFormInput,
-    BCardText,
-  },
-  directives: {
-    'height-fade': heightFade,
-  },
-  data() {
-    return {
-      value: '',
-      show: true,
-      codeExample,
-    }
-  },
-  methods: {
-    validateInput() {
-      if (/^\d+$/.test(this.value)) {
-        this.show = false
-      } else {
-        this.show = true
-      }
+    components: {
+        BCardCode,
+        BAlert,
+        BFormGroup,
+        BFormInput,
+        BCardText,
     },
-  },
+    directives: {
+        'height-fade': heightFade,
+    },
+    data() {
+        return {
+            value: '',
+            show: true,
+            codeExample,
+        }
+    },
+    methods: {
+        validateInput() {
+            if (/^\d+$/.test(this.value)) {
+                this.show = false
+            } else {
+                this.show = true
+            }
+        },
+    },
 }
 </script>

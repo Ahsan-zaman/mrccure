@@ -32,16 +32,16 @@ import TimeSlot from './TimeSlot.vue'
 import TimeInternationalization from './TimeInternationalization.vue'
 
 export default {
-  components: {
-    BCol,
-    BRow,
+    components: {
+        BCol,
+        BRow,
 
-    TimeBasic,
-    TimeState,
-    TimeSpinbutton,
-    TimeBorderPadding,
-    TimeSlot,
-    TimeInternationalization,
-  },
+        TimeBasic,
+        TimeState,
+        TimeSpinbutton,
+        TimeBorderPadding,
+        TimeSlot,
+        TimeInternationalization,
+    },
 }
 </script>

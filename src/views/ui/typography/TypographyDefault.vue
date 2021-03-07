@@ -285,24 +285,24 @@
 
 <script>
 import {
-  BRow, BCol, BCard, BCardHeader, BCardTitle, BCardBody, BCardText, BTableSimple, BThead, BTr, BTh, BTbody, BTd,
+    BRow, BCol, BCard, BCardHeader, BCardTitle, BCardBody, BCardText, BTableSimple, BThead, BTr, BTh, BTbody, BTd,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BTableSimple,
-    BCardHeader,
-    BCardBody,
-    BCardTitle,
-    BCardText,
-    BThead,
-    BTr,
-    BTh,
-    BTbody,
-    BTd,
-  },
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BTableSimple,
+        BCardHeader,
+        BCardBody,
+        BCardTitle,
+        BCardText,
+        BThead,
+        BTr,
+        BTh,
+        BTbody,
+        BTd,
+    },
 }
 </script>

@@ -181,7 +181,7 @@
 
 <script>
 import {
-  BButton, BModal, VBModal, BCardText,
+    BButton, BModal, VBModal, BCardText,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code'
 import Ripple from 'vue-ripple-directive'
@@ -191,20 +191,20 @@ import { codeThemes } from './code'
 Ripple.zIndex = 1
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-    BModal,
-  },
-  directives: {
-    'b-modal': VBModal,
-    Ripple,
-  },
-  data() {
-    return {
-      codeThemes,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
+        BModal,
+    },
+    directives: {
+        'b-modal': VBModal,
+        Ripple,
+    },
+    data() {
+        return {
+            codeThemes,
+        }
+    },
 }
 </script>

@@ -50,49 +50,49 @@ import Ripple from 'vue-ripple-directive'
 import { codeMessageBox } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      boxOne: '',
-      boxTwo: '',
-      codeMessageBox,
-    }
-  },
-  methods: {
-    showMsgBoxOne() {
-      this.boxOne = ''
-      this.$bvModal
-        .msgBoxConfirm('Are you sure?', {
-          cancelVariant: 'outline-secondary',
-        })
-        .then(value => {
-          this.boxOne = value
-        })
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
     },
-    showMsgBoxTwo() {
-      this.boxTwo = ''
-      this.$bvModal
-        .msgBoxConfirm('Please confirm that you want to delete everything.', {
-          title: 'Please Confirm',
-          size: 'sm',
-          okVariant: 'primary',
-          okTitle: 'Yes',
-          cancelTitle: 'No',
-          cancelVariant: 'outline-secondary',
-          hideHeaderClose: false,
-          centered: true,
-        })
-        .then(value => {
-          this.boxTwo = value
-        })
+    directives: {
+        Ripple,
     },
-  },
+    data() {
+        return {
+            boxOne: '',
+            boxTwo: '',
+            codeMessageBox,
+        }
+    },
+    methods: {
+        showMsgBoxOne() {
+            this.boxOne = ''
+            this.$bvModal
+                .msgBoxConfirm('Are you sure?', {
+                    cancelVariant: 'outline-secondary',
+                })
+                .then(value => {
+                    this.boxOne = value
+                })
+        },
+        showMsgBoxTwo() {
+            this.boxTwo = ''
+            this.$bvModal
+                .msgBoxConfirm('Please confirm that you want to delete everything.', {
+                    title: 'Please Confirm',
+                    size: 'sm',
+                    okVariant: 'primary',
+                    okTitle: 'Yes',
+                    cancelTitle: 'No',
+                    cancelVariant: 'outline-secondary',
+                    hideHeaderClose: false,
+                    centered: true,
+                })
+                .then(value => {
+                    this.boxTwo = value
+                })
+        },
+    },
 }
 </script>

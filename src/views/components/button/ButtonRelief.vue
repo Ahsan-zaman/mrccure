@@ -46,15 +46,15 @@ import BCardCode from '@core/components/b-card-code'
 import { codeButtonRelief } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BCardText,
-  },
-  data() {
-    return {
-      codeButtonRelief,
-    }
-  },
+    components: {
+        BCardCode,
+        BButton,
+        BCardText,
+    },
+    data() {
+        return {
+            codeButtonRelief,
+        }
+    },
 }
 </script>

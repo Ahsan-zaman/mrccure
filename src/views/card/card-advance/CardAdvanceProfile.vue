@@ -61,10 +61,10 @@
 import { BCard, BAvatar, BBadge } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard,
-    BBadge,
-    BAvatar,
-  },
+    components: {
+        BCard,
+        BBadge,
+        BAvatar,
+    },
 }
 </script>

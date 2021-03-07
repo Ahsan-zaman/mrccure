@@ -61,15 +61,15 @@ import { BBadge, BCardText } from 'bootstrap-vue'
 import { codeGlow } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BBadge,
-  },
-  data() {
-    return {
-      codeGlow,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BBadge,
+    },
+    data() {
+        return {
+            codeGlow,
+        }
+    },
 }
 </script>

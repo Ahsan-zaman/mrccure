@@ -155,76 +155,76 @@
 
 <script>
 import {
-  BRow, BCol, BFormRadio, BCard, BCardText,
+    BRow, BCol, BFormRadio, BCard, BCardText,
 } from 'bootstrap-vue'
 import BCardCode from '@core/components/b-card-code'
 import vSelect from 'vue-select'
 import {
-  codeVueMultiBasic, codeVueMultiIcon, codeMultiPush, codeVueSelectionLimit, codeVueDir,
+    codeVueMultiBasic, codeVueMultiIcon, codeMultiPush, codeVueSelectionLimit, codeVueDir,
 } from './code'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BFormRadio,
-    BCardText,
-    BCard,
-    BCardCode,
-    vSelect,
-  },
-  data() {
-    return {
-      codeVueMultiBasic,
-      codeVueMultiIcon,
-      codeMultiPush,
-      codeVueSelectionLimit,
-      codeVueDir,
-      dir: 'ltr',
-      selected: [
-        { title: 'Square' },
-        { title: 'Romboid' },
-      ],
-      selected1: [
-        {
-          title: 'Command',
-          icon: 'CommandIcon',
-        },
-      ],
-      selected2: [],
-      selected3: [{
-        title: 'Database',
-        icon: 'DatabaseIcon',
-      }],
-      options: [],
-      option: [
-        { title: 'Square' },
-        { title: 'Rectangle' },
-        { title: 'Rombo' },
-        { title: 'Romboid' },
-        { title: 'Trapeze' },
-        { title: 'Triangle' },
-        { title: 'Polygon' },
-      ],
-      books: [
-        {
-          title: 'Database',
-          icon: 'DatabaseIcon',
-        },
-        {
-          title: 'Codepen',
-          icon: 'CodepenIcon',
-        },
-        {
-          title: 'Aperture ',
-          icon: 'ApertureIcon',
-        },
-        {
-          title: 'Command',
-          icon: 'CommandIcon',
-        },
-      ],
-    }
-  },
+    components: {
+        BRow,
+        BCol,
+        BFormRadio,
+        BCardText,
+        BCard,
+        BCardCode,
+        vSelect,
+    },
+    data() {
+        return {
+            codeVueMultiBasic,
+            codeVueMultiIcon,
+            codeMultiPush,
+            codeVueSelectionLimit,
+            codeVueDir,
+            dir: 'ltr',
+            selected: [
+                { title: 'Square' },
+                { title: 'Romboid' },
+            ],
+            selected1: [
+                {
+                    title: 'Command',
+                    icon: 'CommandIcon',
+                },
+            ],
+            selected2: [],
+            selected3: [{
+                title: 'Database',
+                icon: 'DatabaseIcon',
+            }],
+            options: [],
+            option: [
+                { title: 'Square' },
+                { title: 'Rectangle' },
+                { title: 'Rombo' },
+                { title: 'Romboid' },
+                { title: 'Trapeze' },
+                { title: 'Triangle' },
+                { title: 'Polygon' },
+            ],
+            books: [
+                {
+                    title: 'Database',
+                    icon: 'DatabaseIcon',
+                },
+                {
+                    title: 'Codepen',
+                    icon: 'CodepenIcon',
+                },
+                {
+                    title: 'Aperture ',
+                    icon: 'ApertureIcon',
+                },
+                {
+                    title: 'Command',
+                    icon: 'CommandIcon',
+                },
+            ],
+        }
+    },
 }
 </script>

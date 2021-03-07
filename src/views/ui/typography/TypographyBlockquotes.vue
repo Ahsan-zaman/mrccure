@@ -159,22 +159,22 @@
 
 <script>
 import {
-  BRow, BCol, BCard, BCardHeader, BCardBody, BCardText, BCardTitle, BMedia, BMediaAside, BMediaBody, BImg,
+    BRow, BCol, BCard, BCardHeader, BCardBody, BCardText, BCardTitle, BMedia, BMediaAside, BMediaBody, BImg,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BImg,
-    BCardHeader,
-    BCardBody,
-    BCardText,
-    BCardTitle,
-    BMedia,
-    BMediaAside,
-    BMediaBody,
-  },
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BImg,
+        BCardHeader,
+        BCardBody,
+        BCardText,
+        BCardTitle,
+        BMedia,
+        BMediaAside,
+        BMediaBody,
+    },
 }
 </script>

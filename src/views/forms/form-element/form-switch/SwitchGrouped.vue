@@ -40,23 +40,23 @@ import { BFormCheckboxGroup, BCardText, BFormGroup } from 'bootstrap-vue'
 import { codeGroupArray } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormGroup,
-    BFormCheckboxGroup,
-  },
-  data() {
-    return {
-      options: [
-        { text: 'Red', value: 'red' },
-        { text: 'Green', value: 'green' },
-        { text: 'Yellow (disabled)', value: 'yellow', disabled: true },
-        { text: 'Blue', value: 'blue' },
-      ],
-      selected: [],
-      codeGroupArray,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormGroup,
+        BFormCheckboxGroup,
+    },
+    data() {
+        return {
+            options: [
+                { text: 'Red', value: 'red' },
+                { text: 'Green', value: 'green' },
+                { text: 'Yellow (disabled)', value: 'yellow', disabled: true },
+                { text: 'Blue', value: 'blue' },
+            ],
+            selected: [],
+            codeGroupArray,
+        }
+    },
 }
 </script>

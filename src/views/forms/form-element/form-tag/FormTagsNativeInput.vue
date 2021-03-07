@@ -76,25 +76,25 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormTags, BInputGroup, BInputGroupAppend, BCard, BButton, BCardText,
+    BFormTags, BInputGroup, BInputGroupAppend, BCard, BButton, BCardText,
 } from 'bootstrap-vue'
 import { codeNativeInput } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormTags,
-    BInputGroup,
-    BCard,
-    BButton,
-    BCardText,
-    BInputGroupAppend,
-  },
-  data() {
-    return {
-      value: ['apple', 'orange', 'banana', 'pear', 'peach'],
-      codeNativeInput,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormTags,
+        BInputGroup,
+        BCard,
+        BButton,
+        BCardText,
+        BInputGroupAppend,
+    },
+    data() {
+        return {
+            value: ['apple', 'orange', 'banana', 'pear', 'peach'],
+            codeNativeInput,
+        }
+    },
 }
 </script>

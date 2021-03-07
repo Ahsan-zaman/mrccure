@@ -64,22 +64,22 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BFormTextarea, BRow, BCol, BCardText,
+    BFormTextarea, BRow, BCol, BCardText,
 } from 'bootstrap-vue'
 import { codeAutoHeight } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BCardText,
-    BFormTextarea,
-    BRow,
-    BCol,
-  },
-  data() {
-    return {
-      codeAutoHeight,
-    }
-  },
+    components: {
+        BCardCode,
+        BCardText,
+        BFormTextarea,
+        BRow,
+        BCol,
+    },
+    data() {
+        return {
+            codeAutoHeight,
+        }
+    },
 }
 </script>

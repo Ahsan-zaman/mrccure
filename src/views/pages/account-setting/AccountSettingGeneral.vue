@@ -151,61 +151,61 @@
 
 <script>
 import {
-  BFormFile, BButton, BForm, BFormGroup, BFormInput, BRow, BCol, BAlert, BCard, BCardText, BMedia, BMediaAside, BMediaBody, BLink, BImg,
+    BFormFile, BButton, BForm, BFormGroup, BFormInput, BRow, BCol, BAlert, BCard, BCardText, BMedia, BMediaAside, BMediaBody, BLink, BImg,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import { useInputImageRenderer } from '@core/comp-functions/forms/form-utils'
 import { ref } from '@vue/composition-api'
 
 export default {
-  components: {
-    BButton,
-    BForm,
-    BImg,
-    BFormFile,
-    BFormGroup,
-    BFormInput,
-    BRow,
-    BCol,
-    BAlert,
-    BCard,
-    BCardText,
-    BMedia,
-    BMediaAside,
-    BMediaBody,
-    BLink,
-  },
-  directives: {
-    Ripple,
-  },
-  props: {
-    generalData: {
-      type: Object,
-      default: () => {},
+    components: {
+        BButton,
+        BForm,
+        BImg,
+        BFormFile,
+        BFormGroup,
+        BFormInput,
+        BRow,
+        BCol,
+        BAlert,
+        BCard,
+        BCardText,
+        BMedia,
+        BMediaAside,
+        BMediaBody,
+        BLink,
     },
-  },
-  data() {
-    return {
-      optionsLocal: JSON.parse(JSON.stringify(this.generalData)),
-      profileFile: null,
-    }
-  },
-  methods: {
-    resetForm() {
-      this.optionsLocal = JSON.parse(JSON.stringify(this.generalData))
+    directives: {
+        Ripple,
     },
-  },
-  setup() {
-    const refInputEl = ref(null)
-    const previewEl = ref(null)
+    props: {
+        generalData: {
+            type: Object,
+            default: () => {},
+        },
+    },
+    data() {
+        return {
+            optionsLocal: JSON.parse(JSON.stringify(this.generalData)),
+            profileFile: null,
+        }
+    },
+    methods: {
+        resetForm() {
+            this.optionsLocal = JSON.parse(JSON.stringify(this.generalData))
+        },
+    },
+    setup() {
+        const refInputEl = ref(null)
+        const previewEl = ref(null)
 
-    const { inputImageRenderer } = useInputImageRenderer(refInputEl, previewEl)
+        const { inputImageRenderer } = useInputImageRenderer(refInputEl, previewEl)
 
-    return {
-      refInputEl,
-      previewEl,
-      inputImageRenderer,
-    }
-  },
+        return {
+            refInputEl,
+            previewEl,
+            inputImageRenderer,
+        }
+    },
 }
 </script>

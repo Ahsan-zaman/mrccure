@@ -45,23 +45,23 @@ import { BFormSelect, BCardText } from 'bootstrap-vue'
 import { codeStates } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormSelect,
-    BCardText,
-  },
-  data() {
-    return {
-      selected: null,
-      codeStates,
-      options: [
-        { value: null, text: 'Please select some item' },
-        { value: 'a', text: 'This is First option' },
-        { value: 'b', text: 'Default Selected Option' },
-        { value: 'c', text: 'This is another option' },
-        { value: 'd', text: 'This one is disabled', disabled: true },
-      ],
-    }
-  },
+    components: {
+        BCardCode,
+        BFormSelect,
+        BCardText,
+    },
+    data() {
+        return {
+            selected: null,
+            codeStates,
+            options: [
+                { value: null, text: 'Please select some item' },
+                { value: 'a', text: 'This is First option' },
+                { value: 'b', text: 'Default Selected Option' },
+                { value: 'c', text: 'This is another option' },
+                { value: 'd', text: 'This one is disabled', disabled: true },
+            ],
+        }
+    },
 }
 </script>

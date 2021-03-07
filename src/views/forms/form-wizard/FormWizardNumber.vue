@@ -451,128 +451,128 @@ import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
 import 'vue-form-wizard/dist/vue-form-wizard.min.css'
 import {
-  BRow,
-  BCol,
-  BFormGroup,
-  BFormInput,
-  BFormInvalidFeedback,
+    BRow,
+    BCol,
+    BFormGroup,
+    BFormInput,
+    BFormInvalidFeedback,
 } from 'bootstrap-vue'
 import { required, email } from '@validations'
 import { codeIcon } from './code'
 
 export default {
-  components: {
-    ValidationProvider,
-    ValidationObserver,
-    FormWizard,
-    TabContent,
-    BRow,
-    BCol,
-    BFormGroup,
-    BFormInput,
-    vSelect,
-    BFormInvalidFeedback,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
-  data() {
-    return {
-      selectedContry: '',
-      selectedLanguage: '',
-      name: '',
-      emailValue: '',
-      PasswordValue: '',
-      passwordCon: '',
-      first_name: '',
-      last_name: '',
-      address: '',
-      landMark: '',
-      pincode: '',
-      twitterUrl: '',
-      facebookUrl: '',
-      googleUrl: '',
-      linkedinUrl: '',
-      city: '',
-      required,
-      email,
-      codeIcon,
-      countryName: [
-        { value: 'select_value', text: 'Select Value' },
-        { value: 'Russia', text: 'Russia' },
-        { value: 'Canada', text: 'Canada' },
-        { value: 'China', text: 'China' },
-        { value: 'United States', text: 'United States' },
-        { value: 'Brazil', text: 'Brazil' },
-        { value: 'Australia', text: 'Australia' },
-        { value: 'India', text: 'India' },
-      ],
-      languageName: [
-        { value: 'nothing_selected', text: 'Nothing Selected' },
-        { value: 'English', text: 'English' },
-        { value: 'Chinese', text: 'Mandarin Chinese' },
-        { value: 'Hindi', text: 'Hindi' },
-        { value: 'Spanish', text: 'Spanish' },
-        { value: 'Arabic', text: 'Arabic' },
-        { value: 'Malay', text: 'Malay' },
-        { value: 'Russian', text: 'Russian' },
-      ],
-    }
-  },
-  methods: {
-    formSubmitted() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: 'Form Submitted',
-          icon: 'EditIcon',
-          variant: 'success',
+    components: {
+        ValidationProvider,
+        ValidationObserver,
+        FormWizard,
+        TabContent,
+        BRow,
+        BCol,
+        BFormGroup,
+        BFormInput,
+        vSelect,
+        BFormInvalidFeedback,
+        // eslint-disable-next-line vue/no-unused-components
+        ToastificationContent,
+    },
+    data() {
+        return {
+            selectedContry: '',
+            selectedLanguage: '',
+            name: '',
+            emailValue: '',
+            PasswordValue: '',
+            passwordCon: '',
+            first_name: '',
+            last_name: '',
+            address: '',
+            landMark: '',
+            pincode: '',
+            twitterUrl: '',
+            facebookUrl: '',
+            googleUrl: '',
+            linkedinUrl: '',
+            city: '',
+            required,
+            email,
+            codeIcon,
+            countryName: [
+                { value: 'select_value', text: 'Select Value' },
+                { value: 'Russia', text: 'Russia' },
+                { value: 'Canada', text: 'Canada' },
+                { value: 'China', text: 'China' },
+                { value: 'United States', text: 'United States' },
+                { value: 'Brazil', text: 'Brazil' },
+                { value: 'Australia', text: 'Australia' },
+                { value: 'India', text: 'India' },
+            ],
+            languageName: [
+                { value: 'nothing_selected', text: 'Nothing Selected' },
+                { value: 'English', text: 'English' },
+                { value: 'Chinese', text: 'Mandarin Chinese' },
+                { value: 'Hindi', text: 'Hindi' },
+                { value: 'Spanish', text: 'Spanish' },
+                { value: 'Arabic', text: 'Arabic' },
+                { value: 'Malay', text: 'Malay' },
+                { value: 'Russian', text: 'Russian' },
+            ],
+        }
+    },
+    methods: {
+        formSubmitted() {
+            this.$toast({
+                component: ToastificationContent,
+                props: {
+                    title: 'Form Submitted',
+                    icon: 'EditIcon',
+                    variant: 'success',
+                },
+            })
         },
-      })
+        validationForm() {
+            return new Promise((resolve, reject) => {
+                this.$refs.accountRules.validate().then(success => {
+                    if (success) {
+                        resolve(true)
+                    } else {
+                        reject()
+                    }
+                })
+            })
+        },
+        validationFormInfo() {
+            return new Promise((resolve, reject) => {
+                this.$refs.infoRules.validate().then(success => {
+                    if (success) {
+                        resolve(true)
+                    } else {
+                        reject()
+                    }
+                })
+            })
+        },
+        validationFormAddress() {
+            return new Promise((resolve, reject) => {
+                this.$refs.addressRules.validate().then(success => {
+                    if (success) {
+                        resolve(true)
+                    } else {
+                        reject()
+                    }
+                })
+            })
+        },
+        validationFormSocial() {
+            return new Promise((resolve, reject) => {
+                this.$refs.socialRules.validate().then(success => {
+                    if (success) {
+                        resolve(true)
+                    } else {
+                        reject()
+                    }
+                })
+            })
+        },
     },
-    validationForm() {
-      return new Promise((resolve, reject) => {
-        this.$refs.accountRules.validate().then(success => {
-          if (success) {
-            resolve(true)
-          } else {
-            reject()
-          }
-        })
-      })
-    },
-    validationFormInfo() {
-      return new Promise((resolve, reject) => {
-        this.$refs.infoRules.validate().then(success => {
-          if (success) {
-            resolve(true)
-          } else {
-            reject()
-          }
-        })
-      })
-    },
-    validationFormAddress() {
-      return new Promise((resolve, reject) => {
-        this.$refs.addressRules.validate().then(success => {
-          if (success) {
-            resolve(true)
-          } else {
-            reject()
-          }
-        })
-      })
-    },
-    validationFormSocial() {
-      return new Promise((resolve, reject) => {
-        this.$refs.socialRules.validate().then(success => {
-          if (success) {
-            resolve(true)
-          } else {
-            reject()
-          }
-        })
-      })
-    },
-  },
 }
 </script>

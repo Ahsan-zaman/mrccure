@@ -35,15 +35,15 @@
 
 <script>
 import {
-  BCard, BImg, BAvatar, BCardText,
+    BCard, BImg, BAvatar, BCardText,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard,
-    BAvatar,
-    BImg,
-    BCardText,
-  },
+    components: {
+        BCard,
+        BAvatar,
+        BImg,
+        BCardText,
+    },
 }
 </script>

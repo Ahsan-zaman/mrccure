@@ -122,68 +122,68 @@
 <script>
 import BCardCode from '@core/components/b-card-code'
 import {
-  BForm, BFormGroup, BFormInput, BRow, BCol, BButton,
+    BForm, BFormGroup, BFormInput, BRow, BCol, BButton,
 } from 'bootstrap-vue'
 import { heightTransition } from '@core/mixins/ui/transition'
 import Ripple from 'vue-ripple-directive'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BForm,
-    BRow,
-    BCol,
-    BButton,
-    BFormGroup,
-    BFormInput,
-  },
-  directives: {
-    Ripple,
-  },
-  mixins: [heightTransition],
-  data() {
-    return {
-      items: [{
-        id: 1,
-        selected: 'male',
-        selected1: 'designer',
-        prevHeight: 0,
-      }],
-      nextTodoId: 2,
-      codeBasic,
-    }
-  },
-  mounted() {
-    this.initTrHeight()
-  },
-  created() {
-    window.addEventListener('resize', this.initTrHeight)
-  },
-  destroyed() {
-    window.removeEventListener('resize', this.initTrHeight)
-  },
-  methods: {
-    repeateAgain() {
-      this.items.push({
-        id: this.nextTodoId += this.nextTodoId,
-      })
+    components: {
+        BCardCode,
+        BForm,
+        BRow,
+        BCol,
+        BButton,
+        BFormGroup,
+        BFormInput,
+    },
+    directives: {
+        Ripple,
+    },
+    mixins: [heightTransition],
+    data() {
+        return {
+            items: [{
+                id: 1,
+                selected: 'male',
+                selected1: 'designer',
+                prevHeight: 0,
+            }],
+            nextTodoId: 2,
+            codeBasic,
+        }
+    },
+    mounted() {
+        this.initTrHeight()
+    },
+    created() {
+        window.addEventListener('resize', this.initTrHeight)
+    },
+    destroyed() {
+        window.removeEventListener('resize', this.initTrHeight)
+    },
+    methods: {
+        repeateAgain() {
+            this.items.push({
+                id: this.nextTodoId += this.nextTodoId,
+            })
 
-      this.$nextTick(() => {
-        this.trAddHeight(this.$refs.row[0].offsetHeight)
-      })
+            this.$nextTick(() => {
+                this.trAddHeight(this.$refs.row[0].offsetHeight)
+            })
+        },
+        removeItem(index) {
+            this.items.splice(index, 1)
+            this.trTrimHeight(this.$refs.row[0].offsetHeight)
+        },
+        initTrHeight() {
+            this.trSetHeight(null)
+            this.$nextTick(() => {
+                this.trSetHeight(this.$refs.form.scrollHeight)
+            })
+        },
     },
-    removeItem(index) {
-      this.items.splice(index, 1)
-      this.trTrimHeight(this.$refs.row[0].offsetHeight)
-    },
-    initTrHeight() {
-      this.trSetHeight(null)
-      this.$nextTick(() => {
-        this.trSetHeight(this.$refs.form.scrollHeight)
-      })
-    },
-  },
 }
 </script>
 

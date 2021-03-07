@@ -72,32 +72,32 @@ import Ripple from 'vue-ripple-directive'
 import { codeMethod } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BButton,
-    BModal,
-    BCardText,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeMethod,
-    }
-  },
-  methods: {
-    showModal() {
-      this.$refs['my-modal'].show()
+    components: {
+        BCardCode,
+        BButton,
+        BModal,
+        BCardText,
     },
-    hideModal() {
-      this.$refs['my-modal'].hide()
+    directives: {
+        Ripple,
     },
-    toggleModal() {
-      // We pass the ID of the button that we want to return focus to
-      // when the modal has hidden
-      this.$refs['my-modal'].toggle('#toggle-btn')
+    data() {
+        return {
+            codeMethod,
+        }
     },
-  },
+    methods: {
+        showModal() {
+            this.$refs['my-modal'].show()
+        },
+        hideModal() {
+            this.$refs['my-modal'].hide()
+        },
+        toggleModal() {
+            // We pass the ID of the button that we want to return focus to
+            // when the modal has hidden
+            this.$refs['my-modal'].toggle('#toggle-btn')
+        },
+    },
 }
 </script>

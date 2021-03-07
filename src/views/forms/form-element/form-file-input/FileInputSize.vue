@@ -62,16 +62,16 @@ import { BFormFile, BFormGroup, BCardText } from 'bootstrap-vue'
 import { codeSize } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormFile,
-    BFormGroup,
-    BCardText,
-  },
-  data() {
-    return {
-      codeSize,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormFile,
+        BFormGroup,
+        BCardText,
+    },
+    data() {
+        return {
+            codeSize,
+        }
+    },
 }
 </script>

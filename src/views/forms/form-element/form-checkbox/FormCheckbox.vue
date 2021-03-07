@@ -25,17 +25,17 @@ import FormCheckboxStackedInline from './FormCheckboxStackedInline.vue'
 import FormCheckboxIndeterminate from './FormCheckboxIndeterminate.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    FormCheckboxBasic,
-    FormCheckboxCustom,
-    FormCheckboxColor,
-    FormCheckboxStates,
-    FormCheckboxMultiple,
-    FormCheckboxChangeNames,
-    FormCheckboxStackedInline,
-    FormCheckboxIndeterminate,
-  },
+    components: {
+        BRow,
+        BCol,
+        FormCheckboxBasic,
+        FormCheckboxCustom,
+        FormCheckboxColor,
+        FormCheckboxStates,
+        FormCheckboxMultiple,
+        FormCheckboxChangeNames,
+        FormCheckboxStackedInline,
+        FormCheckboxIndeterminate,
+    },
 }
 </script>

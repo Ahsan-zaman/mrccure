@@ -29,18 +29,18 @@ import BCardCode from '@core/components/b-card-code'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BPagination,
-    BCardText,
-  },
-  data() {
-    return {
-      codeBasic,
-      currentPage: 1,
-      perPage: 1,
-      rows: 100,
-    }
-  },
+    components: {
+        BCardCode,
+        BPagination,
+        BCardText,
+    },
+    data() {
+        return {
+            codeBasic,
+            currentPage: 1,
+            perPage: 1,
+            rows: 100,
+        }
+    },
 }
 </script>

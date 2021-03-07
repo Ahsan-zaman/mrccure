@@ -17,23 +17,23 @@ import VerticalNavMenuLink from '../vertical-nav-menu-link/VerticalNavMenuLink.v
 import VerticalNavMenuGroup from '../vertical-nav-menu-group/VerticalNavMenuGroup.vue'
 
 export default {
-  components: {
-    VerticalNavMenuHeader,
-    VerticalNavMenuLink,
-    VerticalNavMenuGroup,
-  },
-  props: {
-    items: {
-      type: Array,
-      required: true,
+    components: {
+        VerticalNavMenuHeader,
+        VerticalNavMenuLink,
+        VerticalNavMenuGroup,
     },
-  },
-  setup() {
-    provide('openGroups', ref([]))
+    props: {
+        items: {
+            type: Array,
+            required: true,
+        },
+    },
+    setup() {
+        provide('openGroups', ref([]))
 
-    return {
-      resolveNavItemComponent,
-    }
-  },
+        return {
+            resolveNavItemComponent,
+        }
+    },
 }
 </script>

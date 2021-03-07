@@ -38,18 +38,18 @@ import { BProgressBar, BProgress, BCardText } from 'bootstrap-vue'
 import { codeMultipleBar } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BProgressBar,
-    BCardText,
-    BProgress,
-  },
-  data() {
-    return {
-      values: [15, 50, 10],
-      max: 100,
-      codeMultipleBar,
-    }
-  },
+    components: {
+        BCardCode,
+        BProgressBar,
+        BCardText,
+        BProgress,
+    },
+    data() {
+        return {
+            values: [15, 50, 10],
+            max: 100,
+            codeMultipleBar,
+        }
+    },
 }
 </script>

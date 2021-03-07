@@ -27,19 +27,19 @@ import CustomFormTags from './FormTagsCustom.vue'
 import AdvanceCustomFormTags from './FormTagsAdvanceCustom.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    BasicFormTags,
-    SeparatorsFormTags,
-    RemovalFormTags,
-    StylingFormTags,
-    ValidationFormTags,
-    DetectingFormTags,
-    NativeInputFormTags,
-    CustomFormTags,
-    AdvanceCustomFormTags,
-  },
+        BasicFormTags,
+        SeparatorsFormTags,
+        RemovalFormTags,
+        StylingFormTags,
+        ValidationFormTags,
+        DetectingFormTags,
+        NativeInputFormTags,
+        CustomFormTags,
+        AdvanceCustomFormTags,
+    },
 }
 </script>

@@ -42,17 +42,17 @@ import { BFormTags, BFormText, BCardText } from 'bootstrap-vue'
 import { codeRemoval } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormTags,
-    BFormText,
-    BCardText,
-  },
-  data() {
-    return {
-      value: ['apple', 'orange', 'grape'],
-      codeRemoval,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormTags,
+        BFormText,
+        BCardText,
+    },
+    data() {
+        return {
+            value: ['apple', 'orange', 'grape'],
+            codeRemoval,
+        }
+    },
 }
 </script>

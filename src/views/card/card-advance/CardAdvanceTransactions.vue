@@ -51,65 +51,65 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardTitle, BCardBody, BMediaBody, BMedia, BMediaAside, BAvatar,
+    BCard, BCardHeader, BCardTitle, BCardBody, BMediaBody, BMedia, BMediaAside, BAvatar,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard,
-    BCardHeader,
-    BCardTitle,
-    BCardBody,
-    BMediaBody,
-    BMedia,
-    BMediaAside,
-    BAvatar,
-  },
-  data() {
-    return {
-      transactionData: [
-        {
-          mode: 'Wallet',
-          types: 'Starbucks',
-          avatar: 'PocketIcon',
-          avatarVariant: 'light-primary',
-          payment: '-$74',
-          deduction: true,
-        },
-        {
-          mode: 'Bank Transfer',
-          types: 'Add Money',
-          avatar: 'CheckIcon',
-          avatarVariant: 'light-success',
-          payment: '+$480',
-          deduction: false,
-        },
-        {
-          mode: 'Paypal',
-          types: 'Add Money',
-          avatar: 'DollarSignIcon',
-          avatarVariant: 'light-danger',
-          payment: '+$480',
-          deduction: false,
-        },
-        {
-          mode: 'Mastercard',
-          types: 'Ordered Food',
-          avatar: 'CreditCardIcon',
-          avatarVariant: 'light-warning',
-          payment: '-$23',
-          deduction: true,
-        },
-        {
-          mode: 'Transfer',
-          types: 'Refund',
-          avatar: 'TrendingUpIcon',
-          avatarVariant: 'light-info',
-          payment: '+$98',
-          deduction: false,
-        },
-      ],
-    }
-  },
+    components: {
+        BCard,
+        BCardHeader,
+        BCardTitle,
+        BCardBody,
+        BMediaBody,
+        BMedia,
+        BMediaAside,
+        BAvatar,
+    },
+    data() {
+        return {
+            transactionData: [
+                {
+                    mode: 'Wallet',
+                    types: 'Starbucks',
+                    avatar: 'PocketIcon',
+                    avatarVariant: 'light-primary',
+                    payment: '-$74',
+                    deduction: true,
+                },
+                {
+                    mode: 'Bank Transfer',
+                    types: 'Add Money',
+                    avatar: 'CheckIcon',
+                    avatarVariant: 'light-success',
+                    payment: '+$480',
+                    deduction: false,
+                },
+                {
+                    mode: 'Paypal',
+                    types: 'Add Money',
+                    avatar: 'DollarSignIcon',
+                    avatarVariant: 'light-danger',
+                    payment: '+$480',
+                    deduction: false,
+                },
+                {
+                    mode: 'Mastercard',
+                    types: 'Ordered Food',
+                    avatar: 'CreditCardIcon',
+                    avatarVariant: 'light-warning',
+                    payment: '-$23',
+                    deduction: true,
+                },
+                {
+                    mode: 'Transfer',
+                    types: 'Refund',
+                    avatar: 'TrendingUpIcon',
+                    avatarVariant: 'light-info',
+                    payment: '+$98',
+                    deduction: false,
+                },
+            ],
+        }
+    },
 }
 </script>

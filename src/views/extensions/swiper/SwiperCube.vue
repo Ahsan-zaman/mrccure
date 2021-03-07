@@ -36,39 +36,39 @@ import 'swiper/css/swiper.css'
 import { codeCube } from './code'
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-    BCardCode,
-    BImg,
-  },
-  data() {
-    return {
-      codeCube,
+    components: {
+        Swiper,
+        SwiperSlide,
+        BCardCode,
+        BImg,
+    },
+    data() {
+        return {
+            codeCube,
 
-      /* eslint-disable global-require */
-      swiperData: [
-        { img: require('@/assets/images/banner/banner-21.jpg') },
-        { img: require('@/assets/images/banner/banner-22.jpg') },
-        { img: require('@/assets/images/banner/banner-23.jpg') },
-        { img: require('@/assets/images/banner/banner-24.jpg') },
-      ],
-      /* eslint-disable global-require */
+            /* eslint-disable global-require */
+            swiperData: [
+                { img: require('@/assets/images/banner/banner-21.jpg') },
+                { img: require('@/assets/images/banner/banner-22.jpg') },
+                { img: require('@/assets/images/banner/banner-23.jpg') },
+                { img: require('@/assets/images/banner/banner-24.jpg') },
+            ],
+            /* eslint-disable global-require */
 
-      swiperOptions: {
-        effect: 'cube',
-        grabCursor: true,
-        cubeEffect: {
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      },
-    }
-  },
+            swiperOptions: {
+                effect: 'cube',
+                grabCursor: true,
+                cubeEffect: {
+                    shadow: true,
+                    slideShadows: true,
+                    shadowOffset: 20,
+                    shadowScale: 0.94,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            },
+        }
+    },
 }
 </script>

@@ -53,24 +53,24 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BAvatarGroup, BAvatar, BCardText, VBTooltip,
+    BAvatarGroup, BAvatar, BCardText, VBTooltip,
 } from 'bootstrap-vue'
 import { codeGroupTooltip } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAvatarGroup,
-    BAvatar,
-    BCardText,
-  },
-  directives: {
-    'b-tooltip': VBTooltip,
-  },
-  data() {
-    return {
-      codeGroupTooltip,
-    }
-  },
+    components: {
+        BCardCode,
+        BAvatarGroup,
+        BAvatar,
+        BCardText,
+    },
+    directives: {
+        'b-tooltip': VBTooltip,
+    },
+    data() {
+        return {
+            codeGroupTooltip,
+        }
+    },
 }
 </script>

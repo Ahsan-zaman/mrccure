@@ -71,29 +71,29 @@
 
 <script>
 import {
-  BRow, BCol, BCard, BListGroup, BListGroupItem, BCardText, BCardTitle,
+    BRow, BCol, BCard, BListGroup, BListGroupItem, BCardText, BCardTitle,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    BCard,
-    BListGroup,
-    BCardText,
-    BCardTitle,
-    BListGroupItem,
-  },
-  data() {
-    return {
-      kb_question: {},
-    }
-  },
-  created() {
+    components: {
+        BRow,
+        BCol,
+        BCard,
+        BListGroup,
+        BCardText,
+        BCardTitle,
+        BListGroupItem,
+    },
+    data() {
+        return {
+            kb_question: {},
+        }
+    },
+    created() {
     // ! You have to update the below API call according to route parameter
     // * We are using fixed API call for all categories for demo purposes
-    this.$http.get('/kb/data/question').then(res => { this.kb_question = res.data })
-  },
+        this.$http.get('/kb/data/question').then(res => { this.kb_question = res.data })
+    },
 }
 </script>
 

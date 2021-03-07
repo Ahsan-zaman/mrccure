@@ -66,20 +66,20 @@ import { quillEditor } from 'vue-quill-editor'
 import { codeCustom } from './code'
 
 export default {
-  components: {
-    quillEditor,
-    BCardCode,
-    BCardText,
-  },
-  data() {
-    return {
-      codeCustom,
-      editorOption: {
-        modules: {
-          toolbar: '#toolbar',
-        },
-      },
-      content: `<h1 class="ql-align-center">Quill Rich Text Editor</h1>
+    components: {
+        quillEditor,
+        BCardCode,
+        BCardText,
+    },
+    data() {
+        return {
+            codeCustom,
+            editorOption: {
+                modules: {
+                    toolbar: '#toolbar',
+                },
+            },
+            content: `<h1 class="ql-align-center">Quill Rich Text Editor</h1>
                     <p class="card-text"><br /></p>
                     <p class="card-text">
                       Quill is a free, <a href="https://github.com/quilljs/quill/">open source</a> WYSIWYG editor built
@@ -108,13 +108,13 @@ var quill = new Quill('#editor', {
     theme: 'snow'
 });
 // Open your browser's developer console to try out the API!</pre>`,
-    }
-  },
-  methods: {
-    customButtonClick() {
-      // eslint-disable-next-line
-      alert('Button clicked!')
+        }
     },
-  },
+    methods: {
+        customButtonClick() {
+            // eslint-disable-next-line
+      alert('Button clicked!')
+        },
+    },
 }
 </script>

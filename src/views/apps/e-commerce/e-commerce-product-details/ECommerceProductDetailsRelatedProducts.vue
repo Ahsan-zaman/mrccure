@@ -64,94 +64,94 @@
 
 <script>
 import {
-  BCardBody, BCardText, BImg, BLink,
+    BCardBody, BCardText, BImg, BLink,
 } from 'bootstrap-vue'
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 
 export default {
-  components: {
-    BCardBody,
-    BCardText,
-    BImg,
-    BLink,
+    components: {
+        BCardBody,
+        BCardText,
+        BImg,
+        BLink,
 
-    // 3rd Party
-    Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    const swiperOptions = {
-      slidesPerView: 5,
-      spaceBetween: 55,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        1600: {
-          slidesPerView: 4,
-          spaceBetween: 55,
-        },
-        1300: {
-          slidesPerView: 3,
-          spaceBetween: 55,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 55,
-        },
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 55,
-        },
-      },
-    }
+        // 3rd Party
+        Swiper,
+        SwiperSlide,
+    },
+    setup() {
+        const swiperOptions = {
+            slidesPerView: 5,
+            spaceBetween: 55,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                1600: {
+                    slidesPerView: 4,
+                    spaceBetween: 55,
+                },
+                1300: {
+                    slidesPerView: 3,
+                    spaceBetween: 55,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 55,
+                },
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 55,
+                },
+            },
+        }
 
-    /* eslint-disable global-require */
-    const relatedProducts = [
-      {
-        name: 'Apple Watch Series 6',
-        brand: 'Apple',
-        price: 399.98,
-        rating: 4,
-        image: require('@/assets/images/elements/apple-watch.png'),
-      },
-      {
-        name: 'Apple MacBook Pro - Silver',
-        brand: 'Apple',
-        price: 2449.49,
-        rating: 2,
-        image: require('@/assets/images/elements/macbook-pro.png'),
-      },
-      {
-        name: 'Apple HomePod (Space Grey)',
-        brand: 'Apple',
-        price: 229.29,
-        rating: 3,
-        image: require('@/assets/images/elements/homepod.png'),
-      },
-      {
-        name: 'Magic Mouse 2 - Black',
-        brand: 'Apple',
-        price: 90.98,
-        rating: 5,
-        image: require('@/assets/images/elements/magic-mouse.png'),
-      },
-      {
-        name: 'iPhone 12 Pro',
-        brand: 'Apple',
-        price: 1559.99,
-        rating: 4,
-        image: require('@/assets/images/elements/iphone-x.png'),
-      },
-    ]
-    /* eslint-disable global-require */
+        /* eslint-disable global-require */
+        const relatedProducts = [
+            {
+                name: 'Apple Watch Series 6',
+                brand: 'Apple',
+                price: 399.98,
+                rating: 4,
+                image: require('@/assets/images/elements/apple-watch.png'),
+            },
+            {
+                name: 'Apple MacBook Pro - Silver',
+                brand: 'Apple',
+                price: 2449.49,
+                rating: 2,
+                image: require('@/assets/images/elements/macbook-pro.png'),
+            },
+            {
+                name: 'Apple HomePod (Space Grey)',
+                brand: 'Apple',
+                price: 229.29,
+                rating: 3,
+                image: require('@/assets/images/elements/homepod.png'),
+            },
+            {
+                name: 'Magic Mouse 2 - Black',
+                brand: 'Apple',
+                price: 90.98,
+                rating: 5,
+                image: require('@/assets/images/elements/magic-mouse.png'),
+            },
+            {
+                name: 'iPhone 12 Pro',
+                brand: 'Apple',
+                price: 1559.99,
+                rating: 4,
+                image: require('@/assets/images/elements/iphone-x.png'),
+            },
+        ]
+        /* eslint-disable global-require */
 
-    return {
-      swiperOptions,
-      relatedProducts,
-    }
-  },
+        return {
+            swiperOptions,
+            relatedProducts,
+        }
+    },
 }
 </script>
 

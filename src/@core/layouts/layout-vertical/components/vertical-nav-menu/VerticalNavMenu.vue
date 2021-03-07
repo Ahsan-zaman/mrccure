@@ -24,9 +24,12 @@
               class="navbar-brand"
               to="/"
             >
-              <span style="width:36px" class="brand-logo d-flex">
+              <span
+                style="width:36px"
+                class="brand-logo d-flex"
+              >
                 <b-img
-                    class="mx-auto"
+                  class="mx-auto"
                   :src="appLogoImage"
                   alt="logo"
                 />
@@ -34,7 +37,7 @@
               <h6 class="text-primary pl-1 ml-1">
                 MRC Cure <br>
                 <span style="font-family: system-ui;">مركز المرجع الطبي</span>
-                </h6>
+              </h6>
             </b-link>
           </li>
 
@@ -93,69 +96,69 @@ import VerticalNavMenuItems from './components/vertical-nav-menu-items/VerticalN
 import useVerticalNavMenu from './useVerticalNavMenu'
 
 export default {
-  components: {
-    VuePerfectScrollbar,
-    VerticalNavMenuItems,
-    BLink,
-    BImg,
-  },
-  props: {
-    isVerticalMenuActive: {
-      type: Boolean,
-      required: true,
+    components: {
+        VuePerfectScrollbar,
+        VerticalNavMenuItems,
+        BLink,
+        BImg,
     },
-    toggleVerticalMenuActive: {
-      type: Function,
-      required: true,
+    props: {
+        isVerticalMenuActive: {
+            type: Boolean,
+            required: true,
+        },
+        toggleVerticalMenuActive: {
+            type: Function,
+            required: true,
+        },
     },
-  },
-  setup(props) {
-    const {
-      isMouseHovered,
-      isVerticalMenuCollapsed,
-      collapseTogglerIcon,
-      toggleCollapsed,
-      updateMouseHovered,
-    } = useVerticalNavMenu(props)
+    setup(props) {
+        const {
+            isMouseHovered,
+            isVerticalMenuCollapsed,
+            collapseTogglerIcon,
+            toggleCollapsed,
+            updateMouseHovered,
+        } = useVerticalNavMenu(props)
 
-    const { skin } = useAppConfig()
+        const { skin } = useAppConfig()
 
-    // Shadow bottom is UI specific and can be removed by user => It's not in `useVerticalNavMenu`
-    const shallShadowBottom = ref(false)
+        // Shadow bottom is UI specific and can be removed by user => It's not in `useVerticalNavMenu`
+        const shallShadowBottom = ref(false)
 
-    provide('isMouseHovered', isMouseHovered)
+        provide('isMouseHovered', isMouseHovered)
 
-    const perfectScrollbarSettings = {
-      maxScrollbarLength: 60,
-      wheelPropagation: false,
-    }
+        const perfectScrollbarSettings = {
+            maxScrollbarLength: 60,
+            wheelPropagation: false,
+        }
 
-    const collapseTogglerIconFeather = computed(() => (collapseTogglerIcon.value === 'unpinned' ? 'CircleIcon' : 'DiscIcon'))
+        const collapseTogglerIconFeather = computed(() => (collapseTogglerIcon.value === 'unpinned' ? 'CircleIcon' : 'DiscIcon'))
 
-    // App Name
-    const { appName, appLogoImage } = $themeConfig.app
+        // App Name
+        const { appName, appLogoImage } = $themeConfig.app
 
-    return {
-      navMenuItems,
-      perfectScrollbarSettings,
-      isVerticalMenuCollapsed,
-      collapseTogglerIcon,
-      toggleCollapsed,
-      isMouseHovered,
-      updateMouseHovered,
-      collapseTogglerIconFeather,
+        return {
+            navMenuItems,
+            perfectScrollbarSettings,
+            isVerticalMenuCollapsed,
+            collapseTogglerIcon,
+            toggleCollapsed,
+            isMouseHovered,
+            updateMouseHovered,
+            collapseTogglerIconFeather,
 
-      // Shadow Bottom
-      shallShadowBottom,
+            // Shadow Bottom
+            shallShadowBottom,
 
-      // Skin
-      skin,
+            // Skin
+            skin,
 
-      // App Name
-      appName,
-      appLogoImage,
-    }
-  },
+            // App Name
+            appName,
+            appLogoImage,
+        }
+    },
 }
 </script>
 

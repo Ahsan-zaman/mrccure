@@ -111,7 +111,7 @@
 <script>
 import BCardCode from '@core/components/b-card-code/BCardCode.vue'
 import {
-  BListGroupItem, BAvatar, BRow, BCol, BCardText,
+    BListGroupItem, BAvatar, BRow, BCol, BCardText,
 } from 'bootstrap-vue'
 import draggable from 'vuedraggable'
 import Prism from 'vue-prism-component'
@@ -120,56 +120,56 @@ import 'prismjs/themes/prism-tomorrow.css'
 import { codeMultiple } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BAvatar,
-    BListGroupItem,
-    BCardText,
-    BRow,
-    BCol,
-    Prism,
-    draggable,
-  },
-  data() {
-    return {
-      codeMultiple,
-      list1: [
-        {
-          name: 'Paz Joya',
-          email: 'girliness@spotlike.co.uk',
-        },
-        {
-          name: 'Sunshine Cose',
-          email: 'executrixship@equisized.edu',
-        },
-        {
-          name: 'Alba Dobbin',
-          email: 'bidding@demibob.or',
-        },
-        {
-          name: 'Marlin Hinchee',
-          email: 'preholding@scuffly.co.uk',
-        },
-      ],
-      list2: [
-        {
-          name: 'Leia Atienza',
-          email: 'unmeasurableness@interlamellar.co.uk',
-        },
-        {
-          name: 'Lashawna Vaudrainm',
-          email: 'soaking@khubber.com',
-        },
-        {
-          name: 'Liliana Henscheid',
-          email: 'lecideine@turndown.org',
-        },
-        {
-          name: 'Keven Kolter',
-          email: 'nontenure@anglicanum.co.uk',
-        },
-      ],
-    }
-  },
+    components: {
+        BCardCode,
+        BAvatar,
+        BListGroupItem,
+        BCardText,
+        BRow,
+        BCol,
+        Prism,
+        draggable,
+    },
+    data() {
+        return {
+            codeMultiple,
+            list1: [
+                {
+                    name: 'Paz Joya',
+                    email: 'girliness@spotlike.co.uk',
+                },
+                {
+                    name: 'Sunshine Cose',
+                    email: 'executrixship@equisized.edu',
+                },
+                {
+                    name: 'Alba Dobbin',
+                    email: 'bidding@demibob.or',
+                },
+                {
+                    name: 'Marlin Hinchee',
+                    email: 'preholding@scuffly.co.uk',
+                },
+            ],
+            list2: [
+                {
+                    name: 'Leia Atienza',
+                    email: 'unmeasurableness@interlamellar.co.uk',
+                },
+                {
+                    name: 'Lashawna Vaudrainm',
+                    email: 'soaking@khubber.com',
+                },
+                {
+                    name: 'Liliana Henscheid',
+                    email: 'lecideine@turndown.org',
+                },
+                {
+                    name: 'Keven Kolter',
+                    email: 'nontenure@anglicanum.co.uk',
+                },
+            ],
+        }
+    },
 }
 </script>

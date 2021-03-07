@@ -49,47 +49,47 @@ import ECommerceCheckoutStepCart from './ECommerceCheckoutStepCart.vue'
 import ECommerceCheckoutStepAddress from './ECommerceCheckoutStepAddress.vue'
 
 export default {
-  components: {
+    components: {
     // 3rd Party
-    FormWizard,
-    TabContent,
+        FormWizard,
+        TabContent,
 
-    // SFC
-    ECommerceCheckoutStepCart,
-    ECommerceCheckoutStepAddress,
-    ECommerceCheckoutStepPayment,
-  },
-  setup() {
-    const refFormWizard = ref(null)
-    const formWizardNextStep = () => {
-      refFormWizard.value.nextTab()
-    }
+        // SFC
+        ECommerceCheckoutStepCart,
+        ECommerceCheckoutStepAddress,
+        ECommerceCheckoutStepPayment,
+    },
+    setup() {
+        const refFormWizard = ref(null)
+        const formWizardNextStep = () => {
+            refFormWizard.value.nextTab()
+        }
 
-    // ? This is just dummy details
-    const checkoutDetails = ref({
-      address: {
-        fullName: '',
-        mobile: '',
-        houseNo: '',
-        landmark: '',
-        city: '',
-        pincode: '',
-        state: '',
-        addressType: null,
-      },
-      payment: {
-        cvv: '',
-      },
-    })
+        // ? This is just dummy details
+        const checkoutDetails = ref({
+            address: {
+                fullName: '',
+                mobile: '',
+                houseNo: '',
+                landmark: '',
+                city: '',
+                pincode: '',
+                state: '',
+                addressType: null,
+            },
+            payment: {
+                cvv: '',
+            },
+        })
 
-    return {
-      refFormWizard,
-      formWizardNextStep,
+        return {
+            refFormWizard,
+            formWizardNextStep,
 
-      // Dummy Details
-      checkoutDetails,
-    }
-  },
+            // Dummy Details
+            checkoutDetails,
+        }
+    },
 }
 </script>
 

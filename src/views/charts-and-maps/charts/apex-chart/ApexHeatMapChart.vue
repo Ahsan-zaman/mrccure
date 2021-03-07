@@ -42,25 +42,25 @@
 
 <script>
 import {
-  BCard, BCardHeader, BCardBody, BCardTitle, BDropdown, BDropdownItem,
+    BCard, BCardHeader, BCardBody, BCardTitle, BDropdown, BDropdownItem,
 } from 'bootstrap-vue'
 import VueApexCharts from 'vue-apexcharts'
 import apexChatData from './apexChartData'
 
 export default {
-  components: {
-    BCard,
-    BCardHeader,
-    BCardBody,
-    VueApexCharts,
-    BCardTitle,
-    BDropdown,
-    BDropdownItem,
-  },
-  data() {
-    return {
-      apexChatData,
-    }
-  },
+    components: {
+        BCard,
+        BCardHeader,
+        BCardBody,
+        VueApexCharts,
+        BCardTitle,
+        BDropdown,
+        BDropdownItem,
+    },
+    data() {
+        return {
+            apexChatData,
+        }
+    },
 }
 </script>

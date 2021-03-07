@@ -40,16 +40,16 @@ import { BTab, BTabs, BCardText } from 'bootstrap-vue'
 import { codeBasic } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BTab,
-    BCardText,
-    BTabs,
-  },
-  data() {
-    return {
-      codeBasic,
-    }
-  },
+    components: {
+        BCardCode,
+        BTab,
+        BCardText,
+        BTabs,
+    },
+    data() {
+        return {
+            codeBasic,
+        }
+    },
 }
 </script>

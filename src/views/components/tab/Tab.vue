@@ -44,19 +44,19 @@ import TabProgrammatically from './TabProgrammatically.vue'
 import TabPosition from './TabPosition.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
+    components: {
+        BRow,
+        BCol,
 
-    TabDefault,
-    TabFilled,
-    TabJustified,
-    TabAlignment,
-    TabLazy,
-    TabDynamic,
-    TabIcon,
-    TabProgrammatically,
-    TabPosition,
-  },
+        TabDefault,
+        TabFilled,
+        TabJustified,
+        TabAlignment,
+        TabLazy,
+        TabDynamic,
+        TabIcon,
+        TabProgrammatically,
+        TabPosition,
+    },
 }
 </script>

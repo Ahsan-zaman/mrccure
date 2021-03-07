@@ -79,53 +79,53 @@ import Ripple from 'vue-ripple-directive'
 import { codeVirtual } from './code'
 
 export default {
-  components: {
-    Swiper,
-    BCardCode,
-    BButton,
-  },
-  directives: {
-    Ripple,
-  },
-  data() {
-    return {
-      codeVirtual,
-      slides: [],
-      prependNumber: 1,
-      appendNumber: 600,
-      swiperOptions: {
-        slidesPerView: 3,
-        centeredSlides: true,
-        spaceBetween: 30,
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'fraction',
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        virtual: {
-          slides: Array(600)
-            .fill('Slide')
-            .map((item, index) => `${item} ${index + 1}`),
-        },
-      },
-    }
-  },
-  methods: {
-    toSlide(index) {
-      this.$refs.mySwiper15.$swiper.slideTo(index, 1)
+    components: {
+        Swiper,
+        BCardCode,
+        BButton,
     },
-    prependSlides() {
-      this.$refs.mySwiper15.$swiper.virtual.prependSlide([
-        `Slide ${(this.prependNumber -= 1)}`,
-        `Slide ${(this.prependNumber -= 1)}`,
-      ])
+    directives: {
+        Ripple,
     },
-    appendSlide() {
-      this.$refs.mySwiper15.$swiper.virtual.appendSlide(`Slide ${(this.appendNumber += 1)}`)
+    data() {
+        return {
+            codeVirtual,
+            slides: [],
+            prependNumber: 1,
+            appendNumber: 600,
+            swiperOptions: {
+                slidesPerView: 3,
+                centeredSlides: true,
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                virtual: {
+                    slides: Array(600)
+                        .fill('Slide')
+                        .map((item, index) => `${item} ${index + 1}`),
+                },
+            },
+        }
     },
-  },
+    methods: {
+        toSlide(index) {
+            this.$refs.mySwiper15.$swiper.slideTo(index, 1)
+        },
+        prependSlides() {
+            this.$refs.mySwiper15.$swiper.virtual.prependSlide([
+                `Slide ${(this.prependNumber -= 1)}`,
+                `Slide ${(this.prependNumber -= 1)}`,
+            ])
+        },
+        appendSlide() {
+            this.$refs.mySwiper15.$swiper.virtual.appendSlide(`Slide ${(this.appendNumber += 1)}`)
+        },
+    },
 }
 </script>

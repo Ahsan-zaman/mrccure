@@ -274,8 +274,8 @@
 
 <script>
 import {
-  BCard, BRow, BCol, BFormInput, BButton, BTable, BMedia, BAvatar, BLink,
-  BBadge, BDropdown, BDropdownItem, BPagination, BTooltip,
+    BCard, BRow, BCol, BFormInput, BButton, BTable, BMedia, BAvatar, BLink,
+    BBadge, BDropdown, BDropdownItem, BPagination, BTooltip,
 } from 'bootstrap-vue'
 import { avatarText } from '@core/utils/filter'
 import vSelect from 'vue-select'
@@ -286,88 +286,88 @@ import useInvoicesList from './useInvoiceList'
 import invoiceStoreModule from '../invoiceStoreModule'
 
 export default {
-  components: {
-    BCard,
-    BRow,
-    BCol,
-    BFormInput,
-    BButton,
-    BTable,
-    BMedia,
-    BAvatar,
-    BLink,
-    BBadge,
-    BDropdown,
-    BDropdownItem,
-    BPagination,
-    BTooltip,
+    components: {
+        BCard,
+        BRow,
+        BCol,
+        BFormInput,
+        BButton,
+        BTable,
+        BMedia,
+        BAvatar,
+        BLink,
+        BBadge,
+        BDropdown,
+        BDropdownItem,
+        BPagination,
+        BTooltip,
 
-    vSelect,
-  },
-  setup() {
-    const INVOICE_APP_STORE_MODULE_NAME = 'app-invoice'
+        vSelect,
+    },
+    setup() {
+        const INVOICE_APP_STORE_MODULE_NAME = 'app-invoice'
 
-    // Register module
-    if (!store.hasModule(INVOICE_APP_STORE_MODULE_NAME)) store.registerModule(INVOICE_APP_STORE_MODULE_NAME, invoiceStoreModule)
+        // Register module
+        if (!store.hasModule(INVOICE_APP_STORE_MODULE_NAME)) store.registerModule(INVOICE_APP_STORE_MODULE_NAME, invoiceStoreModule)
 
-    // UnRegister on leave
-    onUnmounted(() => {
-      if (store.hasModule(INVOICE_APP_STORE_MODULE_NAME)) store.unregisterModule(INVOICE_APP_STORE_MODULE_NAME)
-    })
+        // UnRegister on leave
+        onUnmounted(() => {
+            if (store.hasModule(INVOICE_APP_STORE_MODULE_NAME)) store.unregisterModule(INVOICE_APP_STORE_MODULE_NAME)
+        })
 
-    const statusOptions = [
-      'Downloaded',
-      'Draft',
-      'Paid',
-      'Partial Payment',
-      'Past Due',
-    ]
+        const statusOptions = [
+            'Downloaded',
+            'Draft',
+            'Paid',
+            'Partial Payment',
+            'Past Due',
+        ]
 
-    const {
-      fetchInvoices,
-      tableColumns,
-      perPage,
-      currentPage,
-      totalInvoices,
-      dataMeta,
-      perPageOptions,
-      searchQuery,
-      sortBy,
-      isSortDirDesc,
-      refInvoiceListTable,
+        const {
+            fetchInvoices,
+            tableColumns,
+            perPage,
+            currentPage,
+            totalInvoices,
+            dataMeta,
+            perPageOptions,
+            searchQuery,
+            sortBy,
+            isSortDirDesc,
+            refInvoiceListTable,
 
-      statusFilter,
+            statusFilter,
 
-      refetchData,
+            refetchData,
 
-      resolveInvoiceStatusVariantAndIcon,
-      resolveClientAvatarVariant,
-    } = useInvoicesList()
+            resolveInvoiceStatusVariantAndIcon,
+            resolveClientAvatarVariant,
+        } = useInvoicesList()
 
-    return {
-      fetchInvoices,
-      tableColumns,
-      perPage,
-      currentPage,
-      totalInvoices,
-      dataMeta,
-      perPageOptions,
-      searchQuery,
-      sortBy,
-      isSortDirDesc,
-      refInvoiceListTable,
+        return {
+            fetchInvoices,
+            tableColumns,
+            perPage,
+            currentPage,
+            totalInvoices,
+            dataMeta,
+            perPageOptions,
+            searchQuery,
+            sortBy,
+            isSortDirDesc,
+            refInvoiceListTable,
 
-      statusFilter,
+            statusFilter,
 
-      refetchData,
+            refetchData,
 
-      statusOptions,
+            statusOptions,
 
-      avatarText,
-      resolveInvoiceStatusVariantAndIcon,
-      resolveClientAvatarVariant,
-    }
-  },
+            avatarText,
+            resolveInvoiceStatusVariantAndIcon,
+            resolveClientAvatarVariant,
+        }
+    },
 }
 </script>
 

@@ -17,14 +17,14 @@ import AutoSuggestSection from './AutoSuggestSection.vue'
 import AutoSuggestAjax from './AutoSuggestAjax.vue'
 
 export default {
-  components: {
-    BRow,
-    BCol,
-    AutoSuggestBasic,
-    AutoSuggestSlot,
-    AutoSuggestSection,
-    AutoSuggestAjax,
-  },
+    components: {
+        BRow,
+        BCol,
+        AutoSuggestBasic,
+        AutoSuggestSlot,
+        AutoSuggestSection,
+        AutoSuggestAjax,
+    },
 }
 </script>
 

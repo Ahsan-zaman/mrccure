@@ -40,17 +40,17 @@ import { BFormInput, BCardText, BFormGroup } from 'bootstrap-vue'
 import { codeDatalist } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormGroup,
-    BCardText,
-    BFormInput,
-  },
-  data() {
-    return {
-      sizes: ['Small', 'Medium', 'Large', 'Extra Large'],
-      codeDatalist,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormGroup,
+        BCardText,
+        BFormInput,
+    },
+    data() {
+        return {
+            sizes: ['Small', 'Medium', 'Large', 'Extra Large'],
+            codeDatalist,
+        }
+    },
 }
 </script>

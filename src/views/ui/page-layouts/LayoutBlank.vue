@@ -27,8 +27,8 @@
 import { BAlert, BLink } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BAlert, BLink,
-  },
+    components: {
+        BAlert, BLink,
+    },
 }
 </script>

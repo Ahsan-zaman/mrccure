@@ -124,7 +124,7 @@
 
 <script>
 import {
-  BSidebar, BForm, BFormGroup, BFormInput, BFormTextarea, BButton,
+    BSidebar, BForm, BFormGroup, BFormInput, BFormTextarea, BButton,
 } from 'bootstrap-vue'
 import { ref } from '@vue/composition-api'
 import Ripple from 'vue-ripple-directive'
@@ -132,26 +132,26 @@ import countries from '@/@fake-db/data/other/countries'
 import vSelect from 'vue-select'
 
 export default {
-  components: {
-    BSidebar, BForm, BFormGroup, BFormInput, BFormTextarea, BButton, vSelect,
-  },
-  directives: {
-    Ripple,
-  },
-  setup() {
-    const customer = ref({
-      name: '',
-      email: '',
-      address: '',
-      country: '',
-      contact: '',
-    })
+    components: {
+        BSidebar, BForm, BFormGroup, BFormInput, BFormTextarea, BButton, vSelect,
+    },
+    directives: {
+        Ripple,
+    },
+    setup() {
+        const customer = ref({
+            name: '',
+            email: '',
+            address: '',
+            country: '',
+            contact: '',
+        })
 
-    return {
-      customer,
-      countries,
-    }
-  },
+        return {
+            customer,
+            countries,
+        }
+    },
 }
 </script>
 

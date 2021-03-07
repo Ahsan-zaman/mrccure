@@ -28,13 +28,13 @@
 
 <script>
 import {
-  BRow, BCol, BCard, BCardText,
+    BRow, BCol, BCard, BCardText,
 } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BRow, BCol, BCard, BCardText,
-  },
+    components: {
+        BRow, BCol, BCard, BCardText,
+    },
 }
 </script>
 

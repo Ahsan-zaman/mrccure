@@ -38,15 +38,15 @@
 import { BCard, BAvatar } from 'bootstrap-vue'
 
 export default {
-  components: {
-    BCard,
-    BAvatar,
-  },
-  props: {
-    pagesData: {
-      type: Array,
-      default: () => [],
+    components: {
+        BCard,
+        BAvatar,
     },
-  },
+    props: {
+        pagesData: {
+            type: Array,
+            default: () => [],
+        },
+    },
 }
 </script>

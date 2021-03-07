@@ -33,29 +33,29 @@ import store from '@/store/index'
 import { codeRange } from './code'
 
 export default {
-  components: {
-    BCardText,
-    VueSlider,
-    BCardCode,
-  },
-  data() {
-    return {
-      codeRange,
-      value: 0.3,
-      dir: 'ltr',
-    }
-  },
-  computed: {
-    direction() {
-      if (store.state.appConfig.isRTL) {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.dir = 'rtl'
-        return this.dir
-      }
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.dir = 'ltr'
-      return this.dir
+    components: {
+        BCardText,
+        VueSlider,
+        BCardCode,
     },
-  },
+    data() {
+        return {
+            codeRange,
+            value: 0.3,
+            dir: 'ltr',
+        }
+    },
+    computed: {
+        direction() {
+            if (store.state.appConfig.isRTL) {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.dir = 'rtl'
+                return this.dir
+            }
+            // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+            this.dir = 'ltr'
+            return this.dir
+        },
+    },
 }
 </script>

@@ -73,7 +73,7 @@
 
 <script>
 import {
-  BTab, BTabs, BCard, BAlert, BLink,
+    BTab, BTabs, BCard, BAlert, BLink,
 } from 'bootstrap-vue'
 import { ref, onUnmounted } from '@vue/composition-api'
 import router from '@/router'
@@ -84,42 +84,42 @@ import UserEditTabInformation from './UserEditTabInformation.vue'
 import UserEditTabSocial from './UserEditTabSocial.vue'
 
 export default {
-  components: {
-    BTab,
-    BTabs,
-    BCard,
-    BAlert,
-    BLink,
+    components: {
+        BTab,
+        BTabs,
+        BCard,
+        BAlert,
+        BLink,
 
-    UserEditTabAccount,
-    UserEditTabInformation,
-    UserEditTabSocial,
-  },
-  setup() {
-    const userData = ref(null)
+        UserEditTabAccount,
+        UserEditTabInformation,
+        UserEditTabSocial,
+    },
+    setup() {
+        const userData = ref(null)
 
-    const USER_APP_STORE_MODULE_NAME = 'app-user'
+        const USER_APP_STORE_MODULE_NAME = 'app-user'
 
-    // Register module
-    if (!store.hasModule(USER_APP_STORE_MODULE_NAME)) store.registerModule(USER_APP_STORE_MODULE_NAME, userStoreModule)
+        // Register module
+        if (!store.hasModule(USER_APP_STORE_MODULE_NAME)) store.registerModule(USER_APP_STORE_MODULE_NAME, userStoreModule)
 
-    // UnRegister on leave
-    onUnmounted(() => {
-      if (store.hasModule(USER_APP_STORE_MODULE_NAME)) store.unregisterModule(USER_APP_STORE_MODULE_NAME)
-    })
+        // UnRegister on leave
+        onUnmounted(() => {
+            if (store.hasModule(USER_APP_STORE_MODULE_NAME)) store.unregisterModule(USER_APP_STORE_MODULE_NAME)
+        })
 
-    store.dispatch('app-user/fetchUser', { id: router.currentRoute.params.id })
-      .then(response => { userData.value = response.data })
-      .catch(error => {
-        if (error.response.status === 404) {
-          userData.value = undefined
+        store.dispatch('app-user/fetchUser', { id: router.currentRoute.params.id })
+            .then(response => { userData.value = response.data })
+            .catch(error => {
+                if (error.response.status === 404) {
+                    userData.value = undefined
+                }
+            })
+
+        return {
+            userData,
         }
-      })
-
-    return {
-      userData,
-    }
-  },
+    },
 }
 </script>
 

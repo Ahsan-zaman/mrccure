@@ -51,16 +51,16 @@ import { BFormCheckbox, BCardText } from 'bootstrap-vue'
 import { codeCustom } from './code'
 
 export default {
-  components: {
-    BCardCode,
-    BFormCheckbox,
-    BCardText,
-  },
-  data() {
-    return {
-      selected: ['B', 'C'],
-      codeCustom,
-    }
-  },
+    components: {
+        BCardCode,
+        BFormCheckbox,
+        BCardText,
+    },
+    data() {
+        return {
+            selected: ['B', 'C'],
+            codeCustom,
+        }
+    },
 }
 </script>

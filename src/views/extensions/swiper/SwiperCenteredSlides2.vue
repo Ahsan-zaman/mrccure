@@ -36,27 +36,27 @@ import 'swiper/css/swiper.css'
 import { codeCenterSlides2 } from './code'
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-    BCardCode,
-  },
-  data() {
-    return {
-      codeCenterSlides2,
-      swiperData: [
-        { icon: 'GithubIcon', text: 'Getting Started' },
-        { icon: 'FacebookIcon', text: 'Pricing & Plans' },
-        { icon: 'TwitterIcon', text: 'Sales Question' },
-        { icon: 'InstagramIcon', text: 'Usage Guides' },
-        { icon: 'FacebookIcon', text: 'Pricing & Plans' },
-      ],
-      swiperOptions: {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 30,
-      },
-    }
-  },
+    components: {
+        Swiper,
+        SwiperSlide,
+        BCardCode,
+    },
+    data() {
+        return {
+            codeCenterSlides2,
+            swiperData: [
+                { icon: 'GithubIcon', text: 'Getting Started' },
+                { icon: 'FacebookIcon', text: 'Pricing & Plans' },
+                { icon: 'TwitterIcon', text: 'Sales Question' },
+                { icon: 'InstagramIcon', text: 'Usage Guides' },
+                { icon: 'FacebookIcon', text: 'Pricing & Plans' },
+            ],
+            swiperOptions: {
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                spaceBetween: 30,
+            },
+        }
+    },
 }
 </script>

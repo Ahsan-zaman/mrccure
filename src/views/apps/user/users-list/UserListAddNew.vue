@@ -258,7 +258,7 @@
 
 <script>
 import {
-  BSidebar, BForm, BFormGroup, BFormInput, BFormInvalidFeedback, BButton,
+    BSidebar, BForm, BFormGroup, BFormInput, BFormInvalidFeedback, BButton,
 } from 'bootstrap-vue'
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import { ref } from '@vue/composition-api'
@@ -270,88 +270,88 @@ import countries from '@/@fake-db/data/other/countries'
 import store from '@/store'
 
 export default {
-  components: {
-    BSidebar,
-    BForm,
-    BFormGroup,
-    BFormInput,
-    BFormInvalidFeedback,
-    BButton,
-    vSelect,
+    components: {
+        BSidebar,
+        BForm,
+        BFormGroup,
+        BFormInput,
+        BFormInvalidFeedback,
+        BButton,
+        vSelect,
 
-    // Form Validation
-    ValidationProvider,
-    ValidationObserver,
-  },
-  directives: {
-    Ripple,
-  },
-  model: {
-    prop: 'isAddNewUserSidebarActive',
-    event: 'update:is-add-new-user-sidebar-active',
-  },
-  props: {
-    isAddNewUserSidebarActive: {
-      type: Boolean,
-      required: true,
+        // Form Validation
+        ValidationProvider,
+        ValidationObserver,
     },
-    roleOptions: {
-      type: Array,
-      required: true,
+    directives: {
+        Ripple,
     },
-    planOptions: {
-      type: Array,
-      required: true,
+    model: {
+        prop: 'isAddNewUserSidebarActive',
+        event: 'update:is-add-new-user-sidebar-active',
     },
-  },
-  data() {
-    return {
-      required,
-      alphaNum,
-      email,
-      countries,
-    }
-  },
-  setup(props, { emit }) {
-    const blankUserData = {
-      fullName: '',
-      username: '',
-      email: '',
-      role: null,
-      currentPlan: null,
-      company: '',
-      country: '',
-      contact: '',
-    }
+    props: {
+        isAddNewUserSidebarActive: {
+            type: Boolean,
+            required: true,
+        },
+        roleOptions: {
+            type: Array,
+            required: true,
+        },
+        planOptions: {
+            type: Array,
+            required: true,
+        },
+    },
+    data() {
+        return {
+            required,
+            alphaNum,
+            email,
+            countries,
+        }
+    },
+    setup(props, { emit }) {
+        const blankUserData = {
+            fullName: '',
+            username: '',
+            email: '',
+            role: null,
+            currentPlan: null,
+            company: '',
+            country: '',
+            contact: '',
+        }
 
-    const userData = ref(JSON.parse(JSON.stringify(blankUserData)))
-    const resetuserData = () => {
-      userData.value = JSON.parse(JSON.stringify(blankUserData))
-    }
+        const userData = ref(JSON.parse(JSON.stringify(blankUserData)))
+        const resetuserData = () => {
+            userData.value = JSON.parse(JSON.stringify(blankUserData))
+        }
 
-    const onSubmit = () => {
-      store.dispatch('app-user/addUser', userData.value)
-        .then(() => {
-          emit('refetch-data')
-          emit('update:is-add-new-user-sidebar-active', false)
-        })
-    }
+        const onSubmit = () => {
+            store.dispatch('app-user/addUser', userData.value)
+                .then(() => {
+                    emit('refetch-data')
+                    emit('update:is-add-new-user-sidebar-active', false)
+                })
+        }
 
-    const {
-      refFormObserver,
-      getValidationState,
-      resetForm,
-    } = formValidation(resetuserData)
+        const {
+            refFormObserver,
+            getValidationState,
+            resetForm,
+        } = formValidation(resetuserData)
 
-    return {
-      userData,
-      onSubmit,
+        return {
+            userData,
+            onSubmit,
 
-      refFormObserver,
-      getValidationState,
-      resetForm,
-    }
-  },
+            refFormObserver,
+            getValidationState,
+            resetForm,
+        }
+    },
 }
 </script>
 

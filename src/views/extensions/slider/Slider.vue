@@ -30,20 +30,20 @@ import SliderInput from './SliderInput.vue'
 import SliderVertical from './SliderVertical.vue'
 
 export default {
-  components: {
-    SliderSingle,
-    SliderMultiple,
-    SliderRangerValue,
-    SliderRtl,
-    SliderLazy,
-    SliderDisabled,
-    SliderAdsorb,
-    SliderContained,
-    SliderBehavior,
-    SliderColor,
-    SliderInput,
-    SliderVertical,
-  },
+    components: {
+        SliderSingle,
+        SliderMultiple,
+        SliderRangerValue,
+        SliderRtl,
+        SliderLazy,
+        SliderDisabled,
+        SliderAdsorb,
+        SliderContained,
+        SliderBehavior,
+        SliderColor,
+        SliderInput,
+        SliderVertical,
+    },
 }
 </script>
 
