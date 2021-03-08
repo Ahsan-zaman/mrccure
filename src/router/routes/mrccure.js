@@ -1,5 +1,15 @@
 export default [
     {
+        path: '/patients/out-patients',
+        name: 'out-patients',
+        component: () => import('@/views/mrccure/OutPatients.vue'),
+    },
+    {
+        path: '/patients/:id',
+        name: 'patient-record',
+        component: () => import('@/views/mrccure/Patient.vue'),
+    },
+    {
         path: '/dashboard',
         name: 'dashboard',
         component: () => import('@/views/mrccure/Dashboard.vue'),
@@ -12,17 +22,57 @@ export default [
     {
         path: '/clinics',
         name: 'clinics',
-        component: () => import('@/views/dashboard/analytics/Analytics.vue'),
+        component: () => import('@/views/mrccure/Clinics.vue'),
     },
     {
         path: '/doctors',
         name: 'doctors',
-        component: () => import('@/views/dashboard/ecommerce/Ecommerce.vue'),
+        component: () => import('@/views/mrccure/Doctors.vue'),
+    },
+    {
+        path: '/reports/lab',
+        name: 'lab-reports',
+        component: () => import('@/views/mrccure/LabReports.vue'),
+    },
+    {
+        path: '/reports/radiology',
+        name: 'radiology-reports',
+        component: () => import('@/views/mrccure/LabReports.vue'),
+    },
+    {
+        path: '/reports/sick-leave',
+        name: 'sick-leave-reports',
+        component: () => import('@/views/mrccure/LabReports.vue'),
+    },
+    {
+        path: '/reports/request',
+        name: 'request-report',
+        component: () => import('@/views/mrccure/LabReports.vue'),
+    },
+    {
+        path: '/reports/operative',
+        name: 'operative-reports',
+        component: () => import('@/views/mrccure/LabReports.vue'),
+    },
+    {
+        path: '/reports/discharge',
+        name: 'discharge-reports',
+        component: () => import('@/views/mrccure/LabReports.vue'),
+    },
+    {
+        path: '/reports/cardiology',
+        name: 'cardiology-reports',
+        component: () => import('@/views/mrccure/LabReports.vue'),
     },
     {
         path: '/medication',
         name: 'medication',
-        component: () => import('@/views/dashboard/analytics/Analytics.vue'),
+        component: () => import('@/views/mrccure/LabReports.vue'),
+    },
+    {
+        path: '/medication',
+        name: 'guardian-add',
+        component: () => import('@/views/mrccure/LabReports.vue'),
     },
     {
         path: '/health-summary',
@@ -47,44 +97,6 @@ export default [
     {
         path: '/contact',
         name: 'contact',
-        component: () => import('@/views/dashboard/ecommerce/Ecommerce.vue'),
-    },
-    {
-        path: '/apps/invoice/list',
-        name: 'apps-invoice-list',
-        component: () =>
-            import('@/views/apps/invoice/invoice-list/InvoiceList.vue'),
-    },
-    {
-        path: '/apps/invoice/preview/:id',
-        name: 'apps-invoice-preview',
-        component: () =>
-            import('@/views/apps/invoice/invoice-preview/InvoicePreview.vue'),
-    },
-    {
-        path: '/apps/invoice/edit/:id',
-        name: 'apps-invoice-edit',
-        component: () =>
-            import('@/views/apps/invoice/invoice-edit/InvoiceEdit.vue'),
-    },
-    {
-        path: '/request-report',
-        name: 'request-report',
-        component: () => import('@/views/dashboard/ecommerce/Ecommerce.vue'),
-    },
-    {
-        path: '/operative-reports',
-        name: 'operative-reports',
-        component: () => import('@/views/dashboard/ecommerce/Ecommerce.vue'),
-    },
-    {
-        path: '/discharge-reports',
-        name: 'discharge-reports',
-        component: () => import('@/views/dashboard/ecommerce/Ecommerce.vue'),
-    },
-    {
-        path: '/cardiology-reports',
-        name: 'cardiology-reports',
         component: () => import('@/views/dashboard/ecommerce/Ecommerce.vue'),
     },
     {

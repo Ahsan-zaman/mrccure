@@ -3,29 +3,9 @@
         <b-row class="match-height">
             <b-col cols="12">
                 <b-card no-body class="card-statistics">
-                    <b-card-body class="statistics-body">
-                        <div class="demo-inline-spacing">
-                            <b-button variant="primary">
-                                Request An Appointment
-                            </b-button>
-                            <b-button variant="success">
-                                Completed Appointment
-                            </b-button>
-                            <b-button variant="danger">
-                                Canceled Appointment
-                            </b-button>
-                            <b-button variant="warning">
-                                No Show Appointment
-                            </b-button>
-                        </div>
-                    </b-card-body>
-                </b-card>
-            </b-col>
-            <b-col cols="12">
-                <b-card no-body class="card-statistics">
                     <b-card-header>
                         <b-card-title>
-                            Your Next Appointments
+                            {{$route.params.title}}
                         </b-card-title>
                     </b-card-header>
                     <b-card-body class="statistics-body">
@@ -44,39 +24,15 @@
                                 </b-col>
                                 <b-col md="4">
                                     <b-form-group>
-                                        <h5>Select the Clinic</h5>
+                                        <h5>Reports</h5>
                                         <b-form-input
                                             id="basicInput"
                                             placeholder="Search"
                                         />
                                     </b-form-group>
                                 </b-col>
-                                <b-col md="4">
-                                    <b-form-group>
-                                        <h5>Select Physician</h5>
-                                        <v-select
-                                            v-model="selected1"
-                                            :dir="
-                                                $store.state.appConfig.isRTL
-                                                    ? 'rtl'
-                                                    : 'ltr'
-                                            "
-                                            :options="books"
-                                            placeholder="Search"
-                                        >
-                                            <template #option="{ title, icon }">
-                                                <feather-icon
-                                                    :icon="icon"
-                                                    size="16"
-                                                    class="align-middle mr-50"
-                                                />
-                                                <span> {{ title }}</span>
-                                            </template>
-                                        </v-select>
-                                    </b-form-group>
-                                </b-col>
                                 <!-- submit and reset -->
-                                <b-col>
+                                <b-col class="d-flex align-items-end mb-1">
                                     <b-button
                                         type="submit"
                                         variant="primary"
@@ -96,6 +52,13 @@
                     </b-card-body>
                 </b-card>
             </b-col>
+            <b-col cols="12">
+                <b-card no-body class="card-statistics">
+                    <b-card-body class="statistics-body">
+                        <b-table responsive="sm" :items="items" />
+                    </b-card-body>
+                </b-card>
+            </b-col>
         </b-row>
     </section>
 </template>
@@ -112,9 +75,9 @@ import {
     BFormGroup,
     BFormInput,
     BForm,
+    BTable,
 } from 'bootstrap-vue'
 import flatPickr from 'vue-flatpickr-component'
-import vSelect from 'vue-select'
 
 export default {
     components: {
@@ -128,29 +91,28 @@ export default {
         BFormGroup,
         BFormInput,
         BForm,
+        BTable,
 
         flatPickr,
-        vSelect,
     },
     data() {
         return {
             rangeDate: null,
-            books: [
+            items: [
                 {
-                    title: 'Dr. Ahmed',
-                    icon: 'UserIcon',
+                    '#': 40,
+                    report_number: '#123456',
+                    actions: 'Pending',
                 },
                 {
-                    title: 'Dr. Ayman',
-                    icon: 'UserIcon',
+                    '#': 21,
+                    report_number: '#123456',
+                    actions: 'Ready',
                 },
                 {
-                    title: 'Dr. Badr',
-                    icon: 'UserIcon',
-                },
-                {
-                    title: 'Dr. Abdul Hamid',
-                    icon: 'UserIcon',
+                    '#': 89,
+                    report_number: '#123456',
+                    actions: 'Out Dated',
                 },
             ],
         }

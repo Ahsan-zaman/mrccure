@@ -1,5 +1,13 @@
 export default [
     {
+        header: 'Doctors Screens',
+    },
+    {
+        title: 'Outpatients',
+        route: 'out-patients',
+        icon: 'LogOutIcon',
+    },
+    {
         header: 'Patient Screens',
     },
     {
@@ -28,31 +36,52 @@ export default [
         children: [
             {
                 title: 'Lab Reports',
-                route: 'apps-invoice-list',
+                route: {
+                    name: 'lab-reports',
+                    params: { title: 'Lab Reports' },
+                },
             },
             {
                 title: 'Radiology Reports',
-                route: { name: 'apps-invoice-preview', params: { id: 4987 } },
+                route: {
+                    name: 'radiology-reports',
+                    params: { title: 'Radiology Reports' },
+                },
             },
             {
                 title: 'Sick Leave Reports',
-                route: { name: 'apps-invoice-edit', params: { id: 4987 } },
+                route: {
+                    name: 'sick-leave-reports',
+                    params: { title: 'Sick Leave Reports' },
+                },
             },
             {
                 title: 'Request a Report',
-                route: 'request-report',
+                route: {
+                    name: 'request-report',
+                    params: { title: 'Request Report' },
+                },
             },
             {
                 title: 'Operative Reports',
-                route: 'operative-reports',
+                route: {
+                    name: 'operative-reports',
+                    params: { title: 'Operative Reports' },
+                },
             },
             {
                 title: 'Discharge Reports',
-                route: 'discharge-reports',
+                route: {
+                    name: 'discharge-reports',
+                    params: { title: 'Discharge Reports' },
+                },
             },
             {
                 title: 'Cardiology Reports',
-                route: 'cardiology-reports',
+                route: {
+                    name: 'cardiology-reports',
+                    params: { title: 'Cardiology Reports' },
+                },
             },
         ],
     },
@@ -63,7 +92,7 @@ export default [
     },
     {
         title: 'Add Guardian',
-        route: 'medication',
+        route: 'guardian-add',
         icon: 'UserIcon',
     },
     {

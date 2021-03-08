@@ -3,57 +3,17 @@
         <b-row class="match-height">
             <b-col cols="12">
                 <b-card no-body class="card-statistics">
-                    <b-card-body class="statistics-body">
-                        <div class="demo-inline-spacing">
-                            <b-button variant="primary">
-                                Request An Appointment
-                            </b-button>
-                            <b-button variant="success">
-                                Completed Appointment
-                            </b-button>
-                            <b-button variant="danger">
-                                Canceled Appointment
-                            </b-button>
-                            <b-button variant="warning">
-                                No Show Appointment
-                            </b-button>
-                        </div>
-                    </b-card-body>
-                </b-card>
-            </b-col>
-            <b-col cols="12">
-                <b-card no-body class="card-statistics">
                     <b-card-header>
                         <b-card-title>
-                            Your Next Appointments
+                            Clinics
                         </b-card-title>
                     </b-card-header>
                     <b-card-body class="statistics-body">
                         <b-form @submit.prevent>
                             <b-row>
-                                <b-col md="4">
+                                <b-col md="6">
                                     <b-form-group>
-                                        <h5>Date Range</h5>
-                                        <flat-pickr
-                                            class="form-control"
-                                            value=""
-                                            placeholder="Select"
-                                            :config="{ mode: 'range' }"
-                                        />
-                                    </b-form-group>
-                                </b-col>
-                                <b-col md="4">
-                                    <b-form-group>
-                                        <h5>Select the Clinic</h5>
-                                        <b-form-input
-                                            id="basicInput"
-                                            placeholder="Search"
-                                        />
-                                    </b-form-group>
-                                </b-col>
-                                <b-col md="4">
-                                    <b-form-group>
-                                        <h5>Select Physician</h5>
+                                        <h5>Search Hospital</h5>
                                         <v-select
                                             v-model="selected1"
                                             :dir="
@@ -76,7 +36,7 @@
                                     </b-form-group>
                                 </b-col>
                                 <!-- submit and reset -->
-                                <b-col>
+                                <b-col class="d-flex align-items-end mb-1">
                                     <b-button
                                         type="submit"
                                         variant="primary"
@@ -96,6 +56,15 @@
                     </b-card-body>
                 </b-card>
             </b-col>
+            <b-col cols="12">
+                <b-card no-body class="card-statistics">
+                    <b-card-header>
+                        <b-card-title>
+                            No Clinics found
+                        </b-card-title>
+                    </b-card-header>
+                </b-card>
+            </b-col>
         </b-row>
     </section>
 </template>
@@ -110,10 +79,8 @@ import {
     BCardTitle,
     BCardHeader,
     BFormGroup,
-    BFormInput,
     BForm,
 } from 'bootstrap-vue'
-import flatPickr from 'vue-flatpickr-component'
 import vSelect from 'vue-select'
 
 export default {
@@ -126,10 +93,8 @@ export default {
         BCardHeader,
         BCardBody,
         BFormGroup,
-        BFormInput,
         BForm,
 
-        flatPickr,
         vSelect,
     },
     data() {
@@ -137,20 +102,20 @@ export default {
             rangeDate: null,
             books: [
                 {
-                    title: 'Dr. Ahmed',
-                    icon: 'UserIcon',
+                    title: 'MRC Cure',
+                    icon: 'HomeIcon',
                 },
                 {
-                    title: 'Dr. Ayman',
-                    icon: 'UserIcon',
+                    title: 'Medical Reference',
+                    icon: 'HomeIcon',
                 },
                 {
-                    title: 'Dr. Badr',
-                    icon: 'UserIcon',
+                    title: 'MR Center',
+                    icon: 'HomeIcon',
                 },
                 {
-                    title: 'Dr. Abdul Hamid',
-                    icon: 'UserIcon',
+                    title: 'All',
+                    icon: 'HomeIcon',
                 },
             ],
         }
