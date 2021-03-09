@@ -10,6 +10,11 @@ export default [
         component: () => import('@/views/mrccure/Patient.vue'),
     },
     {
+        path: '/patients/bills',
+        name: 'patient-bills',
+        component: () => import('@/views/mrccure/PatientBills.vue'),
+    },
+    {
         path: '/dashboard',
         name: 'dashboard',
         component: () => import('@/views/mrccure/Dashboard.vue'),

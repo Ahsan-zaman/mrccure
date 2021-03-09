@@ -8,6 +8,11 @@ export default [
         icon: 'LogOutIcon',
     },
     {
+        title: 'Patient Bills',
+        route: 'patient-bills',
+        icon: 'FileTextIcon',
+    },
+    {
         header: 'Patient Screens',
     },
     {
